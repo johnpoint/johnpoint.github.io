@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2018-08-30T02:56:18.000Z</updated>
+  <updated>2018-09-16T11:02:23.788Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自建域名邮箱：EwoMail</title>
+    <link href="https://blog.lvcshu.com/2018/09/14/%E8%87%AA%E5%BB%BA%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/"/>
+    <id>https://blog.lvcshu.com/2018/09/14/自建域名邮箱/</id>
+    <published>2018-09-14T02:59:00.000Z</published>
+    <updated>2018-09-16T11:02:23.788Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://blog.lvcshu.com/tags/%E6%8A%98%E8%85%BE/"/>
+    
+      <category term="自建邮箱" scheme="https://blog.lvcshu.com/tags/%E8%87%AA%E5%BB%BA%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="域名邮箱" scheme="https://blog.lvcshu.com/tags/%E5%9F%9F%E5%90%8D%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="EwoMail" scheme="https://blog.lvcshu.com/tags/EwoMail/"/>
+    
+  </entry>
   
   <entry>
     <title>跨平台U盘启动盘制作神器 Etcher</title>
