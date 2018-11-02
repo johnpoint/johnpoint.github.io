@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Johnpoint&#39;s blog">
 <meta property="og:description" content="提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。 学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问  学习过程安装12345yum updateyum -y install httpd php mysql mysql-server php-mysqlyum -y install httpd-manual mod_ssl">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-02T12:36:22.579Z">
+<meta property="og:updated_time" content="2018-11-02T12:42:15.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记:初识httpd">
 <meta name="twitter:description" content="提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。 学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问  学习过程安装12345yum updateyum -y install httpd php mysql mysql-server php-mysqlyum -y install httpd-manual mod_ssl">
@@ -411,7 +411,7 @@
                 
               
 
-              <time title="创建时间：2018-11-02 20:00:00 / 修改时间：20:36:22" itemprop="dateCreated datePublished" datetime="2018-11-02T20:00:00+08:00">2018-11-02</time>
+              <time title="创建时间：2018-11-02 20:00:00 / 修改时间：20:42:15" itemprop="dateCreated datePublished" datetime="2018-11-02T20:00:00+08:00">2018-11-02</time>
             
 
             
@@ -478,9 +478,9 @@
 <h2 id="建立一个简陋的主页"><a href="#建立一个简陋的主页" class="headerlink" title="建立一个简陋的主页"></a>建立一个简陋的主页</h2><p>略</p>
 <h1 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h1><p>使用 <a href="https://github.com/Neilpang/acme.sh" target="_blank" rel="noopener">acme.sh</a> 的开源项目</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl  https://get.acme.sh | sh</span><br><span class="line"></span><br><span class="line">cd .acme.sh</span><br><span class="line">acme.sh  --issue  -d hk.lvcshu.info --webroot  /home/www/hk.lvcshu.info/</span><br></pre></td></tr></table></figure>
-<p>证书路径：<code>/etc/letsencrypt/live/hk.lvcshu.info/</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSLCertificateFile        /etc/letsencrypt/live/hk.lvcshu.info/cert.pem</span><br><span class="line">SSLCertificateKeyFile     /etc/letsencrypt/live/hk.lvcshu.info/privkey.pem</span><br></pre></td></tr></table></figure>
-<h1 id="配置-https"><a href="#配置-https" class="headerlink" title="配置 https"></a>配置 https</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">DocumentRoot   /home/www/hk.lvcshu.info</span><br><span class="line">ServerName     hk.lvcshu.info</span><br><span class="line">SSLEngine      on</span><br><span class="line">SSLCertificateFile        /etc/letsencrypt/live/hk.lvcshu.info/cert.pem</span><br><span class="line">SSLCertificateKeyFile     /etc/letsencrypt/live/hk.lvcshu.info/privkey.pem</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<p>证书路径：<code>/root/.acme.sh/hk.lvcshu.info</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSLCertificateFile        /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.cer </span><br><span class="line">SSLCertificateKeyFile     /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.key</span><br></pre></td></tr></table></figure>
+<h1 id="配置-https"><a href="#配置-https" class="headerlink" title="配置 https"></a>配置 https</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">DocumentRoot   /home/www/hk.lvcshu.info</span><br><span class="line">ServerName     hk.lvcshu.info</span><br><span class="line">SSLEngine      on</span><br><span class="line">SSLCertificateFile        /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.cer </span><br><span class="line">SSLCertificateKeyFile     /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.key</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
 <p>return 0;</p>
 
       
@@ -505,7 +505,7 @@
   <p><span>本文标题:</span>学习笔记:初识httpd</a></p>
   <p><span>文章作者:</span>johnpoint</a></p>
   <p><span>发布时间:</span>2018年11月02日 - 20:00:00</p>
-  <p><span>最后更新:</span>2018年11月02日 - 20:36:22</p>
+  <p><span>最后更新:</span>2018年11月02日 - 20:42:15</p>
   <p><span>原始链接:</span><a href="/2018/11/02/学习笔记:初识httpd/" title="学习笔记:初识httpd">https://blog.lvcshu.com/2018/11/02/学习笔记:初识httpd/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://blog.lvcshu.com/2018/11/02/学习笔记:初识httpd/"  aria-label="复制成功！"></i></span>
   </p>
