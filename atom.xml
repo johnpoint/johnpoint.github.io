@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2018-11-09T01:49:57.483Z</updated>
+  <updated>2018-11-16T11:53:55.456Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>存档</title>
+    <link href="https://blog.lvcshu.com/2018/11/05/%E5%9C%B0%E7%8B%B1%E7%A9%BA%E8%8D%A1%E8%8D%A1%EF%BC%8C%E9%AD%94%E9%AC%BC%E5%9C%A8%E4%BA%BA%E9%97%B4/"/>
+    <id>https://blog.lvcshu.com/2018/11/05/地狱空荡荡，魔鬼在人间/</id>
+    <published>2018-11-05T12:00:00.000Z</published>
+    <updated>2018-11-16T11:53:55.456Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="存档" scheme="https://blog.lvcshu.com/tags/%E5%AD%98%E6%A1%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>学习笔记:初识httpd</title>
