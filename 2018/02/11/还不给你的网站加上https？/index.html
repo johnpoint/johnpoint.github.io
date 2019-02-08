@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Learn By Doing"><title>还不给你的网站加上https？ | johnpoint's blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://raw.githubusercontent.com/johnpoint/anti-360browser.js/master/anti-360browser.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-122182397-1','auto');ga('send','pageview');
+</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">还不给你的网站加上https？</h1><a id="logo" href="/.">johnpoint's blog</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/movie/"><i class="fa fa-film"> 电影</i></a><a href="/timeline/"><i class="fa fa-book"> 历史</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">还不给你的网站加上https？</h1><div class="post-meta">Feb 11, 2018</div><a class="disqus-comment-count" data-disqus-identifier="2018/02/11/还不给你的网站加上https？/" href="/2018/02/11/还不给你的网站加上https？/#disqus_thread"></a><div class="post-content"><ul>
+<li>什么是https？<br>现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~<a id="more"></a>
+那么，什么是https呢？</li>
+</ul>
+<blockquote>
+<p>HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。<br>来自百度百科</p>
+</blockquote>
+<p>简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改</p>
+<h1 id="一个小故事"><a href="#一个小故事" class="headerlink" title="一个小故事"></a>一个小故事</h1><p>但是，https并不是绝对安全的，我在知乎上看到了这样一个故事：(斜体为笔者注释)</p>
+<p>从前山上有座庙，庙里有个和尚……，别胡闹了，老和尚来了。</p>
+<p>小和尚问老和尚：ssl为什么会让http安全？</p>
+<p>老和尚答道：譬如你我都有一个同样的密码，我发信给你时用这个密码加密，你收到我发的信，用这个密码解密，就能知道我信的内容，其他的闲杂人等，就算偷偷拿到了信，由于不知道这个密码，也只能望信兴叹，这个密码就叫做对称密码。ssl使用对称密码对http内容进行加解密，所以让http安全了，常用的加解密算法主要有3DES和AES等。</p>
+<p>小和尚摸摸脑袋问老和尚：师傅，如果我们两人选择“和尚”作为密码，再创造一个和尚算法，我们俩之间的通信不就高枕无忧了？</p>
+<p>老和尚当头给了小和尚一戒尺：那我要给山下的小花写情书，还得用“和尚”这个密码不成？想了想又给了小和尚一戒尺：虽然我们是和尚，不是码农，也不能自己造轮子，当初一堆牛人码农造出了Wifi的安全算法WEP，后来发现是一绣花枕头，在安全界传为笑谈；况且小花只知道3DES和AES，哪知道和尚算法？</p>
+<p>小和尚问到：那师傅何解？</p>
+<p>老和尚：我和小花只要知道每封信的密码，就可以读到对方加密的信件，关键是我们互相之间怎么知道这个对称密码。你说，我要是将密码写封信给她，信被别人偷了，那大家不都知道我们的密码了，也就能够读懂我们情书了。不过还是有解的，这里我用到了江湖中秘传的非对称密码。我现在手头有两个密码，一个叫“公钥”，一个叫“私钥”，公钥发布到了江湖上，好多人都知道，私钥嘛，江湖上只有我一个人知道；这两个密钥有数学相关性，就是说用公钥加密的信件，可以用私钥解开，但是用公钥却解不开。公钥小花是知道的，她每次给我写信，都要我的公钥加密她的对称密码，单独写一张密码纸，然后用她的对称密码加密她的信件，这样我用我的私钥可以解出这个对称密码，再用这个对称密码来解密她的信件。</p>
+<p>这种加密方法即自己生成自签证书，这种做法是不完全安全的，具体表现为Chrome地址栏划掉的红色https</p>
+<p>老和尚顿了顿：可惜她用的对称密码老是“和尚为什么写情书”这一类，所以我每次解开密码纸时总是怅然若失，其实我钟意的对称密码是诸如“风花”“雪月”什么的，最头痛的是，我还不得不用“和尚为什么写情书”这个密码来加密我给小花回的情书，人世间最痛苦的事莫过于如此。可我哪里知道，其实有人比我更痛苦。山下的张屠夫，暗恋小花很多年，看着我们鸿雁传书，心中很不是滋味，主动毛遂自荐代替香客给我们送信。在他第一次给小花送信时，就给了小花他自己的公钥，谎称是我公钥刚刚更新了，小花信以为真，之后的信件对称密码都用张屠夫的这个公钥加密了，张屠夫拿到回信后，用他自己的私钥解开了小花的对称密码，然后用这个对称密码，不仅能够看到了小花信件的所有内容，还能使用这个密码伪造小花给我写信，同时还能用他的私钥加密给小花的信件。渐渐我发现信件变味了，尽管心生疑惑，但是没有确切的证据，一次我写信问小花第一次使用的对称密码，回信中“和尚为什么写情书”赫然在列，于是我的疑惑稍稍减轻。直到有一次去拜会嵩山少林寺老方丈才顿悟，原来由于我的公钥没有火印，任何人都可以伪造一份公钥宣称是我的，这样这个人即能读到别人写给我的信，也能伪造别人给我写信，同样也能读到我的回信，也能伪造我给别人的回信，这种邪门武功江湖上称之“Man-in-the-middle attack”（即中间人攻击）。唯一的破解就是使用嵩山少林寺的火印（即由CA机构颁发的证书），这个火印可有讲究了，需要将我的公钥及个人在江湖地位提交给18罗汉委员会，他们会根据我的这些信息使用委员会私钥进行数字签名，签名的信息凸现在火印上，有火印的公钥真实性在江湖上无人质疑，要知道18罗汉可是无人敢得罪的。</p>
+<p>小和尚问：那然后呢？</p>
+<p>老和尚：从嵩山少林寺回山上寺庙时，我将有火印的公钥亲自给小花送去，可是之后再也没有收到小花的来信。过了一年才知道，其实小花还是给我写过信的，当时信确实是用有火印的公钥加密，张屠夫拿到信后，由于不知道我的私钥，解不开小花的密码信，所以一怒之下将信件全部烧毁了。也由于张屠夫无法知道小花的对称密码而无法回信，小花发出几封信后石沉大海，也心生疑惑，到处打听我的近况。这下张屠夫急了，他使用我发布的公钥，仿照小花的语气，给我发来一封信。拿到信时我就觉得奇怪，信纸上怎么有一股猪油的味道，结尾竟然还关切的询问我的私钥。情知有诈，我思量无论如何要找到办法让我知道来的信是否真是小花所写。后来竟然让我想到了办法….</p>
+<p>老和尚摸着光头说：这头发可不是白掉的，我托香客给小花带话，我一切安好，希望她也拥有属于自己的一段幸福，不对，是一对非对称密钥。小花委托小镇美女协会给小花公钥打上火印后，托香客给我送来，这样小花在每次给我写信时，都会在密码纸上贴上一朵小牡丹，牡丹上写上用她自己的私钥加密过的给我的留言，这样我收到自称是小花的信后，我会先抽出密码纸，取下小牡丹，使用小花的公钥解密这段留言，如果解不出来，我会直接将整封信连同密码纸一起扔掉，因为这封信一定不是小花写的，如果能够解出来，这封信才能确信来之于小花，我才仔细的解码阅读。</p>
+<p>小和尚：难怪听说张屠夫是被活活气死的。您这情书整的，我头都大了，我长大后，有想法直接扯着嗓子对山下喊，也省的这么些麻烦。不过我倒是明白了楼上的话，ssl 握手阶段，就是要解决什么看火印，读牡丹，解密码纸，确实够麻烦的，所以性能瓶颈在这里，一旦双方都知道了对称密码，之后就是行云流水的解码读信阶段了，相对轻松很多。</p>
+<p>编辑于 2014-04-28</p>
+<p>著作权归作者所有</p>
+<blockquote>
+<p>来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答</p>
+</blockquote>
+<p>但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：</p>
+<blockquote>
+<p>违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任</p>
+</blockquote>
+<blockquote>
+<p>2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</p>
+</blockquote>
+</div><iframe src="/donate/?AliPayQR=null&amp;WeChatQR=null&amp;GitHub=https://github.com/johnpoint&amp;BTCQR=null&amp;BTCKEY=null&amp;PayPal=https://paypal.me/johnpointpay" style="overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>johnpoint</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2018/02/11/还不给你的网站加上https？/">https://blog.lvcshu.com/2018/02/11/还不给你的网站加上https？/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。</li></ul></div><br><div class="tags"><a href="/tags/建站/">建站</a><a href="/tags/安全/">安全</a><a href="/tags/SSL/">SSL</a></div><div class="post-nav"><a class="pre" href="/2018/05/09/cloudreve体验报告/">cloudreve体验报告</a><a class="next" href="/2018/01/15/配置ufw防火墙，守护你的Ubuntu/">配置ufw防火墙，守护你的Ubuntu</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'https://blog.lvcshu.com/2018/02/11/还不给你的网站加上https？/';
+    this.page.identifier = '2018/02/11/还不给你的网站加上https？/';
+    this.page.title = '还不给你的网站加上https？';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//johnpoint-hexo-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//johnpoint-hexo-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://johnpoint-hexo-1.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://blog.lvcshu.com"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Keepass/" style="font-size: 15px;">Keepass</a> <a href="/tags/总结/" style="font-size: 15px;">总结</a> <a href="/tags/2019/" style="font-size: 15px;">2019</a> <a href="/tags/简报/" style="font-size: 15px;">简报</a> <a href="/tags/SSL检测/" style="font-size: 15px;">SSL检测</a> <a href="/tags/证书分发/" style="font-size: 15px;">证书分发</a> <a href="/tags/折腾/" style="font-size: 15px;">折腾</a> <a href="/tags/建站/" style="font-size: 15px;">建站</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/thinkpad-S2/" style="font-size: 15px;">thinkpad S2</a> <a href="/tags/私有云盘/" style="font-size: 15px;">私有云盘</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/blog/" style="font-size: 15px;">blog</a> <a href="/tags/httpd/" style="font-size: 15px;">httpd</a> <a href="/tags/学习笔记/" style="font-size: 15px;">学习笔记</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/密码管理器/" style="font-size: 15px;">密码管理器</a> <a href="/tags/2018/" style="font-size: 15px;">2018</a> <a href="/tags/安全/" style="font-size: 15px;">安全</a> <a href="/tags/GFW/" style="font-size: 15px;">GFW</a> <a href="/tags/Google/" style="font-size: 15px;">Google</a> <a href="/tags/存档/" style="font-size: 15px;">存档</a> <a href="/tags/树莓派/" style="font-size: 15px;">树莓派</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/SSL/" style="font-size: 15px;">SSL</a> <a href="/tags/UFW/" style="font-size: 15px;">UFW</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/DNS/" style="font-size: 15px;">DNS</a> <a href="/tags/ns1/" style="font-size: 15px;">ns1</a> <a href="/tags/小米手环/" style="font-size: 15px;">小米手环</a> <a href="/tags/app推荐/" style="font-size: 15px;">app推荐</a> <a href="/tags/notify-fitness-for-mi-band/" style="font-size: 15px;">notify & fitness for mi band</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/22/app推荐:notify & fitness for mi band/">app推荐:notify & fitness for mi band</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/14/真-多点部署博客/">真-多点部署博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/10/改进SSL证书相关策略/">改进SSL证书相关策略</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/25/2018年度简报/">2018年度简报</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/02/学习笔记:初识httpd/">学习笔记:初识httpd</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/21/树莓派-docker-搭建-pi-dashboard/">树莓派 docker 搭建 pi-dashboard</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/Ubuntu安装-thinkpad-S2-无线网卡驱动/">Ubuntu 安装 thinkpad S2 无线网卡驱动</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/24/密码管理器是好文明/">密码管理器是好文明</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/07/博客双开，避免offline™/">博客双开，避免offline™</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/21/设定微信自动发送信息/">设定微信自动发送信息</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.ilemonrain.com/" title="极光星空" target="_blank">极光星空</a><ul></ul><a href="https://sometimesnaive.org/" title="南琴浪的博客" target="_blank">南琴浪的博客</a><ul></ul><a href="https://www.xzymoe.com/" title="XZYMOE'S BLOG" target="_blank">XZYMOE'S BLOG</a><ul></ul><a href="https://milkice.me" title="奶冰の冷藏室" target="_blank">奶冰の冷藏室</a><ul></ul><a href="https://www.mengclaw.com/" title="萌爪实验室" target="_blank">萌爪实验室</a><ul></ul><a href="https://www.mrkevin.net/" title="Mr.KevinH" target="_blank">Mr.KevinH</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2017 - 2019 <a href="/." rel="nofollow">johnpoint's blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
