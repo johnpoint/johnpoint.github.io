@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2019-01-22T13:42:48.430Z</updated>
+  <updated>2019-02-09T11:28:29.823Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github commit添加verified标识</title>
+    <link href="https://blog.lvcshu.com/2019/02/09/Github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/"/>
+    <id>https://blog.lvcshu.com/2019/02/09/Github-commit添加verified标识/</id>
+    <published>2019-02-09T11:07:00.000Z</published>
+    <updated>2019-02-09T11:28:29.823Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这是一篇笔记</p></blockquote><blockquote><p>内容：Github commit添加verified标识<br><a id="more"></a><br><img src="https://cdn.lvcshu.info/img/20190209002.png" alt="效果图"></p></blockquote><p>就是一直以来都 <del>懒得</del> 忙得没有将这个事情做好 <del>但是其实这个东西好像并没有什么用</del></p><h1 id="用户端"><a href="#用户端" class="headerlink" title="用户端"></a>用户端</h1><h2 id="生成-GPG-密钥对"><a href="#生成-GPG-密钥对" class="headerlink" title="生成 GPG 密钥对"></a>生成 GPG 密钥对</h2><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg <span class="comment">--gen-key</span></span><br></pre></td></tr></table></figure><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --<span class="keyword">list</span>-<span class="built_in">keys</span></span><br></pre></td></tr></table></figure><p>列出 GPG 密钥对<br><img src="https://cdn.lvcshu.info/img/20190209003.png" alt="列出 GPG 密钥对"></p><h2 id="导出-public-文件"><a href="#导出-public-文件" class="headerlink" title="导出 public 文件"></a>导出 public 文件</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpg --armor --output public-<span class="built_in">key</span>.txt --export E081E7D64************<span class="number">29B7080083</span></span><br><span class="line">gpg --armor --output private-<span class="built_in">key</span>.txt --export-secret-keys</span><br></pre></td></tr></table></figure><h2 id="配置本地-Git"><a href="#配置本地-Git" class="headerlink" title="配置本地 Git"></a>配置本地 Git</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.signingkey E081E7D64***********<span class="number">*29B7080083</span></span><br><span class="line">git<span class="built_in"> config </span>--global commit.gpgsign <span class="literal">true</span></span><br></pre></td></tr></table></figure><h1 id="Github-端"><a href="#Github-端" class="headerlink" title="Github 端"></a>Github 端</h1><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="keyword">public</span>-<span class="built_in">key</span>.txt</span><br></pre></td></tr></table></figure><p>将结果填入 <a href="https://github.com/settings/keys" target="_blank" rel="noopener">Personal settings-&gt;SSH and GPG keys</a></p><p>保存</p><p><img src="https://cdn.lvcshu.info/img/20190209004.png" alt="效果"></p><p>-EOF-</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这是一篇笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内容：Github commit添加verified标识&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Github" scheme="https://blog.lvcshu.com/tags/Github/"/>
+    
+      <category term="verified" scheme="https://blog.lvcshu.com/tags/verified/"/>
+    
+      <category term="笔记" scheme="https://blog.lvcshu.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>app推荐:notify &amp; fitness for mi band</title>
