@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  *
  * @package Maupassant
@@ -18,8 +19,8 @@ html, button, input, select, textarea,
   font-family: "PingFangSC-Regular", Helvetica, "Helvetica Neue", "Segoe UI", "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", sans-serif !important; }
 
 body {
-  background-color: #FFF;
-  color: #444;
+  background: url(https://cdn.lvcshu.info/img/bg.jpeg) no-repeat center center fixed;
+  background-attachment: fixed;
   font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,7 +29,11 @@ body {
 .body_container {
   padding: 0 60px;
   max-width: 1150px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 0;
+  /* 为不影响内容显示必须为最高层 */
+  position: relative;
+  overflow: hidden; }
 
 .content_container {
   padding-right: 50px;
