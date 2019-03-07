@@ -10,6 +10,7 @@ body {
 	line-height: 1.8em;
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
 	background: #fff;
+	opacity: 0;
 }
 img {border-width: 0px;}
 a{
