@@ -59,7 +59,7 @@ div {
 #header {
   padding: 58px 0 0;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid #818181;
   position: relative; }
   #header .site-name {
     margin-bottom: 40px; }
@@ -92,11 +92,11 @@ div {
       #header #nav-menu a:hover {
         border-bottom-color: #444; }
       #header #nav-menu a.current {
-        border: 1px solid #ddd;
+        border: 2px solid #818181;
         border-bottom-color: #fff; }
 
 #sidebar {
-  border-left: 1px solid #ddd;
+  border-left: 2px solid #818181;
   padding-left: 35px;
   margin-top: 40px;
   padding-bottom: 20px;
@@ -107,7 +107,7 @@ div {
       line-height: 2.7;
       margin-top: 0;
       font-size: 16px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 2px solid #818181;
       display: block;
       font-weight: normal; }
     #sidebar .widget .comments-title {
