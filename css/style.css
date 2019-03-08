@@ -104,7 +104,6 @@ div {
   #sidebar .widget {
     margin-bottom: 30px; }
     #sidebar .widget .widget-title {
-      color: #6E7173;
       line-height: 2.7;
       margin-top: 0;
       font-size: 16px;
@@ -122,8 +121,9 @@ div {
     #sidebar .widget .tagcloud {
       margin-top: 10px; }
       #sidebar .widget .tagcloud a {
-        line-height: 1.5;
-        padding: 5px; }
+        line-height: 2;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.2); }
     #sidebar .widget ul {
       list-style: none;
       padding: 0; }
@@ -1462,7 +1462,7 @@ em.search-keyword {
   margin: 2em 0 0;
   padding: 0.5em 1em;
   border-left: 3px solid #FF1700;
-  background-color: #F9F9F9;
+  background-color: rgba(0, 0, 0, 0.2);
   list-style: none; }
   .post-copyright li {
     margin: 8px 0; }
