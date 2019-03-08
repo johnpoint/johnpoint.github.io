@@ -299,7 +299,8 @@ div {
   text-align: center; }
   .page-navigator .page-number {
     display: inline-block;
-    margin: 0 5px 5px 0; }
+    margin: 0 5px 5px 0;
+    background-color: rgba(0, 0, 0, 0.2); }
   .page-navigator a, .page-navigator span {
     display: inline-block;
     height: 25px;
@@ -311,20 +312,22 @@ div {
       background: #F8F8F8;
       border-bottom-color: #D26911; }
     .page-navigator a.prev, .page-navigator span.prev {
-      float: left; }
+      float: left;
+      background-color: rgba(0, 0, 0, 0.2); }
       .page-navigator a.prev:before, .page-navigator span.prev:before {
         font-family: "FontAwesome";
         content: "\f100";
         padding-right: 0.3em; }
     .page-navigator a.next, .page-navigator span.next {
-      float: right; }
+      float: right;
+      background-color: rgba(0, 0, 0, 0.2); }
       .page-navigator a.next:after, .page-navigator span.next:after {
         font-family: "FontAwesome";
         content: "\f101";
         padding-left: 0.3em; }
   .page-navigator .current {
-    background: #F8F8F8;
-    border-bottom-color: #D26911; }
+    border-bottom-color: #D26911;
+    background-color: rgba(0, 0, 0, 0.4); }
   .page-navigator .space {
     border: none;
     padding: 5px 5px; }
