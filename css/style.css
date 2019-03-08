@@ -348,7 +348,8 @@ div {
   padding-bottom: .8em; }
   .post-archive h2 {
     margin: 0;
-    font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif; }
+    font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    background-color: rgba(0, 0, 0, 0.1); }
   .post-archive .date {
     padding-right: .7em; }
 
