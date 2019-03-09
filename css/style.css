@@ -619,6 +619,7 @@ pre {
 
 #process .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   background-color: rgba(0, 0, 0, 0.2);
+  display: none;
   position: relative;
   padding: 30px;
   margin-left: 60px;
@@ -631,7 +632,7 @@ pre {
 
 #process .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label::after {
   content: '';
-  display: block;
+  display: none;
   position: absolute;
   width: 0;
   height: 0;
