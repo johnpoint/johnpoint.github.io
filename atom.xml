@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2019-03-02T12:57:49.000Z</updated>
+  <updated>2019-03-17T07:15:39.172Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初探 Proxmox VE</title>
+    <link href="https://blog.lvcshu.com/2019/03/17/%E5%88%9D%E6%8E%A2Proxmox-VE/"/>
+    <id>https://blog.lvcshu.com/2019/03/17/初探Proxmox-VE/</id>
+    <published>2019-03-17T03:36:00.000Z</published>
+    <updated>2019-03-17T07:15:39.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直好奇主机商们是怎么把一台独立服务器分成 VPS 来售卖的，这几天就去玩了 下 Proxmox VE<br><a id="more"></a><br><img src="https://cdn.lvcshu.info/img/20190317001.jpg" alt=""></p><h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><ul><li>Ubuntu 18.04.2 桌面版</li><li>VirtualBox Graphical User Interface Version 5.2.18_Ubuntu r123745</li><li>Proxmox-ve_5.3-2</li></ul><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>由于我手头上实在是没有空余的机器，所以我向我的笔记本 <del>伸出了邪恶的手</del> ，新建了一个虚拟机，分配给它 4G 内存， 50G 硬盘 。安装时候直接在 <a href="https://www.proxmox.com/en/downloads" target="_blank" rel="noopener">官网-下载</a> 下载 <code>Proxmox VE 5.3 ISO Installer</code> iso 镜像，像平时安装系统一样安装上去，完全傻瓜式。</p><p>安装好以后就会提示你登录并给了你一个网页的地址，就像这样</p><p><img src="https://cdn.lvcshu.info/img/20190317002.png" alt=""></p><p>但是我们的是虚拟机所以需要在 <code>Settings-&gt;Network-&gt;Adapter 1-&gt;Advanced-&gt;Port Forwarding</code> 配置端口转发</p><p>然后在浏览器访问 <code>https://127.0.0.1:映射的端口</code> 就可以看见面板了。</p><p><img src="https://cdn.lvcshu.info/img/20190317003.png" alt=""></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>面板的右上角有 <code>[创建虚拟机]</code> <code>[创建 CT]</code> 的按钮，分别对应虚拟化技术 KVM 以及 OpenVZ（LXC？）</p><h2 id="镜像下载"><a href="#镜像下载" class="headerlink" title="镜像下载"></a>镜像下载</h2><h3 id="KVM"><a href="#KVM" class="headerlink" title="KVM"></a>KVM</h3><p>直接下载官方的安装镜像，并把镜像放置在  </p><p><code>/var/lib/vz/template/iso</code></p><h3 id="OpenVZ"><a href="#OpenVZ" class="headerlink" title="OpenVZ"></a>OpenVZ</h3><p>需要到 OpenVZ 官网的 <a href="https://wiki.openvz.org/Download/template/precreated" target="_blank" rel="noopener">下载页面</a> 下载</p><p>放置目录是</p><p><code>/var/lib/vz/template/cache</code></p><h2 id="网卡-amp-NAT"><a href="#网卡-amp-NAT" class="headerlink" title="网卡 &amp; NAT"></a>网卡 &amp; NAT</h2><p>由于我是虚拟机开虚拟机，并且没有公网ip，所以我们需要通过 NAT(<strong>N</strong>etwork <strong>A</strong>ddress <strong>T</strong>ranslation)来对流量转发，<del>不然就是单机游戏啦</del></p><h2 id="母鸡的配置"><a href="#母鸡的配置" class="headerlink" title="母鸡的配置"></a>母鸡的配置</h2><p>编辑文件 <code>/etc/network/interfaces</code> 添加</p><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">auto vmbr2</span><br><span class="line">iface vmbr4 inet static</span><br><span class="line">        address  <span class="number">10.97</span><span class="number">.0</span><span class="number">.254</span></span><br><span class="line">        netmask  <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br><span class="line">        bridge-ports none</span><br><span class="line">        bridge-stp off</span><br><span class="line">        bridge-fd <span class="number">0</span></span><br><span class="line">        post-up echo <span class="number">1</span> &gt; /<span class="keyword">proc</span>/sys/net/ipv4/ip_forward</span><br><span class="line"><span class="title">        post-up</span> iptables -t<span class="title"> nat</span> -A<span class="title"> POSTROUTING</span> -s '10.97.0.0/24' -o<span class="title"> vmbr0</span> -j<span class="title"> MASQUERADE</span></span><br><span class="line"><span class="title"></span> <span class="title">       post-down</span> iptables -t<span class="title"> nat</span> -D<span class="title"> POSTROUTING</span> -s '10.97.0.0/24' -o<span class="title"> vmbr0</span> -j<span class="title"> MASQUERADE</span></span><br><span class="line"><span class="title"></span> <span class="title">       post-up</span> iptables -t<span class="title"> nat</span> -A<span class="title"> PREROUTING</span> -i<span class="title"> vmbr0</span> -p<span class="title"> tcp</span> --dport 1024 -j<span class="title"> DNAT</span> --to 10.97.0.1:22</span><br><span class="line"><span class="title">        post-down</span> iptables -t<span class="title"> nat</span> -D<span class="title"> PREROUTING</span> -i<span class="title"> vmbr0</span> -p<span class="title"> tcp</span> --dport 1024 -j<span class="title"> DNAT</span> --to 10.97.0.1:22</span><br></pre></td></tr></table></figure><p>然后执行 <code>/etc/init.d/networking restart</code></p><p>就能添加一张网卡，这张网卡主要是用于接下来的小鸡的流量转发用的，他会把所有的流量转向母鸡可以连接外网的网卡。</p><h2 id="小鸡的配置"><a href="#小鸡的配置" class="headerlink" title="小鸡的配置"></a>小鸡的配置</h2><p><img src="https://cdn.lvcshu.info/img/20190317004.png" alt=""></p><p>按照上面的信息随机应变 (?) 就好，网管要填 <strong>母鸡的IP</strong></p><h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h1><ul><li>这里的配置主要是开 CT 容器，KVM 的或许以后会更 <del>咕咕咕</del></li><li>centos 7 的 OpenVZ 镜像貌似有问题，密码是没有办法输对的</li></ul><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>开了三台服务器～</p><p><img src="https://cdn.lvcshu.info/img/20190317005.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直好奇主机商们是怎么把一台独立服务器分成 VPS 来售卖的，这几天就去玩了 下 Proxmox VE&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Proxmox VE" scheme="https://blog.lvcshu.com/tags/Proxmox-VE/"/>
+    
+  </entry>
   
   <entry>
     <title>office 365 online 太好用啦!</title>
