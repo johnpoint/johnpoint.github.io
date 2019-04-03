@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2019-03-17T07:24:48.735Z</updated>
+  <updated>2019-04-03T11:22:11.195Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我们已经被微信捆住了</title>
+    <link href="https://blog.lvcshu.com/2019/04/03/%E6%88%91%E4%BB%AC%E5%B7%B2%E7%BB%8F%E8%A2%AB%E5%BE%AE%E4%BF%A1%E6%8D%86%E4%BD%8F%E4%BA%86/"/>
+    <id>https://blog.lvcshu.com/2019/04/03/我们已经被微信捆住了/</id>
+    <published>2019-04-03T09:41:00.000Z</published>
+    <updated>2019-04-03T11:22:11.195Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们已经被微信捆住了<a id="more"></a></p><h1 id="先看看"><a href="#先看看" class="headerlink" title="先看看"></a>先看看</h1><p><a href="https://weixin.qq.com/" target="_blank" rel="noopener">微信，是一个生活方式</a></p><p><a href="https://blog.yitianshijie.net/2018/02/02/wechat-equals-gfw/" target="_blank" rel="noopener">微信= GFW – 一天世界</a></p><h1 id="先说好话"><a href="#先说好话" class="headerlink" title="先说好话"></a>先说好话</h1><p><del>不可否认的是腾讯的微信的产生的确是即时通信软件的一个巨大的进步</del> 不对啊…其实都知道微信的一些功能其实并不是自己原创的，但是还是得益于微信的诞生使得熟人社交走进了我们的视线，balabala懒得吹下去了</p><h1 id="各种群"><a href="#各种群" class="headerlink" title="各种群"></a>各种群</h1><p>就我的感觉而言，微信<strong>不是</strong>一个恰当的通知发放的平台，有几点原因：</p><ul><li>成员权限管理缺失</li><li>同时只能容纳一条群通知</li><li>消息各平台不能同步</li><li>消息无云端备份</li><li>消息排版几乎没有</li></ul><p>首先，群员权限管理严重残废导致微信群内是<strong>不能</strong>进行禁言的操作的。</p><p>而且，群友们显而易见的是一个比较容易忽略禁言令的群体。</p><p>从而，导致了明明群名挂着的 <strong>禁言</strong> 形同虚设，通知与刷屏齐飞，往往不能很方便的看到通知。</p><p>然后，微信的群公告是藏在微信群详情的菜单里面的，而展现在对话区域的内容与其他一般的聊天内容相比只是多出了 <code>@所有人</code> 这几个字，没有明显的<strong>区分度</strong>。</p><p>更别说微信自己引以为傲的不保存聊天记录所以不能做到云备份聊天数据了，<a href="http://www.sohu.com/a/287819049_162645" target="_blank" rel="noopener">保存没有保存腾讯自己心里应该有数</a>，就造成了微信的聊天记录其实是<strong>不可靠</strong>的。</p><h1 id="各种被要求关注的公众号"><a href="#各种被要求关注的公众号" class="headerlink" title="各种被要求关注的公众号"></a>各种被要求关注的公众号</h1><p>就以共青团员要关注的公众号来说，其实感觉已经比较过分了，从一开始的 <strong>广东共青团</strong> 到 <strong>广东青年之声</strong> 再到 <strong>广东学联</strong>，做个团员也太麻烦了吧，如果说关注一个公众号进行通知推送尚可理解，但是 <strong>强迫</strong> 关注三个公众号未免有点过分</p><h1 id="微信的封闭"><a href="#微信的封闭" class="headerlink" title="微信的封闭"></a>微信的封闭</h1><p>不可否认的是微信的生态是业内的领先水平，但是对于我这样的自由爱好者来说，微信的生态从另一种层面来说就是一种封闭的表现，从微信聊天到公众号的休闲阅读再到微信支付，体验的一致感是有了，但是流量一经微信的入口，就几乎没有任何出口再次让流量进入自由的互联网了，微信仿佛互联网上的孤岛，看似链接了互联网的丰富内容，其实你永远处于微信的牢笼里。</p><h1 id="微信真的成为了生活方式"><a href="#微信真的成为了生活方式" class="headerlink" title="微信真的成为了生活方式"></a>微信真的成为了生活方式</h1><p>最后的最后，我是真的没有想到，真的会有人<strong>发短信</strong>让我去<strong>看微信</strong>…</p><p><img src="https://cdn.lvcshu.info/img/20190403001.jpg" alt=""></p><p>微信像一条绳子，先把一部分人捆住了，然后再让那一部分人把另一部分人捆住。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们已经被微信捆住了
+    
+    </summary>
+    
+    
+      <category term="微信" scheme="https://blog.lvcshu.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="封闭" scheme="https://blog.lvcshu.com/tags/%E5%B0%81%E9%97%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>初探 Proxmox VE</title>
