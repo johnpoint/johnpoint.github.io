@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.lvcshu.com/movie/index.html</loc>
+    
+    <lastmod>2019-04-06T13:06:25.881Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.lvcshu.com/2019/04/03/%E6%88%91%E4%BB%AC%E5%B7%B2%E7%BB%8F%E8%A2%AB%E5%BE%AE%E4%BF%A1%E6%8D%86%E4%BD%8F%E4%BA%86/</loc>
     
     <lastmod>2019-04-03T11:22:11.195Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2019-03-09T05:45:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.lvcshu.com/movie/index.html</loc>
-    
-    <lastmod>2019-03-03T13:39:48.000Z</lastmod>
     
   </url>
   
