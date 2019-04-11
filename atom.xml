@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2019-04-03T11:22:11.195Z</updated>
+  <updated>2019-04-11T13:48:26.918Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客支持 TLS 1.3</title>
+    <link href="https://blog.lvcshu.com/2019/04/11/%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81TLS-1.3/"/>
+    <id>https://blog.lvcshu.com/2019/04/11/博客支持TLS-1.3/</id>
+    <published>2019-04-11T01:36:00.000Z</published>
+    <updated>2019-04-11T13:48:26.918Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客终于在无数次的 想配置 TLS1.3 和 “啊好麻烦啊，不上了” 中一直没有上 TLS1.3<br><a id="more"></a></p><p>借着更新 <a href="https://github.com/johnpoint/DNMP-lvcshu" target="_blank" rel="noopener">DNMP-lvcshu</a> 项目中的 NGINX 模块，顺便把 TLS1.3 的支持给加上了，其实也没有做啥改变，就把 NGINX 的版本升级到了 <code>1.15.11</code> 就好了 <del>其实是我太菜</del></p><p>然后项目里 NGINX 的本来基于 UBUNTU 的镜像换成了 alpine 版本的镜像，体积： 45MB –&gt; 7MB，更加轻量化了呢。</p><p>最麻烦的还是修改配置文件，毕竟每一个网站都要手动加上 TLS1.3 的相关配置，看起来分发 NGINX 配置文件的小工具也要提上日程了呢（<del>四面杵鸽.jpg</del></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;博客终于在无数次的 想配置 TLS1.3 和 “啊好麻烦啊，不上了” 中一直没有上 TLS1.3&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="https" scheme="https://blog.lvcshu.com/tags/https/"/>
+    
+      <category term="TLS" scheme="https://blog.lvcshu.com/tags/TLS/"/>
+    
+      <category term="DNMP" scheme="https://blog.lvcshu.com/tags/DNMP/"/>
+    
+      <category term="nginx" scheme="https://blog.lvcshu.com/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>我们已经被微信捆住了</title>
