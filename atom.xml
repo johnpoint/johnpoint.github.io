@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2019-05-10T05:47:04.226Z</updated>
+  <updated>2019-05-10T05:47:19.869Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.lvcshu.com/2019/05/10/Android-Q-%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
     <id>https://blog.lvcshu.com/2019/05/10/Android-Q-初体验/</id>
     <published>2019-05-10T05:29:57.000Z</published>
-    <updated>2019-05-10T05:47:04.226Z</updated>
+    <updated>2019-05-10T05:47:19.869Z</updated>
     
-    <content type="html"><![CDATA[<p>最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中<a id="more"></a>开心!!</p><p>然后今天在刷入了 Android Q beta3 OOS 版后发现了不少的问题，毕竟 BETA 嘛，还不是正式版本，也可以理解，主要我能体验到的几点是:</p><ul><li>通知栏图标太大了</li><li>快捷键 <strong>只有</strong> 三大金刚 说好的全面屏手势呢？</li><li>设置了 PIN 码以后如果重启手机的话是 <strong>不能</strong> 成功的通过验证的</li><li>指纹解锁是 <strong>无效</strong> 的</li><li>SmartLock 内 <strong>没有</strong> 面部解锁</li><li>Google Assistant <strong>不能</strong> 通过 ‘OK，google’ 唤醒</li><li>通知采用的是右滑消除，左滑会有延迟提醒等更多的功能，行为模式需要一定的时间习惯</li><li>权限管理细致了许多</li><li>流畅度在我的体验里面没有特别的改变</li><li>USB 传文件似乎会导致系统错误？？（遇到过一次没有严格证实</li><li>动画的渐变变得更好看了</li><li>似乎没有找到隐藏刘海的选项</li></ul><h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><p>记录下 adb 跳过手机开机设置向导的方法，实测有效!!</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adb shell<span class="built_in"> settings </span>put secure user_setup_complete 1</span><br><span class="line">adb shell<span class="built_in"> settings </span>put global device_provisioned 1</span><br></pre></td></tr></table></figure><p>然后重启</p><blockquote><p>此方法来源于: <a href="https://www.jianshu.com/p/1776170650d5" target="_blank" rel="noopener">Android 跳过Gapps开机引导</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中<a id="more"></a></p><p>开心!!</p><p>然后今天在刷入了 Android Q beta3 OOS 版后发现了不少的问题，毕竟 BETA 嘛，还不是正式版本，也可以理解，主要我能体验到的几点是:</p><ul><li>通知栏图标太大了</li><li>快捷键 <strong>只有</strong> 三大金刚 说好的全面屏手势呢？</li><li>设置了 PIN 码以后如果重启手机的话是 <strong>不能</strong> 成功的通过验证的</li><li>指纹解锁是 <strong>无效</strong> 的</li><li>SmartLock 内 <strong>没有</strong> 面部解锁</li><li>Google Assistant <strong>不能</strong> 通过 ‘OK，google’ 唤醒</li><li>通知采用的是右滑消除，左滑会有延迟提醒等更多的功能，行为模式需要一定的时间习惯</li><li>权限管理细致了许多</li><li>流畅度在我的体验里面没有特别的改变</li><li>USB 传文件似乎会导致系统错误？？（遇到过一次没有严格证实</li><li>动画的渐变变得更好看了</li><li>似乎没有找到隐藏刘海的选项</li></ul><h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><p>记录下 adb 跳过手机开机设置向导的方法，实测有效!!</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adb shell<span class="built_in"> settings </span>put secure user_setup_complete 1</span><br><span class="line">adb shell<span class="built_in"> settings </span>put global device_provisioned 1</span><br></pre></td></tr></table></figure><p>然后重启</p><blockquote><p>此方法来源于: <a href="https://www.jianshu.com/p/1776170650d5" target="_blank" rel="noopener">Android 跳过Gapps开机引导</a></p></blockquote>]]></content>
     
     <summary type="html">
     
