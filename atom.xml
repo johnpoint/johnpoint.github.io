@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.lvcshu.com/"/>
-  <updated>2019-06-06T13:59:01.317Z</updated>
+  <updated>2019-06-06T14:00:27.020Z</updated>
   <id>https://blog.lvcshu.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Ubuntu 安装 rtl8821ce 驱动</title>
-    <link href="https://blog.lvcshu.com/2019/06/06/ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/"/>
-    <id>https://blog.lvcshu.com/2019/06/06/ubuntu安装rtl8821ce驱动/</id>
+    <link href="https://blog.lvcshu.com/2019/06/06/Ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/"/>
+    <id>https://blog.lvcshu.com/2019/06/06/Ubuntu安装rtl8821ce驱动/</id>
     <published>2019-06-06T13:51:00.000Z</published>
-    <updated>2019-06-06T13:59:01.317Z</updated>
+    <updated>2019-06-06T14:00:27.020Z</updated>
     
     <content type="html"><![CDATA[<p><del>电脑又出问题了</del><a id="more"></a></p><p>升级了 ubuntu 19.04 以后我发现因为内核的更新，<a href="https://blog.lvcshu.com/2018/08/25/Ubuntu安装-thinkpad-S2-无线网卡驱动/">之前的驱动安装方法</a> 已经失效了，所以就去寻找了新的安装方法</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><ul><li><a href="https://github.com/tomaspinho/rtl8821ce" target="_blank" rel="noopener">tomaspinho/rtl8821ce</a></li></ul><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install dkms git -y</span><br><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/tomaspinho/rtl8821ce</span><br><span class="line">cd rtl8821ce</span><br></pre></td></tr></table></figure><p><strong>注意：之后就要断网，我是直接关掉了网络服务</strong></p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dkms-<span class="keyword">install</span>.sh</span><br></pre></td></tr></table></figure><p>完成后加载模块<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe <span class="number">8821</span>ce</span><br></pre></td></tr></table></figure></p><p>完成撒花～</p>]]></content>
     
