@@ -49,7 +49,7 @@ after_success:
 - git init
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
-- git push --quiet https://$REPO_TOKEN@github.com/johnpoint/johnpoint.github.io
+- git push --quiet -f https://$REPO_TOKEN@github.com/johnpoint/johnpoint.github.io
   master
 ```
 
