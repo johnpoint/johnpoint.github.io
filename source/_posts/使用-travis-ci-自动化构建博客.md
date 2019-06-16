@@ -45,11 +45,14 @@ script:
 - hexo clean
 - hexo generate
 after_success:
-- cd ./public
-- git init
+- mkdir push
+- cd ./push
+- git clone https://github.com/johnpoint/johnpoint.github.io .
+- rm * -rf
+- cp ../public/* . -r
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
-- git push --quiet -f https://$REPO_TOKEN@github.com/johnpoint/johnpoint.github.io
+- git push --quiet https://$REPO_TOKEN@github.com/johnpoint/johnpoint.github.io
   master
 ```
 
