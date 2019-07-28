@@ -4,7 +4,7 @@ author: johnpoint
 date: 2019-05-10 13:29:57
 tags:
 - Android
-- 初体验
+- 体验
 - 折腾
 ---
 
