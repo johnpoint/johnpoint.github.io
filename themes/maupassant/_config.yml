@@ -76,12 +76,6 @@ menu:
   - page: history
     directory: timeline/
     icon: fa-book
-  - page: shortsay
-    directory: shortsay/
-    icon: fa-tencent-weibo
-  - page: rss
-    directory: atom.xml
-    icon: fa-rss
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
