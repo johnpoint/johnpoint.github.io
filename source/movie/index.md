@@ -1,5 +1,5 @@
 ---
-title: 书 / 剧 / 影
+title: 书 / 影
 author: johnpoint
 date: 2019-02-08 14:20:37
 layout: page
