@@ -35,11 +35,11 @@ menu:
 widget:
   Tags: true
   Categories: false
-  Custom: false
+  Custom: true
 
-widget_fr:
+widget_custom:
     title: 友情链接
-    content: <a href="https://www.ilemonrain.com/">极光星空</a>
+    content: <a href="https://www.ilemonrain.com/">极光星空</a><br><a href="https://ovear.info/">Ovear's Blog</a><br><a href="https://sometimesnaive.org/">南琴浪的博客</a><br><a href="https://www.xzymoe.com/">XZYMOE'S BLOG</a><br><a href="https://milkice.me">奶冰の冷藏室</a><br><a href="https://www.mengclaw.com/">萌爪实验室</a><br><a href="https://www.mrkevin.net/">Mr.KevinH</a><br><a href="https://0x.mk/">双草酸酯的博客</a><br><a href="https://www.wevg.org">Vigorous Pro</a><br><a href="https://daily.elepover.com/">Elepover's Blog</a><br><a href="https://blingwang.cn">派兹的小站</a><br><a href="https://channel.Justf.space">Justf‘s Channel</a><br><a href="https://www.swung0x48.com">Cyberspace of Swung</a><br><a href="https://blog.fsky7.com">FlyingSky's Blog</a><br><a href="https://1a23.com">1A23 Studio</a><br><a href="https://ihcr.top">翰林的小站</a>
 
 # ===========================================
 # Theme Settings
