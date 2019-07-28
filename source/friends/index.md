@@ -6,6 +6,16 @@ layout: page
 donate: true
 ---
 
+# 我的友链信息
+|||
+| --- | --- |
+|url|https://blog.lvcshu.com|
+|title| Johnpoint's blog|
+|description| “折腾是第一生产力（不是”|
+|avatar|https://cdn.lvcshu.info/img/avatar.jpg|
+
+# 我的友链
+
 排名不分先后~
 ~~好像是按时间先后?~~
 
@@ -25,3 +35,5 @@ donate: true
 - [FlyingSky's Blog](https://blog.fsky7.com)
 - [1A23 Studio](https://1a23.com)
 - [翰林的小站](https://ihcr.top)
+
+
