@@ -61,9 +61,6 @@ post_copyright:
   copyright_text: 本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。 ## Your copyright text, e.g. The author owns the copyright, please indicate the source reproduced.
 
 menu:
-  - page: home
-    directory: .
-    icon: fa-home
   - page: archive
     directory: archives/
     icon: fa-archive
@@ -73,9 +70,12 @@ menu:
   - page: movie
     directory: movie/
     icon: fa-film
-  - page: history
+  - page: timeline
     directory: timeline/
     icon: fa-book
+  - page: friends
+    directory: friends/
+    icon: fa-user-friends
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - search
