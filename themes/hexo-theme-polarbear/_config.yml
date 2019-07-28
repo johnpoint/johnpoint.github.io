@@ -38,8 +38,8 @@ widget:
   Custom: false
 
 widget_custom:
-    title: Test
-    content: <p>testing...</p>
+    title: 友情链接
+    content: <a href="https://www.ilemonrain.com/">极光星空</a>
 
 # ===========================================
 # Theme Settings
