@@ -18,6 +18,15 @@ tags:
 - 支持较为全面
 - 跨平台
 - 可以自行搭建 -> 我自建的[在这](https://keepass.lvcshu.com)
+- 有自动备份
 
 缺点：
 - 缺少自动填充功能
+
+上一些图：
+
+![解锁界面](https://cdn.lvcshu.info/img/20190728001.png)
+
+![主界面](https://cdn.lvcshu.info/img/20190728002.png)
+
+![设定 & 备份](https://cdn.lvcshu.info/img/20190728003.png)
