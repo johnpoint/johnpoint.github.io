@@ -17,8 +17,8 @@ before_install:
 install:
 - yarn
 script:
-- cd theme && git clone https://github.com/johnpoint/hexo-theme-XvA XvA
-- mv theme/_config.yml theme/XvA
+- cd themes && git clone https://github.com/johnpoint/hexo-theme-XvA XvA
+- mv themes/_config.yml themes/XvA
 - npm install hexo-generator-feed --save
 - hexo clean
 - hexo generate
