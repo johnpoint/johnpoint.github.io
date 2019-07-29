@@ -23,6 +23,7 @@ script:
 - hexo clean
 - hexo generate
 after_success:
+- cd ../
 - mkdir push
 - cd ./push
 - git clone https://github.com/johnpoint/johnpoint.github.io .
