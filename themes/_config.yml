@@ -49,3 +49,9 @@ widget:
         url: https://1a23.com
       - title: 翰林的小站
         url: https://ihcr.top
+
+comment:
+  disqus:
+    enable: true
+    shortname: johnpoints-blog-hexo
+    count: true
