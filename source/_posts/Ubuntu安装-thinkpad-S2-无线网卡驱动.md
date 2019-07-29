@@ -19,7 +19,7 @@ Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC
 由[这个帖子里](http://forum.ubuntu.org.cn/viewtopic.php?f=116&t=485936)的大佬在[这里](https://unix.stackexchange.com/questions/379049/realtek-wifi-driver-problem-in-linux-mint-18-2)请教到的大佬给出解决方法
 
 原文如下：
-```
+```bash
 Worked solution (Requirements: kernel >=4.11) :
 
 (UPD: In the latest release of endlessm you need kernel version 4.15)
@@ -41,7 +41,7 @@ $ sudo modprobe -a 8821ce
 在某次 ubuntu 的内核升级了以后，我发现我的无线网卡驱动 **又没了** ~~马上扔掉电脑~~ 于是我想到了使用脚本进行安装，这样就可以在下一次遇到这样的问题时快速解决！
 
 脚本内容：
-```
+```bash
 #!/bin/bash
 
 mv rtl8821ce.zip /home/johnpoint

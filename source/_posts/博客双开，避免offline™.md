@@ -19,7 +19,8 @@ tags:
 
 # 修改 站点配置
 在 站点根目录 下的 `_config.yml` 寻找 `deploy` 关键词，将其 整部分 修改为：
-```
+
+```yaml
 deploy:
   type: git
   repo: GitHub上仓库的完整路径包括 .git
@@ -29,12 +30,14 @@ repo 的链接一定要是 ssh 而不是 https 的！！！
 
 # 配置 git
 生成 ssh 密钥
-```
+
+```bash
 git config --global user.name "你的GitHub用户名"
 git config --global user.email "你的GitHub注册邮箱"
 ```
 生成ssh密钥文件：
-```
+
+```bash
 ssh-keygen -t rsa -C "你的GitHub注册邮箱"
 ```
 然后直接三个回车即可，默认不需要设置密码

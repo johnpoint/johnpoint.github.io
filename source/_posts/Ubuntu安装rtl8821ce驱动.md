@@ -18,7 +18,7 @@ tags:
 
 # 安装
 
-```
+```bash
 sudo apt install dkms git -y
 git clone https://github.com/tomaspinho/rtl8821ce
 cd rtl8821ce
@@ -26,11 +26,11 @@ cd rtl8821ce
 
 **注意：之后就要断网，我是直接关掉了网络服务**
 
-```
+```bash
 ./dkms-install.sh
 ```
 完成后加载模块
-```
+```bash
 sudo modprobe 8821ce
 ```
 

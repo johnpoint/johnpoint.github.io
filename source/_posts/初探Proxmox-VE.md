@@ -62,7 +62,7 @@ tags:
 
 编辑文件 `/etc/network/interfaces` 添加
 
-```
+```bash
 auto vmbr2
 iface vmbr4 inet static
         address  10.97.0.254

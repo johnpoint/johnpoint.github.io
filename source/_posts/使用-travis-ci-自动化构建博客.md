@@ -19,7 +19,7 @@ tags:
 
 文件内容如下：
 
-```
+```yaml
 language: node_js
 node_js: stable
 branches:

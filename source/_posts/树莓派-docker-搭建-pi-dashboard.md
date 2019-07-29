@@ -14,7 +14,7 @@ tags:
 # 安装docker
 这里参考的是[docker 中文文档](https://yeasy.gitbooks.io/docker_practice/install/raspberry-pi.html)的安装过程
 诶，用官方脚本一步搞定嘞
-```
+```bash
 curl -fsSL get.docker.com -o get-docker.sh
 sudo sh get-docker.sh --mirror Aliyun
 ```
@@ -23,7 +23,7 @@ sudo sh get-docker.sh --mirror Aliyun
 
 # 使用docker一步搞定 pi-dashboard
 
-```
+```bash
 sudo docker run -d --name docker-pi-dashboard -e 'LISTEN=1024' --net=host ecat/docker-pi-dashboard
 ```
 来自[一键部署pi dashboard](https://zhuanlan.zhihu.com/p/34923907)

@@ -36,31 +36,31 @@ tags:
 
 ## 验证网络连接
 
-```
+```bash
 ping archlinux.org
 ```
 
 ## 更新系统时间
 
-```
+```bash
 timedatectl set-ntp true
 ```
 
 ### 设置分区
 
 #### 硬盘分区
-```
+```bash
 fdisk /dev/sda
 ```
 
-```
+```bash
 输入 n 新建分区
 然后一路回车默认
 最后 w 改变写入硬盘
 ```
 #### 格式化分区
 
-```
+```bash
 mkfs.ext4 /dev/sda1
 ```
 
@@ -70,7 +70,7 @@ mkfs.ext4 /dev/sda1
 
 #### 挂载分区
 
-```
+```bash
 mount /dev/sda1 /mnt
 ```
 
@@ -81,7 +81,7 @@ mount /dev/sda1 /mnt
 我选择阿里的源
 
 编辑源列表
-```
+```bash
 vim /etc/pacman.d/mirrorlist
 ```
 添加
@@ -90,49 +90,49 @@ Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
 ```
 ### 安装基础系统
 
-```
+```bash
 pacstrap /mnt base base-devel
 ```
 
 ### 设置新安装的系统
 
-```
+```bash
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 切换到新系统
-```
+```bash
 arch-chroot /mnt
 ```
 #### 安装必要的软件
 
-```
+```bash
 pacman -S vim nano
 ```
 
 #### 设置时区
-```
+```bash
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 ```
 
 #### 设置本地化文本编码
 
-```
+```bash
 nano /etc/locale.gen
 ```
 加入
-```
+```bash
 zh_CN.UTF-8 UTF-8
 ```
 执行
-```
+```bash
 locale-gen
 ```
-```
+```bash
 nano /etc/locale.conf
 ```
 加入
-```
+```bash
 LANG=en_US.UTF-8
 ```
 
@@ -140,11 +140,11 @@ LANG=en_US.UTF-8
 
 编辑 `/etc/hostname`
 
-```
+```bash
 nano /etc/hosts
 ```
 
-```
+```bash
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   arch.localdomain  arch
@@ -154,13 +154,13 @@ nano /etc/hosts
 
 ##### 修改 root 密码
 
-```
+```bash
 passwd
 ```
 
 ##### 添加账户
 
-```
+```bash
 useradd -m johnpoint
 passwd johnpoint
 ```
@@ -168,13 +168,13 @@ passwd johnpoint
 #### 设置开机引导
 
 ##### 安装 Grub
-```
+```bash
 pacman -S grub
 ```
 
 ##### 部署 Grub
 
-```
+```bash
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```

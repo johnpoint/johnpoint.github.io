@@ -19,31 +19,31 @@ tags:
 
 # 用户端
 ## 生成 GPG 密钥对
-```
+```bash
 gpg --gen-key
 ```
 
-```
+```bash
 gpg --list-keys
 ```
 列出 GPG 密钥对
 ![列出 GPG 密钥对](https://cdn.lvcshu.info/img/20190209003.png)
 
 ## 导出 public 文件
-```
+```bash
 gpg --armor --output public-key.txt --export E081E7D64************29B7080083
 gpg --armor --output private-key.txt --export-secret-keys
 ```
 
 ## 配置本地 Git
 
-```
+```bash
 git config --global user.signingkey E081E7D64************29B7080083
 git config --global commit.gpgsign true
 ```
 
 # Github 端
-```
+```bash
 cat public-key.txt
 ```
 将结果填入 [Personal settings->SSH and GPG keys](https://github.com/settings/keys)

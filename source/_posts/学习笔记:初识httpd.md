@@ -18,7 +18,8 @@ tags:
 
 ## 学习过程
 ### 安装
-```
+
+```bash
 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm
 
 yum -y install yum-utils
@@ -28,16 +29,25 @@ yum -y install httpd  mysql  mysql-server  mysql-connector-odbc  mysql-devel  li
 
 yum -y install php  php-mcrypt  php-cli  php-gd  php-curl  php-mysql  php-zip  php-fileinfo  php-fpm  php-xml  php-mbstring  php-ldap  php-xmlrpc  php-devel
 ```
-设置开机启动
 
+设置开机启动
+```bash
 chkconfig httpd on  
 chkconfig mysqld on
+```
+
 建立虚拟主机文件夹
+```bash
 cd /home
 mkdir www
+```
+
 修改httpd配置文件
+
+```bash
 cd /etc/httpd/conf
 vi httpd.conf
+```
 加入
 
 Include /home/www/vhost.conf
