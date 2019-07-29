@@ -55,3 +55,8 @@ comment:
     enable: true
     shortname: johnpoints-blog-hexo
     count: true
+
+analytics:
+  google:
+    enable: true
+    id: UA-122182397-1
