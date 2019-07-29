@@ -5,7 +5,7 @@
     <%- partial('partial/header') %>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="col-md-8">
                 <article class="post">
                     <div class="post-title">
                         <div class="page-header">
@@ -21,15 +21,17 @@
                         <%- partial('partial/copyright') %>
                         <% } %>
                     </div>
-                    <div id="footer">
-                        <%- partial('partial/footer') %>
-                    </div>
                 </article>
+                <br>
             </div>
-            <div class="col-xs-6 col-md-4">
+            <div class="col-md-4">
                 <%- partial('partial/postinfo') %>
                 <%- partial('partial/sidebar') %>
             </div>
+
+        </div>
+        <div id="footer">
+            <%- partial('partial/footer') %>
         </div>
     </div>
 </body>

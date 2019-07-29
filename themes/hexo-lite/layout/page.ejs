@@ -17,16 +17,17 @@
                     <div class="post-content">
                         <%- page.content %>
                     </div>
-                    <div id="footer">
-                        <%- partial('partial/footer') %>
-                    </div>
                 </article>
             </div>
             <% if(page.sidebar){ %>
+            <br>
             <div class="col-xs-6 col-md-4">
                 <%- partial('partial/sidebar') %>
             </div>
             <% } %>
+        </div>
+        <div id="footer">
+            <%- partial('partial/footer') %>
         </div>
     </div>
 </body>

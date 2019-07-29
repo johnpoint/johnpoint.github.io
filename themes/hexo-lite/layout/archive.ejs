@@ -8,14 +8,10 @@
             <h1>Archive <small>All articles</small></h1>
         </div>
         <section class="archive">
-            <ul class="post-archive">
                 <% page.posts.each(function (post) { %>
-                <li class="post-item">
                     <span class="post-date"><%= date(post.date, "YYYY-MM-DD") %></span>
-                    <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-                </li>
+                    <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a><br>
                 <% }) %>
-            </ul>
         </section>
         <%- partial('partial/paginator') %>
         <div id="footer">
