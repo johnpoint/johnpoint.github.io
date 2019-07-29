@@ -5,7 +5,6 @@
     <div class="panel-body">
         <strong>作者: </strong><%= theme.post_copyright.author %><br>
         <strong>发布日期: </strong><%- date(page.date,'YYYY-MM-DD') %><br>
-        <strong>最近更新: </strong><%- date(page.updated,'YYYY-MM-DD') %><br>
         <strong>标签: </strong>
         <% page.tags.forEach(function(tag){ %>
         <a href="/<%= tag.path %>">#<%- tag.name %></a>
