@@ -54,7 +54,6 @@ comment:
   disqus:
     enable: true
     shortname: johnpoints-blog-hexo
-    count: true
 
 analytics:
   google:
