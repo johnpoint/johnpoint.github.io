@@ -81,7 +81,7 @@ deploy:
   type:
 
 Plugins:
-- hexo-generator-sitemap
+- hexo-lite
 
 sitemap:
     path: sitemap.xml
