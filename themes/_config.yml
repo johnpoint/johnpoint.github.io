@@ -1,0 +1,49 @@
+menu:
+  Home: /
+  Archives: /archives
+  B & M: /movie
+  About: /about
+  Friends: /friends post_copyright:
+  enable: true
+  author: johnpoint
+  copyright_text: 本作品采用<a rel="license" 
+href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 
+4.0 国际许可协议</a>进行许可。 widget:
+  tag:
+    enable: true
+    count: 30
+  friends:
+    enable: true
+    list:
+      - title: 极光星空
+        url: https://www.ilemonrain.com/
+      - title: Ovear's Blog
+        url: https://ovear.info/
+      - title: 南琴浪的博客
+        url: https://sometimesnaive.org/
+      - title: XZYMOE'S BLOG
+        url: https://www.xzymoe.com/
+      - title: 奶冰の冷藏室
+        url: https://milkice.me
+      - title: 萌爪实验室
+        url: https://www.mengclaw.com/
+      - title: Mr.KevinH
+        url: https://www.mrkevin.net/
+      - title: 双草酸酯的博客
+        url: https://0x.mk/
+      - title: Vigorous Pro
+        url: https://www.wevg.org
+      - title: Elepover's Blog
+        url: https://daily.elepover.com/
+      - title: 派兹的小站
+        url: https://blingwang.cn
+      - title: Justf‘s Channel
+        url: https://channel.Justf.space
+      - title: Cyberspace of Swung
+        url: https://www.swung0x48.com
+      - title: FlyingSky's Blog
+        url: https://blog.fsky7.com
+      - title: 1A23 Studio
+        url: https://1a23.com
+      - title: 翰林的小站
+        url: https://ihcr.top
