@@ -123,6 +123,7 @@ comment:
   disqus:
     enable: true
     shortname: johnpoints-blog-hexo
+    lazyload: true
 
 analytics:
   google:
