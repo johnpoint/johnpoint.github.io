@@ -129,7 +129,7 @@ analytics:
     enable: true
     id: UA-122182397-1
   busuanzi: # 不蒜子网站统计
-    enable: true
+    enable: false
     text:
       head: 你是本站第 # 描述 示例:本站访客数 Example: view
       end: 位小伙伴~ # 描述 单位 示例:人次 Example: times
