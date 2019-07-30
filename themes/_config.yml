@@ -16,39 +16,106 @@ widget:
     count: 30
   friends:
     enable: true
-    list:
-      - title: 极光星空
-        url: https://www.ilemonrain.com/
-      - title: Ovear's Blog
-        url: https://ovear.info/
-      - title: 南琴浪的博客
-        url: https://sometimesnaive.org/
-      - title: XZYMOE'S BLOG
-        url: https://www.xzymoe.com/
-      - title: 奶冰の冷藏室
-        url: https://milkice.me
-      - title: 萌爪实验室
-        url: https://www.mengclaw.com/
-      - title: Mr.KevinH
-        url: https://www.mrkevin.net/
-      - title: 双草酸酯的博客
-        url: https://0x.mk/
-      - title: Vigorous Pro
-        url: https://www.wevg.org
-      - title: Elepover's Blog
-        url: https://daily.elepover.com/
-      - title: 派兹的小站
-        url: https://blingwang.cn
-      - title: Justf‘s Channel
-        url: https://channel.Justf.space
-      - title: Cyberspace of Swung
-        url: https://www.swung0x48.com
-      - title: FlyingSky's Blog
-        url: https://blog.fsky7.com
-      - title: 1A23 Studio
-        url: https://1a23.com
-      - title: 翰林的小站
-        url: https://ihcr.top
+
+friends:
+  pagetitle: 小伙伴们
+  list:
+    - title: 极光星空
+      url: https://www.ilemonrain.com/
+      img: https://cdn.lvcshu.info/img/friends/ilemonrain.png
+      desc: 探索星空，一路前行
+      sidebar: true
+      page: true
+    - title: Ovear's Blog
+      url: https://ovear.info/
+      img: https://cdn.lvcshu.info/img/friends/any.jpg
+      desc: 
+      sidebar: true
+      page: true
+    - title: 南琴浪的博客
+      url: https://sometimesnaive.org/
+      img: https://cdn.lvcshu.info/img/friends/any.jpg
+      desc: 
+      sidebar: true
+      page: true
+    - title: XZYMOE'S BLOG
+      url: https://www.xzymoe.com/
+      img: https://cdn.lvcshu.info/img/friends/xzymoe.jpg
+      desc: 关注互联网, 记录MOE的互联网生活.
+      sidebar: true
+      page: true
+    - title: 奶冰の冷藏室
+      url: https://milkice.me
+      img: https://cdn.lvcshu.info/img/friends/milkice.jpg
+      desc: Maybe a way to explore the world?
+      sidebar: true
+      page: true
+    - title: 萌爪实验室
+      url: https://www.mengclaw.com/
+      img: https://cdn.lvcshu.info/img/friends/wolfskylake.jpg
+      desc: 一只雪狗狗的杂货铺
+      sidebar: true
+      page: true
+    - title: Mr.KevinH
+      url: https://www.mrkevin.net/
+      img: https://cdn.lvcshu.info/img/friends/kevin.jpg
+      desc: 咨询、技术、分享
+      sidebar: false
+      page: true
+    - title: 双草酸酯的博客
+      url: https://0x.mk/
+      img: https://cdn.lvcshu.info/img/friends/0xmk.png
+      desc: 
+      sidebar: true
+      page: true
+    - title: Vigorous Pro
+      url: https://www.wevg.org
+      img: https://cdn.lvcshu.info/img/friends/Vigorous.png
+      desc: The world can always use more heroes.
+      sidebar: true
+      page: true
+    - title: Elepover's Blog
+      url: https://daily.elepover.com/
+      img: https://cdn.elepover.com/avatar/white/avatar.svg
+      desc: Make undeniable rules to your own world.
+      sidebar: true
+      page: true
+    - title: 派兹的小站
+      url: https://blingwang.cn
+      img: https://cdn.blingwang.cn/head.png
+      desc: 莓办法 银不了 尽梨了
+      sidebar: true
+      page: true
+    - title: Justf's Channel
+      url: https://channel.Justf.space
+      img: https://cdn.lvcshu.info/img/friends/any.jpg
+      desc: 幸福如人饮水，冷暖自知。
+      sidebar: true
+      page: true
+    - title: Cyberspace of Swung
+      url: https://www.swung0x48.com
+      img:
+      desc: Lost in cyberpunk.
+      sidebar: true
+      page: true
+    - title: FlyingSky's Blog
+      url: https://blog.fsky7.com
+      img: https://flyingsky51.gitee.io/flyingcdn/FlyingSky/Links/FlyingSky.jpg
+      desc: 每个人的裂痕，最后都会变成故事的花纹。
+      sidebar: true
+      page: true
+    - title: 1A23 Studio
+      url: https://1a23.com
+      img: https://1a23.com/eanois_themes/default/images/logo4square.svg
+      desc: We create.
+      sidebar: true
+      page: true
+    - title: 翰林的小站
+      url: https://ihcr.top
+      img: https://ihcr.top/wp-content/uploads/2019/03/avatar.png
+      desc: 博览乐学，敢于探索。
+      sidebar: true
+      page: true
 
 comment:
   disqus:
