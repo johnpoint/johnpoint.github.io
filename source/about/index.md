@@ -21,6 +21,8 @@ donate: true
 - Java
 - PHP
 - Javascript
+- ejs?
+- HTML
 
 # 我的 BOT
 
