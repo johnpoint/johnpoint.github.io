@@ -122,7 +122,7 @@ Ip6rN9f8d+iX9NaVC+jRrtI=
 - 源代码 --> Github [johnpoint/johnpoint.github.io](https://github.com/johnpoint/johnpoint.github.io)
 
 
-- hexo 生成 --> [travis-ci](https://travis-ci.org/johnpoint/johnpoint.github.io) ![](https://travis-ci.org/johnpoint/johnpoint.github.io.svg?branch=source)
+- hexo 生成 --> ![](https://travis-ci.org/johnpoint/johnpoint.github.io.svg?branch=source)
 
 - 部署
   - VPS *4 (通过 Git 同步) https://blog.lvcshu.com
