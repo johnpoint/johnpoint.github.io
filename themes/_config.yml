@@ -127,6 +127,13 @@ comment:
     enable: true
     shortname: johnpoints-blog-hexo
     lazyload: true
+  gitalk:
+    enable: false
+    owner:
+    repo:
+    oauth:
+      client_id:
+      client_secret:
 
 analytics:
   google:
