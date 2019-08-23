@@ -139,6 +139,9 @@ analytics:
   google:
     enable: true
     id: UA-122182397-1
+  51LA:
+      enable: true
+      script: <script type="text/javascript" src="https://js.users.51.la/20184423.js"></script>
   busuanzi: # 不蒜子网站统计
     enable: false
     text:
