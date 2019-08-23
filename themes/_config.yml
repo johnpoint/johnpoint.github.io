@@ -140,8 +140,8 @@ analytics:
     enable: true
     id: UA-122182397-1
   51LA:
-      enable: true
-      id: 20184423
+    enable: true
+    id: 20184423
   busuanzi: # 不蒜子网站统计
     enable: false
     text:
