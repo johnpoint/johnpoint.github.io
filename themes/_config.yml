@@ -93,7 +93,7 @@ friends:
       page: true
     - title: Justf's Channel
       url: https://channel.Justf.space
-      img: https://git.lvcshu.com/johnpoint/cdn/raw/master/img/friends/Justf.png
+      img: https://cdn.lvcshu.info/img/friends/Justf.png
       desc: 幸福如人饮水，冷暖自知。
       sidebar: true
       page: true
@@ -105,19 +105,19 @@ friends:
       page: true
     - title: FlyingSky's Blog
       url: https://blog.fsky7.com
-      img: https://flyingsky51.gitee.io/flyingcdn/FlyingSky/Links/FlyingSky.jpg
+      img: https://cdn.lvcshu.info/img/friends/FlyingSky.jpg
       desc: 每个人的裂痕，最后都会变成故事的花纹。
       sidebar: true
       page: true
     - title: 1A23 Studio
       url: https://1a23.com
-      img: https://1a23.com/eanois_themes/default/images/logo4square.svg
+      img: https://cdn.lvcshu.info/img/friends/logo4square.svg
       desc: We create.
       sidebar: true
       page: true
     - title: 翰林的小站
       url: https://ihcr.top
-      img: https://ihcr.top/wp-content/uploads/2019/03/avatar.png
+      img: https://cdn.lvcshu.info/img/friends/ihcr.png
       desc: 博览乐学，敢于探索。
       sidebar: true
       page: true
