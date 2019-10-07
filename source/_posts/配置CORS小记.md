@@ -1,0 +1,51 @@
+---
+title: 配置CORS小记
+date: 2019-10-07 21:44:00
+toc: true
+tags:
+- hexo
+- 折腾
+- blog
+- 字体
+- nginx
+---
+
+最近在折腾博客的字体，最终选定了这几个字体作为网站的字体<!--more--> ~~莫名绕口~~
+
+- (方正兰亭纤黑)[http://www.foundertype.com/index.php/FontInfo/index/id/216.html]
+- (方正粗金陵)[http://www.foundertype.com/index.php/FontInfo/index/id/202]
+- Times New Roman
+- Times
+- serif
+
+然后我在方正网站上面获取的授权是非商业的授权，虽然说我的用处都是非商业的按理来说是不会翻车的，但是为了减少我的风险，我还是选择把字体和项目分开(怕死.jpg)，那么问题来了，我不把字体整进主题里面我怎么去使用字体咧？网上的 font CDN 我觉得也不大可能有方正的字体...所以我就把字体放上了我的一个资源服务器 cdn.lvcshu.info 我的图片之类的外链的东西都全部扔在上面，就把字体扔到了 https://cdn.lvcshu.info/font/ 上面，如果你打开 F12->network 然后刷新的话，应该能发现有两个后缀为 ttf 的资源是从 cdn.lvcshu.info 加载的。
+
+然而，事情并没有那么简单，一般来说从别的域名引用是一种叫做跨域请求的请求 ~~莫名绕口×2~~ ，但是这种请求会撞上 浏览器的一种叫做 [Same-origin policy(同源策略)](https://en.wikipedia.org/wiki/Same-origin_policy) 的安全策略，虽然说这个策略是为了保证我们安全而出现的，但是挡着我路了我还是有点不爽，好消息是这个策略也有相应的绕过方法 [Cross-origin resource sharing(CORS 跨来源资源共享)](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) 这种技术规范就可以通过添加标头来进行资源的跨域名调用。顺便他还可以对资源的调用范围作出限制，毕竟我可不想碰到方正的法务团队(~~逃~~)。
+
+具体配置如下
+
+```
+location /font {
+    set $cors_origin "";
+    if ($http_origin ~* "^https://blog.lvcshu.com$") {
+            set $cors_origin $http_origin;
+    }
+    if ($http_origin ~* "^https://johnpoint.github.io$") {
+            set $cors_origin $http_origin;
+    }
+    if ($http_origin ~* "^https://lvcshu.netlify.com$") {
+            set $cors_origin $http_origin;
+    }
+    if ($request_method = 'OPTIONS') {
+    return 204;
+    }
+    add_header Access-Control-Allow-Origin $cors_origin always;
+    add_header Access-Control-Allow-Headers "Content-Type, Authorization" always;
+    add_header Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, PATCH, DELETE, HEAD" always;
+    add_header Access-Control-Max-Age 86400 always;
+}
+```
+
+### 参考
+- [nginx 处理跨域 (cors)](https://juejin.im/entry/5c249af1e51d45392c42e833)
+- [nginx 指定多个域名跨域请求配置](https://my.oschina.net/yzChen/blog/1573828)
