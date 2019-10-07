@@ -24,6 +24,8 @@ emmmmm 我不把字体整进主题里面我怎么去使用字体咧？网上的 
 
 最后就把字体放上了一个资源服务器 cdn.lvcshu.info 我的图片之类的外链的东西都全部扔在上面，就把字体扔到了 https://cdn.lvcshu.info/font/ 上面，如果你打开 F12->network 然后刷新的话，应该能发现有两个后缀为 ttf 的资源是从 cdn.lvcshu.info 加载的。
 
+## 配置 CORS
+
 事情并没有那么简单，从别的域名引用是一种叫做跨域请求的请求 ~~莫名绕口×2~~ ，但是这种请求会撞上浏览器的一种叫做 [Same-origin policy(同源策略)](https://en.wikipedia.org/wiki/Same-origin_policy) 的安全策略，好消息是这个策略也有相应的绕过方法 [Cross-origin resource sharing(CORS 跨来源资源共享)](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) 这种技术规范就可以通过添加标头来进行资源的跨域名调用。顺便他还可以对资源的调用范围作出限制，毕竟我可不想碰到方正的法务团队(~~逃~~)。
 
 具体配置如下
@@ -49,6 +51,16 @@ location /font {
     add_header Access-Control-Max-Age 86400 always;
 }
 ```
+
+## 修改 CSS
+
+但是如果在主题的项目 CSS 里面写死我的 url 的话，因为上面有域名限制是不会生效的，可不能这样误导别人啊 QAQ，所以就把 CSS 的字体的声明在项目中删去了，要想正确加载字体只需要在 `all.css` 中加入这一句
+
+```
+@font-face{font-family:"FZJL";src:url('字体所在url')}
+@font-face{font-family:"FZLT";src: url('字体所在url')}
+```
+即可生效
 
 ### 参考
 - [nginx 处理跨域 (cors)](https://juejin.im/entry/5c249af1e51d45392c42e833)
