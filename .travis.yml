@@ -17,7 +17,7 @@ before_install:
 install:
 - yarn
 script:
-- cd themes && git clone https://github.com/johnpoint/hexo-theme-XvA XvA && mv _config.yml XvA/ && mv zh-Cu.yml XvA/languages && mv all.css XvA/source/css
+- cd themes && git clone https://github.com/johnpoint/hexo-theme-XvA XvA && mv _config.yml XvA/ && mv zh-Cu.yml XvA/languages && echo "@font-face{font-family:'FZJL';src:url('https://cdn.lvcshu.info/font/FZJL.ttf')}@font-face{font-family:'FZLT';src:url('https://cdn.lvcshu.info/font/FZLT.ttf')}" >> XvA/source/css/all.css
 - npm install hexo-generator-feed --save
 - hexo clean
 - hexo generate
