@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo '---
+title: '$1'
+author: johnpoint
+date: '`date '+%Y-%m-%d %k:%M:%S'`'
+tags:
+---
+<!--more-->'>$1.md
+echo 'OK!'
+code $1.md
