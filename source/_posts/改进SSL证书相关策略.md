@@ -7,6 +7,7 @@ tags:
 - SSL
 - 折腾
 - 建站
+pressone: https://press.one/file/v?s=63fcb3a91f42c81f766fe6e07d665ae5ad4f399619a4c94707f3e4a31764264f4a36a9b74bf0f482a5c336892af861dd20eaca52b03543f2902b9429f076c1b701&h=8d731d8b814e9dfaa1047e090233116b13d9ecfdb92a04abc57e8975cfddc189&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&v=3&f=P1
 ---
 
 自从使用了 docker 作为基础环境以后，我想着写一个能够服务进行统一集中管理的面板，一方面不想使用市面上使用比较广泛面板 ~~因为我做到他们不行啊啊啊~~，一方面也算是一种练习吧<!--more-->

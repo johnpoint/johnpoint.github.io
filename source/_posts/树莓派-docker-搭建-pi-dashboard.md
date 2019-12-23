@@ -4,6 +4,7 @@ date: 2018-10-21 05:40:21
 tags:
 - 树莓派
 - docker
+pressone: https://press.one/file/v?s=6a10521d5178f085674b2263476e9152576e05760974be0c7803f2c3a1d0150d1516a3dcb3cafdedc05936d3a2b982213c2a0c9f282853d16e4f2fa6cfc95eb801&h=cc79baea14ae9311d7f84eff94c219b40bd7dbb17ea4aab1691ea800399322fc&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&v=3&f=P1
 ---
 
 前一阵子我入手了一（台？）（个？）树莓派，但是一直都没有时间研究该用来做什么.... 然后无意间看见了一个叫做pi-dashboard 的小玩意儿 上一张图看看

@@ -6,6 +6,7 @@ tags:
 - 折腾
 - 建站
 - hexo
+pressone: https://press.one/file/v?s=7d78892c6f6ac239b296832338d2a1046a25e1a64d5279f07e443b3b39f27d18745f4945b43b617c75c5b7819e09f5f2fba5ee1edb6f6ae85e47202d8468f94c01&h=8c8fecc840bd6e1fa3e696baacae2ecb0067e8ed6ebacb2dbe9e12f308e547d6&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
 
 使用[lnmp.org](https://lnmp.org)的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
