@@ -7,7 +7,6 @@ tags:
 - 体验
 - 折腾
 ---
-
 ~~最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中~~<!--more-->
 
 最近我心心念念想着更新的 Android 10 终于向 Oneplus 6 [推送](https://t.me/OnePlus/1907)了，不过是 Open beta 版本，着意味着这个版本的系统还有可能有着不稳定的情况，尽管如此，我还是第一时间通过手刷更新包进行了更新。
@@ -25,3 +24,6 @@ tags:
 - Magisk 运行正常
 - 自动亮度无效
 - 有几个软件不适配
+----
+这篇文章的 PRESS.one 签名:
+https://press.one/file/v?s=b689a80e2c09e0c0bcd0e382f36164a2d4d2109673baec1c2100da7e797d96dc46c13c3bee7512c643cde35937e19ca52dbabdbec2fdb4ee95a79d6cb6b00bd600&h=34947106a54ca54a2700dc6c2c7adbfc15df2b22fb8505a475752e198d3881b4&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3

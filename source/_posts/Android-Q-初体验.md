@@ -7,7 +7,6 @@ tags:
 - 体验
 - 折腾
 ---
-
 最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中<!--more-->
 
 开心!!
@@ -39,3 +38,6 @@ adb shell settings put global device_provisioned 1
 然后重启
 
 >此方法来源于: [Android 跳过Gapps开机引导](https://www.jianshu.com/p/1776170650d5)
+----
+这篇文章的 PRESS.one 签名:
+https://press.one/file/v?s=eb063e81ea35bb35c1ae86884af61a212a1bf6f64feb3ec450374dbda8187512608b08f3c42f04878b36b7562c5a6c60686942fc3bb1277fd075b69b9bb3d0ff00&h=cf3551430e355011ec5f87f4d33ab363eae4d56e05e6a12bc0f2af913b04c4b1&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
