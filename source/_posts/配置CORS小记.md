@@ -8,6 +8,7 @@ tags:
 - blog
 - 字体
 - nginx
+pressone: https://press.one/file/v?s=b56535d9f85b2136fc4e85f8fa7366cd8a70d556562fcfc5fa8dd53a8e5ee57519c00d36461aa88e290111cc4dcad55f1869a5348f1283c1555db7c3d7ccd47d01&h=fb875cd81a5e33cb55088b3ccd82e84331db49f4e1e06f1b2481ba5320f33ac7&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&v=3&f=P1
 ---
 
 最近在折腾博客的字体，最终选定了这几个字体作为网站的字体<!--more--> ~~莫名绕口~~
