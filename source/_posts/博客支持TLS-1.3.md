@@ -7,6 +7,7 @@ tags:
 - TLS
 - DNMP
 - nginx
+pressone: https://press.one/file/v?s=e770b366bbe0d251732e2eab2804233830e800c7cc49846e1fc1966117e01f334de16f0aead5d314aa9d24bfa7aec38927856dd2da1ef6e78f71c0d24a12274601&h=0bea6a1d0679e1f04d338e3386af6e8c161933b43da63f7a050d3a6b7330b14d&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
 
 博客终于在无数次的 想配置 TLS1.3 和 "啊好麻烦啊，不上了" 中一直没有上 TLS1.3

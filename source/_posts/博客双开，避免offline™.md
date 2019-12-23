@@ -7,6 +7,7 @@ tags:
 - 折腾
 - git
 - blog
+pressone: https://press.one/file/v?s=2b681c7ec637d574ea5199d7e0dac2f11abff4f008ea3b3fe816df0673f1bdd618f8227d313c35adea2b1d312f9e7e000984a1870fc69487cab6ed8f89e07ea100&h=070b53258c3a4dd1b185096ad33d30f346f93f3f34a7bf54691a708960c2a093&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
 
 怎么双开博客呢？
