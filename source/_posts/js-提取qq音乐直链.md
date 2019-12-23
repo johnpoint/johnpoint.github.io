@@ -6,6 +6,7 @@ tags:
 - QQ音乐
 - JS
 - 折腾
+pressone: https://press.one/file/v?s=1128b721b4c7ea3d2748911ff238691c9e42f470c78d37e8c52d3293a228e5bb443708f287422344acf36a3b31fc9c44ce2c5f5c00b8f321be33a74a10948e3601&h=9d526189f1fdfc453e2a7ba05d19fc13ace1ed7cc7737297b3f1588b3b3c70ff&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
 ```js
 function getSong(name) {
@@ -26,6 +27,3 @@ function getSong(name) {
     })
 }
 ```
-----
-这篇文章的 PRESS.one 签名:
-https://press.one/file/v?s=1128b721b4c7ea3d2748911ff238691c9e42f470c78d37e8c52d3293a228e5bb443708f287422344acf36a3b31fc9c44ce2c5f5c00b8f321be33a74a10948e3601&h=9d526189f1fdfc453e2a7ba05d19fc13ace1ed7cc7737297b3f1588b3b3c70ff&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3

@@ -6,6 +6,7 @@ tags:
 - UFW
 - ubuntu
 - 安全
+pressone: https://press.one/file/v?s=6e068c89b3f6ca86a239a577b327fa4e04ba0ef6e5c8ba275be3394b5cce914379193543997d8568165fbeedcddf34686d9f59ae94aedb870eaf6e01eb4602cb00&h=6338fd3a0605eafd20fe98c9c32c8f686d17ed03d9c4f244123fc49df19c55d0&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
 
 很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
@@ -59,6 +60,3 @@ ufw enable
 更新配置 ufw reload
 查看防火墙状态 ufw status
 ```
-----
-这篇文章的 PRESS.one 签名:
-https://press.one/file/v?s=6e068c89b3f6ca86a239a577b327fa4e04ba0ef6e5c8ba275be3394b5cce914379193543997d8568165fbeedcddf34686d9f59ae94aedb870eaf6e01eb4602cb00&h=6338fd3a0605eafd20fe98c9c32c8f686d17ed03d9c4f244123fc49df19c55d0&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
