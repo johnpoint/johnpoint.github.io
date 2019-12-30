@@ -20,13 +20,13 @@ function show() {
         var date =newyear - new Date();
         var now = "";
         var t=parseInt(date/1000);
-        var hour = parseInt(parseInt(date/1000)/3600);
+        var hour = parseInt(date/1000/3600);
         if (hour < 10) { hour = "0" + hour };
         document.getElementById("hr").innerHTML = hour;
-        var min = parseInt((parseInt(date/1000)-3600*hour)/60);
+        var min = parseInt((date/1000-3600*hour)/60);
         if (min < 10) { min = "0" + min };
         document.getElementById("min").innerHTML = min;
-        var sec = parseInt(parseInt(date/1000)-3600*hour-min*60);
+        var sec = parseInt(date/1000-3600*hour-min*60);
         if (sec < 10) { sec = "0" + sec };
         document.getElementById("sec").innerHTML = sec;
         setTimeout("show()", 1000);
