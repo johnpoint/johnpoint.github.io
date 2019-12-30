@@ -17,11 +17,11 @@ function show() {
         var date =newyear - new Date();
         var now = "";
         var t=parseInt(date/1000);
-        var hour = parseInt(parseInt((c-new Date)/1000)/3600);
+        var hour = parseInt(parseInt(date/1000)/3600);
         date=date-hour*3600;
         if (hour < 10) { hour = "0" + hour };
         now = now + hour + ":";
-        var min = parseInt(parseInt((c-new Date)/1000)/60);
+        var min = parseInt(parseInt(date/1000)/60);
         date=date-min*60;
         if (min < 10) { min = "0" + min };
         now = now + min + ":";
