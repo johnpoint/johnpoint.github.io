@@ -12,19 +12,20 @@ comment: false
             <h1 id="nowDiv"></h1>
         </center>
 <script>
+var newyear=new Date("2020/01/01 00:00:00");
 function show() {
-        var date = new Date();
+        var date =newyear - new Date();
         var now = "";
-        now = date.getFullYear() + "-";
-        now = now + (date.getMonth() + 1) + "-";
-        now = now + date.getDate() + " ";
-        var hour = date.getHours();
+        var t=parseInt(date/1000);
+        var hour = parseInt(parseInt((c-new Date)/1000)/3600);
+        date=date-hour*3600;
         if (hour < 10) { hour = "0" + hour };
         now = now + hour + ":";
-        var min = date.getMinutes();
+        var min = parseInt(parseInt((c-new Date)/1000)/60);
+        date=date-min*60;
         if (min < 10) { min = "0" + min };
         now = now + min + ":";
-        var sec = date.getSeconds();
+        var sec = date;
         if (sec < 10) { sec = "0" + sec };
         now = now + sec;
         document.getElementById("nowDiv").innerHTML = now;
