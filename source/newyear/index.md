@@ -10,8 +10,10 @@ comment: false
 
 <center>
 <p>距离 2020 年仅剩</p>
-            <h1 id="nowDiv"></h1>
-        </center>
+</center>
+<center>
+<p><font size="10" id="hr"></font> 小时 <font size="10" id="min"> 分钟 </font><font size="10" id="sec"> 秒</font></p>
+</center>
 <script>
 var newyear=new Date("2020/01/01 00:00:00");
 function show() {
@@ -20,14 +22,13 @@ function show() {
         var t=parseInt(date/1000);
         var hour = parseInt(parseInt(date/1000)/3600);
         if (hour < 10) { hour = "0" + hour };
-        now = now + hour + " 小时 ";
+        document.getElementById("hr").innerHTML = hour;
         var min = parseInt((parseInt(date/1000)-3600*hour)/60);
         if (min < 10) { min = "0" + min };
-        now = now + min + " 分钟 ";
+        document.getElementById("min").innerHTML = min;
         var sec = parseInt(parseInt(date/1000)-3600*hour-min*60);
         if (sec < 10) { sec = "0" + sec };
-        now = now + sec+" 秒 ";
-        document.getElementById("nowDiv").innerHTML = now;
+        document.getElementById("sec").innerHTML = sec;
         setTimeout("show()", 1000);
     }
     show();
