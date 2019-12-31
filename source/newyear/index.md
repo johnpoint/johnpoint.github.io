@@ -15,7 +15,7 @@ comment: false
 <p><font size="10" id="hr"></font> 小时 <font size="10" id="min"></font> 分钟 <font size="10" id="sec"></font> 秒</p>
 </center>
 <script>
-var newyear=new Date("2020/01/01 00:00:00");
+var newyear=new Date("2021/01/01 00:00:00");
 function show() {
         var date =newyear - new Date();
         var now = "";
