@@ -1,5 +1,5 @@
 ---
-title: 广东电信配置 IPTV-NET VLAN 单线复用
+title: 配置 IPTV-NET VLAN 单线复用
 date:  2020-01-09 21:00:00
 tags:
 - IPTV
@@ -37,8 +37,6 @@ PassWord: nE7jA%5m
                |
                |----> CPU(NET)
 ```
-
-![](https://cdn.lvcshu.info/img/20200109004.jpg)
 
 然后就好了～
 
