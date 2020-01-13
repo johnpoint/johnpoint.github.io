@@ -1,10 +1,11 @@
 ---
 title: Archlinux 系统体验报告
-date: 2020-01-07 18:43:00
+date: 2020-01-13 22:16:00
 toc: true
 tags:
 - Arch
 - 体验
+pressone: https://press.one/file/v?s=578f6c338bbdc0f9bee8a948a900da87597b54e4c340f30e6c46a54d83d27a31180fc70ee8e7966a1a302b423fcc36eee54aad0a7aff897daa28d494711f32d200&h=9cfe07deb55fa1ef3f85f9314d9d98e3f88a3c5217e9b308fd13777940e68ab7&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
 <!--more-->
 ```
