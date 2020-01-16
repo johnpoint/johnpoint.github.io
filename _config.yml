@@ -86,3 +86,6 @@ Plugins:
 sitemap:
     path: sitemap.xml
 
+AdSense:
+  enable: true
+  google_ad_client: ca-pub-7533427735836188
