@@ -1,7 +1,7 @@
 ---
 title: 修复Chrome色差问题
 date: 2019-06-04 15:54:20
-toc: true
+toc: false
 tags:
 - Chrome
 - 色差
