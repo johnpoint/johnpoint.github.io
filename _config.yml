@@ -85,7 +85,3 @@ Plugins:
 
 sitemap:
     path: sitemap.xml
-
-AdSense:
-  enable: false
-  google_ad_client: 
