@@ -2,6 +2,7 @@
 title: 写了个 Hexo 主题 hexo-theme-XvA
 author: johnpoint
 date: 2019-08-13 11:50:00
+toc: true
 tags:
 - hexo
 - 主题
