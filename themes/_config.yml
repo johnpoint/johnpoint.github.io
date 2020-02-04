@@ -14,7 +14,7 @@ loading: true
 totop: true
 fancybox: true
 sitesince: 2017
-yiyan: true
+yiyan: false
 
 widget:
   tag:
@@ -141,7 +141,7 @@ analytics:
     enable: true
     id: UA-122182397-1
   LA:
-    enable: true
+    enable: false
     id: 20184423
   busuanzi: # 不蒜子网站统计
     enable: false
