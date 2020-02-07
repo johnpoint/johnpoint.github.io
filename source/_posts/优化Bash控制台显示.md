@@ -3,9 +3,9 @@ title: 优化Bash控制台显示
 date: 2019-05-28 21:14:30
 toc: true
 tags:
-- Bash
+- bash
 - 美化
-- Ubuntu
+- ubuntu
 ---
 
 =。=<!--more-->

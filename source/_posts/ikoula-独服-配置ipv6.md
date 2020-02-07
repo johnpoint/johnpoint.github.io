@@ -3,7 +3,7 @@ title: ikoula Ubuntu 18.04 独服配置 IPv6
 date: 2019-08-19 20:00:00
 tags:
 - IPv6
-- Ubuntu
+- ubuntu
 - ikoula
 - 折腾
 pressone: https://press.one/file/v?s=501c70bae7ca289a2a2d621136c7c7ce7778b4c11ac9f1b136c192a3d4352dd020fa13c3c0ea0defa76b4f343e3a766f436863e090e04abad8d6bc40b582d10501&h=8dcad102c253d7881b284334e18afb59304ea4b850fa1bff1669011ff329c689&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&hash_alg=sha256&f=P1&v=3

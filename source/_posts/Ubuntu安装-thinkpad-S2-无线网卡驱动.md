@@ -3,7 +3,7 @@ title: <失效> Ubuntu 安装 thinkpad S2 无线网卡驱动
 author: johnpoint
 date: 2018-08-25 16:58
 tags:
-- Ubuntu
+- ubuntu
 - thinkpad S2
 ---
 
