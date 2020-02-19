@@ -6,10 +6,10 @@ layout: page
 donate: true
 ---
 
->会点前端
->会点后端
->喜欢折腾
->全不精通
+> 会点前端
+> 会点后端
+> 喜欢折腾
+> 全不精通
 
 欢迎各位大佬跟我交换友链啊~
 
@@ -40,80 +40,83 @@ emmmmmm,因为之前沉迷于 telegram 所以也自学写了一些 bot ，他们
 本博客大部分文章采用采用[知识共享署名-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-sa/4.0/)进行许可。
 
 > ## You are free to:
->**Share** — copy and redistribute the material in any medium or format
->**Adapt** — remix, transform, and build upon the material for any purpose, even commercially.
+>
+> **Share** — copy and redistribute the material in any medium or format
+> **Adapt** — remix, transform, and build upon the material for any purpose, even commercially.
 
 > ## Under the following terms:
->**Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
->**ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
->No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+>
+> **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+> **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+> No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 [协议中文版本](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
 
 ## 图片
 
-本站图片部分来自 [Unsplash](https://unsplash.com/) 
+本站图片部分来自 [Unsplash](https://unsplash.com/)
 
->## License
->All photos published on Unsplash can be used for free. You can use them for commercial and noncommercial purposes. You do not need to ask permission from or provide credit to the photographer or Unsplash, although it is appreciated when possible.
+> ## License
 >
->More precisely, Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.
+> All photos published on Unsplash can be used for free. You can use them for commercial and noncommercial purposes. You do not need to ask permission from or provide credit to the photographer or Unsplash, although it is appreciated when possible.
+>
+> More precisely, Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.
 
 # 联系
 
-| 平台 | 联系方式 |
-| --- | --- |
-| GitHub | [johnpoint](https://github.com/johnpoint)| 
-| Wikipedia | [johnpoint](https://zh.wikipedia.org/wiki/User:Johnpoint) |
-| Telegram | [@johnpoint](https://t.me/johnpoint) |
-| Gmail | jahanngauss414@gmail.com |
-| Mail (想加友链发这里~) | me@lvcshu.com |
+| 平台                   | 联系方式                                                  |
+| ---------------------- | --------------------------------------------------------- |
+| GitHub                 | [johnpoint](https://github.com/johnpoint)                 |
+| Wikipedia              | [johnpoint](https://zh.wikipedia.org/wiki/User:Johnpoint) |
+| Telegram               | [@johnpoint](https://t.me/johnpoint)                      |
+| Gmail                  | jahanngauss414@gmail.com                                  |
+| Mail (想加友链发这里~) | me@lvcshu.com                                             |
 
 # GPG
 
-![](https://cdn.lvcshu.info/img/20190705001.png)
-
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User-ID:	johnpoint <me@lvcshu.com>
+Comment: Created:	2/19/20 8:15 PM
+Comment: Expires:	12/31/20 12:00 PM
+Comment: Type:	2,048-bit RSA (secret key available)
+Comment: Usage:	Signing, Encryption, Certifying User-IDs
+Comment: Fingerprint:	E8328D2A617B46B0B3F9E1198C54892A42FDD08F
 
-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
-Ip6rN9f8d+iX9NaVC+jRrtI=
-=/XPF
+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
+=XqT0
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
@@ -121,11 +124,10 @@ Ip6rN9f8d+iX9NaVC+jRrtI=
 
 - 源代码 --> Github [johnpoint/johnpoint.github.io](https://github.com/johnpoint/johnpoint.github.io)
 
+* hexo 生成 --> ![](https://travis-ci.org/johnpoint/johnpoint.github.io.svg?branch=source)
 
-- hexo 生成 --> ![](https://travis-ci.org/johnpoint/johnpoint.github.io.svg?branch=source)
-
-- 部署
-  - VPS *4 (通过 Git 同步) https://blog.lvcshu.com
+* 部署
+  - VPS \*4 (通过 Git 同步) https://blog.lvcshu.com
   - Github Pages https://johnpoint.github.io
   - [netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.com/
 
@@ -133,6 +135,6 @@ Ip6rN9f8d+iX9NaVC+jRrtI=
 
 - Vultr
 
-说是新用户注册赠送 $50 还是可以去尝试下的 
+说是新用户注册赠送 \$50 还是可以去尝试下的
 
 --> [链接](https://www.vultr.com/?ref=8001434-4F) <--
