@@ -100,10 +100,10 @@ E832 8D2A 617B 46B0 B3F9 E119 8C54 892A 42FD D08F
   - Github Pages https://johnpoint.github.io
   - [netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.com/
 
-# 推广链接
+# 在线乞讨
 
-- Vultr
+BTC
 
-说是新用户注册赠送 \$50 还是可以去尝试下的
-
---> [链接](https://www.vultr.com/?ref=8001434-4F) <--
+```
+bc1qyfyncn2nn6dmmfp9l4kuuffnmkjzpqu7hp59wkrmscgrcyvqsskswhnawy
+```
