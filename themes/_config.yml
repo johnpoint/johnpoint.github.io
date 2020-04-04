@@ -16,6 +16,11 @@ fancybox: true
 sitesince: 2017
 yiyan: false
 
+bigimg: #首页巨幕图片
+  enable: false
+  imgurl:
+  text:
+
 widget:
   tag:
     enable: true
@@ -165,3 +170,5 @@ tagscloud:
 AdSense:
   enable: false
   google_ad_client: 
+
+version: 3.3.0
