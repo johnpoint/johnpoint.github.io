@@ -114,3 +114,9 @@ BTC
 ```
 15xAeGxxXWdqdrXfM4RrgiCp7hSd9mWuCy
 ```
+
+# 推介(AFF)
+
+[IDC.WIKI](https://idc.wiki/aff.php?aff=1100)
+[VULTR](https://www.vultr.com/?ref=7131883)
+[Digitalocean](https://m.do.co/c/60f242e5b700)
