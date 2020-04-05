@@ -26,13 +26,10 @@ donate: true
 
 # 我写的
 
-emmmmmm,因为之前沉迷于 telegram 所以也自学写了一些 bot ，他们有的还在使用，有的则已经退役了
-
 - [lottery_bot](https://github.com/johnpoint/lottery_bot) 一个抽奖 Bot 如果没有记错的话，这是 TG 中文圈第一台抽奖 Bot 呢，嘻嘻
 - [@xiaojin_bot](https://t.me/xiaojin_bot) 津津乐道播客听友 Telegram 群机器人，目前还活着并且一直在维护
 - [go-pmbot](https://github.com/johnpoint/go-pmbot) 用 Go 语言写的 PM Bot 算是跟风
 - [tele-uptime-bot](https://github.com/johnpoint/tele-uptime-bot) 一个很辣鸡的监控服务器在线 Bot ，主要靠 ping
-
 - [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA) 一套 Hexo 主题，就是现在在用的这个
 - [ControlCenter](https://github.com/johnpoint/ControlCenter) 服务器综合管理面板服务端及被控端
 - [ControlCenter-web](https://github.com/johnpoint/ControlCenter-web) 服务器综合管理面板前端
