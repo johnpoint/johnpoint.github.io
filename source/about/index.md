@@ -37,6 +37,35 @@ donate: true
 - [DNMP-lvcshu](https://github.com/johnpoint/DNMP-lvcshu) 使用 docker-compose 组织安装 LNMP 环境
 - [start-vps-shell](https://github.com/johnpoint/start-vps-shell) 梦开始的地方（逃）
 
+
+# 联系我
+
+| 平台                   | 联系方式                                                  |
+| ---------------------- | --------------------------------------------------------- |
+| GitHub                 | [johnpoint](https://github.com/johnpoint)                 |
+| Wikipedia              | [johnpoint](https://zh.wikipedia.org/wiki/User:Johnpoint) |
+| Telegram               | [@johnpoint](https://t.me/johnpoint)                      |
+| Gmail                  | jahanngauss414@gmail.com                                  |
+| Mail (想加友链发这里~) | me@lvcshu.com                                             |
+
+## PGP
+
+```
+PGP public key:
+johnpoint <jahanngauss414@gmail.com>
+F030 93FD 817B 0573 D656 74A1 2281 9148 A38B C6DD
+```
+
+或者 [下载导入](https://cdn.lvcshu.info/PGP/F03093FD817B0573D65674A122819148A38BC6DD-pub.asc)
+
+```
+johnpoint <me@lvcshu.com>
+E832 8D2A 617B 46B0 B3F9 E119 8C54 892A 42FD D08F
+```
+
+或者 [下载导入](https://cdn.lvcshu.info/PGP/E8328D2A617B46B0B3F9E1198C54892A42FDD08F-pub.asc)
+
+
 # 授权协议
 
 ## 文章
@@ -66,43 +95,17 @@ donate: true
 >
 > More precisely, Unsplash grants you an irrevocable, nonexclusive, worldwide copyright license to download, copy, modify, distribute, perform, and use photos from Unsplash for free, including for commercial purposes, without permission from or attributing the photographer or Unsplash. This license does not include the right to compile photos from Unsplash to replicate a similar or competing service.
 
-# 联系
-
-| 平台                   | 联系方式                                                  |
-| ---------------------- | --------------------------------------------------------- |
-| GitHub                 | [johnpoint](https://github.com/johnpoint)                 |
-| Wikipedia              | [johnpoint](https://zh.wikipedia.org/wiki/User:Johnpoint) |
-| Telegram               | [@johnpoint](https://t.me/johnpoint)                      |
-| Gmail                  | jahanngauss414@gmail.com                                  |
-| Mail (想加友链发这里~) | me@lvcshu.com                                             |
-
-# PGP
-
-```
-PGP public key:
-johnpoint <jahanngauss414@gmail.com>
-F030 93FD 817B 0573 D656 74A1 2281 9148 A38B C6DD
-```
-
-或者 [下载导入](https://cdn.lvcshu.info/PGP/F03093FD817B0573D65674A122819148A38BC6DD-pub.asc)
-
-```
-johnpoint <me@lvcshu.com>
-E832 8D2A 617B 46B0 B3F9 E119 8C54 892A 42FD D08F
-```
-
-或者 [下载导入](https://cdn.lvcshu.info/PGP/E8328D2A617B46B0B3F9E1198C54892A42FDD08F-pub.asc)
-
 # 关于本站
 
 - 源代码 --> Github [johnpoint/johnpoint.github.io](https://github.com/johnpoint/johnpoint.github.io)
+- 主题 --> [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA)
 
 * hexo 生成 --> ![](https://travis-ci.org/johnpoint/johnpoint.github.io.svg?branch=source)
 
 * 部署
-  - VPS \*4 (通过 Git 同步) https://blog.lvcshu.com
+  - https://blog.lvcshu.com
   - Github Pages https://johnpoint.github.io
-  - [netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.com/
+  - [netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.app/
 
 # 在线乞讨
 
