@@ -9,7 +9,7 @@ comment: false
 ---
 
 <center>
-<p>距离 2020 年仅剩</p>
+<p>距离 2021 年仅剩</p>
 </center>
 <center>
 <p><font size="10" id="hr"></font> 小时 <font size="10" id="min"></font> 分钟 <font size="10" id="sec"></font> 秒</p>
