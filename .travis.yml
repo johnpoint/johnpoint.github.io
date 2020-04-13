@@ -10,11 +10,10 @@ cache:
 before_install:
 - git config --global user.name "johnpoint"
 - git config --global user.email "me@lvcshu.com"
-- curl -o- -L https://yarnpkg.com/install.sh | bash
 - npm install -g hexo-cli
 script:
 - cd themes && git clone https://github.com/johnpoint/hexo-theme-XvA XvA && mv _config.yml XvA/ && mv zh-Cu.yml XvA/languages
-- npm install hexo-generator-feed --save
+- npm install hexo-generator-feed hexo-neat --save
 - hexo clean
 - hexo generate
 after_success:
