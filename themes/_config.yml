@@ -127,6 +127,12 @@ friends:
       desc: 博览乐学，敢于探索。
       sidebar: true
       page: true
+    - title: Taoidle
+      url: https://www.lkyblog.cn
+      img: https://cdn.lvcshu.info/img/friends/Taoidle.jpg
+      desc: 交流学习心得，分享生活乐事
+      sidebar: true
+      page: true
 
 comment:
   disqus:
