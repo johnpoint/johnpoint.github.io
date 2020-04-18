@@ -17,7 +17,7 @@ sitesince: 2017
 yiyan: false
 
 bigimg: #首页巨幕图片
-  enable: false
+  enable: true
   imgurl:
   text:
 
