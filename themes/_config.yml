@@ -19,7 +19,7 @@ yiyan: false
 bigimg: #首页巨幕图片
   enable: true
   imgurl:
-  text:
+  text: <a href="/atom.xml" class="iconfont icon-rss"></a> <a href="https://github.com/johnpoint" class="iconfont icon-git"></a>
 
 widget:
   tag:
