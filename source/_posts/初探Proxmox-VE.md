@@ -25,13 +25,13 @@ tags:
 
 安装好以后就会提示你登录并给了你一个网页的地址，就像这样
 
-![](https://cdn.lvcshu.info/img/20190317002.png)
+![](https://cdn.lvcshu.info/img/20190317002.jpg)
 
 但是我们的是虚拟机所以需要在 `Settings->Network->Adapter 1->Advanced->Port Forwarding` 配置端口转发
 
 然后在浏览器访问 `https://127.0.0.1:映射的端口` 就可以看见面板了。
 
-![](https://cdn.lvcshu.info/img/20190317003.png)
+![](https://cdn.lvcshu.info/img/20190317003.jpg)
 
 # 使用
 
@@ -83,7 +83,7 @@ iface vmbr4 inet static
 
 ## 小鸡的配置
 
-![](https://cdn.lvcshu.info/img/20190317004.png)
+![](https://cdn.lvcshu.info/img/20190317004.jpg)
 
 按照上面的信息随机应变 (?) 就好，网管要填 **母鸡的IP**
 
@@ -95,7 +95,7 @@ iface vmbr4 inet static
 
 开了三台服务器～
 
-![](https://cdn.lvcshu.info/img/20190317005.png)
+![](https://cdn.lvcshu.info/img/20190317005.jpg)
 
 # 参考
 

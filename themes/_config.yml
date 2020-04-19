@@ -18,6 +18,7 @@ yiyan: false
 
 bigimg: #首页巨幕图片
   enable: true
+  background: //cdn.lvcshu.info/img/20200419001.jpg
   RSS: /atom.xml # URL
   Github: https://github.com/johnpoint #URL
   Telegram: https://t.me/johnpoint #URL
@@ -34,7 +35,7 @@ friends:
   list:
     - title: 极光星空
       url: https://www.ilemonrain.com/
-      img: https://cdn.lvcshu.info/img/friends/ilemonrain.png
+      img: https://cdn.lvcshu.info/img/friends/ilemonrain.jpg
       desc: 探索星空，一路前行
       sidebar: true
       page: true
@@ -76,13 +77,13 @@ friends:
       page: true
     - title: 双草酸酯的博客
       url: https://0x.mk/
-      img: https://cdn.lvcshu.info/img/friends/0xmk.png
+      img: https://cdn.lvcshu.info/img/friends/0xmk.jpg
       desc: 
       sidebar: true
       page: true
     - title: Vigorous Pro
       url: https://www.wevg.org
-      img: https://cdn.lvcshu.info/img/friends/Vigorous.png
+      img: https://cdn.lvcshu.info/img/friends/Vigorous.jpg
       desc: The world can always use more heroes.
       sidebar: true
       page: true
@@ -94,13 +95,13 @@ friends:
       page: true
     - title: 派兹的小站
       url: https://blog.blw.moe
-      img: https://cdn.lvcshu.info/img/friends/blingwang.png
+      img: https://cdn.lvcshu.info/img/friends/blingwang.jpg
       desc: 莓办法 银不了 尽梨了
       sidebar: true
       page: true
     - title: Justf's Channel
       url: https://channel.Justf.space
-      img: https://cdn.lvcshu.info/img/friends/Justf.png
+      img: https://cdn.lvcshu.info/img/friends/Justf.jpg
       desc: 幸福如人饮水，冷暖自知。
       sidebar: true
       page: true
@@ -124,7 +125,7 @@ friends:
       page: true
     - title: 翰林的小站
       url: https://ihcr.top
-      img: https://cdn.lvcshu.info/img/friends/ihcr.png
+      img: https://cdn.lvcshu.info/img/friends/ihcr.jpg
       desc: 博览乐学，敢于探索。
       sidebar: true
       page: true

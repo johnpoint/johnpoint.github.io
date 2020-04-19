@@ -16,11 +16,11 @@ tags:
 
 就像这样
 
-![](https://cdn.lvcshu.info/img/20190528001.png)
+![](https://cdn.lvcshu.info/img/20190528001.jpg)
 
 然后现在改成了这样
 
-![](https://cdn.lvcshu.info/img/20190528002.png)
+![](https://cdn.lvcshu.info/img/20190528002.jpg)
 
 # 方法
 

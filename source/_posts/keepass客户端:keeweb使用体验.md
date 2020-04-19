@@ -25,8 +25,8 @@ tags:
 
 上一些图：
 
-![解锁界面](https://cdn.lvcshu.info/img/20190728001.png)
+![解锁界面](https://cdn.lvcshu.info/img/20190728001.jpg)
 
-![主界面](https://cdn.lvcshu.info/img/20190728002.png)
+![主界面](https://cdn.lvcshu.info/img/20190728002.jpg)
 
-![设定 & 备份](https://cdn.lvcshu.info/img/20190728003.png)
+![设定 & 备份](https://cdn.lvcshu.info/img/20190728003.jpg)

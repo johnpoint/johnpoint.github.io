@@ -12,9 +12,9 @@ tags:
 
 # 使用体验
 
-![](https://cdn.lvcshu.info/img/20200216001.png)
-![](https://cdn.lvcshu.info/img/20200216002.png)
-![](https://cdn.lvcshu.info/img/20200216003.png)
+![](https://cdn.lvcshu.info/img/20200216001.jpg)
+![](https://cdn.lvcshu.info/img/20200216002.jpg)
+![](https://cdn.lvcshu.info/img/20200216003.jpg)
 
 ## 优点
 
