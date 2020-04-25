@@ -125,6 +125,8 @@ E832 8D2A 617B 46B0 B3F9 E119 8C54 892A 42FD D08F
 
 然后我就会处理你的友链请求啦～记得要先加上我的友情链接哦～
 
+以上原则自 commit [64c8029ebc681afff4c07d458d2ba157789efb9d](https://github.com/johnpoint/johnpoint.github.io/commit/64c8029ebc681afff4c07d458d2ba157789efb9d) 起生效
+
 # 在线乞讨
 
 BTC
