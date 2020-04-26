@@ -3,7 +3,7 @@ title: 关于我
 author: johnpoint
 date: 2018-12-20 21:30:37
 layout: page
-donate: true
+bigimg: rgb(111, 95, 160)
 ---
 
 > 会点前端
