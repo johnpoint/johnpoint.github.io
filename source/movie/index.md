@@ -4,7 +4,6 @@ author: johnpoint
 date: 2019-02-08 14:20:37
 layout: page
 description: 影视以及书摘
-donate: true
 comment: false
 toc: true
 bigimg: url('//cdn.lvcshu.info/img/20200426001.jpg')
