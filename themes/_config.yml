@@ -137,6 +137,12 @@ friends:
       desc: 交流学习心得，分享生活乐事
       sidebar: true
       page: true
+    - title: Anthony's Blog
+      url: https://www.scery.com/
+      img: https://cdn.lvcshu.info/img/friends/anthony.jpg
+      desc: As you look around
+      sidebar: true
+      page: true
 
 comment:
   disqus:
