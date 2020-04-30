@@ -14,7 +14,7 @@ tags:
 
 于是写了个 python 脚本来删除文件
 
-```
+```python
 import os
 for pathname,dirnames,filenames in os.walk('/root'):
      for filename in filenames:
