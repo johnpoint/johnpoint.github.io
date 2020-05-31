@@ -10,7 +10,7 @@ tags:
 ```
 git remote add upstream 上游地址
 ```
-![](https://cdn.lvcshu.info/img/20200531001.png)
+![](https://cdn.lvcshu.info/img/20200531001.jpg)
 
 ```
 git fetch upstream
