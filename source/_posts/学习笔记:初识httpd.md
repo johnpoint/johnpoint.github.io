@@ -4,7 +4,7 @@ author: johnpoint
 date: 2018-11-02 09:49:57
 tags:
 - httpd
-- 学习笔记
+- 笔记
 - 折腾
 pressone: https://press.one/file/v?s=cd7ed7c4f687fb45d0f5f2520ed62e28f659627a5ca7562893842f22649ad60b2701293a7a3f4cc255c9e68ee7240bb2d295f123d8578007b703829a714ff78a01&h=960a433bd0f2fb6e7506bff5d979d515949b1e2728d5598dc41e5b44fc042402&a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&f=P1&v=3
 ---
