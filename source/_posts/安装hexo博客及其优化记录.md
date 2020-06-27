@@ -297,6 +297,7 @@ links_layout: block #布局，一行一个连接
 links: #连接  
  baidu: http://example.com/  
  google: http://example.com/  
+```
 
 ## 主页文章添加边框阴影效果
 
@@ -355,13 +356,14 @@ post_copyright:
  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/  
 ```
 自定义文章底部版权声明  
-  ```
+```
     作者：Dragonstyle  
     链接：http://www.dragonstyle.win/2017/09/06/Android-Studio个人设置/  
     來源：简书  
     版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 4.0 许可协议。转载请注明出处！  
-    ```
-在目录 `themes/next/layout/_macro/` 下添加 `my-copyright.swig` ,内容如下:  
+```
+在目录 `themes/next/layout/_macro/` 下添加 `my-copyright.swig` ,内容如下: 
+
  ```
 {% if page.copyright %}  
 <div class="my\_post\_copyright">  
@@ -467,12 +469,12 @@ post_copyright:
 ```
 设置新建文章自动开启 copyright,即新建文章自动显示自定义的版权声明,设置 `your site/scaffolds/post.md`文件
  ```
-\-\-\-  
+---  
 title: {{ title }}  
 date: {{ date }}  
 tags:  
 type: "categories"  
 categories:  
 copyright: true #新增,开启  
-\-\-\-  
+---  
 ```
