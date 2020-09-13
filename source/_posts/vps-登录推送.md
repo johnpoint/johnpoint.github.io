@@ -1,5 +1,5 @@
 ---
-title: vps 登录推送.md
+title: vps 登录推送
 date: 2020-09-13 13:10:21
 tags:
 - vps
