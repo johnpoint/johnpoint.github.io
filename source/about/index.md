@@ -23,6 +23,7 @@ bigimg: rgb(111, 95, 160)
 - Javascript
 - ejs?
 - HTML
+- Vue
 
 # 我写的
 
