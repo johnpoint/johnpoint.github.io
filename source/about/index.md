@@ -32,8 +32,9 @@ bigimg: rgb(111, 95, 160)
 - [go-pmbot](https://github.com/johnpoint/go-pmbot) 用 Go 语言写的 PM Bot 算是跟风
 - [tele-uptime-bot](https://github.com/johnpoint/tele-uptime-bot) 一个很辣鸡的监控服务器在线 Bot ，主要靠 ping
 - [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA) 一套 Hexo 主题，就是现在在用的这个
-- [ControlCenter](https://github.com/johnpoint/ControlCenter) 服务器综合管理面板服务端及被控端
+- [ControlCenter](https://github.com/johnpoint/ControlCenter-Server) 服务器综合管理面板
 - [ControlCenter-web](https://github.com/johnpoint/ControlCenter-web) 服务器综合管理面板前端
+- [RssReader](https://github.com/johnpoint/RssReader) Vue 前端 Go 后端的 Rss 在线阅读器
 - [CEIC-TG](https://github.com/johnpoint/CEIC-TG) 迫真地震预警推送到 telegram
 - [DNMP-lvcshu](https://github.com/johnpoint/DNMP-lvcshu) 使用 docker-compose 组织安装 LNMP 环境
 - [start-vps-shell](https://github.com/johnpoint/start-vps-shell) 梦开始的地方（逃）
