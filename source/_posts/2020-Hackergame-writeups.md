@@ -314,6 +314,8 @@ alcarl   2018-01-09 01:25:21 +08:00 via Android   ❤️ 3
 
 地址: http://202.38.93.111:0/
 
+从题目就可以看出来，应该自己构造 http 请求就可以得到 flag
+
 我的解法：
 
 网上找了个 C 实现的 http get ([来源](https://blog.csdn.net/weixin_37569048/article/details/91047343))
