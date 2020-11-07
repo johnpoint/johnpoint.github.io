@@ -498,7 +498,7 @@ Connected to: ws://202.38.93.111:0/shell
 
 搜索一下题目里面的 1–2 oblivious transfer 查到了 [这个](https://en.wikipedia.org/wiki/Oblivious_transfer#1%E2%80%932_oblivious_transfer)
 
-然后打开python照上面的步骤一步一步就可以拿到解密的消息（也有可能是有概率获得，但是我是一次获得的）
+然后打开 python 照上面的步骤一步一步就可以拿到解密的消息
 
 `flag{U_R_0n_Th3_ha1f_way_0f_succe55_w0rk_h4rder!_163a930598}`
 
