@@ -467,7 +467,7 @@ int main(int argc, char **argv)
     </script>
 ```
 
-然后又[整了个](https://github.com/core1011/websocket) C 的 websocket，连上他的服务器，发送 token，flag 到手
+然后又[整了个](https://github.com/core1011/websocket) C++ 的 websocket，连上他的服务器，发送 token，flag 到手
 
 ```
 easywsclient: connecting: host=202.38.93.111 port=0 path=/shell
