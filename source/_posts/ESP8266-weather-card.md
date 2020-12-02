@@ -95,6 +95,7 @@ https://github.com/esp8266/Arduino
 
 ### WEB 管理界面
 
+![](https://cdn.lvcshu.info/img/20201202005.jpg)
 ![](https://cdn.lvcshu.info/img/20201202004.jpg)
 
 ## 后续
