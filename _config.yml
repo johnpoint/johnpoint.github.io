@@ -81,7 +81,7 @@ deploy:
   type: git
   repo: https://github.com/johnpoint/johnpoint.github.io
   branch: master
-  message: HEXO_AUTO_DEPLOY
+  message: Github Action Auto Build
 
 Plugins:
 - hexo-generator-sitemap
