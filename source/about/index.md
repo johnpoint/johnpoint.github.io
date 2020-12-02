@@ -100,8 +100,8 @@ E832 8D2A 617B 46B0 B3F9 E119 8C54 892A 42FD D08F
 
 # 关于本站
 
-|- |- |
-| --- | --- |
+| | | |
+|-|-|-|
 |源代码 | [johnpoint/johnpoint.github.io](https://github.com/johnpoint/johnpoint.github.io)| 
 |主题|[hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA)|
 |GitHub Action Auto Build |![](https://github.com/johnpoint/johnpoint.github.io/workflows/HEXO_AUTO_DEPLOY/badge.svg)|
