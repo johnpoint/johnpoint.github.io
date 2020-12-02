@@ -78,7 +78,10 @@ theme: XvA
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/johnpoint/johnpoint.github.io
+  branch: master
+  message: HEXO_AUTO_DEPLOY
 
 Plugins:
 - hexo-generator-sitemap
