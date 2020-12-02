@@ -36,6 +36,7 @@ bigimg: rgb(111, 95, 160)
 - [ControlCenter-web](https://github.com/johnpoint/ControlCenter-web) 服务器综合管理面板前端
 - [RssReader](https://github.com/johnpoint/RssReader) Vue 前端 Go 后端的 Rss 在线阅读器
 - [CEIC-TG](https://github.com/johnpoint/CEIC-TG) 迫真地震预警推送到 telegram
+- [Weather-Card](https://github.com/johnpoint/Weather-Card) 基于 ESP8266 的桌面天气时钟摆件
 - [DNMP-lvcshu](https://github.com/johnpoint/DNMP-lvcshu) 使用 docker-compose 组织安装 LNMP 环境
 - [start-vps-shell](https://github.com/johnpoint/start-vps-shell) 梦开始的地方（逃）
 
@@ -102,12 +103,12 @@ E832 8D2A 617B 46B0 B3F9 E119 8C54 892A 42FD D08F
 - 源代码 --> Github [johnpoint/johnpoint.github.io](https://github.com/johnpoint/johnpoint.github.io)
 - 主题 --> [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA)
 
-* hexo 生成 --> ![](https://travis-ci.org/johnpoint/johnpoint.github.io.svg?branch=source)
+- GitHub Action Auto Build --> ![](https://github.com/johnpoint/johnpoint.github.io/workflows/HEXO_AUTO_DEPLOY/badge.svg)
 
-* 部署
+- 部署
   - https://blog.lvcshu.com
   - Github Pages https://johnpoint.github.io
-  - [netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.app/
+  - [Netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.app/
 
 # 关于友情链接
 
