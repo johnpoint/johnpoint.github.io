@@ -3,7 +3,7 @@ name: HEXO_AUTO_DEPLOY
 on:
   push:
     branches:
-      - master
+      - source
 
 env:
   GIT_USER: HEXO_AUTO_DEPLOY
