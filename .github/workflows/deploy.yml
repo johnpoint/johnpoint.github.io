@@ -6,7 +6,7 @@ on:
       - source
 
 env:
-  GIT_USER: Github_Action_Auto_Build
+  GIT_USER: johnpoint
   GIT_EMAIL: me@lvcshu.com
   THEME_REPO: johnpoint/hexo-theme-XvA
   THEME_BRANCH: master
