@@ -79,7 +79,7 @@ theme: XvA
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/johnpoint/johnpoint.github.io
+  url: https://github.com/johnpoint/johnpoint.github.io
   branch: master
   message: Github Action Auto Build
 
