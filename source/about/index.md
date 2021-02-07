@@ -13,7 +13,7 @@ bigimg: rgb(111, 95, 160)
 
 欢迎各位大佬跟我交换友链啊~
 
-# 接触过的...
+# 编程语言
 
 - Go
 - Python
@@ -25,23 +25,27 @@ bigimg: rgb(111, 95, 160)
 - HTML
 - Vue
 
-# 我写的
+# 项目
 
-- [lottery_bot](https://github.com/johnpoint/lottery_bot) 一个抽奖 Bot 如果没有记错的话，这是 TG 中文圈第一台抽奖 Bot 呢，嘻嘻
-- [@xiaojin_bot](https://t.me/xiaojin_bot) 津津乐道播客听友 Telegram 群机器人，目前还活着并且一直在维护
-- [go-pmbot](https://github.com/johnpoint/go-pmbot) 用 Go 语言写的 PM Bot 算是跟风
-- [tele-uptime-bot](https://github.com/johnpoint/tele-uptime-bot) 一个很辣鸡的监控服务器在线 Bot ，主要靠 ping
-- [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA) 一套 Hexo 主题，就是现在在用的这个
-- [ControlCenter](https://github.com/johnpoint/ControlCenter-Server) 服务器综合管理面板
-- [ControlCenter-web](https://github.com/johnpoint/ControlCenter-web) 服务器综合管理面板前端
-- [RssReader](https://github.com/johnpoint/RssReader) Vue 前端 Go 后端的 Rss 在线阅读器
-- [CEIC-TG](https://github.com/johnpoint/CEIC-TG) 迫真地震预警推送到 telegram
-- [Weather-Card](https://github.com/johnpoint/Weather-Card) 基于 ESP8266 的桌面天气时钟摆件
-- [DNMP-lvcshu](https://github.com/johnpoint/DNMP-lvcshu) 使用 docker-compose 组织安装 LNMP 环境
-- [start-vps-shell](https://github.com/johnpoint/start-vps-shell) 梦开始的地方（逃）
+| 名称                                                                | 描述                                                                 | 标签                                                                    |
+|---------------------------------------------------------------------|----------------------------------------------------------------------|-------------------------------------------------------------------------|
+| [Neshouse](https://github.com/bestony/neshouse)                     | 一个 clubhouse 的开源实现                                            | `#Javascript` `#Alpine.js` `#Bulma Css` `NES.css` `#Leancloud` `#Agora` |
+| [lottery_bot](https://github.com/johnpoint/lottery_bot)             | 抽奖 Bot,如果没有记错的话，这是 TG 中文圈第一台抽奖 Bot 呢，嘻嘻 | `#Python` `#pyTelegramBotApi`                                           |
+| [@xiaojin_bot](https://t.me/xiaojin_bot)                            | 津津乐道播客听友 Telegram 群机器人，目前还活着并且一直在维护         | `#Python` `#pyTelegramBotApi`                                           |
+| [go-pmbot](https://github.com/johnpoint/go-pmbot)                   | 用 Go 语言写的 PM Bot 算是跟风                                       | `#Golang`                                                               |
+| [tele-uptime-bot](https://github.com/johnpoint/tele-uptime-bot)     | 监控服务器在线 Bot ，主要靠 ping                         | `#Golang`                                                               |
+| [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA)       | 一套 Hexo 主题，就是现在在用的这个                                   | `#Javascript` `#Ejs`                                                    |
+| [ControlCenter](https://github.com/johnpoint/ControlCenter-Server)  | 服务器综合管理面板                                                   | `#Golang` `#Gorm` `#Echo`                                               |
+| [ControlCenter-web](https://github.com/johnpoint/ControlCenter-web) | 服务器综合管理面板前端                                               | `#Vue` `#Element-ui`                                                    |
+| [RssReader](https://github.com/johnpoint/RssReader)                 | Vue 前端 Go 后端的 Rss 在线阅读器                                    | `#Vue` `#Bootstrap-vue` `#Golang` `#Echo` `#Gorm`                       |
+| [CEIC-TG](https://github.com/johnpoint/CEIC-TG)                     | 地震预警推送到 telegram                                          | `#Python` `#pyTelegramBotApi`                                           |
+| [Weather-Card](https://github.com/johnpoint/Weather-Card)           | 基于 ESP8266 的桌面天气时钟摆件                                      | `#Arduino` `#C++`                                                       |
+| [DNMP-lvcshu](https://github.com/johnpoint/DNMP-lvcshu)             | 使用 docker-compose 组织安装 LNMP 环境                               | `#PHP` `#Shell`                                                         |
+| [start-vps-shell](https://github.com/johnpoint/start-vps-shell)     | 梦开始的地方                                                         | `#Shell`                                                                |
 
 
-# 联系我
+
+# 联系
 
 | 平台                   | 联系方式                                                  |
 | ---------------------- | --------------------------------------------------------- |
@@ -185,7 +189,7 @@ mKJN/gJ4JpO7ytQJ/HDcSPppuYZku8NnxeDiMOnIsyaOz4YrEA==
 - 部署
   - https://blog.lvcshu.com|
   - Github Pages https://johnpoint.github.io|
-  - [Netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.app/|
+  - ~~[Netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.app/|~~
 
 # 关于友情链接
 
@@ -207,7 +211,7 @@ mKJN/gJ4JpO7ytQJ/HDcSPppuYZku8NnxeDiMOnIsyaOz4YrEA==
 
 以上原则自 commit [64c8029ebc681afff4c07d458d2ba157789efb9d](https://github.com/johnpoint/johnpoint.github.io/commit/64c8029ebc681afff4c07d458d2ba157789efb9d) 起生效
 
-# 在线乞讨
+# 赞助渠道
 
 BTC
 
@@ -215,8 +219,13 @@ BTC
 15xAeGxxXWdqdrXfM4RrgiCp7hSd9mWuCy
 ```
 
-# 推介(AFF)
+# 服务提供商
 
-[IDC.WIKI](https://idc.wiki/aff.php?aff=1100)
-[VULTR](https://www.vultr.com/?ref=7131883)
-[Digitalocean](https://m.do.co/c/60f242e5b700)
+- [IDC.WIKI](https://idc.wiki/aff.php?aff=1100)
+- ~~[VULTR](https://www.vultr.com/?ref=7131883)~~
+- [Digitalocean](https://m.do.co/c/60f242e5b700)
+- [Letbox](https://my.letbox.com/aff.php?aff=335)
+- [RivenCloud](https://portal.sa.net/aff.php?aff=149)
+- [GigsgigsCloud](https://clientarea.gigsgigscloud.com/?affid=1522)
+- [BandwagonHost](https://bandwagonhost.com/aff.php?aff=15185)
+- [namesilo](https://www.namesilo.com/register.php?rid=5ce3798yc)
