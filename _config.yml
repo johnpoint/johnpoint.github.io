@@ -79,7 +79,7 @@ theme: XvA
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  url: https://github.com/johnpoint/johnpoint.github.io
+  repo: https://github.com/johnpoint/johnpoint.github.io
   branch: master
   message: Github Action Auto Build
 
@@ -87,7 +87,7 @@ Plugins:
 - hexo-generator-sitemap
 
 sitemap:
-    path: sitemap.xml
+  path: sitemap.xml
 
 # 博文压缩
 neat_enable: true
