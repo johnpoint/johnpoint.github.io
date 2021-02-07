@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>js 提取 QQ 音乐直链 | johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <style>
+    div#bigimg {
+        height: 350px;
+
+        background: url('/img/3.jpg');
+                background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .posttitle {
+        color: white;
+        text-shadow: 0 0 40px #000000;
+    }
+
+    small {
+        color: white !important;
+        text-shadow: 0 0 20px #000000;
+    }
+
+    .night .frpanel {
+        background: #000000;
+    }
+
+    .page-header {
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .post-content {
+        background: white;
+        padding: 15px;
+    }
+
+    .night .post-content {
+        background: #000000;
+        padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px !important;
+        }
+    }
+
+    .post-sidebar {
+        top: 0px !important;
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    .col-md-3 {
+        top: 200px;
+    }
+
+    div#main {
+        min-height: 70%;
+        background: rgba(0, 0, 0, 0) !important;
+        padding-top: 50px;
+        position: relative;
+        top: -260px;
+    }
+
+    .night .shaw {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /*.container-fri {
+        background-color: white;
+    }*/
+</style>
+<div class="shaw"></div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-title">
+                        <div class="page-header">
+                            <h1 class="posttitle">
+                                js 提取 QQ 音乐直链</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <div class="post-content">
+                            <pre><code class="js">function getSong(name) &#123;
+    window.location.href = &quot;https://y.qq.com/portal/search.html#page=1&amp;searchid=1&amp;remoteplace=txt.yqq.top&amp;t=song&amp;w=&quot; + name;
+    var muname = $(&#39;.js_song&#39;)[0].href.replace(&#39;https://y.qq.com/n/yqq/song/&#39;, &#39;C400&#39;).replace(&#39;.html&#39;, &#39;&#39;);
+    var qq = &quot;0&quot;;
+    var guid = &quot;0&quot;;
+    $.ajax(&#123;
+        url: &quot;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?g_tk=0&amp;loginUin=&quot; + qq +
+            &quot;&amp;hostUin=0&amp;format=json&amp;inCharset=utf8&amp;outCharset=utf-8&amp;notice=0&amp;platform=yqq&amp;needNewCode=0&amp;cid=205361747&amp;uin=&quot; + qq + &quot;&amp;songmid=&quot; +
+            muname.replace(&#39;C400&#39;, &#39;&#39;) + &quot;&amp;filename=&quot; + muname + &quot;.m4a&amp;guid=&quot; + guid,
+        success: function (data) &#123;
+            data = JSON.parse(data);
+            vkey = data.data.items[0].vkey;
+            console.log($(&#39;.js_song&#39;)[0].href.replace(&#39;https://y.qq.com/n/yqq/song/&#39;, &#39;http://isure.stream.qqmusic.qq.com/C400&#39;).replace(&#39;.html&#39;, &#39;.m4a?guid=&#39; + guid + &#39;&amp;vkey=&#39; + vkey + &#39;&amp;uin=&#39; + qq + &#39;&amp;fromtag=66&#39;))
+            window.open($(&#39;.js_song&#39;)[0].href.replace(&#39;https://y.qq.com/n/yqq/song/&#39;, &#39;http://isure.stream.qqmusic.qq.com/C400&#39;).replace(&#39;.html&#39;, &#39;.m4a?guid=&#39; + guid + &#39;&amp;vkey=&#39; + vkey + &#39;&amp;uin=&#39; + qq + &#39;&amp;fromtag=66&#39;))
+        &#125;
+    &#125;)
+&#125;
+</code></pre>
+
+                        </div>
+                        
+                        <div>
+    <ul class="post-copyright">
+        
+        <li class="post-copyright-author"><strong>本文作者: </strong>
+            johnpoint
+        </li>
+        
+        <li class="post-copyright-link"><strong>本文链接: </strong>
+            <a href="" id="copyrightlink">
+                <script>
+                    document.getElementById("copyrightlink").innerText=decodeURI("https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/")
+                </script>
+            </a>
+        </li>
+        <li class="post-copyright-license"><strong>版权声明: </strong>
+            本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </li>
+    </ul>
+</div>
+                        
+                    </article>
+                    
+                    <hr>
+                    <div class="post-nav">
+                        
+                        <div class="post-nav-prev">
+                            <a href="/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/"><i class="iconfont icon-prev"></i>2019 年度简报</a>
+                        </div>
+                        
+                        
+                        <div class="post-nav-next">
+                            <a href="/2019/10/20/Android-Q-%E5%86%8D%E4%BD%93%E9%AA%8C/">Android 10 再体验<i class="iconfont icon-next"></i></a>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="panel panel-disqus">
+    <div class="panel-body">
+        <div id="disqus_thread">长时间无法加载评论区，请检查您的网络情况</div>
+    </div>
+</div>
+<script>
+    var disqusload = function () {
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnpoints-blog-hexo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+    </script>
+        
+        <script id="loaddisqus" src="/js/disqus-lazyload.js"></script>
+        
+
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+                    
+                    
+                    <br>
+                </div>
+                <div class="col-md-3 post-sidebar">
+                    <div class="panel panel-info">
+    <div class="panel-body postinfo">
+        
+        <strong>作者: </strong>johnpoint<br>
+        
+        <strong>发布日期: </strong>2019-12-12<br>
+        
+        <a href="/tags/折腾/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+        
+        <a href="/tags/QQ音乐/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;QQ音乐</a>&nbsp;
+        
+        <a href="/tags/JS/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;JS</a>&nbsp;
+        
+        
+        <br><a target="_blank" rel="noopener" href="https://press.one/file/v?s=1128b721b4c7ea3d2748911ff238691c9e42f470c78d37e8c52d3293a228e5bb443708f287422344acf36a3b31fc9c44ce2c5f5c00b8f321be33a74a10948e3601&amp;h=9d526189f1fdfc453e2a7ba05d19fc13ace1ed7cc7737297b3f1588b3b3c70ff&amp;a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&amp;f=P1&amp;v=3"><i class="iconfont icon-certificate"
+            aria-hidden="true"></i>&nbsp;PRESS.one</a>
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+    </div>
+</body>

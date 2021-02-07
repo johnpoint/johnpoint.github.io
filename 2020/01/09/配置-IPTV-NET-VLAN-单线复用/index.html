@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>配置 IPTV-NET VLAN 单线复用 | johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <style>
+    div#bigimg {
+        height: 350px;
+
+        background: url('/img/2.jpg');
+                background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .posttitle {
+        color: white;
+        text-shadow: 0 0 40px #000000;
+    }
+
+    small {
+        color: white !important;
+        text-shadow: 0 0 20px #000000;
+    }
+
+    .night .frpanel {
+        background: #000000;
+    }
+
+    .page-header {
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .post-content {
+        background: white;
+        padding: 15px;
+    }
+
+    .night .post-content {
+        background: #000000;
+        padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px !important;
+        }
+    }
+
+    .post-sidebar {
+        top: 0px !important;
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    .col-md-3 {
+        top: 200px;
+    }
+
+    div#main {
+        min-height: 70%;
+        background: rgba(0, 0, 0, 0) !important;
+        padding-top: 50px;
+        position: relative;
+        top: -260px;
+    }
+
+    .night .shaw {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /*.container-fri {
+        background-color: white;
+    }*/
+</style>
+<div class="shaw"></div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-title">
+                        <div class="page-header">
+                            <h1 class="posttitle">
+                                配置 IPTV-NET VLAN 单线复用</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <div class="post-content">
+                            <p>家里的弱电箱因为前期设计失误所以电视那里只有一条网线，而如果我想将 wifi 信号在屋子里面相对良好的覆盖的话我也要将无线路由器设置在电视机附近，但是 IPTV 也需要占用一条网线，一开始我们的解决方案是用一条劈叉的网线，但是数据传输会有质量问题，所以趁着暑假我就尝试着解决这个问题。</p>
+<h1 id="设置光猫"><a href="#设置光猫" class="headerlink" title="设置光猫"></a>设置光猫</h1><p><img src="https://cdn.lvcshu.info/img/20200109001.jpg"></p>
+<p>首先利用广东电信的光猫超级账户</p>
+<pre><code>SuperUser: telecomadmin
+PassWord: nE7jA%5m
+</code></pre>
+<p>进行 VLAN 绑定</p>
+<p><img src="https://cdn.lvcshu.info/img/20200109002.jpg"></p>
+<h1 id="设置路由器"><a href="#设置路由器" class="headerlink" title="设置路由器"></a>设置路由器</h1><p><em>注意：在进行这一个篇章的时候建议先对路由器的设置进行记录，以免<del>机毁人亡</del></em></p>
+<h2 id="交换机设置"><a href="#交换机设置" class="headerlink" title="交换机设置"></a>交换机设置</h2><p><img src="https://cdn.lvcshu.info/img/20200109003.jpg"></p>
+<pre><code>光猫 --&gt; WAN -------&gt; LAN1(IPTV)
+               |
+               |----&gt; CPU(NET)
+</code></pre>
+<p>然后就好了～</p>
+<p>还可以顺便获取到 ipv6，双倍的快乐</p>
+
+                        </div>
+                        
+                        <div>
+    <ul class="post-copyright">
+        
+        <li class="post-copyright-author"><strong>本文作者: </strong>
+            johnpoint
+        </li>
+        
+        <li class="post-copyright-link"><strong>本文链接: </strong>
+            <a href="" id="copyrightlink">
+                <script>
+                    document.getElementById("copyrightlink").innerText=decodeURI("https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-IPTV-NET-VLAN-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/")
+                </script>
+            </a>
+        </li>
+        <li class="post-copyright-license"><strong>版权声明: </strong>
+            本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </li>
+    </ul>
+</div>
+                        
+                    </article>
+                    
+                    <hr>
+                    <div class="post-nav">
+                        
+                        <div class="post-nav-prev">
+                            <a href="/2020/01/13/Arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/"><i class="iconfont icon-prev"></i>Archlinux 系统体验报告</a>
+                        </div>
+                        
+                        
+                        <div class="post-nav-next">
+                            <a href="/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/">2019 年度简报<i class="iconfont icon-next"></i></a>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="panel panel-disqus">
+    <div class="panel-body">
+        <div id="disqus_thread">长时间无法加载评论区，请检查您的网络情况</div>
+    </div>
+</div>
+<script>
+    var disqusload = function () {
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnpoints-blog-hexo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+    </script>
+        
+        <script id="loaddisqus" src="/js/disqus-lazyload.js"></script>
+        
+
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+                    
+                    
+                    <br>
+                </div>
+                <div class="col-md-3 post-sidebar">
+                    <div class="panel panel-info">
+    <div class="panel-body postinfo">
+        
+        
+        <strong>作者: </strong>johnpoint<br>
+        
+        
+        <strong>发布日期: </strong>2020-01-09<br>
+        
+        <a href="/tags/折腾/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+        
+        <a href="/tags/IPTV/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;IPTV</a>&nbsp;
+        
+        <a href="/tags/VLAN/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;VLAN</a>&nbsp;
+        
+        
+        <br><a target="_blank" rel="noopener" href="https://press.one/file/v?s=4fa38e405e4ed9b29a047ef1bd53ef87032093307636e33c20a712512825e8ee7362b9f60604563fcbeff75141ce09fc47763afbd582934a680fa5f17bbfb99d00&amp;h=36d5889d09acc39ac98332e2661dc9c1d348ce585eb8f6cce9127d865c3052aa&amp;a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&amp;f=P1&amp;v=3"><i class="iconfont icon-certificate"
+            aria-hidden="true"></i>&nbsp;PRESS.one</a>
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+    </div>
+</body>

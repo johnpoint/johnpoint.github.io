@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <script>
+    let pagestatus = 0;
+    $('.navbar-default').addClass("nav-bg");
+    if (window.location.href.indexOf("page") != -1) {
+        $('#bigimg').hide();
+        $('.navbar-default').removeClass("nav-bg");
+        pagestatus = 1;
+    }
+    $(window).scroll(function (event) {
+        h = $(window).scrollTop()
+        if (pagestatus == 0) {
+            if (h >= document.body.clientHeight - 30) {
+                $('.navbar-default').removeClass("nav-bg");
+            }
+            if (h <= document.body.clientHeight - 30) {
+                $('.navbar-default').addClass("nav-bg");
+            }
+        }
+    });
+    function goindex() {
+        window.scrollTo({
+            top: document.body.clientHeight - 10,
+            behavior: "smooth"
+        })
+    }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+<div id="bg-shaw">
+    <i onclick="goindex()" class="iconfont icon-down"></i>
+</div>
+<h1 id="bg-title">johnpoint&#39;s blog</h1>
+<div id="bg-text">
+    
+    <a href="/atom.xml" class="iconfont icon-rss"></a>
+    
+    
+    <a target="_blank" rel="noopener" href="https://github.com/johnpoint" class="iconfont icon-git"></a>
+    
+    
+    <a target="_blank" rel="noopener" href="https://t.me/johnpoint" class="iconfont icon-telegram"></a>
+    
+    
+    <a href="mailto:me@lvcshu.com" class="iconfont icon-mail"></a>
+    
+    
+    <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/User:Johnpoint" class="iconfont icon-wikipedia"></a>
+    
+</div>
+<style>
+    #bg-shaw {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    div#bg-text {
+        text-align: center;
+    }
+
+    i.iconfont.icon-down {
+        font-size: 2.5em;
+        position: absolute;
+        bottom: 10px;
+        color: white;
+        left: 10px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px;
+        }
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    #bg-title {
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        color: white;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    #bg-text {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        color: white;
+    }
+
+    #bg-text>a {
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+        text-decoration: none;
+        padding: 6px;
+    }
+
+    div#bigimg {
+        top: 0px;
+        height: 100%;
+
+        background: url('//cdn.lvcshu.info/img/20200419001.jpg');
+            background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .nav-bg {
+        border: none !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    .nav-bg .navbar-collapse>ul>li>a {
+        color: white !important;
+    }
+
+    .nav-bg .navbar-collapse>ul>li:hover {
+        color: white !important;
+        border-bottom: inset;
+    }
+
+    .nav-bg .navbar-brand {
+        color: white;
+    }
+</style>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 post-list" style="padding-top: 30px;">
+                    
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/05/28/Telegram-spammer/">Telegram spammer 二三事</a><small
+                                    class="post-time">
+                                    2020-05-28</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/telegram/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;telegram</a>&nbsp;
+                                
+                                <a href="/tags/广告/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;广告</a>&nbsp;
+                                
+                                <a href="/tags/spam/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;spam</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/">博客主题更新 &amp;&amp; 一些碎碎念</a><small
+                                    class="post-time">
+                                    2020-04-19</small></h3>
+                            <small><p>好久没有更新博客啦，上来写点碎碎念</small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/建站/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;建站</a>&nbsp;
+                                
+                                <a href="/tags/hexo/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;hexo</a>&nbsp;
+                                
+                                <a href="/tags/主题/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;主题</a>&nbsp;
+                                
+                                <a href="/tags/iconfont/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;iconfont</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/03/23/Notion:%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/">Notion：好用的现代笔记软件</a><small
+                                    class="post-time">
+                                    2020-03-23</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/笔记/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;笔记</a>&nbsp;
+                                
+                                <a href="/tags/Joplin/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Joplin</a>&nbsp;
+                                
+                                <a href="/tags/Notion/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Notion</a>&nbsp;
+                                
+                                <a href="/tags/OneNote/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;OneNote</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/02/22/Joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/">Joplin：笔记软件的新选择</a><small
+                                    class="post-time">
+                                    2020-02-22</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/体验/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;体验</a>&nbsp;
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/Joplin/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Joplin</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/02/14/Tiny-File-Manager-%E4%BD%BF%E7%94%A8/">Tiny File Manager 使用</a><small
+                                    class="post-time">
+                                    2020-02-14</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/体验/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;体验</a>&nbsp;
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/01/13/Arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/">Archlinux 系统体验报告</a><small
+                                    class="post-time">
+                                    2020-01-13</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/体验/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;体验</a>&nbsp;
+                                
+                                <a href="/tags/Arch/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Arch</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/01/09/%E9%85%8D%E7%BD%AE-IPTV-NET-VLAN-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/">配置 IPTV-NET VLAN 单线复用</a><small
+                                    class="post-time">
+                                    2020-01-09</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/IPTV/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;IPTV</a>&nbsp;
+                                
+                                <a href="/tags/VLAN/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;VLAN</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/">2019 年度简报</a><small
+                                    class="post-time">
+                                    2019-12-23</small></h3>
+                            <small><p>又是一年圣诞节，2019 年也来到了尾声，2018 年的年度简报感觉就是在不久之前写的，时间过得真的快。又是时候来给过去的 2019 年做一个简报以及总结。</p></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/总结/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;总结</a>&nbsp;
+                                
+                                <a href="/tags/2019/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;2019</a>&nbsp;
+                                
+                                <a href="/tags/简报/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;简报</a>&nbsp;
+                                
+                                <a href="/tags/2020/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;2020</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/">js 提取 QQ 音乐直链</a><small
+                                    class="post-time">
+                                    2019-12-12</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/QQ音乐/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;QQ音乐</a>&nbsp;
+                                
+                                <a href="/tags/JS/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;JS</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2019/10/20/Android-Q-%E5%86%8D%E4%BD%93%E9%AA%8C/">Android 10 再体验</a><small
+                                    class="post-time">
+                                    2019-10-21</small></h3>
+                            <small><p><del>最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中</del></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/Android/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Android</a>&nbsp;
+                                
+                                <a href="/tags/体验/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;体验</a>&nbsp;
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+<nav class="page-navigator">
+  <a class="extend prev" rel="prev" href="/">Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next</a>
+</nav>
+
+                    <br>
+                </div>
+                <div class="col-md-3" style="padding-top: 30px;">
+                    
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">TAG</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018/" rel="tag">2018</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2019/" rel="tag">2019</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%80%E6%8A%A5/" rel="tag">简报</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2020/" rel="tag">2020</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2021/" rel="tag">2021</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E9%AA%8C/" rel="tag">体验</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arch/" rel="tag">Arch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESP8266/" rel="tag">ESP8266</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ST7796/" rel="tag">ST7796</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SGP30/" rel="tag">SGP30</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeMCU/" rel="tag">NodeMCU</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/verified/" rel="tag">verified</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Joplin/" rel="tag">Joplin</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alpine/" rel="tag">Alpine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notion/" rel="tag">Notion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OneNote/" rel="tag">OneNote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RSS/" rel="tag">RSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/telegram/" rel="tag">telegram</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%91%8A/" rel="tag">广告</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spam/" rel="tag">spam</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad-S2/" rel="tag">thinkpad S2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rtl8821ce/" rel="tag">rtl8821ce</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%B1%B3%E6%89%8B%E7%8E%AF/" rel="tag">小米手环</a><span class="tag-list-count">1</span></li></ul>
+        <a href="/tagscloud">More >></a>
+    </div>
+</div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Friends</h3>
+    </div>
+    <div class="panel-body">
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.ilemonrain.com/">极光星空</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://ovear.info/">Ovear&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.sometimesnaive.org/">南琴浪的博客</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.xzymoe.com/">Xzymoe&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://milkice.me">奶冰の冷藏室</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.mengclaw.com/">萌爪实验室</a><br>
+        
+        
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://0x.mk/">双草酸酯的博客</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://kn007.net/">kn007 的个人博客</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.wevg.org">Vigorous Pro</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://daily.elepover.com/">Elepover&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.blw.moe">派兹的小站</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://channel.Justf.space">Justf&#39;s Channel</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.swung0x48.com">Cyberspace of Swung</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.fsky7.com">FlyingSky&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://1a23.com">1A23 Studio</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.hanlin.press">翰林的小站</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.taoidle.com">Taoidle</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.scery.com/">Anthony&#39;s Blog</a><br>
+        
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+</body>

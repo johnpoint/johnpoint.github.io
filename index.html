@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <script>
+    let pagestatus = 0;
+    $('.navbar-default').addClass("nav-bg");
+    if (window.location.href.indexOf("page") != -1) {
+        $('#bigimg').hide();
+        $('.navbar-default').removeClass("nav-bg");
+        pagestatus = 1;
+    }
+    $(window).scroll(function (event) {
+        h = $(window).scrollTop()
+        if (pagestatus == 0) {
+            if (h >= document.body.clientHeight - 30) {
+                $('.navbar-default').removeClass("nav-bg");
+            }
+            if (h <= document.body.clientHeight - 30) {
+                $('.navbar-default').addClass("nav-bg");
+            }
+        }
+    });
+    function goindex() {
+        window.scrollTo({
+            top: document.body.clientHeight - 10,
+            behavior: "smooth"
+        })
+    }
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+<div id="bg-shaw">
+    <i onclick="goindex()" class="iconfont icon-down"></i>
+</div>
+<h1 id="bg-title">johnpoint&#39;s blog</h1>
+<div id="bg-text">
+    
+    <a href="/atom.xml" class="iconfont icon-rss"></a>
+    
+    
+    <a target="_blank" rel="noopener" href="https://github.com/johnpoint" class="iconfont icon-git"></a>
+    
+    
+    <a target="_blank" rel="noopener" href="https://t.me/johnpoint" class="iconfont icon-telegram"></a>
+    
+    
+    <a href="mailto:me@lvcshu.com" class="iconfont icon-mail"></a>
+    
+    
+    <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/User:Johnpoint" class="iconfont icon-wikipedia"></a>
+    
+</div>
+<style>
+    #bg-shaw {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    div#bg-text {
+        text-align: center;
+    }
+
+    i.iconfont.icon-down {
+        font-size: 2.5em;
+        position: absolute;
+        bottom: 10px;
+        color: white;
+        left: 10px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px;
+        }
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    #bg-title {
+        top: 40%;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        color: white;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    #bg-text {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        color: white;
+    }
+
+    #bg-text>a {
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+        text-decoration: none;
+        padding: 6px;
+    }
+
+    div#bigimg {
+        top: 0px;
+        height: 100%;
+
+        background: url('//cdn.lvcshu.info/img/20200419001.jpg');
+            background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .nav-bg {
+        border: none !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    .nav-bg .navbar-collapse>ul>li>a {
+        color: white !important;
+    }
+
+    .nav-bg .navbar-collapse>ul>li:hover {
+        color: white !important;
+        border-bottom: inset;
+    }
+
+    .nav-bg .navbar-brand {
+        color: white;
+    }
+</style>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 post-list" style="padding-top: 30px;">
+                    
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2021/02/02/Linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/">Linux 进程信息格式化</a><small
+                                    class="post-time">
+                                    2021-02-02</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/Linux/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Linux</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/">2020 年度简报</a><small
+                                    class="post-time">
+                                    2020-12-23</small></h3>
+                            <small><p>2020 年的开头我们并不知道接下来的这一年是那么的艰难，幸好春节前我就已经在某些地方得知了疫情的消息并且准备了一些口罩，减轻了疫情高峰期时口罩的使用压力。</p>
+<p>Bilibili 跨年晚会仿佛就发生在昨天，又到了 2020 年的圣诞节，得开始写年度总结了，总感觉这一年啥都没有干就到年末了（</p></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/总结/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;总结</a>&nbsp;
+                                
+                                <a href="/tags/简报/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;简报</a>&nbsp;
+                                
+                                <a href="/tags/2020/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;2020</a>&nbsp;
+                                
+                                <a href="/tags/2021/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;2021</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/12/02/ESP8266-weather-card/">NodeMCU 制作桌面天气时钟</a><small
+                                    class="post-time">
+                                    2020-12-02</small></h3>
+                            <small><p>其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。</small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/ESP8266/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;ESP8266</a>&nbsp;
+                                
+                                <a href="/tags/ST7796/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;ST7796</a>&nbsp;
+                                
+                                <a href="/tags/SGP30/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;SGP30</a>&nbsp;
+                                
+                                <a href="/tags/NodeMCU/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;NodeMCU</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/11/07/webdav-backup/">使用 Webdav 备份</a><small
+                                    class="post-time">
+                                    2020-11-07</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                                <a href="/tags/webdav/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;webdav</a>&nbsp;
+                                
+                                <a href="/tags/备份/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;备份</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/11/03/2020-Hackergame-writeups/">Hackergame 2020 writeups</a><small
+                                    class="post-time">
+                                    2020-11-04</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/hackergame/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;hackergame</a>&nbsp;
+                                
+                                <a href="/tags/记录/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;记录</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/10/21/Oneplus-8T/">Oneplus 8T 到手</a><small
+                                    class="post-time">
+                                    2020-10-21</small></h3>
+                            <small><p><del>来了来了，Android R 他朝我们走来了</del></p>
+<p>刚刚忍不住剁手了香气四溢的 Oneplus 8T，也把我手中的已经伊拉克成色的 Oneplus 6 给以旧换新处理掉了，就例行来说一下 Android 11 以及这个看起来很香的 Oneplus 8T 的体验</p></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/Android/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Android</a>&nbsp;
+                                
+                                <a href="/tags/体验/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;体验</a>&nbsp;
+                                
+                                <a href="/tags/折腾/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/10/09/upgrade-to-python-3.9/">编译安装 python 3.9</a><small
+                                    class="post-time">
+                                    2020-10-09</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/python/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;python</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/">vps 登录推送</a><small
+                                    class="post-time">
+                                    2020-09-13</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/安全/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;安全</a>&nbsp;
+                                
+                                <a href="/tags/vps/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;vps</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/06/12/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/">liunx jetbrains 软件输入中文</a><small
+                                    class="post-time">
+                                    2020-06-13</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/笔记/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;笔记</a>&nbsp;
+                                
+                                <a href="/tags/Linux/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Linux</a>&nbsp;
+                                
+                                <a href="/tags/Jetbrains/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Jetbrains</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default panel-post">
+                        <div class="panel-body">
+                            <h3 class="posttitle"><a href="/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/">git 同步上游代码</a><small
+                                    class="post-time">
+                                    2020-05-31</small></h3>
+                            <small></small><br>
+                            <div class="indexPostTag">
+                                
+                                <a href="/tags/笔记/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;笔记</a>&nbsp;
+                                
+                                <a href="/tags/git/" style="font-size: 0.9em;"></style><i
+                                        class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;git</a>&nbsp;
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+<nav class="page-navigator">
+  <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+</nav>
+
+                    <br>
+                </div>
+                <div class="col-md-3" style="padding-top: 30px;">
+                    
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">TAG</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2018/" rel="tag">2018</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2019/" rel="tag">2019</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%80%E6%8A%A5/" rel="tag">简报</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2020/" rel="tag">2020</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2021/" rel="tag">2021</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E9%AA%8C/" rel="tag">体验</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arch/" rel="tag">Arch</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ESP8266/" rel="tag">ESP8266</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ST7796/" rel="tag">ST7796</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SGP30/" rel="tag">SGP30</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeMCU/" rel="tag">NodeMCU</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Github/" rel="tag">Github</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/verified/" rel="tag">verified</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Joplin/" rel="tag">Joplin</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Alpine/" rel="tag">Alpine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notion/" rel="tag">Notion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OneNote/" rel="tag">OneNote</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RSS/" rel="tag">RSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/telegram/" rel="tag">telegram</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E5%91%8A/" rel="tag">广告</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spam/" rel="tag">spam</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinkpad-S2/" rel="tag">thinkpad S2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rtl8821ce/" rel="tag">rtl8821ce</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%B1%B3%E6%89%8B%E7%8E%AF/" rel="tag">小米手环</a><span class="tag-list-count">1</span></li></ul>
+        <a href="/tagscloud">More >></a>
+    </div>
+</div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Friends</h3>
+    </div>
+    <div class="panel-body">
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.ilemonrain.com/">极光星空</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://ovear.info/">Ovear&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.sometimesnaive.org/">南琴浪的博客</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.xzymoe.com/">Xzymoe&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://milkice.me">奶冰の冷藏室</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.mengclaw.com/">萌爪实验室</a><br>
+        
+        
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://0x.mk/">双草酸酯的博客</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://kn007.net/">kn007 的个人博客</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.wevg.org">Vigorous Pro</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://daily.elepover.com/">Elepover&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.blw.moe">派兹的小站</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://channel.Justf.space">Justf&#39;s Channel</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.swung0x48.com">Cyberspace of Swung</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.fsky7.com">FlyingSky&#39;s Blog</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://1a23.com">1A23 Studio</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://blog.hanlin.press">翰林的小站</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.taoidle.com">Taoidle</a><br>
+        
+        
+        
+        <a class="frlink" target="_blank" rel="noopener" href="https://www.scery.com/">Anthony&#39;s Blog</a><br>
+        
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+</body>

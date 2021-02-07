@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>配置CORS小记 | johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <style>
+    div#bigimg {
+        height: 350px;
+
+        background: url('/img/0.jpg');
+                background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .posttitle {
+        color: white;
+        text-shadow: 0 0 40px #000000;
+    }
+
+    small {
+        color: white !important;
+        text-shadow: 0 0 20px #000000;
+    }
+
+    .night .frpanel {
+        background: #000000;
+    }
+
+    .page-header {
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .post-content {
+        background: white;
+        padding: 15px;
+    }
+
+    .night .post-content {
+        background: #000000;
+        padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px !important;
+        }
+    }
+
+    .post-sidebar {
+        top: 0px !important;
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    .col-md-3 {
+        top: 200px;
+    }
+
+    div#main {
+        min-height: 70%;
+        background: rgba(0, 0, 0, 0) !important;
+        padding-top: 50px;
+        position: relative;
+        top: -260px;
+    }
+
+    .night .shaw {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /*.container-fri {
+        background-color: white;
+    }*/
+</style>
+<div class="shaw"></div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-title">
+                        <div class="page-header">
+                            <h1 class="posttitle">
+                                配置CORS小记</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <div class="post-content">
+                            <p>最近在折腾博客的字体，最终选定了这几个字体作为网站的字体<a id="more"></a> <del>莫名绕口</del></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.foundertype.com/index.php/FontInfo/index/id/216.html">方正兰亭纤黑</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.foundertype.com/index.php/FontInfo/index/id/202">方正粗金陵</a></li>
+<li>Times New Roman</li>
+<li>Times</li>
+<li>serif</li>
+</ul>
+<p>问题来了，在方正网站上面获取字体的授权是非商业的授权。即使我都是非商业的用途，但是为了减少我的风险，我还是选择把字体和项目分开(怕死.jpg)。</p>
+<p>emmmmm 我不把字体整进主题里面我怎么去使用字体咧？网上的 font CDN 也不大可能有方正的字体…</p>
+<p>最后就把字体放上了一个资源服务器 cdn.lvcshu.info 我的图片之类的外链的东西都全部扔在上面，就把字体扔到了 <a target="_blank" rel="noopener" href="https://cdn.lvcshu.info/font/">https://cdn.lvcshu.info/font/</a> 上面，如果你打开 F12-&gt;network 然后刷新的话，应该能发现有两个后缀为 ttf 的资源是从 cdn.lvcshu.info 加载的。</p>
+<h2 id="配置-CORS"><a href="#配置-CORS" class="headerlink" title="配置 CORS"></a>配置 CORS</h2><p>事情并没有那么简单，从别的域名引用是一种叫做跨域请求的请求 <del>莫名绕口×2</del> ，但是这种请求会撞上浏览器的一种叫做 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Same-origin_policy">Same-origin policy(同源策略)</a> 的安全策略，好消息是这个策略也有相应的绕过方法 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing(CORS 跨来源资源共享)</a> 这种技术规范就可以通过添加标头来进行资源的跨域名调用。顺便他还可以对资源的调用范围作出限制，毕竟我可不想碰到方正的法务团队(<del>逃</del>)。</p>
+<p>具体配置如下</p>
+<pre><code>location /font &#123;
+    set $cors_origin &quot;&quot;;
+    if ($http_origin ~* &quot;^https://blog.lvcshu.com$&quot;) &#123;
+            set $cors_origin $http_origin;
+    &#125;
+    if ($http_origin ~* &quot;^https://johnpoint.github.io$&quot;) &#123;
+            set $cors_origin $http_origin;
+    &#125;
+    if ($http_origin ~* &quot;^https://lvcshu.netlify.com$&quot;) &#123;
+            set $cors_origin $http_origin;
+    &#125;
+    if ($request_method = &#39;OPTIONS&#39;) &#123;
+    return 204;
+    &#125;
+    add_header Access-Control-Allow-Origin $cors_origin always;
+    add_header Access-Control-Allow-Headers &quot;Content-Type, Authorization&quot; always;
+    add_header Access-Control-Allow-Methods &quot;GET, POST, OPTIONS, PUT, PATCH, DELETE, HEAD&quot; always;
+    add_header Access-Control-Max-Age 86400 always;
+&#125;
+</code></pre>
+<h2 id="修改-CSS"><a href="#修改-CSS" class="headerlink" title="修改 CSS"></a>修改 CSS</h2><p>但是如果在主题的项目 CSS 里面写死我的 url 的话，因为上面有域名限制是不会生效的，可不能这样误导别人啊 QAQ，所以就把 CSS 的字体的声明在项目中删去了，要想正确加载字体只需要在 <code>all.css</code> 中加入这一句</p>
+<pre><code>@font-face&#123;font-family:&quot;FZJL&quot;;src:url(&#39;字体所在url&#39;)&#125;
+@font-face&#123;font-family:&quot;FZLT&quot;;src: url(&#39;字体所在url&#39;)&#125;
+</code></pre>
+<p>即可生效</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/entry/5c249af1e51d45392c42e833">nginx 处理跨域 (cors)</a></li>
+<li><a target="_blank" rel="noopener" href="https://my.oschina.net/yzChen/blog/1573828">nginx 指定多个域名跨域请求配置</a></li>
+</ul>
+
+                        </div>
+                        
+                        <div>
+    <ul class="post-copyright">
+        
+        <li class="post-copyright-author"><strong>本文作者: </strong>
+            johnpoint
+        </li>
+        
+        <li class="post-copyright-link"><strong>本文链接: </strong>
+            <a href="" id="copyrightlink">
+                <script>
+                    document.getElementById("copyrightlink").innerText=decodeURI("https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AECORS%E5%B0%8F%E8%AE%B0/")
+                </script>
+            </a>
+        </li>
+        <li class="post-copyright-license"><strong>版权声明: </strong>
+            本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </li>
+    </ul>
+</div>
+                        
+                    </article>
+                    
+                    <hr>
+                    <div class="post-nav">
+                        
+                        <div class="post-nav-prev">
+                            <a href="/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><i class="iconfont icon-prev"></i>deepin 应用字体异常解决方法</a>
+                        </div>
+                        
+                        
+                        <div class="post-nav-next">
+                            <a href="/2019/09/24/RSS-On-Android/">app推荐:安卓上好用的 RSS 客户端们<i class="iconfont icon-next"></i></a>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="panel panel-disqus">
+    <div class="panel-body">
+        <div id="disqus_thread">长时间无法加载评论区，请检查您的网络情况</div>
+    </div>
+</div>
+<script>
+    var disqusload = function () {
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnpoints-blog-hexo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+    </script>
+        
+        <script id="loaddisqus" src="/js/disqus-lazyload.js"></script>
+        
+
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+                    
+                    
+                    <br>
+                </div>
+                <div class="col-md-3 post-sidebar">
+                    <div class="panel panel-info">
+    <div class="panel-body postinfo">
+        
+        
+        <strong>作者: </strong>johnpoint<br>
+        
+        
+        <strong>发布日期: </strong>2019-10-07<br>
+        
+        <a href="/tags/折腾/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+        
+        <a href="/tags/字体/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;字体</a>&nbsp;
+        
+        <a href="/tags/hexo/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;hexo</a>&nbsp;
+        
+        <a href="/tags/blog/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;blog</a>&nbsp;
+        
+        <a href="/tags/nginx/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;nginx</a>&nbsp;
+        
+        
+        <br><a target="_blank" rel="noopener" href="https://press.one/file/v?s=b56535d9f85b2136fc4e85f8fa7366cd8a70d556562fcfc5fa8dd53a8e5ee57519c00d36461aa88e290111cc4dcad55f1869a5348f1283c1555db7c3d7ccd47d01&amp;h=fb875cd81a5e33cb55088b3ccd82e84331db49f4e1e06f1b2481ba5320f33ac7&amp;a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&amp;v=3&amp;f=P1"><i class="iconfont icon-certificate"
+            aria-hidden="true"></i>&nbsp;PRESS.one</a>
+        
+    </div>
+</div>
+
+
+<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE-CORS"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置 CORS</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BF%AE%E6%94%B9-CSS"><span class="post-toc-number">2.</span> <span class="post-toc-text">修改 CSS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">参考</span></a></li></ol></li></ol>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+    </div>
+</body>

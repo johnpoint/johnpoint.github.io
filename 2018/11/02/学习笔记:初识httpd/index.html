@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>学习笔记:初识httpd | johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <style>
+    div#bigimg {
+        height: 350px;
+
+        background: url('/img/1.jpg');
+                background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .posttitle {
+        color: white;
+        text-shadow: 0 0 40px #000000;
+    }
+
+    small {
+        color: white !important;
+        text-shadow: 0 0 20px #000000;
+    }
+
+    .night .frpanel {
+        background: #000000;
+    }
+
+    .page-header {
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .post-content {
+        background: white;
+        padding: 15px;
+    }
+
+    .night .post-content {
+        background: #000000;
+        padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px !important;
+        }
+    }
+
+    .post-sidebar {
+        top: 0px !important;
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    .col-md-3 {
+        top: 200px;
+    }
+
+    div#main {
+        min-height: 70%;
+        background: rgba(0, 0, 0, 0) !important;
+        padding-top: 50px;
+        position: relative;
+        top: -260px;
+    }
+
+    .night .shaw {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /*.container-fri {
+        background-color: white;
+    }*/
+</style>
+<div class="shaw"></div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-title">
+                        <div class="page-header">
+                            <h1 class="posttitle">
+                                学习笔记:初识httpd</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <div class="post-content">
+                            <blockquote>
+<p>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。</p>
+</blockquote>
+<!---more--->
+
+<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><h2 id="安装-httpd、php、mysql"><a href="#安装-httpd、php、mysql" class="headerlink" title="安装 httpd、php、mysql"></a>安装 httpd、php、mysql</h2><ul>
+<li>建立 <strong>两个</strong> 虚拟主机建立网站，并申请 <strong>SSL</strong> 使其能够通过 <strong>https</strong> 访问</li>
+</ul>
+<h2 id="学习过程"><a href="#学习过程" class="headerlink" title="学习过程"></a>学习过程</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm
+
+yum -y install yum-utils
+yum-config-manager --enable remi-php72
+
+yum -y install httpd  mysql  mysql-server  mysql-connector-odbc  mysql-devel  libdbi-dbd-mysql  openssl  mod_ssl  httpd-manual  mod_ssl  mod_perl  mod_auth_mysql
+
+yum -y install php  php-mcrypt  php-cli  php-gd  php-curl  php-mysql  php-zip  php-fileinfo  php-fpm  php-xml  php-mbstring  php-ldap  php-xmlrpc  php-devel
+</code></pre>
+<p>设置开机启动</p>
+<pre><code class="bash">chkconfig httpd on  
+chkconfig mysqld on
+</code></pre>
+<p>建立虚拟主机文件夹</p>
+<pre><code class="bash">cd /home
+mkdir www
+</code></pre>
+<p>修改httpd配置文件</p>
+<pre><code class="bash">cd /etc/httpd/conf
+vi httpd.conf
+</code></pre>
+<p>加入</p>
+<p>Include /home/www/vhost.conf<br>解析域名<br>略</p>
+<p>新建虚拟主机<br>建立虚拟主机路径<br>cd /home/www<br>mkdir hk.lvcshu.info<br>新建虚拟主机配置<br>vi vhost.conf<br>写入</p>
+<p>&lt;VirtualHost *:80&gt;<br>    DocumentRoot /home/www/hk.lvcshu.info<br>    ServerName hk.lvcshu.info<br>    RewriteEngine on<br>    RewriteCond %{SERVER_PORT} !^443<br>    RewriteRule ^(.*)?$ https://%{SERVER_NAME}/$1 [R=permanent,L]<br></VirtualHost></p>
+<p>&lt;Directory “/home/www/hk.lvcshu.info”&gt;<br>    Options Indexes FollowSymLinks<br>    AllowOverride all<br>    Order Deny,Allow<br>    Deny from none<br>    Allow from all<br></Directory><br>建立一个简陋的主页<br>略</p>
+<p>申请证书<br>使用 acme.sh 的开源项目</p>
+<p>curl  <a target="_blank" rel="noopener" href="https://get.acme.sh/">https://get.acme.sh</a> | sh</p>
+<p>cd .acme.sh<br>acme.sh  –issue  -d hk.lvcshu.info –webroot  /home/www/hk.lvcshu.info/<br>证书路径：/root/.acme.sh/hk.lvcshu.info</p>
+<p>SSLCertificateFile        /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.cer<br>SSLCertificateKeyFile     /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.key<br>配置 https<br>&lt;VirtualHost *:443&gt;<br>DocumentRoot   /home/www/hk.lvcshu.info<br>ServerName     hk.lvcshu.info<br>SSLEngine      on<br>SSLCertificateFile        /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.cer<br>SSLCertificateKeyFile     /root/.acme.sh/hk.lvcshu.info/hk.lvcshu.info.key<br></VirtualHost><br>return 0;</p>
+<p>更新：</p>
+<p>其实有一个更加好的虚拟主机的管理方法，那就是一个网站用一个配置文件来管理，在配置文件 httpd.conf 中直接引入 /home/www/vhost/* 即可</p>
+<p>例如在 <code>/home/www/vhost</code> 中 <code>hk.lvcshu.info.dom</code> 即为 <code>hk.lvcshu.info</code> 的配置文件。</p>
+
+                        </div>
+                        
+                        <div>
+    <ul class="post-copyright">
+        
+        <li class="post-copyright-author"><strong>本文作者: </strong>
+            johnpoint
+        </li>
+        
+        <li class="post-copyright-link"><strong>本文链接: </strong>
+            <a href="" id="copyrightlink">
+                <script>
+                    document.getElementById("copyrightlink").innerText=decodeURI("https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0:%E5%88%9D%E8%AF%86httpd/")
+                </script>
+            </a>
+        </li>
+        <li class="post-copyright-license"><strong>版权声明: </strong>
+            本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </li>
+    </ul>
+</div>
+                        
+                    </article>
+                    
+                    <hr>
+                    <div class="post-nav">
+                        
+                        <div class="post-nav-prev">
+                            <a href="/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/"><i class="iconfont icon-prev"></i>2018年度简报</a>
+                        </div>
+                        
+                        
+                        <div class="post-nav-next">
+                            <a href="/2018/10/20/%E6%A0%91%E8%8E%93%E6%B4%BE-docker-%E6%90%AD%E5%BB%BA-pi-dashboard/">树莓派 docker 搭建 pi-dashboard<i class="iconfont icon-next"></i></a>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="panel panel-disqus">
+    <div class="panel-body">
+        <div id="disqus_thread">长时间无法加载评论区，请检查您的网络情况</div>
+    </div>
+</div>
+<script>
+    var disqusload = function () {
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnpoints-blog-hexo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+    </script>
+        
+        <script id="loaddisqus" src="/js/disqus-lazyload.js"></script>
+        
+
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+                    
+                    
+                    <br>
+                </div>
+                <div class="col-md-3 post-sidebar">
+                    <div class="panel panel-info">
+    <div class="panel-body postinfo">
+        
+        <strong>作者: </strong>johnpoint<br>
+        
+        <strong>发布日期: </strong>2018-11-02<br>
+        
+        <a href="/tags/折腾/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+        
+        <a href="/tags/笔记/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;笔记</a>&nbsp;
+        
+        <a href="/tags/httpd/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;httpd</a>&nbsp;
+        
+        
+        <br><a target="_blank" rel="noopener" href="https://press.one/file/v?s=cd7ed7c4f687fb45d0f5f2520ed62e28f659627a5ca7562893842f22649ad60b2701293a7a3f4cc255c9e68ee7240bb2d295f123d8578007b703829a714ff78a01&amp;h=960a433bd0f2fb6e7506bff5d979d515949b1e2728d5598dc41e5b44fc042402&amp;a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&amp;f=P1&amp;v=3"><i class="iconfont icon-certificate"
+            aria-hidden="true"></i>&nbsp;PRESS.one</a>
+        
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+    </div>
+</body>

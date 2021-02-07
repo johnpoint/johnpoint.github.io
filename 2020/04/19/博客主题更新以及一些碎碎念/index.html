@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>博客主题更新 &amp;&amp; 一些碎碎念 | johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <style>
+    div#bigimg {
+        height: 350px;
+
+        background: url('/img/2.jpg');
+                background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .posttitle {
+        color: white;
+        text-shadow: 0 0 40px #000000;
+    }
+
+    small {
+        color: white !important;
+        text-shadow: 0 0 20px #000000;
+    }
+
+    .night .frpanel {
+        background: #000000;
+    }
+
+    .page-header {
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .post-content {
+        background: white;
+        padding: 15px;
+    }
+
+    .night .post-content {
+        background: #000000;
+        padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px !important;
+        }
+    }
+
+    .post-sidebar {
+        top: 0px !important;
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    .col-md-3 {
+        top: 200px;
+    }
+
+    div#main {
+        min-height: 70%;
+        background: rgba(0, 0, 0, 0) !important;
+        padding-top: 50px;
+        position: relative;
+        top: -260px;
+    }
+
+    .night .shaw {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /*.container-fri {
+        background-color: white;
+    }*/
+</style>
+<div class="shaw"></div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-title">
+                        <div class="page-header">
+                            <h1 class="posttitle">
+                                博客主题更新 &amp;&amp; 一些碎碎念</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <div class="post-content">
+                            <p>好久没有更新博客啦，上来写点碎碎念<a id="more"></a></p>
+<h1 id="博客主题更新"><a href="#博客主题更新" class="headerlink" title="博客主题更新"></a>博客主题更新</h1><p>最近在上网课之余腾出手来将 Hexo 主题做了一点点更新，主要是将<a href="https://blog.lvcshu.com/">入口页面</a>做的漂亮了一点，加上了背景图片以及把顶栏 CSS 调整成了透明来更加适应图片背景。</p>
+<p>然后发现如果顶栏一直透明的话滚动到了文章列表会比较难看，就加了一点 js 使顶栏能自己切换透明以及白色。</p>
+<h1 id="启用渐进式-JPEG-图片"><a href="#启用渐进式-JPEG-图片" class="headerlink" title="启用渐进式 JPEG 图片"></a>启用渐进式 JPEG 图片</h1><h2 id="渐进式图片转换"><a href="#渐进式图片转换" class="headerlink" title="渐进式图片转换"></a>渐进式图片转换</h2><p>因为上文提到的博客主题的更新，所以一进博客就要加载一张大背景图，如果还采用原来的线性加载的 jpg 图片的话会造成观感的不和谐，所以就将网站的图片进行了转换，使图片支持渐进式加载，这里的转换用到了 python 脚本</p>
+<pre><code>from PIL import Image # pip3 install pillow
+ 
+origin_file_path = &#39;./t.jpeg&#39;
+progressive_file_path = &#39;./o.jpeg&#39;
+ 
+original_image = Image.open(origin_file_path)
+original_image.convert(&#39;RGB&#39;)
+original_image.save(progressive_file_path, optimize=True, quality=100, progressive=True)
+</code></pre>
+<h2 id="PNG-转-JPG"><a href="#PNG-转-JPG" class="headerlink" title="PNG 转 JPG"></a>PNG 转 JPG</h2><p>同样也使用了 python 脚本，这里顺便将图片也进行了渐进式 jpeg 的转换</p>
+<pre><code>import os
+import cv2
+import sys
+import numpy as np
+from PIL import Image # pip3 install pillow
+ 
+path = &quot;./&quot;
+print(path)
+ 
+for filename in os.listdir(path):
+    if os.path.splitext(filename)[1] == &#39;.png&#39;:
+        # print(filename)
+        img = cv2.imread(path + filename)
+        print(filename.replace(&quot;.png&quot;,&quot;.jpg&quot;))
+        newfilename = filename.replace(&quot;.png&quot;,&quot;.jpg&quot;)
+        # cv2.imshow(&quot;Image&quot;,img)
+        # cv2.waitKey(0)
+        cv2.imwrite(path + newfilename,img)
+        origin_file_path = path + newfilename
+        progressive_file_path = path + newfilename
+        original_image = Image.open(origin_file_path)
+        original_image.convert(&#39;RGB&#39;)
+        original_image.save(progressive_file_path, optimize=True, quality=100, progressive=True)
+        os.remove(path+filename)% 
+</code></pre>
+<h1 id="iconfont-使用体验"><a href="#iconfont-使用体验" class="headerlink" title="iconfont 使用体验"></a>iconfont 使用体验</h1><p>写这套主题的时候，我有一点使用 icon 图标的需求，虽然说 <a target="_blank" rel="noopener" href="https://fontawesome.com/">fontawesome.com</a> 的图标品种十分丰富，但是似乎有些图标要使用的话要付费，对于我这种(穷)学生党来说有点难受，然后我想起了阿里巴巴开的 <a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont</a> 图标库，第一次使用之后就爱上了。</p>
+<p><img src="https://cdn.lvcshu.info/img/20200419002.jpg"></p>
+<p>它不仅提供常规的 icon 还提供了彩色的 icon，还是免费的(指没有商业使用的情况下)，爱了爱了，博客主题项目的图标就是使用的 iconfont 的图标</p>
+<h1 id="更改-DNS-服务商"><a href="#更改-DNS-服务商" class="headerlink" title="更改 DNS 服务商"></a>更改 DNS 服务商</h1><p>之前使用的是 NS1 的免费 DNS 解析服务，虽然有分区域解析的功能，但是貌似效果不是很显著，趁着腾讯云的云解析正在搞活动买了一年的个人专业版(钱包 -￥36)来试用下，看了下可以区分境内境外解析，速度提升效果还可以</p>
+<p><img src="https://cdn.lvcshu.info/img/20200420001.jpg"></p>
+<p>EOF</p>
+
+                        </div>
+                        
+                        <div>
+    <ul class="post-copyright">
+        
+        <li class="post-copyright-author"><strong>本文作者: </strong>
+            johnpoint
+        </li>
+        
+        <li class="post-copyright-link"><strong>本文链接: </strong>
+            <a href="" id="copyrightlink">
+                <script>
+                    document.getElementById("copyrightlink").innerText=decodeURI("https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/")
+                </script>
+            </a>
+        </li>
+        <li class="post-copyright-license"><strong>版权声明: </strong>
+            本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </li>
+    </ul>
+</div>
+                        
+                    </article>
+                    
+                    <hr>
+                    <div class="post-nav">
+                        
+                        <div class="post-nav-prev">
+                            <a href="/2020/05/28/Telegram-spammer/"><i class="iconfont icon-prev"></i>Telegram spammer 二三事</a>
+                        </div>
+                        
+                        
+                        <div class="post-nav-next">
+                            <a href="/2020/03/23/Notion:%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/">Notion：好用的现代笔记软件<i class="iconfont icon-next"></i></a>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="panel panel-disqus">
+    <div class="panel-body">
+        <div id="disqus_thread">长时间无法加载评论区，请检查您的网络情况</div>
+    </div>
+</div>
+<script>
+    var disqusload = function () {
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnpoints-blog-hexo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+    </script>
+        
+        <script id="loaddisqus" src="/js/disqus-lazyload.js"></script>
+        
+
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+                    
+                    
+                    <br>
+                </div>
+                <div class="col-md-3 post-sidebar">
+                    <div class="panel panel-info">
+    <div class="panel-body postinfo">
+        
+        <strong>作者: </strong>johnpoint<br>
+        
+        <strong>发布日期: </strong>2020-04-19<br>
+        
+        <a href="/tags/折腾/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;折腾</a>&nbsp;
+        
+        <a href="/tags/建站/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;建站</a>&nbsp;
+        
+        <a href="/tags/hexo/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;hexo</a>&nbsp;
+        
+        <a href="/tags/主题/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;主题</a>&nbsp;
+        
+        <a href="/tags/iconfont/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;iconfont</a>&nbsp;
+        
+        
+    </div>
+</div>
+
+
+<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">博客主题更新</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%90%AF%E7%94%A8%E6%B8%90%E8%BF%9B%E5%BC%8F-JPEG-%E5%9B%BE%E7%89%87"><span class="post-toc-number">2.</span> <span class="post-toc-text">启用渐进式 JPEG 图片</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B8%90%E8%BF%9B%E5%BC%8F%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">渐进式图片转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PNG-%E8%BD%AC-JPG"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">PNG 转 JPG</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#iconfont-%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="post-toc-number">3.</span> <span class="post-toc-text">iconfont 使用体验</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%9B%B4%E6%94%B9-DNS-%E6%9C%8D%E5%8A%A1%E5%95%86"><span class="post-toc-number">4.</span> <span class="post-toc-text">更改 DNS 服务商</span></a></li></ol>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+    </div>
+</body>

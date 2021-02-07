@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/css/all.css?v=1.0.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/css/iconfont.css?type=font" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    
+    <script src="/js/pace.min.js"></script>
+    <link href="/css/pace-theme-flash.css" rel="stylesheet">
+    
+    
+    <title>Archlinux 系统体验报告 | johnpoint&#39;s blog</title>
+    
+    
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="navv">
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navdown"
+                aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">johnpoint&#39;s blog</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navdown">
+            <ul class="nav navbar-nav">
+                
+                
+                <li>
+                    
+                    <a href="/">Home</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/archives">Archives</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/movie">B &amp; M</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/about">About</a>
+                </li>
+                
+                
+                <li>
+                    
+                    <a href="/friends">Friends</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="totop">
+    <i class="iconfont icon-top" onclick="totop()"></i>
+</div>
+<div class="daynight">
+    <i class="iconfont icon-Sun" onclick="daynight()"></i>
+    <i class="iconfont icon-moon" onclick="daynight()"></i>
+</div>
+
+    </div>
+    
+    <div id="bigimg">
+        <style>
+    div#bigimg {
+        height: 350px;
+
+        background: url('/img/4.jpg');
+                background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .posttitle {
+        color: white;
+        text-shadow: 0 0 40px #000000;
+    }
+
+    small {
+        color: white !important;
+        text-shadow: 0 0 20px #000000;
+    }
+
+    .night .frpanel {
+        background: #000000;
+    }
+
+    .page-header {
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .post-content {
+        background: white;
+        padding: 15px;
+    }
+
+    .night .post-content {
+        background: #000000;
+        padding: 15px;
+    }
+
+    @media (min-width: 768px) {
+        div#bigimg {
+            height: 350px !important;
+        }
+    }
+
+    .post-sidebar {
+        top: 0px !important;
+    }
+
+    div#bigimg {
+        height: 240px;
+    }
+
+    .col-md-3 {
+        top: 200px;
+    }
+
+    div#main {
+        min-height: 70%;
+        background: rgba(0, 0, 0, 0) !important;
+        padding-top: 50px;
+        position: relative;
+        top: -260px;
+    }
+
+    .night .shaw {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /*.container-fri {
+        background-color: white;
+    }*/
+</style>
+<div class="shaw"></div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-title">
+                        <div class="page-header">
+                            <h1 class="posttitle">
+                                Archlinux 系统体验报告</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <div class="post-content">
+                            <a id="more"></a>
+<pre><code>                   -`                    johnpoint@archlinux 
+                  .o+`                   ------------------- 
+                 `ooo/                   OS: Arch Linux x86_64 
+                `+oooo:                  Host: ××××××××××××
+               `+oooooo:                 Kernel: 5.4.8-arch1-1 
+               -+oooooo+:                Uptime: 18 hours, 43 mins 
+             `/:-:++oooo+:               Packages: 1389 (pacman) 
+            `/++++/+++++++:              Shell: zsh 5.7.1 
+           `/++++++++++++++:             Resolution: 1920x1080, 1920x1080 
+          `/+++ooooooooooooo/`           DE: Plasma 
+         ./ooosssso++osssssso+`          WM: KWin 
+        .oossssso-````/ossssss+`         Theme: Breeze [GTK2/3] 
+       -osssssso.      :ssssssso.        Icons: breeze [GTK2/3] 
+      :osssssss/        osssso+++.       Terminal: konsole 
+     /ossssssss/        +ssssooo/-       Terminal Font: Cascadia Code 11 
+   `/ossssso+/:-        -:/+osssso+-     CPU: Intel i5-8250U (8) @ 3.400GHz 
+  `+sso+:-`                 `.-/+oso:    GPU: Intel UHD Graphics 620 
+ `++:.                           `-/+/   Memory: ××××××××××××
+ .`                                 `/
+</code></pre>
+<p>今天写一下在这段时间 Archlinux 的使用体验。</p>
+<p>从去年上半年开始我先是使用的 Ubuntu 18.04 作为我的笔记本电脑兼主用电脑使用，Ubuntu 的桌面版本的使用体验其实已经不逊于 Windows 系统（除了 office 套件还是 Windows 上好用），开源的 office 套件方案（Libreoffice）也已经相对成熟也可以在大部分时间下代替 MS office 存在。</p>
+<p>前些时候，我也写过一篇 Archlinux 的安装指南（<a href="https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85Arch%E7%AC%94%E8%AE%B0/">传送门</a>），但是那时候我是在虚拟机里面安装的，主要是怕翻车（逃</p>
+<p>在 2019 年下半年，我才在 Yuuta 的一条<a target="_blank" rel="noopener" href="https://t.me/c/1076844146/10385">频道消息</a>的提醒下想起了那被我遗忘的 Archlinux 遂备份文件准备把主用的系统换过去。</p>
+<h1 id="使用体验"><a href="#使用体验" class="headerlink" title="使用体验"></a>使用体验</h1><ul>
+<li><p>桌面环境: 纯净的 KDE 体验，在我这里没有出现啥奇怪的问题</p>
+</li>
+<li><p>网页浏览: 选用了 Chromium，体验与其他平台的 Chrome 基本一致</p>
+</li>
+<li><p>视频: VLC 我觉得是最好用的播放器</p>
+</li>
+<li><p>文档编辑: Libreoffice 体验一般，就是能用的程度</p>
+</li>
+<li><p>代码: </p>
+<ul>
+<li>VScode 跨平台体验一致</li>
+<li>Netbean 跨平台体验一致</li>
+</ul>
+</li>
+<li><p>视频编辑: 无此需求</p>
+</li>
+<li><p>游戏:</p>
+<ul>
+<li><p>Steam 我 想/能 玩的游戏都运行正常(缺氧 &amp;&amp; 异星工厂)</p>
+</li>
+<li><p>Minecraft Java 跨平台</p>
+<h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1></li>
+</ul>
+</li>
+<li><p>内核升级的时候 wifi 的内核驱动模块不能自己挂载，往往需要自己重新加载</p>
+</li>
+<li><p>由于内核版本太高，有一次编译出来的 go 可执行文件放到了服务器上时提示 glibc 版本不存在</p>
+</li>
+</ul>
+
+                        </div>
+                        
+                        <div>
+    <ul class="post-copyright">
+        
+        <li class="post-copyright-author"><strong>本文作者: </strong>
+            johnpoint
+        </li>
+        
+        <li class="post-copyright-link"><strong>本文链接: </strong>
+            <a href="" id="copyrightlink">
+                <script>
+                    document.getElementById("copyrightlink").innerText=decodeURI("https://blog.lvcshu.com/2020/01/13/Arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/")
+                </script>
+            </a>
+        </li>
+        <li class="post-copyright-license"><strong>版权声明: </strong>
+            本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+        </li>
+    </ul>
+</div>
+                        
+                    </article>
+                    
+                    <hr>
+                    <div class="post-nav">
+                        
+                        <div class="post-nav-prev">
+                            <a href="/2020/02/14/Tiny-File-Manager-%E4%BD%BF%E7%94%A8/"><i class="iconfont icon-prev"></i>Tiny File Manager 使用</a>
+                        </div>
+                        
+                        
+                        <div class="post-nav-next">
+                            <a href="/2020/01/09/%E9%85%8D%E7%BD%AE-IPTV-NET-VLAN-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/">配置 IPTV-NET VLAN 单线复用<i class="iconfont icon-next"></i></a>
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <div class="panel panel-disqus">
+    <div class="panel-body">
+        <div id="disqus_thread">长时间无法加载评论区，请检查您的网络情况</div>
+    </div>
+</div>
+<script>
+    var disqusload = function () {
+        (function () {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://johnpoints-blog-hexo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+    </script>
+        
+        <script id="loaddisqus" src="/js/disqus-lazyload.js"></script>
+        
+
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+                    
+                    
+                    <br>
+                </div>
+                <div class="col-md-3 post-sidebar">
+                    <div class="panel panel-info">
+    <div class="panel-body postinfo">
+        
+        
+        <strong>作者: </strong>johnpoint<br>
+        
+        
+        <strong>发布日期: </strong>2020-01-13<br>
+        
+        <a href="/tags/体验/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;体验</a>&nbsp;
+        
+        <a href="/tags/Arch/"><i class="iconfont icon-tag" aria-hidden="true"></i>&nbsp;Arch</a>&nbsp;
+        
+        
+        <br><a target="_blank" rel="noopener" href="https://press.one/file/v?s=578f6c338bbdc0f9bee8a948a900da87597b54e4c340f30e6c46a54d83d27a31180fc70ee8e7966a1a302b423fcc36eee54aad0a7aff897daa28d494711f32d200&amp;h=9cfe07deb55fa1ef3f85f9314d9d98e3f88a3c5217e9b308fd13777940e68ab7&amp;a=79a3a060a7faa9dfc9b8b4e0a59bf3ebac305f78&amp;f=P1&amp;v=3"><i class="iconfont icon-certificate"
+            aria-hidden="true"></i>&nbsp;PRESS.one</a>
+        
+    </div>
+</div>
+
+
+<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用体验</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9D%91"><span class="post-toc-number">2.</span> <span class="post-toc-text">坑</span></a></li></ol>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+        <footer>
+                <script src="/js/bootstrap.min.js"></script>
+                
+                <script src="/js/jquery.fancybox.min.js"></script>
+                <script src="/js/fancybox.js"></script>
+                <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+                
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122182397-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-122182397-1');
+</script>
+                
+                
+                
+                <script src="/js/totop.js"></script>
+                
+                <script src="/js/night.js"></script>
+                <div id="footer">Copyright © 2017 - 2021 <a href="/."
+                                rel="nofollow">johnpoint's blog.</a><br>Powered by<a rel="nofollow" target="_blank"
+                                href="https://hexo.io">
+                                Hexo </a> & <a rel="nofollow" target="_blank"
+                                href="https://github.com/johnpoint/hexo-theme-XvA">XvA v3.8.0</a>.
+                        </div>
+                <link rel="stylesheet" href="/css/dark.css">
+                <script src="/js/highlight.js">
+                </script>
+                <script>
+                        hljs.initHighlightingOnLoad();
+                </script>
+        </footer>
+</div>
+    </div>
+</body>
