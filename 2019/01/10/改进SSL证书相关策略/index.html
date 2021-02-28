@@ -17,7 +17,7 @@
     <title>改进SSL证书相关策略 | johnpoint&#39;s blog</title>
     
     
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -87,7 +87,7 @@
     div#bigimg {
         height: 350px;
 
-        background: url('/img/1.jpg');
+        background: url('/img/4.jpg');
                 background-repeat: no-repeat;
         background-size: cover;
     }
@@ -177,7 +177,7 @@
                 <div class="col-md-9">
                     <article class="post">
                         <div class="post-content">
-                            <p>自从使用了 docker 作为基础环境以后，我想着写一个能够服务进行统一集中管理的面板，一方面不想使用市面上使用比较广泛面板 <del>因为我做到他们不行啊啊啊</del>，一方面也算是一种练习吧<a id="more"></a></p>
+                            <p>自从使用了 docker 作为基础环境以后，我想着写一个能够服务进行统一集中管理的面板，一方面不想使用市面上使用比较广泛面板 <del>因为我做到他们不行啊啊啊</del>，一方面也算是一种练习吧<span id="more"></span></p>
 <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>抬头看下网站证书，yes！已经更换成泛域名证书啦~<br>简单的说下现在已经实现的 <del>满是bug的</del> 功能，证书分发，前文提过我是集中一个面板进行管理，面板中集成一个文件 <code>getcerfile.php</code> 可以直接访问（当然是有鉴权的啦，证书什么的不鉴权放公网会凉的），证书选用 Let’s 签发泛域名证书这样就不用考虑证书签发的时候解析到底解析到哪台服务器上去了 <del>不用造多轮子了，ye</del></p>
 <h1 id="证书检测"><a href="#证书检测" class="headerlink" title="证书检测"></a>证书检测</h1><p>这一部分主要是受了  Axton 大佬的启发 详情看 <a target="_blank" rel="noopener" href="https://flyhigher.top/develop/755.html">这篇文章</a> ，加上本人比较弱，且目前暂时还不想用上数据库存数据，所以目前是用文件 + shell 进行证书检查工作 配合 php 输出为不那么难看的页面 并且嵌入在面板中。</p>
 <p>效果图：</p>

@@ -17,7 +17,7 @@
     <title>NodeMCU 制作桌面天气时钟 | johnpoint&#39;s blog</title>
     
     
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="johnpoint's blog" type="application/atom+xml">
 </head>
 
 <body>
@@ -87,7 +87,7 @@
     div#bigimg {
         height: 350px;
 
-        background: url('/img/3.jpg');
+        background: url('/img/4.jpg');
                 background-repeat: no-repeat;
         background-size: cover;
     }
@@ -177,7 +177,7 @@
                 <div class="col-md-9">
                     <article class="post">
                         <div class="post-content">
-                            <p>其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。<a id="more"></a></p>
+                            <p>其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。<span id="more"></span></p>
 <h2 id="选型"><a href="#选型" class="headerlink" title="选型"></a>选型</h2><h3 id="芯片"><a href="#芯片" class="headerlink" title="芯片"></a>芯片</h3><p>在正式开始采购元件以及编码之前要先选定这个摆件将要采用的元件，因为是第一次真正意义上做这种加入了硬件的摆件，所以选择了对新手比较友好的 NodeMCU 上面有 ESP8266 芯片，这样的话就可以同时解决网络通信的问题，同时 NodeMCU 支持 Arduino 方式编程，这就很方便了，网上有各种各样的库可以给我调用。</p>
 <h3 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h3><p>由于是桌面摆件肯定要有个界面展示出来，OLED 屏幕成本太高了不考虑，最终选定了 <a target="_blank" rel="noopener" href="http://www.lcdwiki.com/zh/4.0inch_SPI_Module_ST7796">ST7796</a> 这块带触摸的 4 英寸 TFT 屏幕，一方面是价格还可以接受，另一方面是触摸屏也可以方便后续可以满足我可能突然想做触摸交互功能的想法（也许会一直只是想做）。</p>
 <h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><p>PM2.5 什么的数据公开的 API 其实已经够了，其实青萍空气检测仪打动我的点是那个二氧化碳检测的功能，所以这个摆件的二氧化碳检测功能是肯定要安排上的，空气检测模块就在淘宝那里找了个 SGP30，这个模块可以检测 CO2和 TVOC，也够用了。</p>
