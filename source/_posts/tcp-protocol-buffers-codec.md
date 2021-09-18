@@ -2,14 +2,14 @@
 title: 用于 gnet 的 Protocol buffers 编解码器
 date: 2021-09-17 18:30:00
 tags:
-  + gnet
-  + tcp
-  + Protocol buffers
-  + codec
-  + 笔记
+  - gnet
+  - tcp
+  - Protocol buffers
+  - codec
+  - 笔记
 ---
 
-要写一个 TCP 服务端，要处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 [gnet](https://gnet.host/)，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了...
+要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 [gnet](https://gnet.host/)，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了...
 
 ## 协议分析
 
