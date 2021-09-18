@@ -7,6 +7,7 @@ tags:
   - Protocol buffers
   - codec
   - 笔记
+toc: true
 ---
 
 要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 [gnet](https://gnet.host/)，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了...
