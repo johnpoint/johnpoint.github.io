@@ -149,6 +149,12 @@ friends:
       desc: As you look around
       sidebar: true
       page: true
+    - title: Marshall's Blog
+      url: https://www.naiquoy.com/
+      img: https://cdn.lvcshu.info/img/friends/wxy.jpg
+      desc: 人生何处不青山
+      sidebar: true
+      page: true
 
 comment:
   disqus:
