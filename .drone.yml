@@ -1,0 +1,29 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: Get Theme
+  image: alpine/git
+  commands:
+  - sudo timedatectl set-timezone "Asia/Shanghai"
+  - mkdir -p ~/.ssh/
+  - echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - ssh-keyscan github.com >> ~/.ssh/known_hosts
+  - git config --global user.name $USER
+  - git config --global user.email $MAIL
+  - git checkout source
+  - git clone https://github.com/johnpoint/hexo-theme-XvA theme/XvA
+  - cp themes/_config.yml themes/XvA/_config.yml
+  - cp themes/zh-Cu.yml themes/XvA/languages
+
+- name: Hexo Build
+  image: node:15-alpine
+  commands:
+  - npm install
+  - hexo deploy
+  
+trigger:
+  event:
+  - push
