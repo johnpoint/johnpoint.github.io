@@ -42,3 +42,28 @@ Login from:
 ```
 
 *脚本使用的 api 来自 ip.sb*
+
+### 2021-10-20 更新
+
+脚本中间更新了几个版本，现在的脚本已经可以实现之前所缺少的一些功能
+
+- 显示登录用户名
+- 不阻塞登录用户的 TTY
+
+```
+#!/bin/bash
+
+token=762929490:AAFMfL97A19Smd16LnRffesY1l7bCt1locs
+id=292043839
+
+localip=$(who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g')
+
+echo 'localip=$(curl -s ip.sb -4)' > tg.sh
+echo 'user=$(whoami)' >> tg.sh
+echo 'logintime=$(TZ=UTC-8 date "+%Y-%m-%d %H:%M:%S")' >> tg.sh
+echo 'loginip='${localip} >> tg.sh
+echo 'loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq -r .asn_organization)' >> tg.sh
+echo 'curl -s "https://api.telegram.org/bot'${token}'/sendMessage?chat_id='${id}'" --data-binary "&text=NewLogin:%0AVPS:${user}@${localip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}" > /dev/null && rm tg.sh' >> tg.sh
+
+bash tg.sh &
+```
