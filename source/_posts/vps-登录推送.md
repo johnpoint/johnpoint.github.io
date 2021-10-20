@@ -50,11 +50,13 @@ Login from:
 - 显示登录用户名
 - 不阻塞登录用户的 TTY
 
-```
+```shell
 #!/bin/bash
 
-token=762929490:AAFMfL97A19Smd16LnRffesY1l7bCt1locs
-id=292043839
+#填入 telegram bot 的 token
+token=
+#填自己telegram的id
+id=
 
 localip=$(who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g')
 
