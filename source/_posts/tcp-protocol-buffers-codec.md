@@ -165,3 +165,62 @@ func (d *Codec) Encode(c gnet.Conn, buf []byte) ([]byte, error) {
 	return buf, nil
 }
 ```
+
+
+## 2021-11-09 更新
+
+大意了，之前用上下文存储中间信息的方法有 **严重的性能问题**，在调用 golang 原生的 `context.WithValue` 方法时候，会在传入的上下文下面创建一个子上下文，这就导致了在一次又一次解码中，上下文树越来越庞大，而且每一层上下文内部都存储了本次解码的 `DataStruct`，造成内存泄漏的问题。
+
+在苦苦查了好几天，并且修了几个有可能的内存泄漏隐患之后我才意识到这一点(秃头.jpg)
+
+然后再看了下 `gnet.Conn` 的一个实现的 `Context()` 方法，发现他只是将我们传进去的东西存在了一个 map 里面，并不需要使用 `context` 相关的，所以简单的解决方法就是直接将 `DataStruct` 传进去，目前来看是解决了内存泄漏的问题，代码如下
+
+```go
+func (d *Codec) Decode(c gnet.Conn) ([]byte, error) {
+	// 从上下文里面拿出这个连接的编解码器储存 struct
+	r, ok := c.Context().(DataStruct)
+	if !ok {
+		err := c.Close()
+		if err != nil {
+			return nil, nil
+		}
+	}
+    
+	if len(r.fullData) == 0 {
+		_, bytes := c.ReadN(10)
+		var fullLength uint64
+		fullLength, r.lenNumLength = proto.DecodeVarint(bytes)
+		r.fullLength = int(fullLength)
+		fmt.Println(r.fullLength, r.lenNumLength)
+		if r.fullLength == 0 {
+			return nil, nil
+		}
+	}
+    
+	fullDataLong := len(r.fullData)
+	n, bytes := c.ReadN(r.fullLength + r.lenNumLength - fullDataLong)
+	r.fullData = append(r.fullData, bytes...)
+	c.ShiftN(n)
+	if len(r.fullData) >= r.fullLength+r.lenNumLength {
+		res := r.fullData[r.lenNumLength :]
+		r.fullData = []byte{}
+		c.SetContext(r)
+		return res, nil
+	}
+	ctx = context.WithValue(ctx, "codec", r)
+	c.SetContext(r)
+	return nil, nil
+}
+```
+
+```go
+func (es *EventServer) OnOpened(c gnet.Conn) (out []byte, action gnet.Action) {
+	var r = DataStruct{}
+	c.SetContext(r)
+	return
+}
+```
+
+## 参考资料
+
+- [Go 语言设计与实现 > 上下文 Context > 传值方法](https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-context/#614-%E4%BC%A0%E5%80%BC%E6%96%B9%E6%B3%95)
