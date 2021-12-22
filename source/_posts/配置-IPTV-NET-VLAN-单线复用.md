@@ -12,7 +12,7 @@ pressone: https://press.one/file/v?s=4fa38e405e4ed9b29a047ef1bd53ef8703209330763
 
 # 设置光猫
 
-![](https://cdn.lvcshu.info/img/20200109001.jpg)
+![](https://cdn.6-d.cc/img/20200109001.jpg)
 
 首先利用广东电信的光猫超级账户
 
@@ -23,7 +23,7 @@ PassWord: nE7jA%5m
 
 进行 VLAN 绑定
 
-![](https://cdn.lvcshu.info/img/20200109002.jpg)
+![](https://cdn.6-d.cc/img/20200109002.jpg)
 
 # 设置路由器
 
@@ -31,7 +31,7 @@ PassWord: nE7jA%5m
 
 ## 交换机设置
 
-![](https://cdn.lvcshu.info/img/20200109003.jpg)
+![](https://cdn.6-d.cc/img/20200109003.jpg)
 
 ```
 光猫 --> WAN -------> LAN1(IPTV)

@@ -19,7 +19,7 @@ yiyan: false
 
 bigimg: #首页巨幕图片
   enable: true
-  background: //cdn.lvcshu.info/img/20200419001.jpg
+  background: //cdn.6-d.cc/img/20200419001.jpg
   RSS: /atom.xml # URL
   Github: https://github.com/johnpoint #URL
   Telegram: https://t.me/johnpoint #URL
@@ -38,121 +38,121 @@ friends:
   list:
     - title: 极光星空
       url: https://blog.ilemonrain.com/
-      img: https://cdn.lvcshu.info/img/friends/ilemonrain.jpg
+      img: https://cdn.6-d.cc/img/friends/ilemonrain.jpg
       desc: 探索星空，一路前行
       sidebar: true
       page: true
     - title: Ovear's Blog
       url: https://ovear.info/
-      img: https://cdn.lvcshu.info/img/friends/ovear.jpg
+      img: https://cdn.6-d.cc/img/friends/ovear.jpg
       desc: =。=
       sidebar: true
       page: true
     - title: 南琴浪的博客
       url: https://blog.sometimesnaive.org/
-      img: https://cdn.lvcshu.info/img/friends/sometimesnaive.jpeg
+      img: https://cdn.6-d.cc/img/friends/sometimesnaive.jpeg
       desc: 
       sidebar: true
       page: true
     - title: Xzymoe's Blog
       url: https://www.xzymoe.com/
-      img: https://cdn.lvcshu.info/img/friends/xzymoe.jpg
+      img: https://cdn.6-d.cc/img/friends/xzymoe.jpg
       desc: 关注互联网, 记录MOE的互联网生活.
       sidebar: true
       page: true
     - title: 奶冰の冷藏室
       url: https://milkice.me
-      img: https://cdn.lvcshu.info/img/friends/milkice.jpg
+      img: https://cdn.6-d.cc/img/friends/milkice.jpg
       desc: Maybe a way to explore the world?
       sidebar: true
       page: true
     - title: 萌爪实验室
       url: https://www.mengclaw.com/
-      img: https://cdn.lvcshu.info/img/friends/wolfskylake.jpg
+      img: https://cdn.6-d.cc/img/friends/wolfskylake.jpg
       desc: 一只雪狗狗的杂货铺
       sidebar: true
       page: true
     - title: Mr.KevinH
       url: https://www.mrkevin.net/
-      img: https://cdn.lvcshu.info/img/friends/kevin.jpg
+      img: https://cdn.6-d.cc/img/friends/kevin.jpg
       desc: 咨询、技术、分享
       sidebar: false
       page: true
     - title: 双草酸酯的博客
       url: https://0x.mk/
-      img: https://cdn.lvcshu.info/img/friends/0xmk.jpg
+      img: https://cdn.6-d.cc/img/friends/0xmk.jpg
       desc: 
       sidebar: true
       page: true
     - title: kn007 的个人博客
       url: https://kn007.net/
-      img: https://cdn.lvcshu.info/img/friends/kn007.jpg
+      img: https://cdn.6-d.cc/img/friends/kn007.jpg
       desc: 著名更新博主
       sidebar: true
       page: true
     - title: Vigorous Pro
       url: https://www.wevg.org
-      img: https://cdn.lvcshu.info/img/friends/Vigorous.jpg
+      img: https://cdn.6-d.cc/img/friends/Vigorous.jpg
       desc: The world can always use more heroes.
       sidebar: true
       page: true
     - title: Elepover's Blog
       url: https://daily.elepover.com/
-      img: https://cdn.lvcshu.info/img/friends/elepover.svg
+      img: https://cdn.6-d.cc/img/friends/elepover.svg
       desc: Make undeniable rules to your own world.
       sidebar: true
       page: true
     - title: 派兹的小站
       url: https://blog.blw.moe
-      img: https://cdn.lvcshu.info/img/friends/blingwang.jpg
+      img: https://cdn.6-d.cc/img/friends/blingwang.jpg
       desc: 莓办法 银不了 尽梨了
       sidebar: true
       page: true
     - title: Justf's Channel
       url: https://channel.Justf.space
-      img: https://cdn.lvcshu.info/img/friends/Justf.jpg
+      img: https://cdn.6-d.cc/img/friends/Justf.jpg
       desc: 幸福如人饮水，冷暖自知。
       sidebar: true
       page: true
     - title: Cyberspace of Swung
       url: https://www.swung0x48.com
-      img: https://cdn.lvcshu.info/img/friends/Swung0x48.jpg
+      img: https://cdn.6-d.cc/img/friends/Swung0x48.jpg
       desc: Lost in cyberpunk.
       sidebar: true
       page: true
     - title: FlyingSky's Blog
       url: https://blog.fsky7.com
-      img: https://cdn.lvcshu.info/img/friends/FlyingSky.jpg
+      img: https://cdn.6-d.cc/img/friends/FlyingSky.jpg
       desc: 每个人的裂痕，最后都会变成故事的花纹。
       sidebar: true
       page: true
     - title: 1A23 Studio
       url: https://1a23.com
-      img: https://cdn.lvcshu.info/img/friends/1A23.jpg
+      img: https://cdn.6-d.cc/img/friends/1A23.jpg
       desc: We create.
       sidebar: true
       page: true
     - title: 翰林的小站
       url: https://blog.hanlin.press
-      img: https://cdn.lvcshu.info/img/friends/ihcr.jpg
+      img: https://cdn.6-d.cc/img/friends/ihcr.jpg
       desc: 博览乐学，敢于探索。
       sidebar: true
       page: true
     - title: Taoidle
       url: https://www.taoidle.com
-      img: https://cdn.lvcshu.info/img/friends/Taoidle.jpg
+      img: https://cdn.6-d.cc/img/friends/Taoidle.jpg
       desc: 交流学习心得，分享生活乐事
       sidebar: true
       page: true
     - title: Anthony's Blog
       url: https://www.scery.com/
-      img: https://cdn.lvcshu.info/img/friends/anthony.jpg
+      img: https://cdn.6-d.cc/img/friends/anthony.jpg
       desc: As you look around
       sidebar: true
       page: true
     - title: Marshall's Blog
       url: https://www.naiquoy.com/
-      img: https://cdn.lvcshu.info/img/friends/wxy.jpg
+      img: https://cdn.6-d.cc/img/friends/wxy.jpg
       desc: 人生何处不青山
       sidebar: true
       page: true

@@ -6,7 +6,7 @@ layout: page
 description: 影视以及书摘
 comment: false
 toc: true
-bigimg: url('//cdn.lvcshu.info/img/20200426001.jpg')
+bigimg: url('//cdn.6-d.cc/img/20200426001.jpg')
 ---
 
 # 影视

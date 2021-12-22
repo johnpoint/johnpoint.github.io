@@ -8,7 +8,7 @@ tags:
 
 最近去看了下我的自动重连脚本的 log 文件夹<!--more-->
 
-![](https://cdn.lvcshu.info/img/20191020001.jpg)
+![](https://cdn.6-d.cc/img/20191020001.jpg)
 
 文件太多， `rm` 命令会提示参数太多不能执行
 

@@ -34,10 +34,10 @@ tags:
 
 ## 软件截图
 
-![](https://cdn.lvcshu.info/img/20190122001.jpg)
+![](https://cdn.6-d.cc/img/20190122001.jpg)
 
-![](https://cdn.lvcshu.info/img/20190122002.jpg)
+![](https://cdn.6-d.cc/img/20190122002.jpg)
 
-![](https://cdn.lvcshu.info/img/20190122003.jpg)
+![](https://cdn.6-d.cc/img/20190122003.jpg)
 
 >Google play: [notify & fitness for mi band](https://play.google.com/store/apps/details?id=com.mc.miband1)

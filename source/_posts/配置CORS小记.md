@@ -23,7 +23,7 @@ pressone: https://press.one/file/v?s=b56535d9f85b2136fc4e85f8fa7366cd8a70d556562
 
 emmmmm 我不把字体整进主题里面我怎么去使用字体咧？网上的 font CDN 也不大可能有方正的字体...
 
-最后就把字体放上了一个资源服务器 cdn.lvcshu.info 我的图片之类的外链的东西都全部扔在上面，就把字体扔到了 https://cdn.lvcshu.info/font/ 上面，如果你打开 F12->network 然后刷新的话，应该能发现有两个后缀为 ttf 的资源是从 cdn.lvcshu.info 加载的。
+最后就把字体放上了一个资源服务器 cdn.6-d.cc 我的图片之类的外链的东西都全部扔在上面，就把字体扔到了 https://cdn.6-d.cc/font/ 上面，如果你打开 F12->network 然后刷新的话，应该能发现有两个后缀为 ttf 的资源是从 cdn.6-d.cc 加载的。
 
 ## 配置 CORS
 

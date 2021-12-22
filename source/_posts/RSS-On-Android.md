@@ -25,9 +25,9 @@ tags:
 
 这个 app，在易用性上就比 Read 做得好许多，FeedMe 使用的界面设计遵循了 Google 的 MD2 标准 ~~(现在 Google 自己都不遵守了)~~ 而后者使用的设计则是偏向于极简的风格，手势操作等功能两者都做得不错，而 Nwefold 的设计就更加吸引我。
 
-![主界面](https://cdn.lvcshu.info/img/20190925001.jpg)
-![二级页面](https://cdn.lvcshu.info/img/20190925002.jpg)
-![文章页面](https://cdn.lvcshu.info/img/20190925003.jpg)
+![主界面](https://cdn.6-d.cc/img/20190925001.jpg)
+![二级页面](https://cdn.6-d.cc/img/20190925002.jpg)
+![文章页面](https://cdn.6-d.cc/img/20190925003.jpg)
 
 可以看得出来界面是经过了用心的设计的
 

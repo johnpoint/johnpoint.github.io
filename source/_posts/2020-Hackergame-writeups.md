@@ -38,7 +38,7 @@ binary：0 ， general：850 ， math：300 ， web：350
 提示：完成题目遇到困难？你可以参考 2018 年签到题题解 与 2019 年签到题题解。
 ```
 
-![](https://cdn.lvcshu.info/img/20201104001.jpg)
+![](https://cdn.6-d.cc/img/20201104001.jpg)
 
 F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以得到 flag
 
@@ -58,7 +58,7 @@ F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以�
 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。
 ```
 
-![](https://cdn.lvcshu.info/img/20201104003.jpg)
+![](https://cdn.6-d.cc/img/20201104003.jpg)
 
 1. 手动数，数量为 **12**
 2. 搜索到了 [wikipedia](https://zh.wikipedia.org/wiki/以鸟类为载体的网际协议) -> [RFC1149](https://tools.ietf.org/html/rfc1149)
@@ -78,7 +78,7 @@ F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以�
 要实现 FLXG，你需要过人的智慧，顽强的意志，和命运的眷属。只有在 2048 的世界里证明自己拥有这些宝贵的品质，实现「大成功」，你才有资格扛起 FLXG 的大旗。
 ```
 
-![](https://cdn.lvcshu.info/img/20201104004.jpg)
+![](https://cdn.6-d.cc/img/20201104004.jpg)
 
 真就是 2048，看下 js 文件，发现里面有个 `game_manager.js`，粗略的浏览下逻辑，发现这么一句
 
@@ -88,7 +88,7 @@ if (merged.value === 16384) self.won = true;
 
 打断点，手动修改变量值，就成功了
 
-![](https://cdn.lvcshu.info/img/20201104005.jpg)
+![](https://cdn.6-d.cc/img/20201104005.jpg)
 
 ## 一闪而过的 Flag
 
@@ -115,7 +115,7 @@ if (merged.value === 16384) self.won = true;
 
 注意：请将账单总金额保留小数点后两位，放在 flag{} 中提交，例如总金额为 123.45 元时，你需要提交 flag{123.45}
 ```
-[文件下载](https://cdn.lvcshu.info/file/2020hackergame-bills.xlsx)
+[文件下载](https://cdn.6-d.cc/file/2020hackergame-bills.xlsx)
 
 首先另存为 csv，使用 python 将 csv 转换为 json 下面比较好处理
 
@@ -186,7 +186,7 @@ print("f", fen)
 小 P 在一教做傅里叶光学实验时，在实验室电脑的模拟程序里发现了这么一张的图片：
 ```
 
-![](https://cdn.lvcshu.info/img/20201104006.bmp)
+![](https://cdn.6-d.cc/img/20201104006.bmp)
 
 ```
 数理基础并不扎实的小 P 并不知道什么东西成像会是这个样子：又或许什么东西都不是，毕竟这只是模拟 ... 但可以确定的是，这些看似奇怪的花纹里确实隐藏着一些信息，或许是地下金矿的藏宝图也未可知。
@@ -194,7 +194,7 @@ print("f", fen)
 
 很简单，题目给足了提示，做一下傅立叶逆变换就可以得到
 
-![](https://cdn.lvcshu.info/img/20201104007.jpg)
+![](https://cdn.6-d.cc/img/20201104007.jpg)
 
 ## 超简单的世界模拟器
 
@@ -494,7 +494,7 @@ Connected to: ws://202.38.93.111:0/shell
 除了网页终端，你也可以通过 nc 202.38.93.111 10031 来连接
 ```
 
-[源代码](https://cdn.lvcshu.info/file/2020hackergame-OT.py)
+[源代码](https://cdn.6-d.cc/file/2020hackergame-OT.py)
 
 搜索一下题目里面的 1–2 oblivious transfer 查到了 [这个](https://en.wikipedia.org/wiki/Oblivious_transfer#1%E2%80%932_oblivious_transfer)
 
