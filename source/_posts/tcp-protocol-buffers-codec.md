@@ -221,6 +221,57 @@ func (es *EventServer) OnOpened(c gnet.Conn) (out []byte, action gnet.Action) {
 }
 ```
 
+
+## 2021-12-24 更新
+
+最近 gnet 发布了 v1.6.x 新版本，新版本的 编解码器行为有所改变，所以需要改造一下代码
+
+主要的改动是在 gnet 库的 [eventloop_unix.go](https://github.com/panjf2000/gnet/blob/d6cbe31e65ad3666acf8b4b9d4f55da9ec8c2fdd/eventloop_unix.go) 文件的 [d1ca7f3](https://github.com/panjf2000/gnet/commit/302b2e55a1e0b62544983c0ea3d692fdaa5db4df#diff-b945f3b34ac34d1976944bc0c89304f8105c20362e3f915383250a3e0296f5c7R125) commit 中将进入 React 的时间点从返回的 packet 不为 nil 改为了返回的 err 不为 nil，所以在升级后需要做对应的修改
+
+
+```go
+var (
+	ContinueRead = errors.New("continue read")
+)
+
+
+func (d *Codec) Decode(c gnet.Conn) ([]byte, error) {
+	// 从上下文里面拿出这个连接的编解码器储存 struct
+	r, ok := c.Context().(DataStruct)
+	if !ok {
+		err := c.Close()
+		if err != nil {
+			return nil, nil
+		}
+	}
+    
+	if len(r.fullData) == 0 {
+		_, bytes := c.ReadN(10)
+		var fullLength uint64
+		fullLength, r.lenNumLength = proto.DecodeVarint(bytes)
+		r.fullLength = int(fullLength)
+		fmt.Println(r.fullLength, r.lenNumLength)
+		if r.fullLength == 0 {
+			return nil, ContinueRead
+		}
+	}
+    
+	fullDataLong := len(r.fullData)
+	n, bytes := c.ReadN(r.fullLength + r.lenNumLength - fullDataLong)
+	r.fullData = append(r.fullData, bytes...)
+	c.ShiftN(n)
+	if len(r.fullData) >= r.fullLength+r.lenNumLength {
+		res := r.fullData[r.lenNumLength :]
+		r.fullData = []byte{}
+		c.SetContext(r)
+		return res, nil
+	}
+	ctx = context.WithValue(ctx, "codec", r)
+	c.SetContext(r)
+	return nil, ContinueRead
+}
+```
+
 ## 参考资料
 
 - [Go 语言设计与实现 > 上下文 Context > 传值方法](https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-context/#614-%E4%BC%A0%E5%80%BC%E6%96%B9%E6%B3%95)
