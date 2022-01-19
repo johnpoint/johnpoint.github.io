@@ -18,15 +18,19 @@ bigimg: url('//cdn.6-d.cc/img/20200502001.jpg')
 ## 博客写了啥
 
 在编写那个服务器监控面板的时候我想把服务器上面的进程信息显示在上面，所以顺手写了一个文章
-[Linux 进程信息格式化](https://blog.lvcshu.com/2021/02/02/Linux-进程信息格式化/)
+
+- [Linux 进程信息格式化](https://blog.lvcshu.com/2021/02/02/Linux-进程信息格式化/)
+
 
 这两篇是我在实习中所学习用到的东西，也写成了文章
-[proto 通过字段名获取值](https://blog.lvcshu.com/2021/06/11/proto通过字段名获取值/)
-[用于 gnet 的 Protocol buffers 编解码器](https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/)
 
-[解决全屏背景图卡顿](https://blog.lvcshu.com/2021/07/28/解决全屏背景图卡顿/)
+- [proto 通过字段名获取值](https://blog.lvcshu.com/2021/06/11/proto通过字段名获取值/)
+- [用于 gnet 的 Protocol buffers 编解码器](https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/)
 
-[使用 Zerotier 异地组内网](https://blog.lvcshu.com/2021/11/24/zerotier-构建内网/)
+还有两篇是平时折腾的记录
+
+- [解决全屏背景图卡顿](https://blog.lvcshu.com/2021/07/28/解决全屏背景图卡顿/)
+- [使用 Zerotier 异地组内网](https://blog.lvcshu.com/2021/11/24/zerotier-构建内网/)
 
 可以看出来我今年写的博客少了很多，看看明年能不能试试写多一些
 
