@@ -50,8 +50,7 @@ bigimg: rgb(111, 95, 160)
 | GitHub                 | [johnpoint](https://github.com/johnpoint)                 |
 | Wikipedia              | [johnpoint](https://zh.wikipedia.org/wiki/User:Johnpoint) |
 | Telegram               | [@johnpoint](https://t.me/johnpoint)                      |
-| Gmail                  | jahanngauss414@gmail.com                                  |
-| Mail (想加友链发这里~) | me@lvcshu.com                                             |
+| Mail                   | [me@lvcshu.com](mailto:me@lvcshu.com)               |
 
 ## PGP
 
@@ -60,8 +59,6 @@ bigimg: rgb(111, 95, 160)
 Comment: User-ID:	johnpoint <me@lvcshu.com>
 Comment: Created:	1/2/22 9:58 PM
 Comment: Expires:	12/31/22 11:59 PM
-Comment: Type:	255-bit EdDSA (secret key available)
-Comment: Usage:	Signing, Encryption, Certifying User-IDs, SSH Authentication
 Comment: Fingerprint:	78C3125EFE1625777AD942933459AE8224AE6951
 
 mDMEYdGvnRYJKwYBBAHaRw8BAQdAGd/xLVM57Q9Kwbk9rx4lXxUV1gW5p6pDK39B
