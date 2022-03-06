@@ -8,7 +8,7 @@ tags:
 - 2022
 - 简报
 toc: true
-bigimg: url('//cdn.lvcshu.workers.dev/img/20200502001.jpg')
+bigimg: url('//cdn.6-d.cc/img/20200502001.jpg')
 ---
 
 <!--more-->
@@ -40,7 +40,7 @@ bigimg: url('//cdn.lvcshu.workers.dev/img/20200502001.jpg')
 
 照惯例上绿点图
 
-![](https://cdn.lvcshu.workers.dev/img/20211226001.jpg)
+![](https://cdn.6-d.cc/img/20211226001.jpg)
 
 可以明显的看到今年比去年相比，我的 github 代码提交的不是那么的活跃了。。那是因为实习的时候确实比在学校要忙
 
@@ -63,8 +63,8 @@ bigimg: url('//cdn.lvcshu.workers.dev/img/20200502001.jpg')
 - 友链增加了 <font size="10">0</font> 个大佬
 - 评论 <font size="10">2</font> 条(哇塞，终于有活人来评论了！！~~虽然我没有回复~~)
 
-![](https://cdn.lvcshu.workers.dev/img/20211226002.jpg)
-![](https://cdn.lvcshu.workers.dev/img/20211226003.jpg)
+![](https://cdn.6-d.cc/img/20211226002.jpg)
+![](https://cdn.6-d.cc/img/20211226003.jpg)
 
 [完整数据-Google Sheet](https://docs.google.com/spreadsheets/d/1HrbXkOtkbmIPH6rI54CjIGqP9EG-Bxct7S1Ezz--Gms/edit?usp=sharing)
 

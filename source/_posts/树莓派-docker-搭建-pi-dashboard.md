@@ -9,7 +9,7 @@ pressone: https://press.one/file/v?s=6a10521d5178f085674b2263476e9152576e0576097
 
 前一阵子我入手了一（台？）（个？）树莓派，但是一直都没有时间研究该用来做什么.... 然后无意间看见了一个叫做pi-dashboard 的小玩意儿 上一张图看看
 <!--more-->
-![](https://cdn.lvcshu.workers.dev/img/upload/1812/a6430c02dba0e979.png)
+![](https://cdn.6-d.cc/img/upload/1812/a6430c02dba0e979.png)
 就是这样，性能看起来就比较方便了
 
 # 安装docker

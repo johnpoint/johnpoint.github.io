@@ -13,7 +13,7 @@ tags:
 
 >内容：Github commit添加verified标识
 <!--more-->
-![效果图](https://cdn.lvcshu.workers.dev/img/20190209002.jpg)
+![效果图](https://cdn.6-d.cc/img/20190209002.jpg)
 
 就是一直以来都 ~~懒得~~ 忙得没有将这个事情做好 ~~但是其实这个东西好像并没有什么用~~
 
@@ -27,7 +27,7 @@ gpg --gen-key
 gpg --list-keys
 ```
 列出 GPG 密钥对
-![列出 GPG 密钥对](https://cdn.lvcshu.workers.dev/img/20190209003.jpg)
+![列出 GPG 密钥对](https://cdn.6-d.cc/img/20190209003.jpg)
 
 ## 导出 public 文件
 ```bash
@@ -50,6 +50,6 @@ cat public-key.txt
 
 保存
 
-![效果](https://cdn.lvcshu.workers.dev/img/20190209004.jpg)
+![效果](https://cdn.6-d.cc/img/20190209004.jpg)
 
 -EOF-

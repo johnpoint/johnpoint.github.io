@@ -12,9 +12,9 @@ tags:
 刚刚忍不住剁手了香气四溢的 Oneplus 8T，也把我手中的已经伊拉克成色的 Oneplus 6 给以旧换新处理掉了，就例行来说一下 Android 11 以及这个看起来很香的 Oneplus 8T 的体验
 <!--more-->
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021008.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021008.jpg" style="width: 300px">
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021009.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021009.jpg" style="width: 300px">
 
 这次拿到手 1+ 8T 默认搭载的是国内的 H2OS 系统，也是安卓11,但是由于我想体验更多的原生的功能以及软件，所以就在一加官网想找 1+ 8T 的 OTA 包，结果发现并没有，最后在 [XDA论坛找到了包]，顺便就把手机解锁 + Root 一口气搞定了。
 
@@ -28,37 +28,37 @@ emmmmm 满满的 OneUI 风格，有一说一还是挺好看的。
 
 ## 设置界面 UI + 氧视窗
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021001.jpg" style="width: 300px">
-<img src="https://cdn.lvcshu.workers.dev/img/20201021002.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021001.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021002.jpg" style="width: 300px">
 
 ## Google Assistant 今日日程
 
 这个日程提醒真的方便好用，特别是我这种要看在哪里上课的人。
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021003.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021003.jpg" style="width: 300px">
 
 ## 充电屏保
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021006.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021006.jpg" style="width: 300px">
 
 ## 自定义各种东西
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021004.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021004.jpg" style="width: 300px">
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021005.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021005.jpg" style="width: 300px">
 
 ## 锁屏
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021011.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021011.jpg" style="width: 300px">
 
 ## 通知栏
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021010.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021010.jpg" style="width: 300px">
 
 ## 使用体验
 
 终于用上了高刷屏幕，有一说一区别还是很大的，动画效果柔滑了很多，相对的电量消耗感觉就变大了，这次 65W 的充电功率也很顶，就是充电头有点大，上图给你们看下
 
-<img src="https://cdn.lvcshu.workers.dev/img/20201021012.jpg" style="width: 300px">
+<img src="https://cdn.6-d.cc/img/20201021012.jpg" style="width: 300px">
 
 续航和装了什么软件来压制国内软件毒瘤晚点写（或许
