@@ -28,7 +28,7 @@ tags:
 
 值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库
 
-![https://cdn.6-d.cc/img/20200323001.jpg](https://cdn.6-d.cc/img/20200323001.jpg)
+![https://cdn.lvcshu.workers.dev/img/20200323001.jpg](https://cdn.lvcshu.workers.dev/img/20200323001.jpg)
 
 上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
 

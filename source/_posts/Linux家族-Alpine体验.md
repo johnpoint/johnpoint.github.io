@@ -16,11 +16,11 @@ tags:
 Alpine Linux是一个由社区开发的Linux操作系统，该操作系统以安全为理念，面向x86路由器、防火墙、虚拟专用网、IP电话盒及服务器而设计。
 <sub>摘自[维基百科](https://zh.wikipedia.org/wiki/Alpine_Linux)</sub>
 
-![官网图](https://cdn.6-d.cc/img/20190724001.jpg)
+![官网图](https://cdn.lvcshu.workers.dev/img/20190724001.jpg)
 
 我是怎么发现这个系统的呢，前一阵子我在折腾 Docker 的时候我就发现 nginx 的官方 docker 仓库里面有一些 tag 的大小有很大的区别
 
-![](https://cdn.6-d.cc/img/20190724002.jpg)
+![](https://cdn.lvcshu.workers.dev/img/20190724002.jpg)
 
 所以我就去 Google 了一下 alpine 的含义，就发现了这样的一个精简的 Linux 系统。
 
@@ -32,13 +32,13 @@ Alpine Linux是一个由社区开发的Linux操作系统，该操作系统以安
 
 安装过程简单明了。
 
-![进入安装界面有安装系统的提示](https://cdn.6-d.cc/img/20190724003.jpg)
+![进入安装界面有安装系统的提示](https://cdn.lvcshu.workers.dev/img/20190724003.jpg)
 
-![选择键盘布局 & 配置网络](https://cdn.6-d.cc/img/20190724004.jpg)
+![选择键盘布局 & 配置网络](https://cdn.lvcshu.workers.dev/img/20190724004.jpg)
 
-![配置](https://cdn.6-d.cc/img/20190724005.jpg)
+![配置](https://cdn.lvcshu.workers.dev/img/20190724005.jpg)
 
-![配置硬盘 & 写入系统](https://cdn.6-d.cc/img/20190724006.jpg)
+![配置硬盘 & 写入系统](https://cdn.lvcshu.workers.dev/img/20190724006.jpg)
 
 然后经过等待就搞定系统的安装了，虽然没有 GUI 但是安装体验还是挺好的。
 
@@ -48,7 +48,7 @@ Alpine Linux是一个由社区开发的Linux操作系统，该操作系统以安
 
 alpine 使用的包管理器叫做 apk，查询有无相应的包可以使用 [Alpine Linux Packages](https://pkgs.alpinelinux.org/packages) 进行查询。
 
-![](https://cdn.6-d.cc/img/20190724007.jpg)
+![](https://cdn.lvcshu.workers.dev/img/20190724007.jpg)
 
 当然也可以使用 apk 的 `apk search` 命令进行查询。
 

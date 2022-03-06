@@ -12,5 +12,5 @@ tags:
 
 然后我才发现了 [office 365 online](https://www.office.com/) 神器一般的存在，因为他几乎不会占据电脑的本地资源，与 M$ office 完全兼容，功能齐全(跟电脑上的桌面版已经没有什么区别了！！)，文件是储存在 onedrive 上的，非常方便。 爽到了啊！！！
 
-![](https://cdn.6-d.cc/img/20190301001.jpg)
+![](https://cdn.lvcshu.workers.dev/img/20190301001.jpg)
 

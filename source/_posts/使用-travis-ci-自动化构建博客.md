@@ -60,7 +60,7 @@ after_success:
 
 因为之前我是打开了 github 的双因素认证，所以 push 不能使用原来的 github 用户名 + 密码的方式进行身份认证了。
 
-![](https://cdn.6-d.cc/img/20190615001.jpg)
+![](https://cdn.lvcshu.workers.dev/img/20190615001.jpg)
 
 在上图的地方加入 name 为 REPO_TOKEN，value 为 [Personal access tokens](https://github.com/settings/tokens) 
 
@@ -69,4 +69,4 @@ after_success:
 
 一般来说要做的工作就已经完成了，只需要静静的等待 travis-ci 的构建完成，这篇文章就是通过自动构建生成的
 
-![](https://cdn.6-d.cc/img/20190615002.jpg)
+![](https://cdn.lvcshu.workers.dev/img/20190615002.jpg)
