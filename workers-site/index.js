@@ -26,7 +26,17 @@ addEventListener('fetch', event => {
 
 async function handleEvent(event) {
   const url = new URL(event.request.url)
+  const { origin, pathname: path, search } = new URL(event.request.url);
   let options = {}
+
+  if (path === '/atom.xml') {
+    return getAssetFromKV(event, {
+      cacheControl: {
+        edgeTtl: 60 * 60,
+        browserTtl: 2 * 60 * 60,
+      }
+    });
+  }
 
   /**
    * You can add custom logic to how we fetch your assets
@@ -58,12 +68,15 @@ async function handleEvent(event) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
       try {
-        let notFoundResponse = await getAssetFromKV(event, {
-          mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
-        })
+        event.Request.url = "/404.html"
+        // let notFoundResponse = await getAssetFromKV(event, {
+        //   mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
+        // })
+
+        let notFoundResponse = await getAssetFromKV(event, options)
 
         return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
-      } catch (e) {}
+      } catch (e) { }
     }
 
     return new Response(e.message || e.toString(), { status: 500 })
