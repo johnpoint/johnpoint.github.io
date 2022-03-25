@@ -76,5 +76,5 @@ jobs:
         run: |
           mkdir /home/runner/.wrangler/config -p
           echo 'api_token = "'$CF_WORKERS_TOKEN'"' > /home/runner/.wrangler/config/default.toml
-          mv package.json package.json.bak
+          cp workers-site/package.json package.json
           wrangler publish
