@@ -29,14 +29,14 @@ async function handleEvent(event) {
   // const { origin, pathname: path, search } = new URL(event.request.url);
   let options = {}
 
-  // if (path === '/atom.xml') {
-  //   return getAssetFromKV(event, {
-  //     cacheControl: {
-  //       edgeTtl: 60 * 60,
-  //       browserTtl: 2 * 60 * 60,
-  //     }
-  //   });
-  // }
+  if (path === '/atom.xml') {
+    return getAssetFromKV(event, {
+      cacheControl: {
+        edgeTtl: 60 * 60,
+        browserTtl: 2 * 60 * 60,
+      }
+    });
+  }
 
   /**
    * You can add custom logic to how we fetch your assets
