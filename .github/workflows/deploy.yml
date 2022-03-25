@@ -74,7 +74,7 @@ jobs:
         env:
           CF_WORKERS_TOKEN: ${{secrets.CF_WORKERS_TOKEN}}
         run: |
-          echo $(date) > public/version
+          echo $(date) > public/build_info.html
           mkdir /home/runner/.wrangler/config -p
           echo 'api_token = "'$CF_WORKERS_TOKEN'"' > /home/runner/.wrangler/config/default.toml
           cp workers-site/package.json package.json
