@@ -1,5 +1,5 @@
 name = "blog"
-type = "javascript"
+type = "webpack"
 route = 'blog.lvcshu.com/*'
 zone_id = 'ef036b4d9f03b8299bda12c42aec0766'
 usage_model = ''
@@ -7,6 +7,3 @@ compatibility_flags = []
 workers_dev = false
 site = {bucket = "./public",entry-point = "workers-site"}
 compatibility_date = "2022-03-22"
-
-[build]
-command = "yarn install"
