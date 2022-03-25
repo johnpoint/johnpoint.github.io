@@ -68,7 +68,6 @@ async function handleEvent(event) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
       try {
-        event.Request.url = "/404.html"
         let notFoundResponse = await getAssetFromKV(event, {
           mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
         })
