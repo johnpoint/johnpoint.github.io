@@ -156,6 +156,12 @@ friends:
       desc: 人生何处不青山
       sidebar: true
       page: true
+    - title: noechou
+      url: https://noechou.cn
+      img: https://cdn.6-d.cc/img/friends/noechou.jpg
+      desc: 要正视无情的真理，就要有无穷勇气
+      sidebar: true
+      page: true
 
 comment:
   disqus:
