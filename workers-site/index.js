@@ -26,7 +26,7 @@ addEventListener('fetch', event => {
 
 async function handleEvent(event) {
   const url = new URL(event.request.url)
-  // const { origin, pathname: path, search } = new URL(event.request.url);
+  const { origin, pathname: path, search } = new URL(event.request.url);
   let options = {}
 
   if (path === '/atom.xml') {
