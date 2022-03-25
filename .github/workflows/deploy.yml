@@ -62,7 +62,7 @@ jobs:
       - name: Install dependencies
         run: |
           yarn global add hexo-cli
-          npm i
+          yarn
 
       - name: Deploy hexo
         run: |
