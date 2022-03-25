@@ -73,5 +73,5 @@ jobs:
         env:
           CF_WORKERS_TOKEN: ${{secrets.CF_WORKERS_TOKEN}}
         run: |
-          echo 'api_token = "'$CF_WORKERS_TOKEN'"' > default.toml
+          echo 'api_token = "'$CF_WORKERS_TOKEN'"' > /home/runner/.wrangler/config/default.toml
           wrangler publish
