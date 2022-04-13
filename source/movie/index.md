@@ -6,7 +6,8 @@ layout: page
 description: 影视以及书摘
 comment: false
 toc: true
-bigimg: url('//cdn.6-d.cc/img/20200426001.jpg')
+#bigimg: url('//cdn.6-d.cc/img/20200426001.jpg')
+bigimg: rgb(177 138 138)
 ---
 
 # 影视
