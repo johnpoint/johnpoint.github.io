@@ -19,7 +19,8 @@ yiyan: false
 
 bigimg: #首页巨幕图片
   enable: true
-  background: //cdn.6-d.cc/img/20200419001.jpg
+  background: //cdn.6-d.cc/img/20220413002.jpg
+  color: rgb(0 0 0)
   RSS: /atom.xml # URL
   Github: https://github.com/johnpoint #URL
   Telegram: https://t.me/johnpoint #URL
