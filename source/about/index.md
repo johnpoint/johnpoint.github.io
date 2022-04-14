@@ -120,8 +120,11 @@ EQEA3G2QdZS6dSrQ175iV842Z2HD9wBTRA6VG0MImYC4aA8=
 - 主题 [hexo-theme-XvA](https://github.com/johnpoint/hexo-theme-XvA)
 - GitHub Action Auto Build  ![](https://github.com/johnpoint/johnpoint.github.io/workflows/HEXO_AUTO_DEPLOY/badge.svg)|
 - 部署
-  - https://blog.lvcshu.com|
-  - Github Pages https://johnpoint.github.io|
+  - Github Pages https://johnpoint.github.io
+  - CloudFlare Workers
+    - https://blog.lvcshu.com
+    - https://6-d.cc
+    - https://lvcshu.com
   - ~~[Netlify](https://www.netlify.com/) 托管 https://lvcshu.netlify.app/|~~
 
 # 关于友情链接
