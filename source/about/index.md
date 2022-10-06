@@ -52,36 +52,10 @@ bigimg: rgb(111, 95, 160)
 | Telegram               | [@johnpoint](https://t.me/johnpoint)                      |
 | Mail                   | [me@lvcshu.com](mailto:me@lvcshu.com)               |
 
-## PGP
+## SSH 公钥
 
 ```
------BEGIN PGP PUBLIC KEY BLOCK-----
-Comment: User-ID:	johnpoint <me@lvcshu.com>
-Comment: Created:	1/2/22 9:58 PM
-Comment: Expires:	12/31/22 11:59 PM
-Comment: Fingerprint:	78C3125EFE1625777AD942933459AE8224AE6951
-
-mDMEYdGvnRYJKwYBBAHaRw8BAQdAGd/xLVM57Q9Kwbk9rx4lXxUV1gW5p6pDK39B
-bGop5Ze0GWpvaG5wb2ludCA8bWVAbHZjc2h1LmNvbT6IlgQTFggAPgIbAQULCQgH
-AgYVCgkICwIEFgIDAQIeAQIXgBYhBHjDEl7+FiV3etlCkzRZroIkrmlRBQJh0bGw
-BQkB3qzhAAoJEDRZroIkrmlRcZQA/RJUPM3fZlKwi1aR0xmlQ6M1F/HOORAAX50T
-BZPm0WUvAQDOk+mLViyANWi8u3vvoEe5UVW+9qxisE6gtXPtPqFPC7gzBGHRr/kW
-CSsGAQQB2kcPAQEHQOF+lCBqjOLr7tt3p2WaCTb3bgmQVUct8Sb9OwMQ2gGsiH4E
-GBYIACYCGyAWIQR4wxJe/hYld3rZQpM0Wa6CJK5pUQUCYdGx+gUJAd6shQAKCRA0
-Wa6CJK5pUZ4FAQDQVQSYECjP0fUaM6sY0qVw86oqBbHAd7Gf/B/jL2j2ywEA/SCO
-sPjfyLVPSnB85qONBVr/x5c+JTWbPLcz2hcT+AC4MwRh0bAGFgkrBgEEAdpHDwEB
-B0AXuJte211/G/g0fKyWITS2OQufQzwmNdIjFxbbIW36eoj1BBgWCAAmAhsCFiEE
-eMMSXv4WJXd62UKTNFmugiSuaVEFAmHRsgAFCQHerHgAgXYgBBkWCAAdFiEEG/HA
-vhfqHSY0LoSUEmvW8rn5mggFAmHRsAYACgkQEmvW8rn5mgi2EgEAzmsDYMC0xp9l
-DC5XQrmKRfL13YJ5mcPxD2Xi5CDbirwA/0jc/1NpeGeLOPVtG3nBBpN0UkDKdot7
-e5iotciHDeIMCRA0Wa6CJK5pUX3tAQDe/F3e0++Liu8FJyI0ku0SVrQTCr/8LEGG
-0F4Xbv2suAD9H/el0WLLboxblTbP/o0d+leNf3fGDeEce/9F3JC8uQq4OARh0a/o
-EgorBgEEAZdVAQUBAQdAXxcLxycmywlx57Qa7Ad4h/tbiDjIwyJ093ZJ19pl+jsD
-AQgHiH4EGBYIACYCGwwWIQR4wxJe/hYld3rZQpM0Wa6CJK5pUQUCYdGx8QUJAd6s
-lgAKCRA0Wa6CJK5pUWBxAQDQ8lDbQ0d+RLZf96OwsR9hev+pSCiYSidVIuN2PSwf
-EQEA3G2QdZS6dSrQ175iV842Z2HD9wBTRA6VG0MImYC4aA8=
-=x/ch
------END PGP PUBLIC KEY BLOCK-----
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMMkcVBtYdqmP7DsDmfwsIZquum6YWp67bGdr2h78Elo
 ```
 
 # 授权协议
@@ -147,21 +121,15 @@ EQEA3G2QdZS6dSrQ175iV842Z2HD9wBTRA6VG0MImYC4aA8=
 
 以上原则自 commit [64c8029ebc681afff4c07d458d2ba157789efb9d](https://github.com/johnpoint/johnpoint.github.io/commit/64c8029ebc681afff4c07d458d2ba157789efb9d) 起生效
 
-# 赞助渠道
-
-BTC
-
-```
-15xAeGxxXWdqdrXfM4RrgiCp7hSd9mWuCy
-```
-
 # 服务提供商
 
-- [IDC.WIKI](https://idc.wiki/aff.php?aff=1100)
+- ~~[IDC.WIKI](https://idc.wiki/aff.php?aff=1100)~~
 - ~~[VULTR](https://www.vultr.com/?ref=7131883)~~
 - [Digitalocean](https://m.do.co/c/60f242e5b700)
-- [Letbox](https://my.letbox.com/aff.php?aff=335)
+- ~~[Letbox](https://my.letbox.com/aff.php?aff=335)~~
 - [RivenCloud](https://portal.sa.net/aff.php?aff=149)
 - [GigsgigsCloud](https://clientarea.gigsgigscloud.com/?affid=1522)
 - [BandwagonHost](https://bandwagonhost.com/aff.php?aff=15185)
-- [namesilo](https://www.namesilo.com/register.php?rid=5ce3798yc)
+- ~~[namesilo](https://www.namesilo.com/register.php?rid=5ce3798yc)~~
+- Cloudflare
+- Tencent Cloud
