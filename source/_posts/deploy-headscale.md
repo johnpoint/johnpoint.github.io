@@ -1,11 +1,10 @@
-https://grafana.com/blog/2021/02/09/how-i-monitor-my-openwrt-router-with-grafana-cloud-and-prometheus/
-
 ---
 title: 使用 headscale 异地组网
 author: johnpoint
 date: 2022-11-04 10:00:00
 tags:
 - 笔记
+- headscale
 toc: true
 ---
 
