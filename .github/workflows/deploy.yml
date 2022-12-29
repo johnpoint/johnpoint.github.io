@@ -61,7 +61,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm install npm -g
           yarn global add hexo-cli
           yarn global add @cloudflare/wrangler
           yarn
