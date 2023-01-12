@@ -1,0 +1,82 @@
+name: HEXO_AUTO_DEPLOY
+
+on:
+  push:
+    branches:
+      - source
+
+env:
+  GIT_USER: johnpoint
+  GIT_EMAIL: me@lvcshu.com
+  THEME_REPO: johnpoint/hexo-theme-XvA
+  THEME_BRANCH: master
+  DEPLOY_REPO: johnpoint/johnpoint.github.io
+  DEPLOY_BRANCH: master
+
+jobs:
+  build:
+    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node_version: [16.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout theme repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.THEME_REPO }}
+          ref: ${{ env.THEME_BRANCH }}
+          path: themes/XvA
+
+      - name: Checkout deploy repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.DEPLOY_REPO }}
+          ref: ${{ env.DEPLOY_BRANCH }}
+          path: .deploy_git
+
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node_version }}
+
+      - name: Configuration environment
+        env:
+          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+        run: |
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name $GIT_USER
+          git config --global user.email $GIT_EMAIL
+          cp themes/_config.yml themes/XvA/_config.yml
+          cp themes/zh-Cu.yml themes/XvA/languages
+
+      - name: Install dependencies
+        run: |
+          yarn global add hexo-cli
+          yarn global add @cloudflare/wrangler
+          yarn
+
+      - name: Deploy hexo
+        run: |
+          hexo deploy
+      
+      - name: Deploy to Cloudflare Workers
+        env:
+          CF_WORKERS_TOKEN: ${{secrets.CF_WORKERS_TOKEN}}
+        run: |
+          echo "build at: "$(date) > public/build_info.html
+          echo "<br />"$(node -v) >> public/build_info.html
+          mkdir /home/runner/.wrangler/config -p
+          echo 'api_token = "'$CF_WORKERS_TOKEN'"' > /home/runner/.wrangler/config/default.toml
+          cp workers-site/package.json package.json
+          ls
+          wrangler publish
