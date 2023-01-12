@@ -15,12 +15,8 @@ env:
 
 jobs:
   build:
-    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node_version: [12.x]
+    name: Build on node 12.x and ubuntu-20.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
@@ -40,10 +36,10 @@ jobs:
           ref: ${{ env.DEPLOY_BRANCH }}
           path: .deploy_git
 
-      - name: Use Node.js ${{ matrix.node_version }}
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node_version }}
+          node-version: 12.x
 
       - name: Configuration environment
         env:
