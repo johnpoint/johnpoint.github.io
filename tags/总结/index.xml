@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>总结 on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/%E6%80%BB%E7%BB%93/</link>
+    <description>Recent content in 总结 on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 26 Dec 2021 15:11:29 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021 年度简报</title>
+      <link>https://blog.lvcshu.com/2021/12/26/2021-year-summary/</link>
+      <pubDate>Sun, 26 Dec 2021 15:11:29 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2021/12/26/2021-year-summary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2020 年度简报</title>
+      <link>https://blog.lvcshu.com/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
+      <pubDate>Wed, 23 Dec 2020 11:11:29 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
+      <description>&lt;p&gt;2020 年的开头我们并不知道接下来的这一年是那么的艰难，幸好春节前我就已经在某些地方得知了疫情的消息并且准备了一些口罩，减轻了疫情高峰期时口罩的使用压力。&lt;/p&gt;
+&lt;p&gt;Bilibili 跨年晚会仿佛就发生在昨天，又到了 2020 年的圣诞节，得开始写年度总结了，总感觉这一年啥都没有干就到年末了（&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2019 年度简报</title>
+      <link>https://blog.lvcshu.com/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
+      <pubDate>Mon, 23 Dec 2019 16:47:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
+      <description>&lt;p&gt;又是一年圣诞节，2019 年也来到了尾声，2018 年的年度简报感觉就是在不久之前写的，时间过得真的快。又是时候来给过去的 2019 年做一个简报以及总结。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2018年度简报</title>
+      <link>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
+      <pubDate>Tue, 25 Dec 2018 16:47:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
+      <description>首先 圣诞快乐~ 转眼间啊，2018年就快要过去了，是时候来 水 写一篇年终总结了
+Photo by Fabrizio Verrecchia on Unsplash
+学习 这一年学了什么？ apache PHP javacript SQL docker 成果？ emmmmmmmm好像也没有什么成果可以出来说的，就简单的定制了几个 docker 并且写成了 docker-compose 使得我在部署服务器的时候能够更加方便，然后时间也比之前采用的脚本的编译安装要大大缩短，以后重装服务器就更加肆无忌惮了
+同时，初步的尝试使用 N2Nv2 的 peer to peer VPN 把所有的服务器链接成一个大内网，以后有什么证书之类的文件就可以通过内网进行传输了，并且我的电脑也连上了这个内网，使得我在外面（不在电脑身边）也能通过连接上我任意一台 VPS 来链接我的电脑。但是目前只是刚刚开始部署，估计完全搞定得到 2019 年了&amp;hellip;.
+还有这个！ 求star！！ johnpoint/anti-360browser.js
+Github 的一年 那么 2019 加油哇~
+__ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _ \ \ \ \ \ / / / __/| |_| | | (_) | / / \_\ /_/ |_____|\___/|_|\___/ /_/ 2019 计划 预习JAVA 把 业余无线电牌照 考到手 继续学习算法知识 待定&amp;hellip; </description>
+    </item>
+    
+  </channel>
+</rss>

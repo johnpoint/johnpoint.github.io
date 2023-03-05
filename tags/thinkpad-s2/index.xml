@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>thinkpad S2 on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/thinkpad-s2/</link>
+    <description>Recent content in thinkpad S2 on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 25 Aug 2018 16:58:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/thinkpad-s2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&lt;失效&gt; Ubuntu 安装 thinkpad S2 无线网卡驱动</title>
+      <link>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</link>
+      <pubDate>Sat, 25 Aug 2018 16:58:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</guid>
+      <description>注意：本文已失效，目前有效的方法在 这里
+最近入手了一台 thinkpad S2 ，打开 windows 系统，觉得缺了点什么，于是连忙把 ubuntu 系统也安装了上去，但是在配置 ubuntu 系统的时候并没有让我连接网络的选项，当时就感觉有些奇怪&amp;lt;!&amp;mdash;more&amp;mdash;&amp;gt;，但是没有放在心上。安装完成后打开 ubuntu 系统发现系统 根本没有 检测到无线网卡的存在，于是我就慌了，赶紧回到 windows 系统，看见了无线网卡的型号
+Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC 于是使用强大的 百度 google 搜索解决办法，最后在 ubuntu论坛 的这个帖子里发现了解决办法。
+解决方法 由这个帖子里的大佬在这里请教到的大佬给出解决方法
+原文如下：
+Worked solution (Requirements: kernel &amp;gt;=4.11) : (UPD: In the latest release of endlessm you need kernel version 4.15) Download driver directory from this repo: https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce You can do it by this link: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce Unpack zip archive. Change the Makefile.</description>
+    </item>
+    
+  </channel>
+</rss>

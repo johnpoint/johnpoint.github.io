@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/docker/</link>
+    <description>Recent content in docker on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 12 Aug 2022 17:30:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 docker-compose 搭建 clickhouse 集群</title>
+      <link>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</link>
+      <pubDate>Fri, 12 Aug 2022 17:30:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
+      <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>
+    </item>
+    
+    <item>
+      <title>树莓派 docker 搭建 pi-dashboard</title>
+      <link>https://blog.lvcshu.com/2018/10/21/%E6%A0%91%E8%8E%93%E6%B4%BE-docker-%E6%90%AD%E5%BB%BA-pi-dashboard/</link>
+      <pubDate>Sun, 21 Oct 2018 05:40:21 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/10/21/%E6%A0%91%E8%8E%93%E6%B4%BE-docker-%E6%90%AD%E5%BB%BA-pi-dashboard/</guid>
+      <description>&lt;p&gt;前一阵子我入手了一（台？）（个？）树莓派，但是一直都没有时间研究该用来做什么&amp;hellip;. 然后无意间看见了一个叫做pi-dashboard 的小玩意儿 上一张图看看&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

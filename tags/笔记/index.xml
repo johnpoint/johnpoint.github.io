@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>笔记 on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 04 Nov 2022 10:00:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 headscale 异地组网</title>
+      <link>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</link>
+      <pubDate>Fri, 04 Nov 2022 10:00:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
+      <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。
+然后就听说了 wireguard 被加入 linux 内核，以下是 wireguard 的介绍：
+WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]，基于Linux内核实现，利用Curve25519进行密钥交换，ChaCha20用于加密，Poly1305用于数据认证，BLAKE2用于散列函数运算[1]，支持IPv4和IPv6的第3层。[2]WireGuard旨在获得比IPsec和OpenVPN更好的性能[3]。
+确实，wireguard 性能十分不错，但是配置实在是过于繁琐了，如果要往 wireguard 网络中加入一台设备，则需要修改几乎所有连入网络设备的配置文件，实在是太麻烦了，好在现在已经有了 tailscale 这个服务提供商提供了基于 wireguard 的 0 配置的 VPN 组网方案。
+而 headscale 就是 tailscale 中控服务端的开源版本，开源版本支持自己部署，同时没有连入设备的数量限制，于是我花了一点时间将 headscale 部署了一下。
+使用到的项目 Github:juanfont/headscale Github:gurucomputing/headscale-ui
+部署 headscale 这里我使用 docker-componse 进行部署
+version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:latest-alpine container_name: headscale volumes: - ./container-config:/etc/headscale - ./container-data/data:/var/lib/headscale ports: - 27896:8080 command: headscale serve restart: unless-stopped headscale-ui: image: ghcr.io/gurucomputing/headscale-ui:latest restart: unless-stopped container_name: headscale-ui ports: - 9443:443 同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下</description>
+    </item>
+    
+    <item>
+      <title>使用 docker-compose 搭建 clickhouse 集群</title>
+      <link>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</link>
+      <pubDate>Fri, 12 Aug 2022 17:30:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
+      <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>
+    </item>
+    
+    <item>
+      <title>用于 gnet 的 Protocol buffers 编解码器</title>
+      <link>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</link>
+      <pubDate>Fri, 17 Sep 2021 18:30:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</guid>
+      <description>要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 gnet，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了&amp;hellip;
+协议分析 从 TCP 流里面传过来的是经过简单处理的 Protocol buffers 数据，他在数据的头携带了这个数据包的长度信息，像是这样
+[ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ] 调用 golang 的 proto 官方库中的 func DecodeVarint(b []byte) (uint64, int) 方法可以从数据中拿到两个值，分别是 数据的完整长度、标明数据长度的头信息的长度。
+由于没有特定的协议在包与包之间进行明显的划分，所以得用他的头数据来进行分包。
+解码器 // 储存连接内的相关信息 type DataStruct struct { fullLength int lenNumLength int fullData []byte } func (d *Codec) Decode(c gnet.</description>
+    </item>
+    
+    <item>
+      <title>proto 通过字段名获取值</title>
+      <link>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</link>
+      <pubDate>Fri, 11 Jun 2021 15:48:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
+      <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
+protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
+func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect.</description>
+    </item>
+    
+    <item>
+      <title>liunx jetbrains 软件输入中文</title>
+      <link>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
+      <description>首先你得有中文输入法
+在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8</description>
+    </item>
+    
+    <item>
+      <title>git 同步上游代码</title>
+      <link>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sun, 31 May 2020 21:30:37 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
+      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
+    </item>
+    
+    <item>
+      <title>Notion：好用的现代笔记软件</title>
+      <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
+      <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
+0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
+1 接下来我就去体验了一下大名鼎鼎的巨硬出的 OneNote ，使用体验的确十分惊艳，其中文字图片混排的使用方式其实很适合上课的笔记，但是为什么我后来也放弃了 OneNote 呢，原因就在于我是个实打实的跨平台用户，从 windows 到 安卓 到 Linux，都是我比较主要使用的操作系统，OneNote 的客户端功能不统一的弊端就出现了，而且情况十分严重，web、移动端、win10 PWA 版和 office 2016版这四个版本的客户端其中的功能 都 不 一 样，就很气，所以使用体验就比 joplin 还要割裂，最后忍无可忍就放弃了 OneNote。
+最后我只能把我的视线投向了目前还很火的 Notion，用 EDU 教育邮箱注册可以获得永久的免费个人订阅。
+2 入坑，简单的试了下发现还不赖，排版功能虽然说没有 OneNote 那种几乎无限制的容器布局，但是 Notion 的块布局也相对比较自由，排版功能已经满足了我，页面套娃功能也非常不错，页面层级理论上来说可以是无限的。
+值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库
+上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
+if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
+    </item>
+    
+    <item>
+      <title>Notion：好用的现代笔记软件</title>
+      <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
+      <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
+0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
+1 接下来我就去体验了一下大名鼎鼎的巨硬出的 OneNote ，使用体验的确十分惊艳，其中文字图片混排的使用方式其实很适合上课的笔记，但是为什么我后来也放弃了 OneNote 呢，原因就在于我是个实打实的跨平台用户，从 windows 到 安卓 到 Linux，都是我比较主要使用的操作系统，OneNote 的客户端功能不统一的弊端就出现了，而且情况十分严重，web、移动端、win10 PWA 版和 office 2016版这四个版本的客户端其中的功能 都 不 一 样，就很气，所以使用体验就比 joplin 还要割裂，最后忍无可忍就放弃了 OneNote。
+最后我只能把我的视线投向了目前还很火的 Notion，用 EDU 教育邮箱注册可以获得永久的免费个人订阅。
+2 入坑，简单的试了下发现还不赖，排版功能虽然说没有 OneNote 那种几乎无限制的容器布局，但是 Notion 的块布局也相对比较自由，排版功能已经满足了我，页面套娃功能也非常不错，页面层级理论上来说可以是无限的。
+值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库
+上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
+if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
+    </item>
+    
+    <item>
+      <title>安装Arch笔记</title>
+      <link>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 07 May 2019 22:53:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Arch Linux（或 Arch /ˈɑːrtʃ/)）是一款基于 x86-64 架构的 Linux发行版。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Github commit添加verified标识</title>
+      <link>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</link>
+      <pubDate>Sat, 09 Feb 2019 19:07:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;这是一篇笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内容：Github commit添加verified标识&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>学习笔记:初识httpd</title>
+      <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
+      <pubDate>Fri, 02 Nov 2018 09:49:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
+      <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
+学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
+chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
+cd /home mkdir www 修改httpd配置文件</description>
+    </item>
+    
+    <item>
+      <title>学习笔记:初识httpd</title>
+      <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
+      <pubDate>Fri, 02 Nov 2018 09:49:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
+      <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
+学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
+chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
+cd /home mkdir www 修改httpd配置文件</description>
+    </item>
+    
+  </channel>
+</rss>

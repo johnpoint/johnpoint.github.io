@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>travis-ci on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/travis-ci/</link>
+    <description>Recent content in travis-ci on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Jun 2019 14:09:31 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/travis-ci/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 travis-ci 自动化构建博客</title>
+      <link>https://blog.lvcshu.com/2019/06/15/%E4%BD%BF%E7%94%A8-travis-ci-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 15 Jun 2019 14:09:31 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/06/15/%E4%BD%BF%E7%94%A8-travis-ci-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;之前的 hexo 博客我都是在电脑上进行生成然后 push 上 github repo，现在感觉有些麻烦 &lt;del&gt;就是懒&lt;/del&gt; 所以就想着能不能用 travis-ci 自动化构建博客。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

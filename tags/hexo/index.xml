@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hexo on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/hexo/</link>
+    <description>Recent content in hexo on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Jul 2021 11:44:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决全屏背景图卡顿</title>
+      <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
+      <pubDate>Wed, 28 Jul 2021 11:44:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
+      <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
+而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。
+搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>博客主题更新 &amp;&amp; 一些碎碎念</title>
+      <link>https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
+      <pubDate>Sun, 19 Apr 2020 18:26:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
+      <description>&lt;p&gt;好久没有更新博客啦，上来写点碎碎念&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>配置CORS小记</title>
+      <link>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</link>
+      <pubDate>Mon, 07 Oct 2019 21:44:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</guid>
+      <description>&lt;p&gt;最近在折腾博客的字体，最终选定了这几个字体作为网站的字体&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>写了个 Hexo 主题 hexo-theme-XvA</title>
+      <link>https://blog.lvcshu.com/2019/08/13/%E5%86%99%E4%BA%86%E4%B8%AAhexo%E4%B8%BB%E9%A2%98/</link>
+      <pubDate>Tue, 13 Aug 2019 11:50:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/08/13/%E5%86%99%E4%BA%86%E4%B8%AAhexo%E4%B8%BB%E9%A2%98/</guid>
+      <description>&lt;p&gt;之前博客用的主题是移植自 Typecho 的 &lt;a href=&#34;https://github.com/tufu9441/maupassant-hexo&#34;&gt;Maupassant&lt;/a&gt; 主题，简洁，也挺好看，就是有点略显单调&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装hexo博客及其优化记录</title>
+      <link>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 20 Jul 2018 06:01:39 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
+      <description>使用lnmp.org的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
+本文采用 lvcshu.com 为示例域名
+安装 HEXO 按照官网说明的方法一步步安装
+安装 node.js curl:
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 或
+wget:
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 然后重启终端或者ssh重新连接
+nvm install stable 安装 hexo-cil npm install -g hexo-cli 随后就会很快安装完成！
+部署博客 安装Hexo后，运行以下命令以初始化目标中的Hexo 。
+此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行
+hexo init . npm install hexo g 此时我们博客的静态页面已经成功生成了，但是访问页面是没有办法看到的，接着下一步
+调整 nginx 配置文件 打开 nginx 相应站点 的配置文件，找到
+root /home/wwwroot/lvcshu.com; 改为
+root /home/wwwroot/blog.lvcshu.com/public; 记住：有两个地方要改，对应http与https
+推荐：可以将 http 通过301跳转，跳转到 https
+lnmp nginx restart 看看效果吧！</description>
+    </item>
+    
+  </channel>
+</rss>

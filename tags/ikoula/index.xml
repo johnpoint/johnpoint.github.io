@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ikoula on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/ikoula/</link>
+    <description>Recent content in ikoula on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 Aug 2019 20:00:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/ikoula/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ikoula Ubuntu 18.04 独服配置 IPv6</title>
+      <link>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</link>
+      <pubDate>Mon, 19 Aug 2019 20:00:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</guid>
+      <description>&lt;p&gt;之前在 ikoula 买了个 8.99o/mo 的独服用来刷 PT ，最近看了下 ikoula 终于加上了 18.04 的镜像，就去升级了下。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

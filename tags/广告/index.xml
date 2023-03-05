@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>广告 on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/%E5%B9%BF%E5%91%8A/</link>
+    <description>Recent content in 广告 on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 May 2020 17:20:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E5%B9%BF%E5%91%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Telegram spammer 二三事</title>
+      <link>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</link>
+      <pubDate>Thu, 28 May 2020 17:20:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</guid>
+      <description>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
+今天就简单的写一写在我记忆里面的 Telegram 中文使用者群体里面所见到的 spammer 以及反 spammer 的一些事情。
+spammer 分类 截至到目前，我所见过的广告帐号主要分为以下几类
+色情
+色情频道推广 色情 GIF/图片 分发机器人，带频道推广 私聊问你要不要拍一些色图 卖东西
+卖高仿鞋 黑产
+各种涨粉 个人信息售卖 四件套 实体储蓄卡+身份证+手机卡+U盾（取款密码+网银登录密码 售卖（四件套解释-知乎） 出售科学上网工具 出售各种帐号(twitter,facebook,微博) 三网数据 币圈
+拉人 推荐各种币 传教
+法轮功 Arch神教 外语
+各种看不懂的语言 spammer 行为分类 公开群类
+进群发送一些无意义的问好的消息，并且展露自己的广告iID 进群不说话，但是会私聊群成员进行推广 进群后发送转发的频道的消息 私聊类
+会先了解你是不是中国人，然后假装是一个对中国很有兴趣的外国人，然后就会宣传法轮功 拉群类
+会将你拉进一些莫名其妙的群里面，一般以币圈的群居多 爆破类
+进群就批量发送 spam 消息，刷屏来进行爆破骚扰 spammer 等级区分 反 spam 史 这一步部分虽然美其名曰 史 但是这些阶段并没有什么明显的分界线，目前来看这几个方案都是并存的状态，这几个方案及其项目目前的活跃程度不一，但在笔者有限的视野里面也的确有在运行。
+第一阶段 - 手动处理 一开始也是处理 spammer 比较原始的方式，就是利用 telegram 的比较完善的群组管理的功能进行广告内容的清理，同时因为能够清除成员发送的所有消息，所以其实效果还不错（在有管理员在线的情况下）</description>
+    </item>
+    
+  </channel>
+</rss>

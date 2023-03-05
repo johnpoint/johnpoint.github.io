@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Android on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/android/</link>
+    <description>Recent content in Android on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 01 May 2022 11:51:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oneplus 8T 刷入 LineageOS</title>
+      <link>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</link>
+      <pubDate>Sun, 01 May 2022 11:51:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</guid>
+      <description>劳动节来给博客除除草！
+自从一加手机社区发布了官方公告说 Android 12 正式版本出来了之后我就一直在等系统更新的推送，谁知道从4月12日公告出来到今天我都没有收到推送，再加上一加的在 Android 12 后 HOS 会切换成 ColorOS，类原生的特点就没有了，OOS 虽说还会持续维护，但是我既然都用 OOS 了我为啥不自己刷个更加原生的系统呢？比如说 LineageOS。
+前期准备 说干就干，先去官网看下有没有支持，芜湖，有支持而且看了下文档还蛮完善的，备份好微信(这个手机里面唯一没有同步功能的app)的数据就打算开始刷机了。
+开刷 刷机的过程官方文档已经非常完善了，在这里不重复赘述。
+一些要注意的小问题 GAPPS GAPPS 一定要在首次启动系统之前刷入，不然就要双清，之前辛苦配置的东西都无了
+SafetyNet 在刷好系统之后，我自然是想打开 ingress 玩下，然后折腾了半天，一直在提醒 ”ingress 需要安全登录“，一开始还以为是代理的问题，疯狂切换代理都没有用，后来查到这个讨论发现是 SafetyNet 的问题，于是 Magisk 刷入了 MagiskHide Props Config、Universal SafetyNet Fix 两个模块解决了这个问题
+Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生效 MagiskHide Props Config 这个则需要在shell执行指令 props 按照提示选择即可。 相机 自带的相机 app 太拉了，直接停用，在 Google Camera Port 下载了个最新版本的相机，以及挑了个推荐的配置文件。
+使用感受 原生的系统真是舒服啊，没有了一些有的没有的app，动画啥的感觉要比HOS要好。高帧率、AOD、蓝牙HD音频编码、屏下指纹这些都没有啥大问题。
+甚至有些之前在HOS上面没有体验过的特性，比如说锁屏音乐可视化 总的来说挺满意的，再看看后续使用的过程中有没有啥坑了，就这样。</description>
+    </item>
+    
+    <item>
+      <title>Oneplus 8T 到手</title>
+      <link>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</link>
+      <pubDate>Wed, 21 Oct 2020 15:56:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</guid>
+      <description>&lt;p&gt;&lt;del&gt;来了来了，Android R 他朝我们走来了&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;刚刚忍不住剁手了香气四溢的 Oneplus 8T，也把我手中的已经伊拉克成色的 Oneplus 6 给以旧换新处理掉了，就例行来说一下 Android 11 以及这个看起来很香的 Oneplus 8T 的体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android 10 再体验</title>
+      <link>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Mon, 21 Oct 2019 00:19:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;&lt;del&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/del&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>app推荐:安卓上好用的 RSS 客户端们</title>
+      <link>https://blog.lvcshu.com/2019/09/25/rss-on-android/</link>
+      <pubDate>Wed, 25 Sep 2019 00:17:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/09/25/rss-on-android/</guid>
+      <description>&lt;p&gt;一直以来我都是用着 Telegram bot 来作为 RSS 推送阅读的阅读器，直到前几天我的 bot 突然宕机，我就懒得恢复了 &lt;del&gt;因为我忘记他在哪个服务器上了嘤嘤嘤&lt;/del&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Q 初体验</title>
+      <link>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Fri, 10 May 2019 13:29:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

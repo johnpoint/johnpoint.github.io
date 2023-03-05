@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>golang on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/golang/</link>
+    <description>Recent content in golang on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Jul 2022 10:00:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 实现瑞士轮排列算法</title>
+      <link>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</link>
+      <pubDate>Fri, 29 Jul 2022 10:00:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</guid>
+      <description>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
+瑞士轮有两个规则
+选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
+type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
+    </item>
+    
+    <item>
+      <title>proto 通过字段名获取值</title>
+      <link>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</link>
+      <pubDate>Fri, 11 Jun 2021 15:48:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
+      <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
+protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
+func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect.</description>
+    </item>
+    
+  </channel>
+</rss>

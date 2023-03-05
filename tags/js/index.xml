@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JS on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/js/</link>
+    <description>Recent content in JS on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 12 Dec 2019 17:19:57 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js 提取 QQ 音乐直链</title>
+      <link>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</link>
+      <pubDate>Thu, 12 Dec 2019 17:19:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</guid>
+      <description>function getSong(name) { window.location.href = &amp;#34;https://y.qq.com/portal/search.html#page=1&amp;amp;searchid=1&amp;amp;remoteplace=txt.yqq.top&amp;amp;t=song&amp;amp;w=&amp;#34; + name; var muname = $(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;&amp;#39;); var qq = &amp;#34;0&amp;#34;; var guid = &amp;#34;0&amp;#34;; $.ajax({ url: &amp;#34;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?g_tk=0&amp;amp;loginUin=&amp;#34; + qq + &amp;#34;&amp;amp;hostUin=0&amp;amp;format=json&amp;amp;inCharset=utf8&amp;amp;outCharset=utf-8&amp;amp;notice=0&amp;amp;platform=yqq&amp;amp;needNewCode=0&amp;amp;cid=205361747&amp;amp;uin=&amp;#34; + qq + &amp;#34;&amp;amp;songmid=&amp;#34; + muname.replace(&amp;#39;C400&amp;#39;, &amp;#39;&amp;#39;) + &amp;#34;&amp;amp;filename=&amp;#34; + muname + &amp;#34;.m4a&amp;amp;guid=&amp;#34; + guid, success: function (data) { data = JSON.parse(data); vkey = data.data.items[0].vkey; console.log($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.stream.qqmusic.qq.com/C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;.m4a?guid=&amp;#39; + guid + &amp;#39;&amp;amp;vkey=&amp;#39; + vkey + &amp;#39;&amp;amp;uin=&amp;#39; + qq + &amp;#39;&amp;amp;fromtag=66&amp;#39;)) window.open($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.</description>
+    </item>
+    
+  </channel>
+</rss>

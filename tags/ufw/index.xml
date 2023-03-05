@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UFW on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/ufw/</link>
+    <description>Recent content in UFW on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 15 Jan 2018 05:21:10 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/ufw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配置ufw防火墙，守护你的Ubuntu</title>
+      <link>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</link>
+      <pubDate>Mon, 15 Jan 2018 05:21:10 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
+      <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
+直到我发现了ufw这个神器
+UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
+废话不多说，上教程
+环境 Ubuntu 16.04
+安装 apt install ufw 配置 首先先打开ssh端口
+ufw allow ssh 如果你的ssh端口不是默认的22，就
+ufw allow 你的ssh端口 打开53端口，使dns功能不受影响
+ufw allow 53/tcp ufw allow 53/udp 可选：打开80，443端口
+ufw allow http/tcp ufw allow https/tcp 然后
+ufw default deny 阻断除上述规则外的外部连接（本机外发流量无影响）
+ufw enable 启动防火墙，done！
+操作指令 启动防火墙 ufw enable 关闭防火墙 ufw disable 更新配置 ufw reload 查看防火墙状态 ufw status </description>
+    </item>
+    
+  </channel>
+</rss>

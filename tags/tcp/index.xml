@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tcp on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/tcp/</link>
+    <description>Recent content in tcp on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Sep 2021 18:30:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/tcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用于 gnet 的 Protocol buffers 编解码器</title>
+      <link>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</link>
+      <pubDate>Fri, 17 Sep 2021 18:30:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</guid>
+      <description>要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 gnet，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了&amp;hellip;
+协议分析 从 TCP 流里面传过来的是经过简单处理的 Protocol buffers 数据，他在数据的头携带了这个数据包的长度信息，像是这样
+[ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ] 调用 golang 的 proto 官方库中的 func DecodeVarint(b []byte) (uint64, int) 方法可以从数据中拿到两个值，分别是 数据的完整长度、标明数据长度的头信息的长度。
+由于没有特定的协议在包与包之间进行明显的划分，所以得用他的头数据来进行分包。
+解码器 // 储存连接内的相关信息 type DataStruct struct { fullLength int lenNumLength int fullData []byte } func (d *Codec) Decode(c gnet.</description>
+    </item>
+    
+  </channel>
+</rss>

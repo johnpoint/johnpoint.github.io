@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>体验 on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/%E4%BD%93%E9%AA%8C/</link>
+    <description>Recent content in 体验 on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 21 Oct 2020 15:56:57 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E4%BD%93%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oneplus 8T 到手</title>
+      <link>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</link>
+      <pubDate>Wed, 21 Oct 2020 15:56:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</guid>
+      <description>&lt;p&gt;&lt;del&gt;来了来了，Android R 他朝我们走来了&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;刚刚忍不住剁手了香气四溢的 Oneplus 8T，也把我手中的已经伊拉克成色的 Oneplus 6 给以旧换新处理掉了，就例行来说一下 Android 11 以及这个看起来很香的 Oneplus 8T 的体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Joplin：笔记软件的新选择</title>
+      <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
+      <pubDate>Sat, 22 Feb 2020 14:29:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
+      <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
+使用体验 优点 支持 markdown、html 待办事项可以定时提醒 网页摘抄可以直接截取网页的 HTML 代码保存 中文本地化并不完全 一些坑 onedriver 速度慢 Dropbox Linux 版本无法授权 坚果云 webdav 有频率限制 自建 webdav 有点麻烦以及不能保证速度 linux 桌面版本有时会无端卡顿 加密密钥不能编辑管理 安装 桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。
+配置同步 一开始我使用的同步策略是使用自建 webdav 进行同步，但是效果不佳，后来我就去尝试使用了国内的坚果云 webdav 进行同步笔记，但是由于坚果云的 webdav 有频繁操作的保护，所以几乎是不可用的状态。
+无奈之下我只能粗暴的选择直接进行文件同步，首先使用的 resilio sync 未知原因的同步速度十分缓慢(内网)，所以最后选择了同类型的软件 synthing
+加密配置 Joplin 还自带加密的功能，但是加密的功能稍微有点设计缺陷，主要是操作了逻辑的缺陷，他没有设计加密密钥的删除功能，所以加密如果禁用再重新打开是不能用回之前的密钥的，只能重新生成，而且如果两个设备都生成了密钥两边都会有两把密钥，有点看不顺眼。
+正确的操作逻辑：
+启用加密--&amp;gt;同步--&amp;gt;输入密码 参考链接 Joplin：真正的 Evernote 开源替代品 Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置 Joplin 同步到坚果云 webdav Syncthing 官网 PS:本篇文章在 Joplin 上完成</description>
+    </item>
+    
+    <item>
+      <title>Tiny File Manager 使用</title>
+      <link>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 14 Feb 2020 11:20:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</guid>
+      <description>最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。
+但是 PT 下载好了的文件我得拉回本地，所以我就想在服务器上建个私有云盘，但是试来试去都没有啥好用的，最后用到了 Tiny File Manager
+安装的话也很简单，只需要你的服务器上有网页服务器和 php 环境即可，将 tinyfilemanager.php 和 translation.json 放到目录下就好了
+为了安全起见，我还在 nginx 上设置了权限限制，让这个目录下面的文件只能通过这个 php 文件下载。
+location / { deny all; } location /index.php { allow all; } </description>
+    </item>
+    
+    <item>
+      <title>Archlinux 系统体验报告</title>
+      <link>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
+      <pubDate>Mon, 13 Jan 2020 22:16:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android 10 再体验</title>
+      <link>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Mon, 21 Oct 2019 00:19:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;&lt;del&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/del&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>app推荐:安卓上好用的 RSS 客户端们</title>
+      <link>https://blog.lvcshu.com/2019/09/25/rss-on-android/</link>
+      <pubDate>Wed, 25 Sep 2019 00:17:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/09/25/rss-on-android/</guid>
+      <description>&lt;p&gt;一直以来我都是用着 Telegram bot 来作为 RSS 推送阅读的阅读器，直到前几天我的 bot 突然宕机，我就懒得恢复了 &lt;del&gt;因为我忘记他在哪个服务器上了嘤嘤嘤&lt;/del&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>keepass 客户端：keeweb 使用体验</title>
+      <link>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sun, 28 Jul 2019 17:07:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;前不久转坑到 1 password 的我在看见了 keeweb 这一项目时又有了重回 keepass 的想法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>keepass 客户端：keeweb 使用体验</title>
+      <link>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sun, 28 Jul 2019 17:07:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;前不久转坑到 1 password 的我在看见了 keeweb 这一项目时又有了重回 keepass 的想法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 家族:Alpine 体验</title>
+      <link>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Wed, 24 Jul 2019 17:16:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;最近心痒痒想折腾下新的系统，顺便记录一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>天猫精灵体验</title>
+      <link>https://blog.lvcshu.com/2019/06/22/%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5-%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sat, 22 Jun 2019 01:31:30 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/06/22/%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5-%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;买了天猫精灵方糖也有半年了 &lt;del&gt;差不多&lt;/del&gt; 就写 &lt;del&gt;水&lt;/del&gt; 一篇文章说说使用体验吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android Q 初体验</title>
+      <link>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Fri, 10 May 2019 13:29:57 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
+      <description>&lt;p&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>office 365 online 太好用啦!</title>
+      <link>https://blog.lvcshu.com/2019/03/02/office-365-online-%E5%A4%AA%E5%A5%BD%E7%94%A8%E5%95%A6/</link>
+      <pubDate>Sat, 02 Mar 2019 20:40:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/03/02/office-365-online-%E5%A4%AA%E5%A5%BD%E7%94%A8%E5%95%A6/</guid>
+      <description>&lt;p&gt;自从把主力的系统从 windows 转向了 ubuntu 了以后，感觉 ubuntu 实在是比 windows 要方便许多 （除了进行文档处理的操作以外）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>app推荐:notify &amp; fitness for mi band</title>
+      <link>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</link>
+      <pubDate>Tue, 22 Jan 2019 21:21:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</guid>
+      <description>&lt;p&gt;话说用了那么久小米手环，其实感觉还是比较不错的，唯一美中不足的就是小米手环的附属应用 &lt;code&gt;小米运动(mi fit)&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>app推荐:notify &amp; fitness for mi band</title>
+      <link>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</link>
+      <pubDate>Tue, 22 Jan 2019 21:21:00 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</guid>
+      <description>&lt;p&gt;话说用了那么久小米手环，其实感觉还是比较不错的，唯一美中不足的就是小米手环的附属应用 &lt;code&gt;小米运动(mi fit)&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cloudreve体验报告</title>
+      <link>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
+      <pubDate>Wed, 09 May 2018 05:30:37 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
+      <description>&lt;p&gt;自从360云盘把业务收缩回企业用户之时，笔者就在不断的寻觅适合个人用户使用的私有云盘，但是纵观网络的各种各样的云盘，不是过于简单，就是部署过于复杂，还有就是会出现各种各样奇奇怪怪的问题（比如nextcloud），&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

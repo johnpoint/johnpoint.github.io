@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Chrome on johnpoint&#39;s blog</title>
+    <link>https://blog.lvcshu.com/tags/chrome/</link>
+    <description>Recent content in Chrome on johnpoint&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Jun 2019 15:54:20 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>修复Chrome色差问题</title>
+      <link>https://blog.lvcshu.com/2019/06/04/%E4%BF%AE%E5%A4%8Dchrome%E8%89%B2%E5%B7%AE%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 04 Jun 2019 15:54:20 +0000</pubDate>
+      
+      <guid>https://blog.lvcshu.com/2019/06/04/%E4%BF%AE%E5%A4%8Dchrome%E8%89%B2%E5%B7%AE%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;在几次使用 Chrome 发现了网页的色彩渲染似乎有些问题&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
