@@ -14,8 +14,8 @@
       <guid>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</guid>
       <description>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
-选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
-type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
+ 选择积分相近的对手进行比赛 不会重复比赛  写出来的算法如下:
+type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 	if _, has := opponentMap[players[i]]; !has { // 选中 	res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 	var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
     </item>
     
   </channel>

@@ -23,12 +23,13 @@
       <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
       <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。
 然后就听说了 wireguard 被加入 linux 内核，以下是 wireguard 的介绍：
-WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]，基于Linux内核实现，利用Curve25519进行密钥交换，ChaCha20用于加密，Poly1305用于数据认证，BLAKE2用于散列函数运算[1]，支持IPv4和IPv6的第3层。[2]WireGuard旨在获得比IPsec和OpenVPN更好的性能[3]。
-确实，wireguard 性能十分不错，但是配置实在是过于繁琐了，如果要往 wireguard 网络中加入一台设备，则需要修改几乎所有连入网络设备的配置文件，实在是太麻烦了，好在现在已经有了 tailscale 这个服务提供商提供了基于 wireguard 的 0 配置的 VPN 组网方案。
+ WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]，基于Linux内核实现，利用Curve25519进行密钥交换，ChaCha20用于加密，Poly1305用于数据认证，BLAKE2用于散列函数运算[1]，支持IPv4和IPv6的第3层。[2]WireGuard旨在获得比IPsec和OpenVPN更好的性能[3]。
+ 确实，wireguard 性能十分不错，但是配置实在是过于繁琐了，如果要往 wireguard 网络中加入一台设备，则需要修改几乎所有连入网络设备的配置文件，实在是太麻烦了，好在现在已经有了 tailscale 这个服务提供商提供了基于 wireguard 的 0 配置的 VPN 组网方案。
 而 headscale 就是 tailscale 中控服务端的开源版本，开源版本支持自己部署，同时没有连入设备的数量限制，于是我花了一点时间将 headscale 部署了一下。
 使用到的项目 Github:juanfont/headscale Github:gurucomputing/headscale-ui
 部署 headscale 这里我使用 docker-componse 进行部署
-version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:latest-alpine container_name: headscale volumes: - ./container-config:/etc/headscale - ./container-data/data:/var/lib/headscale ports: - 27896:8080 command: headscale serve restart: unless-stopped headscale-ui: image: ghcr.io/gurucomputing/headscale-ui:latest restart: unless-stopped container_name: headscale-ui ports: - 9443:443 同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下</description>
+version:&amp;#39;3.5&amp;#39;services:headscale:image:headscale/headscale:latest-alpinecontainer_name:headscalevolumes:- ./container-config:/etc/headscale- ./container-data/data:/var/lib/headscaleports:- 27896:8080command:headscale serverestart:unless-stoppedheadscale-ui:image:ghcr.io/gurucomputing/headscale-ui:latestrestart:unless-stoppedcontainer_name:headscale-uiports:- 9443:443同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下
+location / { add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; &amp;#39;{{UI的域名}}&amp;#39; always; add_header &amp;#39;Access-Control-Allow-Methods&amp;#39; &amp;#39;GET, POST, OPTIONS,DELETE ,PUT&amp;#39; always; add_header &amp;#39;Access-Control-Allow-Headers&amp;#39; &amp;#39;authorization ,DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range&amp;#39; always; add_header &amp;#39;Access-Control-Expose-Headers&amp;#39; &amp;#39;Content-Length,Content-Range&amp;#39; always; if ($request_method = &amp;#39;OPTIONS&amp;#39;) { add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; &amp;#39;{{UI的域名}}&amp;#39; always; add_header &amp;#39;Access-Control-Allow-Methods&amp;#39; &amp;#39;GET, POST, OPTIONS,DELETE ,PUT &amp;#39; always; add_header &amp;#39;Access-Control-Allow-Headers&amp;#39; &amp;#39;authorization ,DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range&amp;#39; always; add_header &amp;#39;Access-Control-Expose-Headers&amp;#39; &amp;#39;Content-Length,Content-Range&amp;#39; always; add_header &amp;#39;Access-Control-Max-Age&amp;#39; 1728000; add_header &amp;#39;Content-Type&amp;#39; &amp;#39;text/plain; charset=utf-8&amp;#39;; add_header &amp;#39;Content-Length&amp;#39; 0; return 204; } proxy_pass {{headscale的地址}}; proxy_http_version 1.</description>
     </item>
     
     <item>
@@ -47,7 +48,7 @@ git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id
       <pubDate>Fri, 12 Aug 2022 17:30:00 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
-      <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>
+      <description>Docker Compose 配置 version:&amp;#39;3&amp;#39;services:clickhouse-server-ck1:restart:on-failure:10# 退出非0重启，尝试10次image:yandex/clickhouse-servercontainer_name:ck1networks:- ck-networkports:- &amp;#34;8124:8123&amp;#34;- &amp;#34;9001:9000&amp;#34;- &amp;#34;9010:9004&amp;#34;volumes:- `pwd`/clickhouse/:/var/lib/clickhouse/- `pwd`/clickhouse-server/:/etc/clickhouse-server/- `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;depends_on:- zookeeper-1clickhouse-server-ck2:restart:on-failure:10# 退出非0重启，尝试10次image:yandex/clickhouse-servercontainer_name:ck2networks:- ck-networkports:- &amp;#34;8125:8123&amp;#34;- &amp;#34;9002:9000&amp;#34;- &amp;#34;9011:9004&amp;#34;volumes:- `pwd`/clickhouse2/:/var/lib/clickhouse/- `pwd`/clickhouse-server2/:/etc/clickhouse-server/- `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;depends_on:- zookeeper-1clickhouse-server-ck3:restart:on-failure:10# 退出非0重启，尝试10次image:yandex/clickhouse-servercontainer_name:ck3networks:- ck-networkports:- &amp;#34;8126:8123&amp;#34;- &amp;#34;9003:9000&amp;#34;- &amp;#34;9012:9004&amp;#34;volumes:- `pwd`/clickhouse3/:/var/lib/clickhouse/- `pwd`/clickhouse-server3/:/etc/clickhouse-server/- `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;depends_on:- zookeeper-1zookeeper-1:restart:on-failure:10# 退出非0重启，尝试10次image:zookeeper:3.8.0container_name:zookeeper1networks:- ck-networkports:- &amp;#34;2181:2181&amp;#34;volumes:- `pwd`/zookeeper/conf/:/apache-zookeeper-3.8.0-bin/conf/- `pwd`/zookeeper/data/:/data- `pwd`/zookeeper/datalog/:/datalog- `pwd`/zookeeper/logs/:/logsulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;networks:ck-network:Clickhouse 配置文件 &amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt; &amp;lt;!-- NOTE: User and query level settings are set up in &amp;#34;users.xml&amp;#34; file. If you have accidentally specified user-level settings here, server won&amp;#39;t start. You can either move the settings to the right place inside &amp;#34;users.</description>
     </item>
     
     <item>
@@ -58,8 +59,8 @@ git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id
       <guid>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</guid>
       <description>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
-选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
-type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
+ 选择积分相近的对手进行比赛 不会重复比赛  写出来的算法如下:
+type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 	if _, has := opponentMap[players[i]]; !has { // 选中 	res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 	var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
     </item>
     
     <item>
@@ -90,7 +91,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
 在这次部署流程更新后他变成了这样，博客由于是 public 代码仓库，所以我的自动构建直接使用了 github action，只要基于之前的配置改改加上 publish 到 cloudflare workers 的 step 就可以直接用了。
 而静态文件托管的我一直是存在自建的 gitea 上面，所以配了个 drone 来执行自动 publish 到 cloudflare workers 的工作，总而言之也是挺香的。
 5月1日更新 又更改了下，用上了 vercel 的服务，实测这个服务提供的 cdn 要比 cloudflare 在中国大陆访问的快些。 博客主题更新 博客主题也好久没有更新了，这次更新主要是加上了几个能够改进访问体验的 feature。
-添加了首页巨幕以及文章头图图片下面的背景颜色，能够自定义在图片还没有加载出来之前显示的颜色 将博客底部版权信息部分的版本号放进了一个js里面，这样就减少了版本号修改时候需要修改的位置 将原来的文章无头图从几张图片中随机选择一张作为头图改成了随机选择一个颜色作为头图 颜色随机取值这里，是取值RGB都在 110-87之间的值，这里的颜色饱和度比较低，看起来比较舒服</description>
+ 添加了首页巨幕以及文章头图图片下面的背景颜色，能够自定义在图片还没有加载出来之前显示的颜色 将博客底部版权信息部分的版本号放进了一个js里面，这样就减少了版本号修改时候需要修改的位置 将原来的文章无头图从几张图片中随机选择一张作为头图改成了随机选择一个颜色作为头图  颜色随机取值这里，是取值RGB都在 110-87之间的值，这里的颜色饱和度比较低，看起来比较舒服</description>
     </item>
     
     <item>
@@ -106,7 +107,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
 404页面异常 在 worker-site/index.js 文件中，有一段逻辑是控制在url无法获取到文件的时候返回 /404.html。但是一部署上去我就发现了不对劲，这个404页面直接源代码显示，并没有被浏览器渲染出来。
 经过F12大法查看network的response知道返回的数据中缺少了个指定响应数据格式的header。
 修复这个情况只需要在返回响应的时候加上相应的header即可，代码修改可以参考我提的PR
-参考链接 将 Hexo 部署到 Cloudflare Workers Site 上的趟坑记录 </description>
+参考链接  将 Hexo 部署到 Cloudflare Workers Site 上的趟坑记录  </description>
     </item>
     
     <item>
@@ -162,7 +163,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
       <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
       <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
 protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
-func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect.</description>
+func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message 	if has { return has, value, isList } } if msgDesc.</description>
     </item>
     
     <item>
@@ -218,7 +219,7 @@ machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav ba
       <description>最终成绩 Sat Nov 7 09:59:22 AM CST 2020 当前分数：1500， 总排名：225 / 2415 binary：0 ， general：850 ， math：300 ， web：350 啊，我真的是太菜了（
 只做出了一点点题目
 签到 谢邀，利益相关：老签到出题人了。 今年出题组的要求是「来参加我们比赛的同学很多都是初学者，我们的签到题要清晰明确一点，让同学们轻松签到。」 我完全明白了，签到题就是送 flag，送就送，我最会送了.jpg 首先写好题目介绍：「你需要点击下面蓝色的 “打开/下载题目” 按钮，在打开的网页上获取到形如 flag{...} 的 flag，回到本页面，将其完整填写到下面的文本框中，并点击灰色的 “提交” 按钮即可完成本题。」 然后写一个 flag 提取器，选手要多少个 flag，我就给多少个 flag，绿色背景，红色加粗，显眼的位置，标准的格式，这都不叫送，那还有什么叫做送。 点击 「打开/下载题目」 按钮，打开 flag 提取器，获取第一个 flag 吧！ 提示：完成题目遇到困难？你可以参考 2018 年签到题题解 与 2019 年签到题题解。 F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以得到 flag
-&amp;lt;input type=&amp;#34;range&amp;#34; id=&amp;#34;number&amp;#34; name=&amp;#34;number&amp;#34; class=&amp;#34;form-control&amp;#34; value=&amp;#34;0&amp;#34; min=&amp;#34;0&amp;#34; max=&amp;#34;1&amp;#34; step=&amp;#34;0.00001&amp;#34;&amp;gt; 猫咪问答++ 在科大西区的研究生食堂旁边，有块水泥石板盛产肥猫。 每一个晴朗的中午，其上都会有花花白白的猫咪慵懒地晒着太阳。 而许多吃完午饭的同学，也可以趁此良机大肆撸猫。 但是突然从某一天起，水泥石板上多了一只猫首猫身的动物，拦住前来撸猫的同学，用它精心准备好的谜语考验他们。 只有全部答对了才可以撸猫，如果不小心答错了它就会炸毛给你看。 为了让每日撸猫活动恢复正轨，热心的 LUG 协会同学把这些谜题放到了这里。 如果你能答对所有的谜题，就会有 flag 作为奖励。 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。 手动数，数量为 12 搜索到了 wikipedia -&amp;gt; RFC1149 A typical MTU is 256 milligrams.</description>
+&amp;lt;input type=&amp;#34;range&amp;#34; id=&amp;#34;number&amp;#34; name=&amp;#34;number&amp;#34; class=&amp;#34;form-control&amp;#34; value=&amp;#34;0&amp;#34; min=&amp;#34;0&amp;#34; max=&amp;#34;1&amp;#34; step=&amp;#34;0.00001&amp;#34;&amp;gt; 猫咪问答++ 在科大西区的研究生食堂旁边，有块水泥石板盛产肥猫。 每一个晴朗的中午，其上都会有花花白白的猫咪慵懒地晒着太阳。 而许多吃完午饭的同学，也可以趁此良机大肆撸猫。 但是突然从某一天起，水泥石板上多了一只猫首猫身的动物，拦住前来撸猫的同学，用它精心准备好的谜语考验他们。 只有全部答对了才可以撸猫，如果不小心答错了它就会炸毛给你看。 为了让每日撸猫活动恢复正轨，热心的 LUG 协会同学把这些谜题放到了这里。 如果你能答对所有的谜题，就会有 flag 作为奖励。 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。  手动数，数量为 12 搜索到了 wikipedia -&amp;gt; RFC1149   A typical MTU is 256 milligrams.</description>
     </item>
     
     <item>
@@ -251,7 +252,7 @@ libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev li
       <guid>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</guid>
       <description>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能
 文件名 00-ssh-login-alarm-telegram.sh (其实也可以自己自定义)，将文件放在 /etc/profile.d 目录下。
-#!/bin/bash #填入 telegram bot 的 token token= #填自己telegram的id id= #vps ip vpsip=$(curl -s ip.sb -4) #登录时间 logintime=$(TZ=UTC-8 date &amp;#39;+%Y-%m-%d %H:%M:%S&amp;#39;) #远程登录的ip loginip=$(who -u am i 2&amp;gt;/dev/null| awk &amp;#39;{print $NF}&amp;#39;|sed -e &amp;#39;s/[()]//g&amp;#39;) #ip归属asn组织名称 loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq .asn_organization) curl -s &amp;#34;https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}&amp;#34; --data-binary &amp;#34;&amp;amp;text=NewLogin:%0AVPS: ${vpsip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}&amp;#34; &amp;gt; /dev/null 因为用到了 jq 作为解析 json 的工具，所以需要在包管理器中自行安装。
+#!/bin/bash  #填入 telegram bot 的 token token= #填自己telegram的id id= #vps ip vpsip=$(curl -s ip.sb -4) #登录时间 logintime=$(TZ=UTC-8 date &amp;#39;+%Y-%m-%d %H:%M:%S&amp;#39;) #远程登录的ip loginip=$(who -u am i 2&amp;gt;/dev/null| awk &amp;#39;{print $NF}&amp;#39;|sed -e &amp;#39;s/[()]//g&amp;#39;) #ip归属asn组织名称 loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq .asn_organization) curl -s &amp;#34;https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}&amp;#34; --data-binary &amp;#34;&amp;amp;text=NewLogin:%0AVPS: ${vpsip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}&amp;#34; &amp;gt; /dev/null 因为用到了 jq 作为解析 json 的工具，所以需要在包管理器中自行安装。
 使用效果：
 NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</description>
     </item>
@@ -262,8 +263,9 @@ NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</descr
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
-      <description>首先你得有中文输入法
-在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8</description>
+      <description>  首先你得有中文输入法
+  在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8
+  </description>
     </item>
     
     <item>
@@ -272,7 +274,8 @@ NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</descr
       <pubDate>Sun, 31 May 2020 21:30:37 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
-      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
+      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master  Github:syncing a fork
+ </description>
     </item>
     
     <item>
@@ -284,18 +287,13 @@ NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</descr
       <description>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
 今天就简单的写一写在我记忆里面的 Telegram 中文使用者群体里面所见到的 spammer 以及反 spammer 的一些事情。
 spammer 分类 截至到目前，我所见过的广告帐号主要分为以下几类
-色情
-色情频道推广 色情 GIF/图片 分发机器人，带频道推广 私聊问你要不要拍一些色图 卖东西
-卖高仿鞋 黑产
-各种涨粉 个人信息售卖 四件套 实体储蓄卡+身份证+手机卡+U盾（取款密码+网银登录密码 售卖（四件套解释-知乎） 出售科学上网工具 出售各种帐号(twitter,facebook,微博) 三网数据 币圈
-拉人 推荐各种币 传教
-法轮功 Arch神教 外语
-各种看不懂的语言 spammer 行为分类 公开群类
-进群发送一些无意义的问好的消息，并且展露自己的广告iID 进群不说话，但是会私聊群成员进行推广 进群后发送转发的频道的消息 私聊类
-会先了解你是不是中国人，然后假装是一个对中国很有兴趣的外国人，然后就会宣传法轮功 拉群类
-会将你拉进一些莫名其妙的群里面，一般以币圈的群居多 爆破类
-进群就批量发送 spam 消息，刷屏来进行爆破骚扰 spammer 等级区分 反 spam 史 这一步部分虽然美其名曰 史 但是这些阶段并没有什么明显的分界线，目前来看这几个方案都是并存的状态，这几个方案及其项目目前的活跃程度不一，但在笔者有限的视野里面也的确有在运行。
-第一阶段 - 手动处理 一开始也是处理 spammer 比较原始的方式，就是利用 telegram 的比较完善的群组管理的功能进行广告内容的清理，同时因为能够清除成员发送的所有消息，所以其实效果还不错（在有管理员在线的情况下）</description>
+  色情
+ 色情频道推广 色情 GIF/图片 分发机器人，带频道推广 私聊问你要不要拍一些色图    卖东西
+ 卖高仿鞋    黑产
+ 各种涨粉 个人信息售卖 四件套 实体储蓄卡+身份证+手机卡+U盾（取款密码+网银登录密码 售卖（四件套解释-知乎） 出售科学上网工具 出售各种帐号(twitter,facebook,微博) 三网数据    币圈
+ 拉人 推荐各种币    传教
+ 法轮功 Arch神教    外语
+ 各种看不懂的语言    spammer 行为分类   公开群类</description>
     </item>
     
     <item>
@@ -346,12 +344,12 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
       
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
       <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
-使用体验 优点 支持 markdown、html 待办事项可以定时提醒 网页摘抄可以直接截取网页的 HTML 代码保存 中文本地化并不完全 一些坑 onedriver 速度慢 Dropbox Linux 版本无法授权 坚果云 webdav 有频率限制 自建 webdav 有点麻烦以及不能保证速度 linux 桌面版本有时会无端卡顿 加密密钥不能编辑管理 安装 桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。
+使用体验 优点  支持 markdown、html 待办事项可以定时提醒 网页摘抄可以直接截取网页的 HTML 代码保存 中文本地化并不完全  一些坑  onedriver 速度慢 Dropbox Linux 版本无法授权 坚果云 webdav 有频率限制 自建 webdav 有点麻烦以及不能保证速度 linux 桌面版本有时会无端卡顿 加密密钥不能编辑管理  安装 桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。
 配置同步 一开始我使用的同步策略是使用自建 webdav 进行同步，但是效果不佳，后来我就去尝试使用了国内的坚果云 webdav 进行同步笔记，但是由于坚果云的 webdav 有频繁操作的保护，所以几乎是不可用的状态。
 无奈之下我只能粗暴的选择直接进行文件同步，首先使用的 resilio sync 未知原因的同步速度十分缓慢(内网)，所以最后选择了同类型的软件 synthing
 加密配置 Joplin 还自带加密的功能，但是加密的功能稍微有点设计缺陷，主要是操作了逻辑的缺陷，他没有设计加密密钥的删除功能，所以加密如果禁用再重新打开是不能用回之前的密钥的，只能重新生成，而且如果两个设备都生成了密钥两边都会有两把密钥，有点看不顺眼。
 正确的操作逻辑：
-启用加密--&amp;gt;同步--&amp;gt;输入密码 参考链接 Joplin：真正的 Evernote 开源替代品 Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置 Joplin 同步到坚果云 webdav Syncthing 官网 PS:本篇文章在 Joplin 上完成</description>
+启用加密--&amp;gt;同步--&amp;gt;输入密码 参考链接  Joplin：真正的 Evernote 开源替代品 Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置 Joplin 同步到坚果云 webdav Syncthing 官网   PS:本篇文章在 Joplin 上完成</description>
     </item>
     
     <item>
@@ -665,12 +663,12 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
       
       <guid>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
       <description>首先 圣诞快乐~ 转眼间啊，2018年就快要过去了，是时候来 水 写一篇年终总结了
-Photo by Fabrizio Verrecchia on Unsplash
-学习 这一年学了什么？ apache PHP javacript SQL docker 成果？ emmmmmmmm好像也没有什么成果可以出来说的，就简单的定制了几个 docker 并且写成了 docker-compose 使得我在部署服务器的时候能够更加方便，然后时间也比之前采用的脚本的编译安装要大大缩短，以后重装服务器就更加肆无忌惮了
+ Photo by Fabrizio Verrecchia on Unsplash
+ 学习 这一年学了什么？  apache PHP javacript SQL docker  成果？ emmmmmmmm好像也没有什么成果可以出来说的，就简单的定制了几个 docker 并且写成了 docker-compose 使得我在部署服务器的时候能够更加方便，然后时间也比之前采用的脚本的编译安装要大大缩短，以后重装服务器就更加肆无忌惮了
 同时，初步的尝试使用 N2Nv2 的 peer to peer VPN 把所有的服务器链接成一个大内网，以后有什么证书之类的文件就可以通过内网进行传输了，并且我的电脑也连上了这个内网，使得我在外面（不在电脑身边）也能通过连接上我任意一台 VPS 来链接我的电脑。但是目前只是刚刚开始部署，估计完全搞定得到 2019 年了&amp;hellip;.
 还有这个！ 求star！！ johnpoint/anti-360browser.js
 Github 的一年 那么 2019 加油哇~
-__ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _ \ \ \ \ \ / / / __/| |_| | | (_) | / / \_\ /_/ |_____|\___/|_|\___/ /_/ 2019 计划 预习JAVA 把 业余无线电牌照 考到手 继续学习算法知识 待定&amp;hellip; </description>
+__ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _ \ \ \ \ \ / / / __/| |_| | | (_) | / / \_\ /_/ |_____|\___/|_|\___/ /_/  2019 计划  预习JAVA 把 业余无线电牌照 考到手 继续学习算法知识 待定&amp;hellip;  </description>
     </item>
     
     <item>
@@ -680,7 +678,7 @@ __ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
-学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
+ 学习目标 安装 httpd、php、mysql  建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问  学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
@@ -692,7 +690,7 @@ cd /home mkdir www 修改httpd配置文件</description>
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
-学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
+ 学习目标 安装 httpd、php、mysql  建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问  学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
@@ -728,7 +726,7 @@ Worked solution (Requirements: kernel &amp;gt;=4.11) : (UPD: In the latest relea
       <guid>https://blog.lvcshu.com/2018/08/24/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8%E6%98%AF%E5%A5%BD%E6%96%87%E6%98%8E/</guid>
       <description>密码一直以来是人们帐号的一个薄弱点，通过各种各样的途径，想要获取他人密码的人总能获取到另他们满意的信息，&amp;lt;!&amp;mdash;more&amp;mdash;&amp;gt;而人们喜欢利用自己个人信息的组合作为密码立下了汗马功劳，而一些人对于密码重要性毫不了解从而设下简单密码的人也功不可没，而我，一直以来使用的是一串字符串所生成 md5 来作为我帐号的密码，自认为十分安全，实则不然，因为密码中只含有小写字母和数字，是可以实现暴力破解的。加上一些特殊符号的密码是目前为止相对安全的密码解决方案，但是 复杂的密码太难记了啊 这该咋办，直到某群大佬说出了 密码管理器是好文明（） 我才发现原来早就有人想到解决方案了。
 目前，网络上流行的有四款密码管理器：
-KeePass：免费 开源 兼容性强 LastPass：最大的优势是跨浏览器平台 1Password：跨平台管理 用户认可度高 Enpass：支持平台多 20条密码免费 而其中，我第一时间试用了 LastPass 发现多设备使用需要高级版本授权，而授权居然需要 VISA卡 （我没有啊啊啊啊） ，于是舍弃。后来我看见了开源解决方案 KeePass 在经过一段时间的使用之后，觉得用起来十分舒服，而且支持 Linux 、Windows 和手机系统，而且支持 Webdav ，这在自己已经搭建了网盘的人来说简直就是太爽了，不用担心密码存放在别人手里而不安全，但是安全设施一定要做好。
+ KeePass：免费 开源 兼容性强 LastPass：最大的优势是跨浏览器平台 1Password：跨平台管理 用户认可度高 Enpass：支持平台多 20条密码免费  而其中，我第一时间试用了 LastPass 发现多设备使用需要高级版本授权，而授权居然需要 VISA卡 （我没有啊啊啊啊） ，于是舍弃。后来我看见了开源解决方案 KeePass 在经过一段时间的使用之后，觉得用起来十分舒服，而且支持 Linux 、Windows 和手机系统，而且支持 Webdav ，这在自己已经搭建了网盘的人来说简直就是太爽了，不用担心密码存放在别人手里而不安全，但是安全设施一定要做好。
 KeePass 同样采用了主流的一个主密码打开密码数据库文件的模式，这时，这个主密码就代表了你的所有密码，需要尽可能的兼顾复杂与你的好记，这就是唯一需要做的。至于其他密码，KeePass 提供了随机密码生成器，能自定义生成密码包含 字母、符号、特殊字符等内容，还可以自定义长度，总之就是非常爽就是了。
 在用上 KeePass 的那一晚，我就把每一个可以想起来的帐号都改成了自动生成的强密码，感觉自己的帐号安全提升了不止一点半点，美滋滋～
 赶快去尝试下咯～</description>
@@ -744,10 +742,10 @@ KeePass 同样采用了主流的一个主密码打开密码数据库文件的模
 好吧，我承认我是标题党了一下，主要是记录一下我 成功部署 完 hexo 博客了以后如何将博客部署到 github 上去。
 创建远程仓库 就是在 github 上创建一个名称为 用户名.github.io 的仓库，这一个仓库可以在自动化部署之后在 用户名.github.io 生成博客，而用 github 在全世界（除中国大陆，中国大陆就是互联网上的孤岛）外厉害的 cdn ，我们的博客访问速度会比较快， 注意，一开始我是选择不初始化仓库，这样可以避免一些莫名奇妙的坑！
 修改 站点配置 在 站点根目录 下的 _config.yml 寻找 deploy 关键词，将其 整部分 修改为：
-deploy: type: git repo: GitHub上仓库的完整路径包括 .git branch: master repo 的链接一定要是 ssh 而不是 https 的！！！
+deploy:type:gitrepo:GitHub上仓库的完整路径包括 .gitbranch:masterrepo 的链接一定要是 ssh 而不是 https 的！！！
 配置 git 生成 ssh 密钥
 git config --global user.name &amp;#34;你的GitHub用户名&amp;#34; git config --global user.email &amp;#34;你的GitHub注册邮箱&amp;#34; 生成ssh密钥文件：
-ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三个回车即可，默认不需要设置密码 然后找到生成的 .</description>
+ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三个回车即可，默认不需要设置密码 然后找到生成的 .ssh 的文件夹中的 id_rsa.pub 密钥，将内容全部复制</description>
     </item>
     
     <item>
@@ -763,7 +761,7 @@ ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三�
 &amp;lt;pre id=&amp;#34;editArea&amp;#34; contenteditable-directive=&amp;#34;&amp;#34; mm-paste=&amp;#34;&amp;#34; class=&amp;#34;flex edit_area ng-isolate-scope ng-pristine ng-valid&amp;#34; contenteditable=&amp;#34;true&amp;#34; ng-blur=&amp;#34;editAreaBlur($event)&amp;#34; ng-model=&amp;#34;editAreaCtn&amp;#34; ng-click=&amp;#34;editAreaClick($event)&amp;#34; ng-keyup=&amp;#34;editAreaKeyup($event)&amp;#34; ng-keydown=&amp;#34;editAreaKeydown($event)&amp;#34;&amp;gt;&amp;lt;/pre&amp;gt; 然而并没有什么用。。。
 google搜索 然后，我分别以 微信、发信息、chrome、console、javascript 为关键词进行搜索，最终发现了这篇文章–&amp;gt;用javascriptt脚本实现微信定时发送信息，关键词命中。遂打开，发现正是我想要的。
 修改代码
-// 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍 var appElement = document.querySelector(&amp;#39;[ng-controller=chatSenderController]&amp;#39;); var $scope = angular.element(appElement).scope(); setInterval(function(){ var localTime = new Date(); if(localTime.</description>
+// 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍  var appElement = document.querySelector(&amp;#39;[ng-controller=chatSenderController]&amp;#39;); var $scope = angular.element(appElement).scope(); setInterval(function(){ var localTime = new Date(); if(localTime.</description>
     </item>
     
     <item>
@@ -773,21 +771,20 @@ google搜索 然后，我分别以 微信、发信息、chrome、console、javas
       
       <guid>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
       <description>使用lnmp.org的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
-本文采用 lvcshu.com 为示例域名
-安装 HEXO 按照官网说明的方法一步步安装
+ 本文采用 lvcshu.com 为示例域名
+ 安装 HEXO 按照官网说明的方法一步步安装
 安装 node.js curl:
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 或
 wget:
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 然后重启终端或者ssh重新连接
 nvm install stable 安装 hexo-cil npm install -g hexo-cli 随后就会很快安装完成！
-部署博客 安装Hexo后，运行以下命令以初始化目标中的Hexo 。
-此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行
+部署博客  安装Hexo后，运行以下命令以初始化目标中的Hexo 。
+ 此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行
 hexo init . npm install hexo g 此时我们博客的静态页面已经成功生成了，但是访问页面是没有办法看到的，接着下一步
 调整 nginx 配置文件 打开 nginx 相应站点 的配置文件，找到
 root /home/wwwroot/lvcshu.com; 改为
 root /home/wwwroot/blog.lvcshu.com/public; 记住：有两个地方要改，对应http与https
-推荐：可以将 http 通过301跳转，跳转到 https
-lnmp nginx restart 看看效果吧！</description>
+推荐：可以将 http 通过301跳转，跳转到 https</description>
     </item>
     
     <item>
@@ -805,9 +802,9 @@ lnmp nginx restart 看看效果吧！</description>
       <pubDate>Sun, 11 Feb 2018 05:47:16 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</guid>
-      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~ 那么，什么是https呢？
-HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
-简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
+      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~  那么，什么是https呢？
+ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
+ 简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
 一个小故事 但是，https并不是绝对安全的，我在知乎上看到了这样一个故事：(斜体为笔者注释)
 从前山上有座庙，庙里有个和尚……，别胡闹了，老和尚来了。
 小和尚问老和尚：ssl为什么会让http安全？
@@ -824,10 +821,10 @@ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是�
 小和尚：难怪听说张屠夫是被活活气死的。您这情书整的，我头都大了，我长大后，有想法直接扯着嗓子对山下喊，也省的这么些麻烦。不过我倒是明白了楼上的话，ssl 握手阶段，就是要解决什么看火印，读牡丹，解密码纸，确实够麻烦的，所以性能瓶颈在这里，一旦双方都知道了对称密码，之后就是行云流水的解码读信阶段了，相对轻松很多。
 编辑于 2014-04-28
 著作权归作者所有
-来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
-但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
-违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
-2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
+ 来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
+ 但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
+ 违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
+  2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
     </item>
     
     <item>
@@ -838,8 +835,8 @@ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是�
       <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
       <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
 直到我发现了ufw这个神器
-UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
-废话不多说，上教程
+ UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
+ 废话不多说，上教程
 环境 Ubuntu 16.04
 安装 apt install ufw 配置 首先先打开ssh端口
 ufw allow ssh 如果你的ssh端口不是默认的22，就
@@ -858,7 +855,7 @@ ufw enable 启动防火墙，done！
       
       <guid>https://blog.lvcshu.com/2017/12/21/%E6%85%A2%E6%85%A2%E7%9A%84%E5%B0%B1%E6%B2%A1%E6%9C%89%E4%BA%86%E5%B0%B1%E5%83%8F%E4%BB%8E%E6%9C%AA%E5%AD%98%E5%9C%A8%E8%BF%87/</guid>
       <description>作者小海，原文已被和谐
-几年以前，我曾经嘲笑过某科技界大佬。当时他说：也许90后、95后会慢慢不知道谷歌是什么网站。
+ 几年以前，我曾经嘲笑过某科技界大佬。当时他说：也许90后、95后会慢慢不知道谷歌是什么网站。
 那一年，这对于我来说简直就是世界上最好笑的笑话。谷歌，全世界最卓越的互联网公司，活在互联网的一代中国人，会不知道他们的网站？
 今天，我收回这句嘲笑。因为这件不可能的事，它慢慢变成了现实。
 没有人再关注什么谷歌不谷歌。对他们来说，百度也蛮好用的，反正他们几乎没用过谷歌。没有谷歌又怎样？大家还是开心的刷微博，看微信，听歌，看娱乐节目。对于从来就不知道谷歌的人来说，少了谷歌又有什么影响？

@@ -1,20 +1,170 @@
-<!doctype html><html lang=en dir=auto><head><meta name=generator content="Hugo 0.110.0"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>johnpoint's blog</title><meta name=keywords content="blog,johnpoint"><meta name=description content="johnpoint's blog"><meta name=author content="johnpoint"><link rel=canonical href=https://blog.lvcshu.com/><link crossorigin=anonymous href=/assets/css/stylesheet.635203c1629fde69896622bdc0aee4210e2fa2ca161e2cc0cf7ea8ccf604149e.css integrity="sha256-Y1IDwWKf3mmJZiK9wK7kIQ4vosoWHizAz36ozPYEFJ4=" rel="preload stylesheet" as=style><link rel=icon href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=32x32 href=https://blog.lvcshu.com/favicon.ico><link rel=apple-touch-icon href=https://blog.lvcshu.com/favicon.ico><link rel=mask-icon href=https://blog.lvcshu.com/favicon.ico><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://blog.lvcshu.com/index.xml><link rel=alternate type=application/json href=https://blog.lvcshu.com/index.json><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:title" content="johnpoint's blog"><meta property="og:description" content="johnpoint's blog"><meta property="og:type" content="website"><meta property="og:url" content="https://blog.lvcshu.com/"><meta property="og:site_name" content="johnpoint's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="johnpoint's blog"><meta name=twitter:description content="johnpoint's blog"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"johnpoint's blog","url":"https://blog.lvcshu.com/","description":"johnpoint\u0026#39;s blog","thumbnailUrl":"https://blog.lvcshu.com/favicon.ico","sameAs":["https://t.me/johnpoint","https://blog.lvcshu.com/atom.xml","https://github.com/johnpoint","mailto:me@lvcshu.com"]}</script></head><body class="list dark" id=top><header class=header><nav class=nav><div class=logo><a href=https://blog.lvcshu.com/ accesskey=h title="johnpoint's blog (Alt + H)">johnpoint's blog</a><div class=logo-switches></div></div><ul id=menu><li><a href=https://blog.lvcshu.com/posts/ title=归档><span>归档</span></a></li><li><a href=https://blog.lvcshu.com/friends/ title=友链><span>友链</span></a></li><li><a href=https://blog.lvcshu.com/about/ title=关于我><span>关于我</span></a></li><li><a href=https://blog.lvcshu.com/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-entry><header class=entry-header><h2>使用 Webdav 备份</h2></header><div class=entry-content><p>webdav 服务端 使用 cloudreve 自带 webdav
+<!doctype html><html lang=en dir=auto>
+<head>
+<meta name=generator content="Hugo 0.92.2"><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>johnpoint's blog</title>
+<meta name=keywords content="blog,johnpoint">
+<meta name=description content="johnpoint's blog">
+<meta name=author content="johnpoint">
+<link rel=canonical href=https://blog.lvcshu.com/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.635203c1629fde69896622bdc0aee4210e2fa2ca161e2cc0cf7ea8ccf604149e.css integrity="sha256-Y1IDwWKf3mmJZiK9wK7kIQ4vosoWHizAz36ozPYEFJ4=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://blog.lvcshu.com/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://blog.lvcshu.com/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=https://blog.lvcshu.com/favicon.ico>
+<link rel=apple-touch-icon href=https://blog.lvcshu.com/favicon.ico>
+<link rel=mask-icon href=https://blog.lvcshu.com/favicon.ico>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<link rel=alternate type=application/rss+xml href=https://blog.lvcshu.com/index.xml>
+<link rel=alternate type=application/json href=https://blog.lvcshu.com/index.json>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+</noscript><meta property="og:title" content="johnpoint's blog">
+<meta property="og:description" content="johnpoint's blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.lvcshu.com/"><meta property="og:site_name" content="johnpoint's blog">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="johnpoint's blog">
+<meta name=twitter:description content="johnpoint's blog">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"johnpoint's blog","url":"https://blog.lvcshu.com/","description":"johnpoint\u0026#39;s blog","thumbnailUrl":"https://blog.lvcshu.com/favicon.ico","sameAs":["https://t.me/johnpoint","https://blog.lvcshu.com/atom.xml","https://github.com/johnpoint","mailto:me@lvcshu.com"]}</script>
+</head>
+<body class="list dark" id=top>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://blog.lvcshu.com/ accesskey=h title="johnpoint's blog (Alt + H)">johnpoint's blog</a>
+<div class=logo-switches>
+</div>
+</div>
+<ul id=menu>
+<li>
+<a href=https://blog.lvcshu.com/posts/ title=归档>
+<span>归档</span>
+</a>
+</li>
+<li>
+<a href=https://blog.lvcshu.com/friends/ title=友链>
+<span>友链</span>
+</a>
+</li>
+<li>
+<a href=https://blog.lvcshu.com/about/ title=关于我>
+<span>关于我</span>
+</a>
+</li>
+<li>
+<a href=https://blog.lvcshu.com/search/ title="搜索 (Alt + /)" accesskey=/>
+<span>搜索</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-entry>
+<header class=entry-header>
+<h2>使用 Webdav 备份
+</h2>
+</header>
+<div class=entry-content>
+<p>webdav 服务端 使用 cloudreve 自带 webdav
 客户端 cadaver
 备份 记录登录信息 .netrc
-machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav backup echo "==========================================================================" export t=`date +%Y-%m-%d` echo "Backup: " $t printf "集中配置文件 [执行中]" mkdir config cp .ssh/config config ...... printf "\r集中配置文件 [完成] \n" printf "归档配置文件 [执行中]" zip -q backup.zip config -r rm config -rf printf "\r归档配置文件 [完成] \n" ...... printf "\r归档密钥文件 [完成] \n" echo "put backup-"$t".zip" > webdav echo "bye" >> webdav cadaver WEBDAVURL &lt; webdav rm webdav rm backup-$t....</p></div><footer class=entry-footer><span title='2020-11-07 10:19:57 +0000 UTC'>2020-11-07 10:19:57</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;84 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 使用 Webdav 备份" href=https://blog.lvcshu.com/2020/11/07/webdav-backup/></a></article><article class=post-entry><header class=entry-header><h2>Hackergame 2020 writeups</h2></header><div class=entry-content><p>最终成绩 Sat Nov 7 09:59:22 AM CST 2020 当前分数：1500， 总排名：225 / 2415 binary：0 ， general：850 ， math：300 ， web：350 啊，我真的是太菜了（
+machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav backup echo "==========================================================================" export t=`date +%Y-%m-%d` echo "Backup: " $t printf "集中配置文件 [执行中]" mkdir config cp .ssh/config config ...... printf "\r集中配置文件 [完成] \n" printf "归档配置文件 [执行中]" zip -q backup.zip config -r rm config -rf printf "\r归档配置文件 [完成] \n" ...... printf "\r归档密钥文件 [完成] \n" echo "put backup-"$t".zip" > webdav echo "bye" >> webdav cadaver WEBDAVURL &lt; webdav rm webdav rm backup-$t....</p>
+</div>
+<footer class=entry-footer><span title="2020-11-07 10:19:57 +0000 UTC">2020-11-07 10:19:57</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;84 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 使用 Webdav 备份" href=https://blog.lvcshu.com/2020/11/07/webdav-backup/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Hackergame 2020 writeups
+</h2>
+</header>
+<div class=entry-content>
+<p>最终成绩 Sat Nov 7 09:59:22 AM CST 2020 当前分数：1500， 总排名：225 / 2415 binary：0 ， general：850 ， math：300 ， web：350 啊，我真的是太菜了（
 只做出了一点点题目
 签到 谢邀，利益相关：老签到出题人了。 今年出题组的要求是「来参加我们比赛的同学很多都是初学者，我们的签到题要清晰明确一点，让同学们轻松签到。」 我完全明白了，签到题就是送 flag，送就送，我最会送了.jpg 首先写好题目介绍：「你需要点击下面蓝色的 “打开/下载题目” 按钮，在打开的网页上获取到形如 flag{...} 的 flag，回到本页面，将其完整填写到下面的文本框中，并点击灰色的 “提交” 按钮即可完成本题。」 然后写一个 flag 提取器，选手要多少个 flag，我就给多少个 flag，绿色背景，红色加粗，显眼的位置，标准的格式，这都不叫送，那还有什么叫做送。 点击 「打开/下载题目」 按钮，打开 flag 提取器，获取第一个 flag 吧！ 提示：完成题目遇到困难？你可以参考 2018 年签到题题解 与 2019 年签到题题解。 F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以得到 flag
-&lt;input type="range" id="number" name="number" class="form-control" value="0" min="0" max="1" step="0.00001"> 猫咪问答++ 在科大西区的研究生食堂旁边，有块水泥石板盛产肥猫。 每一个晴朗的中午，其上都会有花花白白的猫咪慵懒地晒着太阳。 而许多吃完午饭的同学，也可以趁此良机大肆撸猫。 但是突然从某一天起，水泥石板上多了一只猫首猫身的动物，拦住前来撸猫的同学，用它精心准备好的谜语考验他们。 只有全部答对了才可以撸猫，如果不小心答错了它就会炸毛给你看。 为了让每日撸猫活动恢复正轨，热心的 LUG 协会同学把这些谜题放到了这里。 如果你能答对所有的谜题，就会有 flag 作为奖励。 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。 手动数，数量为 12 搜索到了 wikipedia -> RFC1149 A typical MTU is 256 milligrams....</p></div><footer class=entry-footer><span title='2020-11-04 00:19:57 +0000 UTC'>2020-11-04 00:19:57</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1102 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to Hackergame 2020 writeups" href=https://blog.lvcshu.com/2020/11/04/2020-hackergame-writeups/></a></article><article class=post-entry><header class=entry-header><h2>Oneplus 8T 到手</h2></header><div class=entry-content><p>来了来了，Android R 他朝我们走来了
+&lt;input type="range" id="number" name="number" class="form-control" value="0" min="0" max="1" step="0.00001"> 猫咪问答++ 在科大西区的研究生食堂旁边，有块水泥石板盛产肥猫。 每一个晴朗的中午，其上都会有花花白白的猫咪慵懒地晒着太阳。 而许多吃完午饭的同学，也可以趁此良机大肆撸猫。 但是突然从某一天起，水泥石板上多了一只猫首猫身的动物，拦住前来撸猫的同学，用它精心准备好的谜语考验他们。 只有全部答对了才可以撸猫，如果不小心答错了它就会炸毛给你看。 为了让每日撸猫活动恢复正轨，热心的 LUG 协会同学把这些谜题放到了这里。 如果你能答对所有的谜题，就会有 flag 作为奖励。 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。 手动数，数量为 12 搜索到了 wikipedia -> RFC1149 A typical MTU is 256 milligrams....</p>
+</div>
+<footer class=entry-footer><span title="2020-11-04 00:19:57 +0000 UTC">2020-11-04 00:19:57</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;1090 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to Hackergame 2020 writeups" href=https://blog.lvcshu.com/2020/11/04/2020-hackergame-writeups/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Oneplus 8T 到手
+</h2>
+</header>
+<div class=entry-content>
+<p>来了来了，Android R 他朝我们走来了
 刚刚忍不住剁手了香气四溢的 Oneplus 8T，也把我手中的已经伊拉克成色的 Oneplus 6 给以旧换新处理掉了，就例行来说一下 Android 11 以及这个看起来很香的 Oneplus 8T 的体验
-...</p></div><footer class=entry-footer><span title='2020-10-21 15:56:57 +0000 UTC'>2020-10-21 15:56:57</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;65 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to Oneplus 8T 到手" href=https://blog.lvcshu.com/2020/10/21/oneplus-8t/></a></article><article class=post-entry><header class=entry-header><h2>编译安装 python 3.9</h2></header><div class=entry-content><p>环境 Ubuntu 20.04.1 LTS focal x86_64
+...</p>
+</div>
+<footer class=entry-footer><span title="2020-10-21 15:56:57 +0000 UTC">2020-10-21 15:56:57</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;65 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to Oneplus 8T 到手" href=https://blog.lvcshu.com/2020/10/21/oneplus-8t/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>编译安装 python 3.9
+</h2>
+</header>
+<div class=entry-content>
+<p>环境 Ubuntu 20.04.1 LTS focal x86_64
 下载 && 解压缩 wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz 解压xz文件需要软件包 xz-utils
 tar -Jxvf Python-3.9.0.tar.xz 编译 && 安装 cd Python-3.9.0 ./configure make make install 错误解决方法 No module named zlib 编译步骤中使用 ./configure --with-zlib pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available. 安装软件包
-libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev</p></div><footer class=entry-footer><span title='2020-10-09 11:02:14 +0000 UTC'>2020-10-09 11:02:14</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;59 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 编译安装 python 3.9" href=https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/></a></article><article class=post-entry><header class=entry-header><h2>vps 登录推送</h2></header><div class=entry-content><p>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能
+libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev </p>
+</div>
+<footer class=entry-footer><span title="2020-10-09 11:02:14 +0000 UTC">2020-10-09 11:02:14</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;59 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 编译安装 python 3.9" href=https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>vps 登录推送
+</h2>
+</header>
+<div class=entry-content>
+<p>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能
 文件名 00-ssh-login-alarm-telegram.sh (其实也可以自己自定义)，将文件放在 /etc/profile.d 目录下。
 #!/bin/bash #填入 telegram bot 的 token token= #填自己telegram的id id= #vps ip vpsip=$(curl -s ip.sb -4) #登录时间 logintime=$(TZ=UTC-8 date '+%Y-%m-%d %H:%M:%S') #远程登录的ip loginip=$(who -u am i 2>/dev/null| awk '{print $NF}'|sed -e 's/[()]//g') #ip归属asn组织名称 loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq .asn_organization) curl -s "https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}" --data-binary "&text=NewLogin:%0AVPS: ${vpsip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}" > /dev/null 因为用到了 jq 作为解析 json 的工具，所以需要在包管理器中自行安装。
 使用效果：
-NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***....</p></div><footer class=entry-footer><span title='2020-09-13 13:10:21 +0000 UTC'>2020-09-13 13:10:21</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;153 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to vps 登录推送" href=https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/></a></article><article class=post-entry><header class=entry-header><h2>liunx jetbrains 软件输入中文</h2></header><div class=entry-content><p>首先你得有中文输入法
-在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8</p></div><footer class=entry-footer><span title='2020-06-13 00:00:00 +0000 UTC'>2020-06-13 00:00:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;6 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to liunx jetbrains 软件输入中文" href=https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/></a></article><article class=post-entry><header class=entry-header><h2>git 同步上游代码</h2></header><div class=entry-content><p>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</p></div><footer class=entry-footer><span title='2020-05-31 21:30:37 +0000 UTC'>2020-05-31 21:30:37</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;24 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to git 同步上游代码" href=https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/></a></article><article class=post-entry><header class=entry-header><h2>Telegram spammer 二三事</h2></header><div class=entry-content><p>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
+NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***....</p>
+</div>
+<footer class=entry-footer><span title="2020-09-13 13:10:21 +0000 UTC">2020-09-13 13:10:21</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;153 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to vps 登录推送" href=https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>liunx jetbrains 软件输入中文
+</h2>
+</header>
+<div class=entry-content>
+<p> 首先你得有中文输入法
+在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8
+</p>
+</div>
+<footer class=entry-footer><span title="2020-06-13 00:00:00 +0000 UTC">2020-06-13 00:00:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;6 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to liunx jetbrains 软件输入中文" href=https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>git 同步上游代码
+</h2>
+</header>
+<div class=entry-content>
+<p>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork
+</p>
+</div>
+<footer class=entry-footer><span title="2020-05-31 21:30:37 +0000 UTC">2020-05-31 21:30:37</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;24 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to git 同步上游代码" href=https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Telegram spammer 二三事
+</h2>
+</header>
+<div class=entry-content>
+<p>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
 今天就简单的写一写在我记忆里面的 Telegram 中文使用者群体里面所见到的 spammer 以及反 spammer 的一些事情。
 spammer 分类 截至到目前，我所见过的广告帐号主要分为以下几类
 色情
@@ -23,13 +173,32 @@ spammer 分类 截至到目前，我所见过的广告帐号主要分为以下�
 各种涨粉 个人信息售卖 四件套 实体储蓄卡+身份证+手机卡+U盾（取款密码+网银登录密码 售卖（四件套解释-知乎） 出售科学上网工具 出售各种帐号(twitter,facebook,微博) 三网数据 币圈
 拉人 推荐各种币 传教
 法轮功 Arch神教 外语
-各种看不懂的语言 spammer 行为分类 公开群类
-进群发送一些无意义的问好的消息，并且展露自己的广告iID 进群不说话，但是会私聊群成员进行推广 进群后发送转发的频道的消息 私聊类
-会先了解你是不是中国人，然后假装是一个对中国很有兴趣的外国人，然后就会宣传法轮功 拉群类
-会将你拉进一些莫名其妙的群里面，一般以币圈的群居多 爆破类
-进群就批量发送 spam 消息，刷屏来进行爆破骚扰 spammer 等级区分 反 spam 史 这一步部分虽然美其名曰 史 但是这些阶段并没有什么明显的分界线，目前来看这几个方案都是并存的状态，这几个方案及其项目目前的活跃程度不一，但在笔者有限的视野里面也的确有在运行。
-第一阶段 - 手动处理 一开始也是处理 spammer 比较原始的方式，就是利用 telegram 的比较完善的群组管理的功能进行广告内容的清理，同时因为能够清除成员发送的所有消息，所以其实效果还不错（在有管理员在线的情况下）...</p></div><footer class=entry-footer><span title='2020-05-28 17:20:00 +0000 UTC'>2020-05-28 17:20:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;156 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to Telegram spammer 二三事" href=https://blog.lvcshu.com/2020/05/28/telegram-spammer/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://blog.lvcshu.com/page/2/>«&nbsp;Prev&nbsp;</a>
-<a class=next href=https://blog.lvcshu.com/page/4/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2023 <a href=https://blog.lvcshu.com/>johnpoint's blog</a></span>
-<span>Powered by
+各种看不懂的语言 spammer 行为分类 公开群类...</p>
+</div>
+<footer class=entry-footer><span title="2020-05-28 17:20:00 +0000 UTC">2020-05-28 17:20:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;156 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to Telegram spammer 二三事" href=https://blog.lvcshu.com/2020/05/28/telegram-spammer/></a>
+</article>
+<footer class=page-footer>
+<nav class=pagination>
+<a class=prev href=https://blog.lvcshu.com/page/2/>
+«&nbsp;Prev&nbsp;
+</a>
+<a class=next href=https://blog.lvcshu.com/page/4/>Next&nbsp;&nbsp;»
+</a>
+</nav>
+</footer>
+</main>
+<footer class=footer>
+<span>&copy; 2023 <a href=https://blog.lvcshu.com/>johnpoint's blog</a></span>
+<span>
+Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script></body></html>
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+</body>
+</html>

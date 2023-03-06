@@ -21,9 +21,9 @@
       <pubDate>Sun, 11 Feb 2018 05:47:16 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</guid>
-      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~ 那么，什么是https呢？
-HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
-简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
+      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~  那么，什么是https呢？
+ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
+ 简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
 一个小故事 但是，https并不是绝对安全的，我在知乎上看到了这样一个故事：(斜体为笔者注释)
 从前山上有座庙，庙里有个和尚……，别胡闹了，老和尚来了。
 小和尚问老和尚：ssl为什么会让http安全？
@@ -40,10 +40,10 @@ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是�
 小和尚：难怪听说张屠夫是被活活气死的。您这情书整的，我头都大了，我长大后，有想法直接扯着嗓子对山下喊，也省的这么些麻烦。不过我倒是明白了楼上的话，ssl 握手阶段，就是要解决什么看火印，读牡丹，解密码纸，确实够麻烦的，所以性能瓶颈在这里，一旦双方都知道了对称密码，之后就是行云流水的解码读信阶段了，相对轻松很多。
 编辑于 2014-04-28
 著作权归作者所有
-来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
-但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
-违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
-2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
+ 来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
+ 但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
+ 违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
+  2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
     </item>
     
   </channel>

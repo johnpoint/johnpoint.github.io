@@ -14,7 +14,7 @@
       <guid>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</guid>
       <description>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能
 文件名 00-ssh-login-alarm-telegram.sh (其实也可以自己自定义)，将文件放在 /etc/profile.d 目录下。
-#!/bin/bash #填入 telegram bot 的 token token= #填自己telegram的id id= #vps ip vpsip=$(curl -s ip.sb -4) #登录时间 logintime=$(TZ=UTC-8 date &amp;#39;+%Y-%m-%d %H:%M:%S&amp;#39;) #远程登录的ip loginip=$(who -u am i 2&amp;gt;/dev/null| awk &amp;#39;{print $NF}&amp;#39;|sed -e &amp;#39;s/[()]//g&amp;#39;) #ip归属asn组织名称 loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq .asn_organization) curl -s &amp;#34;https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}&amp;#34; --data-binary &amp;#34;&amp;amp;text=NewLogin:%0AVPS: ${vpsip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}&amp;#34; &amp;gt; /dev/null 因为用到了 jq 作为解析 json 的工具，所以需要在包管理器中自行安装。
+#!/bin/bash  #填入 telegram bot 的 token token= #填自己telegram的id id= #vps ip vpsip=$(curl -s ip.sb -4) #登录时间 logintime=$(TZ=UTC-8 date &amp;#39;+%Y-%m-%d %H:%M:%S&amp;#39;) #远程登录的ip loginip=$(who -u am i 2&amp;gt;/dev/null| awk &amp;#39;{print $NF}&amp;#39;|sed -e &amp;#39;s/[()]//g&amp;#39;) #ip归属asn组织名称 loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq .asn_organization) curl -s &amp;#34;https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}&amp;#34; --data-binary &amp;#34;&amp;amp;text=NewLogin:%0AVPS: ${vpsip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}&amp;#34; &amp;gt; /dev/null 因为用到了 jq 作为解析 json 的工具，所以需要在包管理器中自行安装。
 使用效果：
 NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</description>
     </item>
@@ -45,7 +45,7 @@ NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</descr
       <guid>https://blog.lvcshu.com/2018/08/24/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8%E6%98%AF%E5%A5%BD%E6%96%87%E6%98%8E/</guid>
       <description>密码一直以来是人们帐号的一个薄弱点，通过各种各样的途径，想要获取他人密码的人总能获取到另他们满意的信息，&amp;lt;!&amp;mdash;more&amp;mdash;&amp;gt;而人们喜欢利用自己个人信息的组合作为密码立下了汗马功劳，而一些人对于密码重要性毫不了解从而设下简单密码的人也功不可没，而我，一直以来使用的是一串字符串所生成 md5 来作为我帐号的密码，自认为十分安全，实则不然，因为密码中只含有小写字母和数字，是可以实现暴力破解的。加上一些特殊符号的密码是目前为止相对安全的密码解决方案，但是 复杂的密码太难记了啊 这该咋办，直到某群大佬说出了 密码管理器是好文明（） 我才发现原来早就有人想到解决方案了。
 目前，网络上流行的有四款密码管理器：
-KeePass：免费 开源 兼容性强 LastPass：最大的优势是跨浏览器平台 1Password：跨平台管理 用户认可度高 Enpass：支持平台多 20条密码免费 而其中，我第一时间试用了 LastPass 发现多设备使用需要高级版本授权，而授权居然需要 VISA卡 （我没有啊啊啊啊） ，于是舍弃。后来我看见了开源解决方案 KeePass 在经过一段时间的使用之后，觉得用起来十分舒服，而且支持 Linux 、Windows 和手机系统，而且支持 Webdav ，这在自己已经搭建了网盘的人来说简直就是太爽了，不用担心密码存放在别人手里而不安全，但是安全设施一定要做好。
+ KeePass：免费 开源 兼容性强 LastPass：最大的优势是跨浏览器平台 1Password：跨平台管理 用户认可度高 Enpass：支持平台多 20条密码免费  而其中，我第一时间试用了 LastPass 发现多设备使用需要高级版本授权，而授权居然需要 VISA卡 （我没有啊啊啊啊） ，于是舍弃。后来我看见了开源解决方案 KeePass 在经过一段时间的使用之后，觉得用起来十分舒服，而且支持 Linux 、Windows 和手机系统，而且支持 Webdav ，这在自己已经搭建了网盘的人来说简直就是太爽了，不用担心密码存放在别人手里而不安全，但是安全设施一定要做好。
 KeePass 同样采用了主流的一个主密码打开密码数据库文件的模式，这时，这个主密码就代表了你的所有密码，需要尽可能的兼顾复杂与你的好记，这就是唯一需要做的。至于其他密码，KeePass 提供了随机密码生成器，能自定义生成密码包含 字母、符号、特殊字符等内容，还可以自定义长度，总之就是非常爽就是了。
 在用上 KeePass 的那一晚，我就把每一个可以想起来的帐号都改成了自动生成的强密码，感觉自己的帐号安全提升了不止一点半点，美滋滋～
 赶快去尝试下咯～</description>
@@ -57,9 +57,9 @@ KeePass 同样采用了主流的一个主密码打开密码数据库文件的模
       <pubDate>Sun, 11 Feb 2018 05:47:16 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</guid>
-      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~ 那么，什么是https呢？
-HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
-简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
+      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~  那么，什么是https呢？
+ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
+ 简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
 一个小故事 但是，https并不是绝对安全的，我在知乎上看到了这样一个故事：(斜体为笔者注释)
 从前山上有座庙，庙里有个和尚……，别胡闹了，老和尚来了。
 小和尚问老和尚：ssl为什么会让http安全？
@@ -76,10 +76,10 @@ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是�
 小和尚：难怪听说张屠夫是被活活气死的。您这情书整的，我头都大了，我长大后，有想法直接扯着嗓子对山下喊，也省的这么些麻烦。不过我倒是明白了楼上的话，ssl 握手阶段，就是要解决什么看火印，读牡丹，解密码纸，确实够麻烦的，所以性能瓶颈在这里，一旦双方都知道了对称密码，之后就是行云流水的解码读信阶段了，相对轻松很多。
 编辑于 2014-04-28
 著作权归作者所有
-来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
-但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
-违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
-2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
+ 来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
+ 但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
+ 违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
+  2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
     </item>
     
     <item>
@@ -90,8 +90,8 @@ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是�
       <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
       <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
 直到我发现了ufw这个神器
-UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
-废话不多说，上教程
+ UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
+ 废话不多说，上教程
 环境 Ubuntu 16.04
 安装 apt install ufw 配置 首先先打开ssh端口
 ufw allow ssh 如果你的ssh端口不是默认的22，就

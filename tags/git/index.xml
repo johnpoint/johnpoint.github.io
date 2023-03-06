@@ -22,7 +22,8 @@ git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id
       <pubDate>Sun, 31 May 2020 21:30:37 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
-      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
+      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master  Github:syncing a fork
+ </description>
     </item>
     
     <item>
@@ -35,10 +36,10 @@ git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id
 好吧，我承认我是标题党了一下，主要是记录一下我 成功部署 完 hexo 博客了以后如何将博客部署到 github 上去。
 创建远程仓库 就是在 github 上创建一个名称为 用户名.github.io 的仓库，这一个仓库可以在自动化部署之后在 用户名.github.io 生成博客，而用 github 在全世界（除中国大陆，中国大陆就是互联网上的孤岛）外厉害的 cdn ，我们的博客访问速度会比较快， 注意，一开始我是选择不初始化仓库，这样可以避免一些莫名奇妙的坑！
 修改 站点配置 在 站点根目录 下的 _config.yml 寻找 deploy 关键词，将其 整部分 修改为：
-deploy: type: git repo: GitHub上仓库的完整路径包括 .git branch: master repo 的链接一定要是 ssh 而不是 https 的！！！
+deploy:type:gitrepo:GitHub上仓库的完整路径包括 .gitbranch:masterrepo 的链接一定要是 ssh 而不是 https 的！！！
 配置 git 生成 ssh 密钥
 git config --global user.name &amp;#34;你的GitHub用户名&amp;#34; git config --global user.email &amp;#34;你的GitHub注册邮箱&amp;#34; 生成ssh密钥文件：
-ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三个回车即可，默认不需要设置密码 然后找到生成的 .</description>
+ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三个回车即可，默认不需要设置密码 然后找到生成的 .ssh 的文件夹中的 id_rsa.pub 密钥，将内容全部复制</description>
     </item>
     
   </channel>

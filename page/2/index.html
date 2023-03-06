@@ -1,23 +1,195 @@
-<!doctype html><html lang=en dir=auto><head><meta name=generator content="Hugo 0.110.0"><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>johnpoint's blog</title><meta name=keywords content="blog,johnpoint"><meta name=description content="johnpoint's blog"><meta name=author content="johnpoint"><link rel=canonical href=https://blog.lvcshu.com/><link crossorigin=anonymous href=/assets/css/stylesheet.635203c1629fde69896622bdc0aee4210e2fa2ca161e2cc0cf7ea8ccf604149e.css integrity="sha256-Y1IDwWKf3mmJZiK9wK7kIQ4vosoWHizAz36ozPYEFJ4=" rel="preload stylesheet" as=style><link rel=icon href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=32x32 href=https://blog.lvcshu.com/favicon.ico><link rel=apple-touch-icon href=https://blog.lvcshu.com/favicon.ico><link rel=mask-icon href=https://blog.lvcshu.com/favicon.ico><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://blog.lvcshu.com/index.xml><link rel=alternate type=application/json href=https://blog.lvcshu.com/index.json><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:title" content="johnpoint's blog"><meta property="og:description" content="johnpoint's blog"><meta property="og:type" content="website"><meta property="og:url" content="https://blog.lvcshu.com/"><meta property="og:site_name" content="johnpoint's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="johnpoint's blog"><meta name=twitter:description content="johnpoint's blog"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"johnpoint's blog","url":"https://blog.lvcshu.com/","description":"johnpoint\u0026#39;s blog","thumbnailUrl":"https://blog.lvcshu.com/favicon.ico","sameAs":["https://t.me/johnpoint","https://blog.lvcshu.com/atom.xml","https://github.com/johnpoint","mailto:me@lvcshu.com"]}</script></head><body class="list dark" id=top><header class=header><nav class=nav><div class=logo><a href=https://blog.lvcshu.com/ accesskey=h title="johnpoint's blog (Alt + H)">johnpoint's blog</a><div class=logo-switches></div></div><ul id=menu><li><a href=https://blog.lvcshu.com/posts/ title=归档><span>归档</span></a></li><li><a href=https://blog.lvcshu.com/friends/ title=友链><span>友链</span></a></li><li><a href=https://blog.lvcshu.com/about/ title=关于我><span>关于我</span></a></li><li><a href=https://blog.lvcshu.com/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-entry><header class=entry-header><h2>2021 年度简报</h2></header><div class=entry-content><p>...</p></div><footer class=entry-footer><span title='2021-12-26 15:11:29 +0000 UTC'>2021-12-26 15:11:29</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;69 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 2021 年度简报" href=https://blog.lvcshu.com/2021/12/26/2021-year-summary/></a></article><article class=post-entry><header class=entry-header><h2>使用 Zerotier 异地组内网</h2></header><div class=entry-content><p>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。
+<!doctype html><html lang=en dir=auto>
+<head>
+<meta name=generator content="Hugo 0.92.2"><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>johnpoint's blog</title>
+<meta name=keywords content="blog,johnpoint">
+<meta name=description content="johnpoint's blog">
+<meta name=author content="johnpoint">
+<link rel=canonical href=https://blog.lvcshu.com/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.635203c1629fde69896622bdc0aee4210e2fa2ca161e2cc0cf7ea8ccf604149e.css integrity="sha256-Y1IDwWKf3mmJZiK9wK7kIQ4vosoWHizAz36ozPYEFJ4=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://blog.lvcshu.com/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://blog.lvcshu.com/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=https://blog.lvcshu.com/favicon.ico>
+<link rel=apple-touch-icon href=https://blog.lvcshu.com/favicon.ico>
+<link rel=mask-icon href=https://blog.lvcshu.com/favicon.ico>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<link rel=alternate type=application/rss+xml href=https://blog.lvcshu.com/index.xml>
+<link rel=alternate type=application/json href=https://blog.lvcshu.com/index.json>
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+</noscript><meta property="og:title" content="johnpoint's blog">
+<meta property="og:description" content="johnpoint's blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.lvcshu.com/"><meta property="og:site_name" content="johnpoint's blog">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="johnpoint's blog">
+<meta name=twitter:description content="johnpoint's blog">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"johnpoint's blog","url":"https://blog.lvcshu.com/","description":"johnpoint\u0026#39;s blog","thumbnailUrl":"https://blog.lvcshu.com/favicon.ico","sameAs":["https://t.me/johnpoint","https://blog.lvcshu.com/atom.xml","https://github.com/johnpoint","mailto:me@lvcshu.com"]}</script>
+</head>
+<body class="list dark" id=top>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://blog.lvcshu.com/ accesskey=h title="johnpoint's blog (Alt + H)">johnpoint's blog</a>
+<div class=logo-switches>
+</div>
+</div>
+<ul id=menu>
+<li>
+<a href=https://blog.lvcshu.com/posts/ title=归档>
+<span>归档</span>
+</a>
+</li>
+<li>
+<a href=https://blog.lvcshu.com/friends/ title=友链>
+<span>友链</span>
+</a>
+</li>
+<li>
+<a href=https://blog.lvcshu.com/about/ title=关于我>
+<span>关于我</span>
+</a>
+</li>
+<li>
+<a href=https://blog.lvcshu.com/search/ title="搜索 (Alt + /)" accesskey=/>
+<span>搜索</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-entry>
+<header class=entry-header>
+<h2>2021 年度简报
+</h2>
+</header>
+<div class=entry-content>
+<p>...</p>
+</div>
+<footer class=entry-footer><span title="2021-12-26 15:11:29 +0000 UTC">2021-12-26 15:11:29</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;66 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 2021 年度简报" href=https://blog.lvcshu.com/2021/12/26/2021-year-summary/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>使用 Zerotier 异地组内网
+</h2>
+</header>
+<div class=entry-content>
+<p>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。
 其中一度不想折腾想着使用那些现成的局域网对战平台来进行游戏 (对就是浩方) 但是下载注册 (这个平台注册居然还要身份证，就离谱，虽然我是用生成的身份证号码注册的) 之后，登录这边一直卡死在 loading，无奈我只能再看看有没有其他的方案。
 在一位 (非常非常非常想玩红警3的) 朋友的建议下，我去研究了下 ZeroTier 这个异地组网的解决方案，发现挺方便的。
-但是问题来了，在我用上了 ZeroTier 之后，隧道倒是建立了，但是不知道为何，有两个节点相互 ping 不通</p></div><footer class=entry-footer><span title='2021-11-24 16:25:00 +0000 UTC'>2021-11-24 16:25:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;32 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 使用 Zerotier 异地组内网" href=https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/></a></article><article class=post-entry><header class=entry-header><h2>用于 gnet 的 Protocol buffers 编解码器</h2></header><div class=entry-content><p>要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 gnet，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了…
+但是问题来了，在我用上了 ZeroTier 之后，隧道倒是建立了，但是不知道为何，有两个节点相互 ping 不通</p>
+</div>
+<footer class=entry-footer><span title="2021-11-24 16:25:00 +0000 UTC">2021-11-24 16:25:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;32 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 使用 Zerotier 异地组内网" href=https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>用于 gnet 的 Protocol buffers 编解码器
+</h2>
+</header>
+<div class=entry-content>
+<p>要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 gnet，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了…
 协议分析 从 TCP 流里面传过来的是经过简单处理的 Protocol buffers 数据，他在数据的头携带了这个数据包的长度信息，像是这样
 [ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ][ 头 ][ 数据 ] 调用 golang 的 proto 官方库中的 func DecodeVarint(b []byte) (uint64, int) 方法可以从数据中拿到两个值，分别是 数据的完整长度、标明数据长度的头信息的长度。
 由于没有特定的协议在包与包之间进行明显的划分，所以得用他的头数据来进行分包。
-解码器 // 储存连接内的相关信息 type DataStruct struct { fullLength int lenNumLength int fullData []byte } func (d *Codec) Decode(c gnet....</p></div><footer class=entry-footer><span title='2021-09-17 18:30:00 +0000 UTC'>2021-09-17 18:30:00</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;692 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 用于 gnet 的 Protocol buffers 编解码器" href=https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/></a></article><article class=post-entry><header class=entry-header><h2>解决全屏背景图卡顿</h2></header><div class=entry-content><p>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
+解码器 // 储存连接内的相关信息 type DataStruct struct { fullLength int lenNumLength int fullData []byte } func (d *Codec) Decode(c gnet....</p>
+</div>
+<footer class=entry-footer><span title="2021-09-17 18:30:00 +0000 UTC">2021-09-17 18:30:00</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;692 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 用于 gnet 的 Protocol buffers 编解码器" href=https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>解决全屏背景图卡顿
+</h2>
+</header>
+<div class=entry-content>
+<p>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
 而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。
-搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑…</p></div><footer class=entry-footer><span title='2021-07-28 11:44:00 +0000 UTC'>2021-07-28 11:44:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;10 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 解决全屏背景图卡顿" href=https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/></a></article><article class=post-entry><header class=entry-header><h2>proto 通过字段名获取值</h2></header><div class=entry-content><p>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
+搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑…</p>
+</div>
+<footer class=entry-footer><span title="2021-07-28 11:44:00 +0000 UTC">2021-07-28 11:44:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;10 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 解决全屏背景图卡顿" href=https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>proto 通过字段名获取值
+</h2>
+</header>
+<div class=entry-content>
+<p>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
 protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
-func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == "" { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect....</p></div><footer class=entry-footer><span title='2021-06-11 15:48:00 +0000 UTC'>2021-06-11 15:48:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;173 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to proto 通过字段名获取值" href=https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/></a></article><article class=post-entry><header class=entry-header><h2>Linux 进程信息格式化</h2></header><div class=entry-content><p>2021 年了，转头看了下自己的服务器面板，发现还是那个半成品的样子…于是在这三天改了下代码，加入了 v2 api 接口，这个接口主要使用 Websocket 进行通信，虽然说服务端的压力其实不是很大，但是使用轮询进行数据的更新不仅会看到一坨一坨的请求，对我的渣渣电脑来说也有些吃力了，不过这篇文章的内容不是这个，改天再开一篇文章记录一下。
+func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == "" { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc....</p>
+</div>
+<footer class=entry-footer><span title="2021-06-11 15:48:00 +0000 UTC">2021-06-11 15:48:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;173 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to proto 通过字段名获取值" href=https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Linux 进程信息格式化
+</h2>
+</header>
+<div class=entry-content>
+<p>2021 年了，转头看了下自己的服务器面板，发现还是那个半成品的样子…于是在这三天改了下代码，加入了 v2 api 接口，这个接口主要使用 Websocket 进行通信，虽然说服务端的压力其实不是很大，但是使用轮询进行数据的更新不仅会看到一坨一坨的请求，对我的渣渣电脑来说也有些吃力了，不过这篇文章的内容不是这个，改天再开一篇文章记录一下。
 进程查看其实是很早之前就想做进面板的功能之一，但是受限于并没有找到现成的 go 第三方或者官方库，所以就放了一放 （结果放了差不多一年），刚好这几天在改面板的代码，索性就顺手把它做了。
 进程查看没有库可以调用，就只能通过调用系统命令来进行查看，一般来说我看进程会使用 ps -aux，但是对于面板来说，这里输出的数据有点太多以及有点太乱（太乱指的是输出的数据不是计算机友好型结构），然后看了下网上网友们五花八门的命令，左拼右凑之后，最后成品是用的 ps axc -o pid,user,stat,pcpu,pmem,command --sort -pcpu --no-header | sed 's/\ \+/\ /g' 最终得到的数据是没有表头、连续空格被替换成一个空格的数据，我感觉这就够了，其余的交给前端处理。
 前端代码截取如下
-let ps = server.Ps.split('\n'); ps.forEach(item = >{ if (item.split(" ").length > 3) { item = item.split(" ") if (item[0] === "") { item = item.slice(1, item.length) } let i = { PID: item[0], User: item[1], State: item[2], Pcpu: item[3], Pmem: item[4], Command: item....</p></div><footer class=entry-footer><span title='2021-02-02 21:20:00 +0000 UTC'>2021-02-02 21:20:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;79 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to Linux 进程信息格式化" href=https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/></a></article><article class=post-entry><header class=entry-header><h2>2020 年度简报</h2></header><div class=entry-content><p>2020 年的开头我们并不知道接下来的这一年是那么的艰难，幸好春节前我就已经在某些地方得知了疫情的消息并且准备了一些口罩，减轻了疫情高峰期时口罩的使用压力。
+let ps = server.Ps.split('\n'); ps.forEach(item = >{ if (item.split(" ").length > 3) { item = item.split(" ") if (item[0] === "") { item = item.slice(1, item.length) } let i = { PID: item[0], User: item[1], State: item[2], Pcpu: item[3], Pmem: item[4], Command: item....</p>
+</div>
+<footer class=entry-footer><span title="2021-02-02 21:20:00 +0000 UTC">2021-02-02 21:20:00</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;79 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to Linux 进程信息格式化" href=https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>2020 年度简报
+</h2>
+</header>
+<div class=entry-content>
+<p>2020 年的开头我们并不知道接下来的这一年是那么的艰难，幸好春节前我就已经在某些地方得知了疫情的消息并且准备了一些口罩，减轻了疫情高峰期时口罩的使用压力。
 Bilibili 跨年晚会仿佛就发生在昨天，又到了 2020 年的圣诞节，得开始写年度总结了，总感觉这一年啥都没有干就到年末了（
-...</p></div><footer class=entry-footer><span title='2020-12-23 11:11:29 +0000 UTC'>2020-12-23 11:11:29</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;133 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to 2020 年度简报" href=https://blog.lvcshu.com/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/></a></article><article class=post-entry><header class=entry-header><h2>NodeMCU 制作桌面天气时钟</h2></header><div class=entry-content><p>其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。
-...</p></div><footer class=entry-footer><span title='2020-12-02 23:00:37 +0000 UTC'>2020-12-02 23:00:37</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;112 words&nbsp;·&nbsp;johnpoint</footer><a class=entry-link aria-label="post link to NodeMCU 制作桌面天气时钟" href=https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://blog.lvcshu.com/>«&nbsp;Prev&nbsp;</a>
-<a class=next href=https://blog.lvcshu.com/page/3/>Next&nbsp;&nbsp;»</a></nav></footer></main><footer class=footer><span>&copy; 2023 <a href=https://blog.lvcshu.com/>johnpoint's blog</a></span>
-<span>Powered by
+...</p>
+</div>
+<footer class=entry-footer><span title="2020-12-23 11:11:29 +0000 UTC">2020-12-23 11:11:29</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;130 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to 2020 年度简报" href=https://blog.lvcshu.com/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>NodeMCU 制作桌面天气时钟
+</h2>
+</header>
+<div class=entry-content>
+<p>其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。
+...</p>
+</div>
+<footer class=entry-footer><span title="2020-12-02 23:00:37 +0000 UTC">2020-12-02 23:00:37</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;112 words&nbsp;·&nbsp;johnpoint</footer>
+<a class=entry-link aria-label="post link to NodeMCU 制作桌面天气时钟" href=https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/></a>
+</article>
+<footer class=page-footer>
+<nav class=pagination>
+<a class=prev href=https://blog.lvcshu.com/>
+«&nbsp;Prev&nbsp;
+</a>
+<a class=next href=https://blog.lvcshu.com/page/3/>Next&nbsp;&nbsp;»
+</a>
+</nav>
+</footer>
+</main>
+<footer class=footer>
+<span>&copy; 2023 <a href=https://blog.lvcshu.com/>johnpoint's blog</a></span>
+<span>
+Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script></body></html>
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+</body>
+</html>
