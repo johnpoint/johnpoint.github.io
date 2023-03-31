@@ -14,13 +14,12 @@
       <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
       <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。
 然后就听说了 wireguard 被加入 linux 内核，以下是 wireguard 的介绍：
- WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]，基于Linux内核实现，利用Curve25519进行密钥交换，ChaCha20用于加密，Poly1305用于数据认证，BLAKE2用于散列函数运算[1]，支持IPv4和IPv6的第3层。[2]WireGuard旨在获得比IPsec和OpenVPN更好的性能[3]。
- 确实，wireguard 性能十分不错，但是配置实在是过于繁琐了，如果要往 wireguard 网络中加入一台设备，则需要修改几乎所有连入网络设备的配置文件，实在是太麻烦了，好在现在已经有了 tailscale 这个服务提供商提供了基于 wireguard 的 0 配置的 VPN 组网方案。
+WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]，基于Linux内核实现，利用Curve25519进行密钥交换，ChaCha20用于加密，Poly1305用于数据认证，BLAKE2用于散列函数运算[1]，支持IPv4和IPv6的第3层。[2]WireGuard旨在获得比IPsec和OpenVPN更好的性能[3]。
+确实，wireguard 性能十分不错，但是配置实在是过于繁琐了，如果要往 wireguard 网络中加入一台设备，则需要修改几乎所有连入网络设备的配置文件，实在是太麻烦了，好在现在已经有了 tailscale 这个服务提供商提供了基于 wireguard 的 0 配置的 VPN 组网方案。
 而 headscale 就是 tailscale 中控服务端的开源版本，开源版本支持自己部署，同时没有连入设备的数量限制，于是我花了一点时间将 headscale 部署了一下。
 使用到的项目 Github:juanfont/headscale Github:gurucomputing/headscale-ui
 部署 headscale 这里我使用 docker-componse 进行部署
-version:&amp;#39;3.5&amp;#39;services:headscale:image:headscale/headscale:latest-alpinecontainer_name:headscalevolumes:- ./container-config:/etc/headscale- ./container-data/data:/var/lib/headscaleports:- 27896:8080command:headscale serverestart:unless-stoppedheadscale-ui:image:ghcr.io/gurucomputing/headscale-ui:latestrestart:unless-stoppedcontainer_name:headscale-uiports:- 9443:443同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下
-location / { add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; &amp;#39;{{UI的域名}}&amp;#39; always; add_header &amp;#39;Access-Control-Allow-Methods&amp;#39; &amp;#39;GET, POST, OPTIONS,DELETE ,PUT&amp;#39; always; add_header &amp;#39;Access-Control-Allow-Headers&amp;#39; &amp;#39;authorization ,DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range&amp;#39; always; add_header &amp;#39;Access-Control-Expose-Headers&amp;#39; &amp;#39;Content-Length,Content-Range&amp;#39; always; if ($request_method = &amp;#39;OPTIONS&amp;#39;) { add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; &amp;#39;{{UI的域名}}&amp;#39; always; add_header &amp;#39;Access-Control-Allow-Methods&amp;#39; &amp;#39;GET, POST, OPTIONS,DELETE ,PUT &amp;#39; always; add_header &amp;#39;Access-Control-Allow-Headers&amp;#39; &amp;#39;authorization ,DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range&amp;#39; always; add_header &amp;#39;Access-Control-Expose-Headers&amp;#39; &amp;#39;Content-Length,Content-Range&amp;#39; always; add_header &amp;#39;Access-Control-Max-Age&amp;#39; 1728000; add_header &amp;#39;Content-Type&amp;#39; &amp;#39;text/plain; charset=utf-8&amp;#39;; add_header &amp;#39;Content-Length&amp;#39; 0; return 204; } proxy_pass {{headscale的地址}}; proxy_http_version 1.</description>
+version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:latest-alpine container_name: headscale volumes: - ./container-config:/etc/headscale - ./container-data/data:/var/lib/headscale ports: - 27896:8080 command: headscale serve restart: unless-stopped headscale-ui: image: ghcr.io/gurucomputing/headscale-ui:latest restart: unless-stopped container_name: headscale-ui ports: - 9443:443 同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下</description>
     </item>
     
     <item>
@@ -29,7 +28,7 @@ location / { add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; &amp;#39;{
       <pubDate>Fri, 12 Aug 2022 17:30:00 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
-      <description>Docker Compose 配置 version:&amp;#39;3&amp;#39;services:clickhouse-server-ck1:restart:on-failure:10# 退出非0重启，尝试10次image:yandex/clickhouse-servercontainer_name:ck1networks:- ck-networkports:- &amp;#34;8124:8123&amp;#34;- &amp;#34;9001:9000&amp;#34;- &amp;#34;9010:9004&amp;#34;volumes:- `pwd`/clickhouse/:/var/lib/clickhouse/- `pwd`/clickhouse-server/:/etc/clickhouse-server/- `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;depends_on:- zookeeper-1clickhouse-server-ck2:restart:on-failure:10# 退出非0重启，尝试10次image:yandex/clickhouse-servercontainer_name:ck2networks:- ck-networkports:- &amp;#34;8125:8123&amp;#34;- &amp;#34;9002:9000&amp;#34;- &amp;#34;9011:9004&amp;#34;volumes:- `pwd`/clickhouse2/:/var/lib/clickhouse/- `pwd`/clickhouse-server2/:/etc/clickhouse-server/- `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;depends_on:- zookeeper-1clickhouse-server-ck3:restart:on-failure:10# 退出非0重启，尝试10次image:yandex/clickhouse-servercontainer_name:ck3networks:- ck-networkports:- &amp;#34;8126:8123&amp;#34;- &amp;#34;9003:9000&amp;#34;- &amp;#34;9012:9004&amp;#34;volumes:- `pwd`/clickhouse3/:/var/lib/clickhouse/- `pwd`/clickhouse-server3/:/etc/clickhouse-server/- `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;depends_on:- zookeeper-1zookeeper-1:restart:on-failure:10# 退出非0重启，尝试10次image:zookeeper:3.8.0container_name:zookeeper1networks:- ck-networkports:- &amp;#34;2181:2181&amp;#34;volumes:- `pwd`/zookeeper/conf/:/apache-zookeeper-3.8.0-bin/conf/- `pwd`/zookeeper/data/:/data- `pwd`/zookeeper/datalog/:/datalog- `pwd`/zookeeper/logs/:/logsulimits:nofile:soft:&amp;#34;262144&amp;#34;hard:&amp;#34;262144&amp;#34;networks:ck-network:Clickhouse 配置文件 &amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt; &amp;lt;!-- NOTE: User and query level settings are set up in &amp;#34;users.xml&amp;#34; file. If you have accidentally specified user-level settings here, server won&amp;#39;t start. You can either move the settings to the right place inside &amp;#34;users.</description>
+      <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>
     </item>
     
     <item>
@@ -53,7 +52,7 @@ location / { add_header &amp;#39;Access-Control-Allow-Origin&amp;#39; &amp;#39;{
       <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
       <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
 protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
-func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message 	if has { return has, value, isList } } if msgDesc.</description>
+func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect.</description>
     </item>
     
     <item>
@@ -62,9 +61,8 @@ func FindByName(name string, msg protoreflect.Message) (has bool, value protoref
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
-      <description>  首先你得有中文输入法
-  在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8
-  </description>
+      <description>首先你得有中文输入法
+在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8</description>
     </item>
     
     <item>
@@ -73,8 +71,7 @@ func FindByName(name string, msg protoreflect.Message) (has bool, value protoref
       <pubDate>Sun, 31 May 2020 21:30:37 +0000</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
-      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master  Github:syncing a fork
- </description>
+      <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
     </item>
     
     <item>
@@ -141,7 +138,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
- 学习目标 安装 httpd、php、mysql  建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问  学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
+学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
@@ -153,7 +150,7 @@ cd /home mkdir www 修改httpd配置文件</description>
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
- 学习目标 安装 httpd、php、mysql  建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问  学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
+学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>

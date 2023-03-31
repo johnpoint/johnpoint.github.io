@@ -28,7 +28,7 @@
 &amp;lt;pre id=&amp;#34;editArea&amp;#34; contenteditable-directive=&amp;#34;&amp;#34; mm-paste=&amp;#34;&amp;#34; class=&amp;#34;flex edit_area ng-isolate-scope ng-pristine ng-valid&amp;#34; contenteditable=&amp;#34;true&amp;#34; ng-blur=&amp;#34;editAreaBlur($event)&amp;#34; ng-model=&amp;#34;editAreaCtn&amp;#34; ng-click=&amp;#34;editAreaClick($event)&amp;#34; ng-keyup=&amp;#34;editAreaKeyup($event)&amp;#34; ng-keydown=&amp;#34;editAreaKeydown($event)&amp;#34;&amp;gt;&amp;lt;/pre&amp;gt; 然而并没有什么用。。。
 google搜索 然后，我分别以 微信、发信息、chrome、console、javascript 为关键词进行搜索，最终发现了这篇文章–&amp;gt;用javascriptt脚本实现微信定时发送信息，关键词命中。遂打开，发现正是我想要的。
 修改代码
-// 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍  var appElement = document.querySelector(&amp;#39;[ng-controller=chatSenderController]&amp;#39;); var $scope = angular.element(appElement).scope(); setInterval(function(){ var localTime = new Date(); if(localTime.</description>
+// 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍 var appElement = document.querySelector(&amp;#39;[ng-controller=chatSenderController]&amp;#39;); var $scope = angular.element(appElement).scope(); setInterval(function(){ var localTime = new Date(); if(localTime.</description>
     </item>
     
   </channel>
