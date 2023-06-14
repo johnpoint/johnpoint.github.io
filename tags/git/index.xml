@@ -5,6 +5,7 @@
     <link>https://blog.lvcshu.com/tags/git/</link>
     <description>Recent content in git on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Wed, 05 Oct 2022 21:30:37 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 ssh 密钥签名 git commit</title>
