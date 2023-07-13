@@ -6,11 +6,11 @@
     <description>Recent content in git on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Oct 2022 21:30:37 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Oct 2022 21:30:37 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 ssh 密钥签名 git commit</title>
       <link>https://blog.lvcshu.com/2022/10/05/git-commit-sign-by-ssh-key/</link>
-      <pubDate>Wed, 05 Oct 2022 21:30:37 +0000</pubDate>
+      <pubDate>Wed, 05 Oct 2022 21:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/10/05/git-commit-sign-by-ssh-key/</guid>
       <description>在 Github commit添加verified标识 这篇文章中，配置好了 gpg 密钥签名作为标识 git commit 是否值得信任带凭证，但是载后面使用签名的过程中渐渐感到了一丝丝的麻烦，因为 gpg 密钥在我日常的生活中并没有很多其他的用处。最近 github 支持了显示通过 ssh 密钥签名的 commit 的功能。ssh 密钥在日常用起来要比 gpg 密钥要多得多，所以配置了一下，顺便写个文章记录操作流程。
@@ -20,7 +20,7 @@ git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id
     <item>
       <title>git 同步上游代码</title>
       <link>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</link>
-      <pubDate>Sun, 31 May 2020 21:30:37 +0000</pubDate>
+      <pubDate>Sun, 31 May 2020 21:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
       <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
@@ -29,7 +29,7 @@ git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id
     <item>
       <title>博客双开，避免offline™</title>
       <link>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</link>
-      <pubDate>Tue, 07 Aug 2018 05:30:37 +0000</pubDate>
+      <pubDate>Tue, 07 Aug 2018 05:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</guid>
       <description>怎么双开博客呢？ 答案就是—— vps 与 github 一起部署。。。

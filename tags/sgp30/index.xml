@@ -6,11 +6,11 @@
     <description>Recent content in SGP30 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Dec 2020 23:00:37 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/sgp30/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 23:00:37 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/sgp30/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NodeMCU 制作桌面天气时钟</title>
       <link>https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/</link>
-      <pubDate>Wed, 02 Dec 2020 23:00:37 +0000</pubDate>
+      <pubDate>Wed, 02 Dec 2020 23:00:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/</guid>
       <description>&lt;p&gt;其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。&lt;/p&gt;</description>

@@ -6,11 +6,11 @@
     <description>Recent content in 体验 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2020 15:56:57 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E4%BD%93%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2020 15:56:57 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E4%BD%93%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Oneplus 8T 到手</title>
       <link>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</link>
-      <pubDate>Wed, 21 Oct 2020 15:56:57 +0000</pubDate>
+      <pubDate>Wed, 21 Oct 2020 15:56:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</guid>
       <description>&lt;p&gt;&lt;del&gt;来了来了，Android R 他朝我们走来了&lt;/del&gt;&lt;/p&gt;
@@ -20,7 +20,7 @@
     <item>
       <title>Joplin：笔记软件的新选择</title>
       <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
-      <pubDate>Sat, 22 Feb 2020 14:29:57 +0000</pubDate>
+      <pubDate>Sat, 22 Feb 2020 14:29:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
       <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
@@ -35,7 +35,7 @@
     <item>
       <title>Tiny File Manager 使用</title>
       <link>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Fri, 14 Feb 2020 11:20:00 +0000</pubDate>
+      <pubDate>Fri, 14 Feb 2020 11:20:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</guid>
       <description>最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。
@@ -48,7 +48,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>Archlinux 系统体验报告</title>
       <link>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
-      <pubDate>Mon, 13 Jan 2020 22:16:00 +0000</pubDate>
+      <pubDate>Mon, 13 Jan 2020 22:16:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
       <description></description>
@@ -57,7 +57,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>Android 10 再体验</title>
       <link>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Mon, 21 Oct 2019 00:19:57 +0000</pubDate>
+      <pubDate>Mon, 21 Oct 2019 00:19:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;&lt;del&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/del&gt;&lt;/p&gt;</description>
@@ -66,7 +66,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>app推荐:安卓上好用的 RSS 客户端们</title>
       <link>https://blog.lvcshu.com/2019/09/25/rss-on-android/</link>
-      <pubDate>Wed, 25 Sep 2019 00:17:00 +0000</pubDate>
+      <pubDate>Wed, 25 Sep 2019 00:17:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/09/25/rss-on-android/</guid>
       <description>&lt;p&gt;一直以来我都是用着 Telegram bot 来作为 RSS 推送阅读的阅读器，直到前几天我的 bot 突然宕机，我就懒得恢复了 &lt;del&gt;因为我忘记他在哪个服务器上了嘤嘤嘤&lt;/del&gt;&lt;/p&gt;</description>
@@ -75,7 +75,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>keepass 客户端：keeweb 使用体验</title>
       <link>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Sun, 28 Jul 2019 17:07:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2019 17:07:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;前不久转坑到 1 password 的我在看见了 keeweb 这一项目时又有了重回 keepass 的想法。&lt;/p&gt;</description>
@@ -84,7 +84,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>keepass 客户端：keeweb 使用体验</title>
       <link>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Sun, 28 Jul 2019 17:07:00 +0000</pubDate>
+      <pubDate>Sun, 28 Jul 2019 17:07:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;前不久转坑到 1 password 的我在看见了 keeweb 这一项目时又有了重回 keepass 的想法。&lt;/p&gt;</description>
@@ -93,7 +93,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>Linux 家族:Alpine 体验</title>
       <link>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Wed, 24 Jul 2019 17:16:00 +0000</pubDate>
+      <pubDate>Wed, 24 Jul 2019 17:16:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;最近心痒痒想折腾下新的系统，顺便记录一下。&lt;/p&gt;</description>
@@ -102,7 +102,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>天猫精灵体验</title>
       <link>https://blog.lvcshu.com/2019/06/22/%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5-%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Sat, 22 Jun 2019 01:31:30 +0000</pubDate>
+      <pubDate>Sat, 22 Jun 2019 01:31:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/06/22/%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5-%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;买了天猫精灵方糖也有半年了 &lt;del&gt;差不多&lt;/del&gt; 就写 &lt;del&gt;水&lt;/del&gt; 一篇文章说说使用体验吧。&lt;/p&gt;</description>
@@ -111,7 +111,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>Android Q 初体验</title>
       <link>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Fri, 10 May 2019 13:29:57 +0000</pubDate>
+      <pubDate>Fri, 10 May 2019 13:29:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/p&gt;</description>
@@ -120,7 +120,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>office 365 online 太好用啦!</title>
       <link>https://blog.lvcshu.com/2019/03/02/office-365-online-%E5%A4%AA%E5%A5%BD%E7%94%A8%E5%95%A6/</link>
-      <pubDate>Sat, 02 Mar 2019 20:40:00 +0000</pubDate>
+      <pubDate>Sat, 02 Mar 2019 20:40:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/03/02/office-365-online-%E5%A4%AA%E5%A5%BD%E7%94%A8%E5%95%A6/</guid>
       <description>&lt;p&gt;自从把主力的系统从 windows 转向了 ubuntu 了以后，感觉 ubuntu 实在是比 windows 要方便许多 （除了进行文档处理的操作以外）&lt;/p&gt;</description>
@@ -129,7 +129,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>app推荐:notify &amp; fitness for mi band</title>
       <link>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</link>
-      <pubDate>Tue, 22 Jan 2019 21:21:00 +0000</pubDate>
+      <pubDate>Tue, 22 Jan 2019 21:21:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</guid>
       <description>&lt;p&gt;话说用了那么久小米手环，其实感觉还是比较不错的，唯一美中不足的就是小米手环的附属应用 &lt;code&gt;小米运动(mi fit)&lt;/code&gt;&lt;/p&gt;</description>
@@ -138,7 +138,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>app推荐:notify &amp; fitness for mi band</title>
       <link>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</link>
-      <pubDate>Tue, 22 Jan 2019 21:21:00 +0000</pubDate>
+      <pubDate>Tue, 22 Jan 2019 21:21:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</guid>
       <description>&lt;p&gt;话说用了那么久小米手环，其实感觉还是比较不错的，唯一美中不足的就是小米手环的附属应用 &lt;code&gt;小米运动(mi fit)&lt;/code&gt;&lt;/p&gt;</description>
@@ -147,7 +147,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>cloudreve体验报告</title>
       <link>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
-      <pubDate>Wed, 09 May 2018 05:30:37 +0000</pubDate>
+      <pubDate>Wed, 09 May 2018 05:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
       <description>&lt;p&gt;自从360云盘把业务收缩回企业用户之时，笔者就在不断的寻觅适合个人用户使用的私有云盘，但是纵观网络的各种各样的云盘，不是过于简单，就是部署过于复杂，还有就是会出现各种各样奇奇怪怪的问题（比如nextcloud），&lt;/p&gt;</description>

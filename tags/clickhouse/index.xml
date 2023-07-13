@@ -6,11 +6,11 @@
     <description>Recent content in clickhouse on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Aug 2022 17:30:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/clickhouse/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Aug 2022 17:30:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/clickhouse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 docker-compose 搭建 clickhouse 集群</title>
       <link>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</link>
-      <pubDate>Fri, 12 Aug 2022 17:30:00 +0000</pubDate>
+      <pubDate>Fri, 12 Aug 2022 17:30:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
       <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>

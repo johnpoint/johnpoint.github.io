@@ -6,11 +6,11 @@
     <description>Recent content in webdav on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2020 10:19:57 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/webdav/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 10:19:57 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/webdav/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Webdav 备份</title>
       <link>https://blog.lvcshu.com/2020/11/07/webdav-backup/</link>
-      <pubDate>Sat, 07 Nov 2020 10:19:57 +0000</pubDate>
+      <pubDate>Sat, 07 Nov 2020 10:19:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/11/07/webdav-backup/</guid>
       <description>webdav 服务端 使用 cloudreve 自带 webdav

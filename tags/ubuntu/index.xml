@@ -6,11 +6,11 @@
     <description>Recent content in ubuntu on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Aug 2019 20:00:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Aug 2019 20:00:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ikoula Ubuntu 18.04 独服配置 IPv6</title>
       <link>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</link>
-      <pubDate>Mon, 19 Aug 2019 20:00:00 +0000</pubDate>
+      <pubDate>Mon, 19 Aug 2019 20:00:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</guid>
       <description>&lt;p&gt;之前在 ikoula 买了个 8.99o/mo 的独服用来刷 PT ，最近看了下 ikoula 终于加上了 18.04 的镜像，就去升级了下。&lt;/p&gt;</description>
@@ -19,7 +19,7 @@
     <item>
       <title>Ubuntu 安装 rtl8821ce 驱动</title>
       <link>https://blog.lvcshu.com/2019/06/06/ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/</link>
-      <pubDate>Thu, 06 Jun 2019 21:51:00 +0000</pubDate>
+      <pubDate>Thu, 06 Jun 2019 21:51:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/06/06/ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/</guid>
       <description>&lt;p&gt;&lt;del&gt;电脑又出问题了&lt;/del&gt;&lt;/p&gt;</description>
@@ -28,7 +28,7 @@
     <item>
       <title>优化Bash控制台显示</title>
       <link>https://blog.lvcshu.com/2019/05/28/%E4%BC%98%E5%8C%96bash%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%98%BE%E7%A4%BA/</link>
-      <pubDate>Tue, 28 May 2019 21:14:30 +0000</pubDate>
+      <pubDate>Tue, 28 May 2019 21:14:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/05/28/%E4%BC%98%E5%8C%96bash%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%98%BE%E7%A4%BA/</guid>
       <description>&lt;p&gt;=。=&lt;/p&gt;</description>
@@ -37,7 +37,7 @@
     <item>
       <title>&lt;失效&gt; Ubuntu 安装 thinkpad S2 无线网卡驱动</title>
       <link>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</link>
-      <pubDate>Sat, 25 Aug 2018 16:58:00 +0000</pubDate>
+      <pubDate>Sat, 25 Aug 2018 16:58:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</guid>
       <description>注意：本文已失效，目前有效的方法在 这里
@@ -51,7 +51,7 @@ Worked solution (Requirements: kernel &amp;gt;=4.11) : (UPD: In the latest relea
     <item>
       <title>配置ufw防火墙，守护你的Ubuntu</title>
       <link>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</link>
-      <pubDate>Mon, 15 Jan 2018 05:21:10 +0000</pubDate>
+      <pubDate>Mon, 15 Jan 2018 05:21:10 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
       <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~

@@ -6,11 +6,11 @@
     <description>Recent content in vps on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 13 Sep 2020 13:10:21 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Sep 2020 13:10:21 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vps 登录推送</title>
       <link>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</link>
-      <pubDate>Sun, 13 Sep 2020 13:10:21 +0000</pubDate>
+      <pubDate>Sun, 13 Sep 2020 13:10:21 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</guid>
       <description>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能

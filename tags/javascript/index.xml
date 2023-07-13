@@ -6,11 +6,11 @@
     <description>Recent content in javascript on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Jul 2018 06:10:58 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Jul 2018 06:10:58 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>设定微信自动发送信息</title>
       <link>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Sat, 21 Jul 2018 06:10:58 +0000</pubDate>
+      <pubDate>Sat, 21 Jul 2018 06:10:58 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</guid>
       <description>首先先说一说吐槽一下微信封闭的生态圈，除了开放给搜狗这个搜索引擎可以搜索微信公众号的 api 之外，几乎没有开放任何可以利用的 api ，固然这有其在安全方面的考虑，但是这就使得一些比较有趣的功能难以实现，例如机器人。而一些比较实用的功能又在官方垃圾客户端中没有实现。

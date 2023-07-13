@@ -6,11 +6,11 @@
     <description>Recent content in zerotier on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Nov 2021 16:25:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/zerotier/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Nov 2021 16:25:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/zerotier/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Zerotier 异地组内网</title>
       <link>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</link>
-      <pubDate>Wed, 24 Nov 2021 16:25:00 +0000</pubDate>
+      <pubDate>Wed, 24 Nov 2021 16:25:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</guid>
       <description>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。

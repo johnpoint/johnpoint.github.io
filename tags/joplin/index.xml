@@ -6,11 +6,11 @@
     <description>Recent content in Joplin on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Mar 2020 11:30:30 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/joplin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2020 11:30:30 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/joplin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
@@ -26,7 +26,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
@@ -42,7 +42,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Joplin：笔记软件的新选择</title>
       <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
-      <pubDate>Sat, 22 Feb 2020 14:29:57 +0000</pubDate>
+      <pubDate>Sat, 22 Feb 2020 14:29:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
       <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。

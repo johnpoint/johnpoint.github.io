@@ -6,11 +6,11 @@
     <description>Recent content in 自动构建 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 11:51:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 11:51:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Oneplus 8T 刷入 LineageOS</title>
       <link>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</link>
-      <pubDate>Sun, 01 May 2022 11:51:00 +0000</pubDate>
+      <pubDate>Sun, 01 May 2022 11:51:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</guid>
       <description>劳动节来给博客除除草！
@@ -27,7 +27,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>博客及相关服务部署更新</title>
       <link>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</link>
-      <pubDate>Sun, 17 Apr 2022 00:40:00 +0000</pubDate>
+      <pubDate>Sun, 17 Apr 2022 00:40:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</guid>
       <description>部署流程更新 众所周知，之前我的博客以及图片托管的服务是通过硬核的DNS分区域解析来实现流量的就近调度，而多个服务器之间的资源文件我一般使用syncthing来进行同步，这个方法显得比较粗糙，但是还挺有效的。最近折腾了下 cloudflare worker 感觉还不错，于是就把博客以及图片托管迁移到了 cloudflare worker 上来，这样一来可以白嫖到不错的全球加速(除中国大陆)，而且使用 workers 进行部署可以省下不少的服务器资源。
@@ -41,7 +41,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>博客迁移到cloudflare踩坑</title>
       <link>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</link>
-      <pubDate>Fri, 25 Mar 2022 13:11:29 +0000</pubDate>
+      <pubDate>Fri, 25 Mar 2022 13:11:29 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</guid>
       <description>好久不见，新年开始一直忙着毕业设计和实习找新的工作，一直没有空去将一些折腾过的东西记录成为博客，最近在写毕业设计的间隙终于对博客进行了一波优化，顺便写篇博客记录一下。

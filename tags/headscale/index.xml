@@ -6,11 +6,11 @@
     <description>Recent content in headscale on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Nov 2022 10:00:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/headscale/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Nov 2022 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/headscale/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 headscale 异地组网</title>
       <link>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</link>
-      <pubDate>Fri, 04 Nov 2022 10:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Nov 2022 10:00:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
       <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。

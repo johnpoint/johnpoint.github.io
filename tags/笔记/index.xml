@@ -6,11 +6,11 @@
     <description>Recent content in 笔记 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 May 2023 10:34:44 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 May 2023 10:34:44 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 logstash 采集来自腾讯云 tke 的日志</title>
       <link>https://blog.lvcshu.com/2023/05/15/%E4%BD%BF%E7%94%A8-logstash-%E9%87%87%E9%9B%86%E6%9D%A5%E8%87%AA%E8%85%BE%E8%AE%AF%E4%BA%91-tke-%E7%9A%84%E6%97%A5%E5%BF%97/</link>
-      <pubDate>Mon, 15 May 2023 10:34:44 +0000</pubDate>
+      <pubDate>Mon, 15 May 2023 10:34:44 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2023/05/15/%E4%BD%BF%E7%94%A8-logstash-%E9%87%87%E9%9B%86%E6%9D%A5%E8%87%AA%E8%85%BE%E8%AE%AF%E4%BA%91-tke-%E7%9A%84%E6%97%A5%E5%BF%97/</guid>
       <description>前提 好久没有给博客除草了，正好最近折腾了下 logstash，记录一下。
@@ -27,7 +27,7 @@ input { beats { port =&amp;gt; 5044 } tcp { port =&amp;gt; 50000 } } ## Add your
     <item>
       <title>使用 headscale 异地组网</title>
       <link>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</link>
-      <pubDate>Fri, 04 Nov 2022 10:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Nov 2022 10:00:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
       <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。
@@ -43,7 +43,7 @@ version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:l
     <item>
       <title>使用 docker-compose 搭建 clickhouse 集群</title>
       <link>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</link>
-      <pubDate>Fri, 12 Aug 2022 17:30:00 +0000</pubDate>
+      <pubDate>Fri, 12 Aug 2022 17:30:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
       <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>
@@ -52,7 +52,7 @@ version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:l
     <item>
       <title>用于 gnet 的 Protocol buffers 编解码器</title>
       <link>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</link>
-      <pubDate>Fri, 17 Sep 2021 18:30:00 +0000</pubDate>
+      <pubDate>Fri, 17 Sep 2021 18:30:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</guid>
       <description>要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 gnet，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了&amp;hellip;
@@ -65,7 +65,7 @@ version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:l
     <item>
       <title>proto 通过字段名获取值</title>
       <link>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</link>
-      <pubDate>Fri, 11 Jun 2021 15:48:00 +0000</pubDate>
+      <pubDate>Fri, 11 Jun 2021 15:48:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
       <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
@@ -76,7 +76,7 @@ func FindByName(name string, msg protoreflect.Message) (has bool, value protoref
     <item>
       <title>liunx jetbrains 软件输入中文</title>
       <link>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</link>
-      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
       <description>首先你得有中文输入法
@@ -86,7 +86,7 @@ func FindByName(name string, msg protoreflect.Message) (has bool, value protoref
     <item>
       <title>git 同步上游代码</title>
       <link>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</link>
-      <pubDate>Sun, 31 May 2020 21:30:37 +0000</pubDate>
+      <pubDate>Sun, 31 May 2020 21:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
       <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
@@ -95,7 +95,7 @@ func FindByName(name string, msg protoreflect.Message) (has bool, value protoref
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
@@ -111,7 +111,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
@@ -127,7 +127,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>安装Arch笔记</title>
       <link>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Tue, 07 May 2019 22:53:00 +0000</pubDate>
+      <pubDate>Tue, 07 May 2019 22:53:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;blockquote&gt;
@@ -138,7 +138,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Github commit添加verified标识</title>
       <link>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</link>
-      <pubDate>Sat, 09 Feb 2019 19:07:00 +0000</pubDate>
+      <pubDate>Sat, 09 Feb 2019 19:07:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</guid>
       <description>&lt;blockquote&gt;
@@ -152,7 +152,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
-      <pubDate>Fri, 02 Nov 2018 09:49:57 +0000</pubDate>
+      <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
@@ -164,7 +164,7 @@ cd /home mkdir www 修改httpd配置文件</description>
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
-      <pubDate>Fri, 02 Nov 2018 09:49:57 +0000</pubDate>
+      <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。

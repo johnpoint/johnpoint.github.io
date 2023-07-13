@@ -6,11 +6,11 @@
     <description>Recent content in 前端 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Jul 2021 11:44:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jul 2021 11:44:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决全屏背景图卡顿</title>
       <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
-      <pubDate>Wed, 28 Jul 2021 11:44:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jul 2021 11:44:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
       <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。

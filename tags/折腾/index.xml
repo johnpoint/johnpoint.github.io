@@ -6,11 +6,11 @@
     <description>Recent content in 折腾 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 May 2022 11:51:00 +0000</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 11:51:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Oneplus 8T 刷入 LineageOS</title>
       <link>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</link>
-      <pubDate>Sun, 01 May 2022 11:51:00 +0000</pubDate>
+      <pubDate>Sun, 01 May 2022 11:51:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</guid>
       <description>劳动节来给博客除除草！
@@ -27,7 +27,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>博客及相关服务部署更新</title>
       <link>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</link>
-      <pubDate>Sun, 17 Apr 2022 00:40:00 +0000</pubDate>
+      <pubDate>Sun, 17 Apr 2022 00:40:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</guid>
       <description>部署流程更新 众所周知，之前我的博客以及图片托管的服务是通过硬核的DNS分区域解析来实现流量的就近调度，而多个服务器之间的资源文件我一般使用syncthing来进行同步，这个方法显得比较粗糙，但是还挺有效的。最近折腾了下 cloudflare worker 感觉还不错，于是就把博客以及图片托管迁移到了 cloudflare worker 上来，这样一来可以白嫖到不错的全球加速(除中国大陆)，而且使用 workers 进行部署可以省下不少的服务器资源。
@@ -41,7 +41,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>博客迁移到cloudflare踩坑</title>
       <link>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</link>
-      <pubDate>Fri, 25 Mar 2022 13:11:29 +0000</pubDate>
+      <pubDate>Fri, 25 Mar 2022 13:11:29 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</guid>
       <description>好久不见，新年开始一直忙着毕业设计和实习找新的工作，一直没有空去将一些折腾过的东西记录成为博客，最近在写毕业设计的间隙终于对博客进行了一波优化，顺便写篇博客记录一下。
@@ -57,7 +57,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>使用 Zerotier 异地组内网</title>
       <link>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</link>
-      <pubDate>Wed, 24 Nov 2021 16:25:00 +0000</pubDate>
+      <pubDate>Wed, 24 Nov 2021 16:25:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</guid>
       <description>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。
@@ -69,7 +69,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>解决全屏背景图卡顿</title>
       <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
-      <pubDate>Wed, 28 Jul 2021 11:44:00 +0000</pubDate>
+      <pubDate>Wed, 28 Jul 2021 11:44:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
       <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
@@ -80,7 +80,7 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
     <item>
       <title>Linux 进程信息格式化</title>
       <link>https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
-      <pubDate>Tue, 02 Feb 2021 21:20:00 +0000</pubDate>
+      <pubDate>Tue, 02 Feb 2021 21:20:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
       <description>2021 年了，转头看了下自己的服务器面板，发现还是那个半成品的样子&amp;hellip;于是在这三天改了下代码，加入了 v2 api 接口，这个接口主要使用 Websocket 进行通信，虽然说服务端的压力其实不是很大，但是使用轮询进行数据的更新不仅会看到一坨一坨的请求，对我的渣渣电脑来说也有些吃力了，不过这篇文章的内容不是这个，改天再开一篇文章记录一下。
@@ -93,7 +93,7 @@ let ps = server.Ps.split(&amp;#39;\n&amp;#39;); ps.forEach(item = &amp;gt;{ if (
     <item>
       <title>NodeMCU 制作桌面天气时钟</title>
       <link>https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/</link>
-      <pubDate>Wed, 02 Dec 2020 23:00:37 +0000</pubDate>
+      <pubDate>Wed, 02 Dec 2020 23:00:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/</guid>
       <description>&lt;p&gt;其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。&lt;/p&gt;</description>
@@ -102,7 +102,7 @@ let ps = server.Ps.split(&amp;#39;\n&amp;#39;); ps.forEach(item = &amp;gt;{ if (
     <item>
       <title>使用 Webdav 备份</title>
       <link>https://blog.lvcshu.com/2020/11/07/webdav-backup/</link>
-      <pubDate>Sat, 07 Nov 2020 10:19:57 +0000</pubDate>
+      <pubDate>Sat, 07 Nov 2020 10:19:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/11/07/webdav-backup/</guid>
       <description>webdav 服务端 使用 cloudreve 自带 webdav
@@ -114,7 +114,7 @@ machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav ba
     <item>
       <title>Oneplus 8T 到手</title>
       <link>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</link>
-      <pubDate>Wed, 21 Oct 2020 15:56:57 +0000</pubDate>
+      <pubDate>Wed, 21 Oct 2020 15:56:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</guid>
       <description>&lt;p&gt;&lt;del&gt;来了来了，Android R 他朝我们走来了&lt;/del&gt;&lt;/p&gt;
@@ -124,7 +124,7 @@ machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav ba
     <item>
       <title>Telegram spammer 二三事</title>
       <link>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</link>
-      <pubDate>Thu, 28 May 2020 17:20:00 +0000</pubDate>
+      <pubDate>Thu, 28 May 2020 17:20:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</guid>
       <description>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
@@ -147,7 +147,7 @@ spammer 分类 截至到目前，我所见过的广告帐号主要分为以下�
     <item>
       <title>博客主题更新 &amp;&amp; 一些碎碎念</title>
       <link>https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
-      <pubDate>Sun, 19 Apr 2020 18:26:57 +0000</pubDate>
+      <pubDate>Sun, 19 Apr 2020 18:26:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
       <description>&lt;p&gt;好久没有更新博客啦，上来写点碎碎念&lt;/p&gt;</description>
@@ -156,7 +156,7 @@ spammer 分类 截至到目前，我所见过的广告帐号主要分为以下�
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
@@ -172,7 +172,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Mon, 23 Mar 2020 11:30:30 +0000</pubDate>
+      <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
@@ -188,7 +188,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Joplin：笔记软件的新选择</title>
       <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
-      <pubDate>Sat, 22 Feb 2020 14:29:57 +0000</pubDate>
+      <pubDate>Sat, 22 Feb 2020 14:29:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
       <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
@@ -203,7 +203,7 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
     <item>
       <title>Tiny File Manager 使用</title>
       <link>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Fri, 14 Feb 2020 11:20:00 +0000</pubDate>
+      <pubDate>Fri, 14 Feb 2020 11:20:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</guid>
       <description>最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。
@@ -216,7 +216,7 @@ location / { deny all; } location /index.php { allow all; } </description>
     <item>
       <title>配置 IPTV-NET VLAN 单线复用</title>
       <link>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</link>
-      <pubDate>Thu, 09 Jan 2020 21:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Jan 2020 21:00:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</guid>
       <description>家里的弱电箱因为前期设计失误所以电视那里只有一条网线，而如果我想将 wifi 信号在屋子里面相对良好的覆盖的话我也要将无线路由器设置在电视机附近，但是 IPTV 也需要占用一条网线，一开始我们的解决方案是用一条劈叉的网线，但是数据传输会有质量问题，所以趁着暑假我就尝试着解决这个问题。
@@ -230,7 +230,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>js 提取 QQ 音乐直链</title>
       <link>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</link>
-      <pubDate>Thu, 12 Dec 2019 17:19:57 +0000</pubDate>
+      <pubDate>Thu, 12 Dec 2019 17:19:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</guid>
       <description>function getSong(name) { window.location.href = &amp;#34;https://y.qq.com/portal/search.html#page=1&amp;amp;searchid=1&amp;amp;remoteplace=txt.yqq.top&amp;amp;t=song&amp;amp;w=&amp;#34; + name; var muname = $(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;&amp;#39;); var qq = &amp;#34;0&amp;#34;; var guid = &amp;#34;0&amp;#34;; $.ajax({ url: &amp;#34;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?g_tk=0&amp;amp;loginUin=&amp;#34; + qq + &amp;#34;&amp;amp;hostUin=0&amp;amp;format=json&amp;amp;inCharset=utf8&amp;amp;outCharset=utf-8&amp;amp;notice=0&amp;amp;platform=yqq&amp;amp;needNewCode=0&amp;amp;cid=205361747&amp;amp;uin=&amp;#34; + qq + &amp;#34;&amp;amp;songmid=&amp;#34; + muname.replace(&amp;#39;C400&amp;#39;, &amp;#39;&amp;#39;) + &amp;#34;&amp;amp;filename=&amp;#34; + muname + &amp;#34;.m4a&amp;amp;guid=&amp;#34; + guid, success: function (data) { data = JSON.parse(data); vkey = data.data.items[0].vkey; console.log($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.stream.qqmusic.qq.com/C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;.m4a?guid=&amp;#39; + guid + &amp;#39;&amp;amp;vkey=&amp;#39; + vkey + &amp;#39;&amp;amp;uin=&amp;#39; + qq + &amp;#39;&amp;amp;fromtag=66&amp;#39;)) window.open($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.</description>
@@ -239,7 +239,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>Android 10 再体验</title>
       <link>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Mon, 21 Oct 2019 00:19:57 +0000</pubDate>
+      <pubDate>Mon, 21 Oct 2019 00:19:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;&lt;del&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/del&gt;&lt;/p&gt;</description>
@@ -248,7 +248,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>Linux 删除大量文件</title>
       <link>https://blog.lvcshu.com/2019/10/20/linux%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/</link>
-      <pubDate>Sun, 20 Oct 2019 13:40:00 +0000</pubDate>
+      <pubDate>Sun, 20 Oct 2019 13:40:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/10/20/linux%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/</guid>
       <description>&lt;p&gt;最近去看了下我的自动重连脚本的 log 文件夹&lt;/p&gt;</description>
@@ -257,7 +257,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>deepin 应用字体异常解决方法</title>
       <link>https://blog.lvcshu.com/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Sat, 12 Oct 2019 23:30:37 +0000</pubDate>
+      <pubDate>Sat, 12 Oct 2019 23:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
       <description>&lt;p&gt;写下我是怎么解决 deepin 应用字体异常的&lt;/p&gt;</description>
@@ -266,7 +266,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>配置CORS小记</title>
       <link>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</link>
-      <pubDate>Mon, 07 Oct 2019 21:44:00 +0000</pubDate>
+      <pubDate>Mon, 07 Oct 2019 21:44:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</guid>
       <description>&lt;p&gt;最近在折腾博客的字体，最终选定了这几个字体作为网站的字体&lt;/p&gt;</description>
@@ -275,7 +275,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>ikoula Ubuntu 18.04 独服配置 IPv6</title>
       <link>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</link>
-      <pubDate>Mon, 19 Aug 2019 20:00:00 +0000</pubDate>
+      <pubDate>Mon, 19 Aug 2019 20:00:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</guid>
       <description>&lt;p&gt;之前在 ikoula 买了个 8.99o/mo 的独服用来刷 PT ，最近看了下 ikoula 终于加上了 18.04 的镜像，就去升级了下。&lt;/p&gt;</description>
@@ -284,7 +284,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>写了个 Hexo 主题 hexo-theme-XvA</title>
       <link>https://blog.lvcshu.com/2019/08/13/%E5%86%99%E4%BA%86%E4%B8%AAhexo%E4%B8%BB%E9%A2%98/</link>
-      <pubDate>Tue, 13 Aug 2019 11:50:00 +0000</pubDate>
+      <pubDate>Tue, 13 Aug 2019 11:50:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/08/13/%E5%86%99%E4%BA%86%E4%B8%AAhexo%E4%B8%BB%E9%A2%98/</guid>
       <description>&lt;p&gt;之前博客用的主题是移植自 Typecho 的 &lt;a href=&#34;https://github.com/tufu9441/maupassant-hexo&#34;&gt;Maupassant&lt;/a&gt; 主题，简洁，也挺好看，就是有点略显单调&lt;/p&gt;</description>
@@ -293,7 +293,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>Linux 家族:Alpine 体验</title>
       <link>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Wed, 24 Jul 2019 17:16:00 +0000</pubDate>
+      <pubDate>Wed, 24 Jul 2019 17:16:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;最近心痒痒想折腾下新的系统，顺便记录一下。&lt;/p&gt;</description>
@@ -302,7 +302,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>Android Q 初体验</title>
       <link>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
-      <pubDate>Fri, 10 May 2019 13:29:57 +0000</pubDate>
+      <pubDate>Fri, 10 May 2019 13:29:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/p&gt;</description>
@@ -311,7 +311,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>安装Arch笔记</title>
       <link>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Tue, 07 May 2019 22:53:00 +0000</pubDate>
+      <pubDate>Tue, 07 May 2019 22:53:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;blockquote&gt;
@@ -322,7 +322,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>Github commit添加verified标识</title>
       <link>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</link>
-      <pubDate>Sat, 09 Feb 2019 19:07:00 +0000</pubDate>
+      <pubDate>Sat, 09 Feb 2019 19:07:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</guid>
       <description>&lt;blockquote&gt;
@@ -336,7 +336,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>真-多点部署博客</title>
       <link>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Mon, 14 Jan 2019 21:03:02 +0000</pubDate>
+      <pubDate>Mon, 14 Jan 2019 21:03:02 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;emmmmm 众所周知由于中国的特殊情况使得中国的网络监管机制有别于外国，国内开展各项网络业务是需要经过备案的，而备案过程比较繁琐而且需要上传持证照，我是不太喜欢这个玩意儿的，所以我的博客也没备案。&lt;/p&gt;</description>
@@ -345,7 +345,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>改进SSL证书相关策略</title>
       <link>https://blog.lvcshu.com/2019/01/10/%E6%94%B9%E8%BF%9Bssl%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3%E7%AD%96%E7%95%A5/</link>
-      <pubDate>Thu, 10 Jan 2019 11:11:00 +0000</pubDate>
+      <pubDate>Thu, 10 Jan 2019 11:11:00 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2019/01/10/%E6%94%B9%E8%BF%9Bssl%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3%E7%AD%96%E7%95%A5/</guid>
       <description>&lt;p&gt;自从使用了 docker 作为基础环境以后，我想着写一个能够服务进行统一集中管理的面板，一方面不想使用市面上使用比较广泛面板 &lt;del&gt;因为我做到他们不行啊啊啊&lt;/del&gt;，一方面也算是一种练习吧&lt;/p&gt;</description>
@@ -354,7 +354,7 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
-      <pubDate>Fri, 02 Nov 2018 09:49:57 +0000</pubDate>
+      <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
@@ -366,7 +366,7 @@ cd /home mkdir www 修改httpd配置文件</description>
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
-      <pubDate>Fri, 02 Nov 2018 09:49:57 +0000</pubDate>
+      <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
@@ -378,7 +378,7 @@ cd /home mkdir www 修改httpd配置文件</description>
     <item>
       <title>博客双开，避免offline™</title>
       <link>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</link>
-      <pubDate>Tue, 07 Aug 2018 05:30:37 +0000</pubDate>
+      <pubDate>Tue, 07 Aug 2018 05:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</guid>
       <description>怎么双开博客呢？ 答案就是—— vps 与 github 一起部署。。。
@@ -394,7 +394,7 @@ ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三�
     <item>
       <title>设定微信自动发送信息</title>
       <link>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</link>
-      <pubDate>Sat, 21 Jul 2018 06:10:58 +0000</pubDate>
+      <pubDate>Sat, 21 Jul 2018 06:10:58 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</guid>
       <description>首先先说一说吐槽一下微信封闭的生态圈，除了开放给搜狗这个搜索引擎可以搜索微信公众号的 api 之外，几乎没有开放任何可以利用的 api ，固然这有其在安全方面的考虑，但是这就使得一些比较有趣的功能难以实现，例如机器人。而一些比较实用的功能又在官方垃圾客户端中没有实现。
@@ -410,7 +410,7 @@ google搜索 然后，我分别以 微信、发信息、chrome、console、javas
     <item>
       <title>安装hexo博客及其优化记录</title>
       <link>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Fri, 20 Jul 2018 06:01:39 +0000</pubDate>
+      <pubDate>Fri, 20 Jul 2018 06:01:39 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
       <description>使用lnmp.org的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
@@ -434,7 +434,7 @@ lnmp nginx restart 看看效果吧！</description>
     <item>
       <title>cloudreve体验报告</title>
       <link>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
-      <pubDate>Wed, 09 May 2018 05:30:37 +0000</pubDate>
+      <pubDate>Wed, 09 May 2018 05:30:37 +0800</pubDate>
       
       <guid>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
       <description>&lt;p&gt;自从360云盘把业务收缩回企业用户之时，笔者就在不断的寻觅适合个人用户使用的私有云盘，但是纵观网络的各种各样的云盘，不是过于简单，就是部署过于复杂，还有就是会出现各种各样奇奇怪怪的问题（比如nextcloud），&lt;/p&gt;</description>
