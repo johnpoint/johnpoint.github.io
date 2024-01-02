@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>算法 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Jul 2022 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Jul 2022 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go 实现瑞士轮排列算法</title>
       <link>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</link>
       <pubDate>Fri, 29 Jul 2022 10:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</guid>
       <description>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
 选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
 type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
     </item>
-    
   </channel>
 </rss>

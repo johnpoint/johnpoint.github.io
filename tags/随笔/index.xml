@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>随笔 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/%E9%9A%8F%E7%AC%94/</link>
     <description>Recent content in 随笔 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Jul 2023 14:04:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jul 2023 14:04:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我们要对 Newsletter 说不(吗？)</title>
       <link>https://blog.lvcshu.com/2023/07/13/%E6%88%91%E4%BB%AC%E8%A6%81%E5%AF%B9-newsletter-%E8%AF%B4%E4%B8%8D%E5%90%97/</link>
       <pubDate>Thu, 13 Jul 2023 14:04:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2023/07/13/%E6%88%91%E4%BB%AC%E8%A6%81%E5%AF%B9-newsletter-%E8%AF%B4%E4%B8%8D%E5%90%97/</guid>
       <description>刚看了 diygod 发布的这篇文章 对 Newsletter 说不，对其中的一部分观点不是很认同，但是没有钱包的我没有办法去进行留言评论，索性就借此机会水一篇博客吧
 这些问题让我觉得 Newsletter 就像一个没有能力但却拼命想证明自己的暴君，无法很好达到发布者期望的效果，又过分侵犯了用户的选择和效率。
@@ -28,6 +28,5 @@ RSS 的开放性体现在它不需要用户提供个人信息，从而确保了�
 我在这里提出一些 我没有数据支持的观点
 Newsletter 的打开率要比 RSS 要高 Newsletter 一般情况下来说平均质量要高 Newsletter 在付费领域比 RSS 更有优势 </description>
     </item>
-    
   </channel>
 </rss>

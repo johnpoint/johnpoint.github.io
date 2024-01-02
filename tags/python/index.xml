@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/python/</link>
     <description>Recent content in python on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Oct 2020 11:02:14 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Oct 2020 11:02:14 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>编译安装 python 3.9</title>
       <link>https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/</link>
       <pubDate>Fri, 09 Oct 2020 11:02:14 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/</guid>
       <description>环境 Ubuntu 20.04.1 LTS focal x86_64
 下载 &amp;amp;&amp;amp; 解压缩 wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz 解压xz文件需要软件包 xz-utils
 tar -Jxvf Python-3.9.0.tar.xz 编译 &amp;amp;&amp;amp; 安装 cd Python-3.9.0 ./configure make make install 错误解决方法 No module named zlib 编译步骤中使用 ./configure --with-zlib pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available. 安装软件包
 libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev </description>
     </item>
-    
   </channel>
 </rss>

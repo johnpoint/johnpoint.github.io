@@ -1,35 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>httpd on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/httpd/</link>
     <description>Recent content in httpd on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Nov 2018 09:49:57 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/httpd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Nov 2018 09:49:57 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/httpd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
       <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
 学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
-    
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
       <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
 学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>webdav on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/webdav/</link>
     <description>Recent content in webdav on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2020 10:19:57 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/webdav/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Nov 2020 10:19:57 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/webdav/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Webdav 备份</title>
       <link>https://blog.lvcshu.com/2020/11/07/webdav-backup/</link>
       <pubDate>Sat, 07 Nov 2020 10:19:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/11/07/webdav-backup/</guid>
       <description>webdav 服务端 使用 cloudreve 自带 webdav
 客户端 cadaver
 备份 记录登录信息 .netrc
 machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav backup echo &amp;#34;==========================================================================&amp;#34; export t=`date +%Y-%m-%d` echo &amp;#34;Backup: &amp;#34; $t printf &amp;#34;集中配置文件 [执行中]&amp;#34; mkdir config cp .ssh/config config ...... printf &amp;#34;\r集中配置文件 [完成] \n&amp;#34; printf &amp;#34;归档配置文件 [执行中]&amp;#34; zip -q backup.zip config -r rm config -rf printf &amp;#34;\r归档配置文件 [完成] \n&amp;#34; ...... printf &amp;#34;\r归档密钥文件 [完成] \n&amp;#34; echo &amp;#34;put backup-&amp;#34;$t&amp;#34;.zip&amp;#34; &amp;gt; webdav echo &amp;#34;bye&amp;#34; &amp;gt;&amp;gt; webdav cadaver WEBDAVURL &amp;lt; webdav rm webdav rm backup-$t.</description>
     </item>
-    
   </channel>
 </rss>

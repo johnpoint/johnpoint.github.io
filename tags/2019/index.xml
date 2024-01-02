@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2019 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/2019/</link>
     <description>Recent content in 2019 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Dec 2019 16:47:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/2019/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Dec 2019 16:47:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/2019/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2019 年度简报</title>
       <link>https://blog.lvcshu.com/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
       <pubDate>Mon, 23 Dec 2019 16:47:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
       <description>&lt;p&gt;又是一年圣诞节，2019 年也来到了尾声，2018 年的年度简报感觉就是在不久之前写的，时间过得真的快。又是时候来给过去的 2019 年做一个简报以及总结。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>2018年度简报</title>
       <link>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
       <pubDate>Tue, 25 Dec 2018 16:47:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
       <description>首先 圣诞快乐~ 转眼间啊，2018年就快要过去了，是时候来 水 写一篇年终总结了
 Photo by Fabrizio Verrecchia on Unsplash
@@ -30,6 +28,5 @@ Photo by Fabrizio Verrecchia on Unsplash
 Github 的一年 那么 2019 加油哇~
 __ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _ \ \ \ \ \ / / / __/| |_| | | (_) | / / \_\ /_/ |_____|\___/|_|\___/ /_/ 2019 计划 预习JAVA 把 业余无线电牌照 考到手 继续学习算法知识 待定&amp;hellip; </description>
     </item>
-    
   </channel>
 </rss>

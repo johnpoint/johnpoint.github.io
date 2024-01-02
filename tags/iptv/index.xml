@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IPTV on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/iptv/</link>
     <description>Recent content in IPTV on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jan 2020 21:00:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/iptv/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jan 2020 21:00:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/iptv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>配置 IPTV-NET VLAN 单线复用</title>
       <link>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</link>
       <pubDate>Thu, 09 Jan 2020 21:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</guid>
       <description>家里的弱电箱因为前期设计失误所以电视那里只有一条网线，而如果我想将 wifi 信号在屋子里面相对良好的覆盖的话我也要将无线路由器设置在电视机附近，但是 IPTV 也需要占用一条网线，一开始我们的解决方案是用一条劈叉的网线，但是数据传输会有质量问题，所以趁着暑假我就尝试着解决这个问题。
 设置光猫 首先利用广东电信的光猫超级账户
@@ -20,6 +20,5 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
 交换机设置 光猫 --&amp;gt; WAN -------&amp;gt; LAN1(IPTV) | |----&amp;gt; CPU(NET) 然后就好了～
 还可以顺便获取到 ipv6，双倍的快乐</description>
     </item>
-    
   </channel>
 </rss>

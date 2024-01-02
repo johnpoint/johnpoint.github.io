@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notion on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/notion/</link>
     <description>Recent content in Notion on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Mar 2020 11:30:30 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/notion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Mar 2020 11:30:30 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/notion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
 0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
@@ -22,12 +22,10 @@
 上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
 if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
     </item>
-    
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
 0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
@@ -38,6 +36,5 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
 上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
 if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
     </item>
-    
   </channel>
 </rss>

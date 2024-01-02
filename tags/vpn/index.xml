@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vpn on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/vpn/</link>
     <description>Recent content in vpn on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Nov 2021 16:25:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Nov 2021 16:25:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 Zerotier 异地组内网</title>
       <link>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</link>
       <pubDate>Wed, 24 Nov 2021 16:25:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</guid>
       <description>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。
 其中一度不想折腾想着使用那些现成的局域网对战平台来进行游戏 (对就是浩方) 但是下载注册 (这个平台注册居然还要身份证，就离谱，虽然我是用生成的身份证号码注册的) 之后，登录这边一直卡死在 loading，无奈我只能再看看有没有其他的方案。
 在一位 (非常非常非常想玩红警3的) 朋友的建议下，我去研究了下 ZeroTier 这个异地组网的解决方案，发现挺方便的。
 但是问题来了，在我用上了 ZeroTier 之后，隧道倒是建立了，但是不知道为何，有两个节点相互 ping 不通</description>
     </item>
-    
   </channel>
 </rss>

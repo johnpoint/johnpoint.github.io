@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>verified on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/verified/</link>
     <description>Recent content in verified on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 09 Feb 2019 19:07:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/verified/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Feb 2019 19:07:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/verified/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github commit添加verified标识</title>
       <link>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</link>
       <pubDate>Sat, 09 Feb 2019 19:07:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这是一篇笔记&lt;/p&gt;
@@ -20,6 +20,5 @@
 &lt;p&gt;内容：Github commit添加verified标识&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
-    
   </channel>
 </rss>

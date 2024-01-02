@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>proto on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/proto/</link>
     <description>Recent content in proto on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Jun 2021 15:48:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/proto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Jun 2021 15:48:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/proto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>proto 通过字段名获取值</title>
       <link>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</link>
       <pubDate>Fri, 11 Jun 2021 15:48:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
       <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
 protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
 func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect.</description>
     </item>
-    
   </channel>
 </rss>

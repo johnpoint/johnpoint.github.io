@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>博客 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/%E5%8D%9A%E5%AE%A2/</link>
     <description>Recent content in 博客 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Jan 2019 21:03:02 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Jan 2019 21:03:02 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>真-多点部署博客</title>
       <link>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Mon, 14 Jan 2019 21:03:02 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;emmmmm 众所周知由于中国的特殊情况使得中国的网络监管机制有别于外国，国内开展各项网络业务是需要经过备案的，而备案过程比较繁琐而且需要上传持证照，我是不太喜欢这个玩意儿的，所以我的博客也没备案。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

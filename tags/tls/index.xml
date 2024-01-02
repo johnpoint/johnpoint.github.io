@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TLS on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/tls/</link>
     <description>Recent content in TLS on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Apr 2019 09:36:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/tls/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2019 09:36:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/tls/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>博客支持 TLS 1.3</title>
       <link>https://blog.lvcshu.com/2019/04/11/%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81tls-1.3/</link>
       <pubDate>Thu, 11 Apr 2019 09:36:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/04/11/%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81tls-1.3/</guid>
       <description>&lt;p&gt;博客终于在无数次的 想配置 TLS1.3 和 &amp;ldquo;啊好麻烦啊，不上了&amp;rdquo; 中一直没有上 TLS1.3&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

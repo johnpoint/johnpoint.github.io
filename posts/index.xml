@@ -1,17 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/posts/</link>
     <description>Recent content in Posts on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Jul 2023 14:04:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Dec 2023 20:00:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023 年度总结</title>
+      <link>https://blog.lvcshu.com/2023/12/24/2023-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 24 Dec 2023 20:00:00 +0800</pubDate>
+      <guid>https://blog.lvcshu.com/2023/12/24/2023-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+      <description>&lt;p&gt;又是一年平安夜，又到了每年一次固定写年度总结的时候了，在12月末看看今年我到底做了啥。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hackergame 2023 writeups</title>
+      <link>https://blog.lvcshu.com/2023/11/04/2023-hackergame-writeups/</link>
+      <pubDate>Sat, 04 Nov 2023 12:00:00 +0800</pubDate>
+      <guid>https://blog.lvcshu.com/2023/11/04/2023-hackergame-writeups/</guid>
+      <description>久违的参加 hackergame 了，前两年都忙得忘记了还有这个好玩的比赛，上一次参加已经是2020年的事情了
+最终成绩 当前分数：2750， 总排名：260 / 2386 AI：0 ， binary：200 ， general：1550 ， math：200 ， web：800 hackergame 启动 一道简单的签到题，显而易见的我不可能通过录制音频来过这个题目，于是我直接F12看源代码，这个相似度是使用js评估得出来然后放进一个不显示的元素里面的，于是我直接自己将100放进这个元素内，然后提交，这样就得到了第一个flag flag{wELcoM3-7O-HaCk3Rg@Me-AnD-enJOy-hACKIN9-20Z3}
+猫咪小测 又是经典的搜索引擎时间
+想要借阅世界图书出版公司出版的《A Classical Introduction To Modern Number Theory 2nd ed.》，应当前往中国科学技术大学西区图书馆的哪一层？ 很容易就能找到中国科学技术大学图书馆的官方网站，里面有提供图书检索的功能，搜到这本书馆藏在西区图书馆的外文书库 于是搜索西区图书馆的简介，可得外文书库在12楼 今年 arXiv 网站的天体物理版块上有人发表了一篇关于「可观测宇宙中的鸡的密度上限」的论文，请问论文中作者计算出的鸡密度函数的上限为 10 的多少次方每立方秒差距？ 这个随便搜搜就出来了，可得 23 为了支持 TCP BBR 拥塞控制算法，在编译 Linux 内核时应该配置好哪一条内核选项？ 使用 google 搜索这几个关键词 tcp bbr 编译 &amp;quot;config_&amp;quot; 可以找到这篇文章 由于这次的题目是能明确看到分数的，所以逐个试试就可以得到答案为 CONFIG_TCP_CONG_BBR 🥒🥒🥒：「我……从没觉得写类型标注有意思过」。在一篇论文中，作者给出了能够让 Python 的类型检查器 MyPY mypy 陷入死循环的代码，并证明 Python 的类型检查和停机问题一样困难。请问这篇论文发表在今年的哪个学术会议上？ 这题目有点难，但是我打开了bing ai找到了一些相关的信息 虽然没有得到最终正确的答案，但是我找到了新的关键词 esop python type checking is undecidable 把它塞进 google 搜索，可以找到 这篇论文 论文的角落就写着学术回忆的缩写 更深更暗 这题又是看js源代码可以拿到的flag，就不多说了 旅行照片 3.</description>
+    </item>
     <item>
       <title>我们要对 Newsletter 说不(吗？)</title>
       <link>https://blog.lvcshu.com/2023/07/13/%E6%88%91%E4%BB%AC%E8%A6%81%E5%AF%B9-newsletter-%E8%AF%B4%E4%B8%8D%E5%90%97/</link>
       <pubDate>Thu, 13 Jul 2023 14:04:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2023/07/13/%E6%88%91%E4%BB%AC%E8%A6%81%E5%AF%B9-newsletter-%E8%AF%B4%E4%B8%8D%E5%90%97/</guid>
       <description>刚看了 diygod 发布的这篇文章 对 Newsletter 说不，对其中的一部分观点不是很认同，但是没有钱包的我没有办法去进行留言评论，索性就借此机会水一篇博客吧
 这些问题让我觉得 Newsletter 就像一个没有能力但却拼命想证明自己的暴君，无法很好达到发布者期望的效果，又过分侵犯了用户的选择和效率。
@@ -28,12 +45,10 @@ RSS 的开放性体现在它不需要用户提供个人信息，从而确保了�
 我在这里提出一些 我没有数据支持的观点
 Newsletter 的打开率要比 RSS 要高 Newsletter 一般情况下来说平均质量要高 Newsletter 在付费领域比 RSS 更有优势 </description>
     </item>
-    
     <item>
       <title>使用 logstash 采集来自腾讯云 tke 的日志</title>
       <link>https://blog.lvcshu.com/2023/05/15/%E4%BD%BF%E7%94%A8-logstash-%E9%87%87%E9%9B%86%E6%9D%A5%E8%87%AA%E8%85%BE%E8%AE%AF%E4%BA%91-tke-%E7%9A%84%E6%97%A5%E5%BF%97/</link>
       <pubDate>Mon, 15 May 2023 10:34:44 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2023/05/15/%E4%BD%BF%E7%94%A8-logstash-%E9%87%87%E9%9B%86%E6%9D%A5%E8%87%AA%E8%85%BE%E8%AE%AF%E4%BA%91-tke-%E7%9A%84%E6%97%A5%E5%BF%97/</guid>
       <description>前提 好久没有给博客除草了，正好最近折腾了下 logstash，记录一下。
 为啥要用 logstash 呢，其实是因为在测试环境上面腾讯云 tke 的日志没有开启日志收集，所以在排查问题的时候会十分的痛苦，正好有空了就想着将日志抽出来放进 es 里面，方便以后排查问题，正好看到腾讯云的日志规则是允许将 pod 的 stdout 日志进行采集之后投递到 kafka 的，就小试了一下。
@@ -45,21 +60,17 @@ ARG ELASTIC_VERSION # https://www.docker.elastic.co/ FROM docker.elastic.co/logs
 --- ## Default Logstash configuration from Logstash base image. ## https://github.com/elastic/logstash/blob/main/docker/data/logstash/config/logstash-full.yml # http.host: 0.0.0.0 node.name: logstash 路径 logstash/pipeline/logstash.conf
 input { beats { port =&amp;gt; 5044 } tcp { port =&amp;gt; 50000 } } ## Add your filters / logstash plugins configuration here output { elasticsearch { hosts =&amp;gt; &amp;#34;elasticsearch:9200&amp;#34; user =&amp;gt; &amp;#34;logstash_internal&amp;#34; password =&amp;gt; &amp;#34;${LOGSTASH_INTERNAL_PASSWORD}&amp;#34; index =&amp;gt; &amp;#34;logstash-%{+YYYY-MM-dd}&amp;#34; } } 启动服务 version: &amp;#39;3.</description>
     </item>
-    
     <item>
       <title>2022 年度总结</title>
       <link>https://blog.lvcshu.com/2022/12/29/2022-year-summary/</link>
       <pubDate>Thu, 29 Dec 2022 10:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/12/29/2022-year-summary/</guid>
       <description>&lt;p&gt;来了来了，晚到了几天的年度总结，但是总算是没有鸽掉 ~&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 headscale 异地组网</title>
       <link>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</link>
       <pubDate>Fri, 04 Nov 2022 10:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
       <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。
 然后就听说了 wireguard 被加入 linux 内核，以下是 wireguard 的介绍：
@@ -70,43 +81,35 @@ WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]�
 部署 headscale 这里我使用 docker-componse 进行部署
 version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:latest-alpine container_name: headscale volumes: - ./container-config:/etc/headscale - ./container-data/data:/var/lib/headscale ports: - 27896:8080 command: headscale serve restart: unless-stopped headscale-ui: image: ghcr.io/gurucomputing/headscale-ui:latest restart: unless-stopped container_name: headscale-ui ports: - 9443:443 同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下</description>
     </item>
-    
     <item>
       <title>使用 ssh 密钥签名 git commit</title>
       <link>https://blog.lvcshu.com/2022/10/05/git-commit-sign-by-ssh-key/</link>
       <pubDate>Wed, 05 Oct 2022 21:30:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/10/05/git-commit-sign-by-ssh-key/</guid>
       <description>在 Github commit添加verified标识 这篇文章中，配置好了 gpg 密钥签名作为标识 git commit 是否值得信任带凭证，但是载后面使用签名的过程中渐渐感到了一丝丝的麻烦，因为 gpg 密钥在我日常的生活中并没有很多其他的用处。最近 github 支持了显示通过 ssh 密钥签名的 commit 的功能。ssh 密钥在日常用起来要比 gpg 密钥要多得多，所以配置了一下，顺便写个文章记录操作流程。
 git config --global gpg.format ssh git config --global user.signingKey ~/.ssh/id_ed25519.pub git config --global commit.gpgsign true git config --global tag.gpgsign true 一般来说，配置好了这几个选项，就可以顺利的把签名加上了，要是 git commit 的时候提示你 ssh是不支持的格式 那么就意味着当前版本的 git 并不支持通过 ssh 密钥签名 commit，这时候就要自己更新下系统上面的 git 了。</description>
     </item>
-    
     <item>
       <title>使用 docker-compose 搭建 clickhouse 集群</title>
       <link>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</link>
       <pubDate>Fri, 12 Aug 2022 17:30:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/08/12/deploy-clickhouse-by-docker-compose/</guid>
       <description>Docker Compose 配置 version: &amp;#39;3&amp;#39; services: clickhouse-server-ck1: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck1 networks: - ck-network ports: - &amp;#34;8124:8123&amp;#34; - &amp;#34;9001:9000&amp;#34; - &amp;#34;9010:9004&amp;#34; volumes: - `pwd`/clickhouse/:/var/lib/clickhouse/ - `pwd`/clickhouse-server/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck2: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck2 networks: - ck-network ports: - &amp;#34;8125:8123&amp;#34; - &amp;#34;9002:9000&amp;#34; - &amp;#34;9011:9004&amp;#34; volumes: - `pwd`/clickhouse2/:/var/lib/clickhouse/ - `pwd`/clickhouse-server2/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server2/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 clickhouse-server-ck3: restart: on-failure:10 # 退出非0重启，尝试10次 image: yandex/clickhouse-server container_name: ck3 networks: - ck-network ports: - &amp;#34;8126:8123&amp;#34; - &amp;#34;9003:9000&amp;#34; - &amp;#34;9012:9004&amp;#34; volumes: - `pwd`/clickhouse3/:/var/lib/clickhouse/ - `pwd`/clickhouse-server3/:/etc/clickhouse-server/ - `pwd`/log/clickhouse-server3/:/var/log/clickhouse-server/ ulimits: nofile: soft: &amp;#34;262144&amp;#34; hard: &amp;#34;262144&amp;#34; depends_on: - zookeeper-1 zookeeper-1: restart: on-failure:10 # 退出非0重启，尝试10次 image: zookeeper:3.</description>
     </item>
-    
     <item>
       <title>Go 实现瑞士轮排列算法</title>
       <link>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</link>
       <pubDate>Fri, 29 Jul 2022 10:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/</guid>
       <description>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
 选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
 type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) &amp;lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i].</description>
     </item>
-    
     <item>
       <title>Oneplus 8T 刷入 LineageOS</title>
       <link>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</link>
       <pubDate>Sun, 01 May 2022 11:51:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</guid>
       <description>劳动节来给博客除除草！
 自从一加手机社区发布了官方公告说 Android 12 正式版本出来了之后我就一直在等系统更新的推送，谁知道从4月12日公告出来到今天我都没有收到推送，再加上一加的在 Android 12 后 HOS 会切换成 ColorOS，类原生的特点就没有了，OOS 虽说还会持续维护，但是我既然都用 OOS 了我为啥不自己刷个更加原生的系统呢？比如说 LineageOS。
@@ -118,12 +121,10 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
 使用感受 原生的系统真是舒服啊，没有了一些有的没有的app，动画啥的感觉要比HOS要好。高帧率、AOD、蓝牙HD音频编码、屏下指纹这些都没有啥大问题。
 甚至有些之前在HOS上面没有体验过的特性，比如说锁屏音乐可视化 总的来说挺满意的，再看看后续使用的过程中有没有啥坑了，就这样。</description>
     </item>
-    
     <item>
       <title>博客及相关服务部署更新</title>
       <link>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Sun, 17 Apr 2022 00:40:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</guid>
       <description>部署流程更新 众所周知，之前我的博客以及图片托管的服务是通过硬核的DNS分区域解析来实现流量的就近调度，而多个服务器之间的资源文件我一般使用syncthing来进行同步，这个方法显得比较粗糙，但是还挺有效的。最近折腾了下 cloudflare worker 感觉还不错，于是就把博客以及图片托管迁移到了 cloudflare worker 上来，这样一来可以白嫖到不错的全球加速(除中国大陆)，而且使用 workers 进行部署可以省下不少的服务器资源。
 这个就是我之前的发布工作流程
@@ -132,12 +133,10 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
 5月1日更新 又更改了下，用上了 vercel 的服务，实测这个服务提供的 cdn 要比 cloudflare 在中国大陆访问的快些。 博客主题更新 博客主题也好久没有更新了，这次更新主要是加上了几个能够改进访问体验的 feature。
 添加了首页巨幕以及文章头图图片下面的背景颜色，能够自定义在图片还没有加载出来之前显示的颜色 将博客底部版权信息部分的版本号放进了一个js里面，这样就减少了版本号修改时候需要修改的位置 将原来的文章无头图从几张图片中随机选择一张作为头图改成了随机选择一个颜色作为头图 颜色随机取值这里，是取值RGB都在 110-87之间的值，这里的颜色饱和度比较低，看起来比较舒服</description>
     </item>
-    
     <item>
       <title>博客迁移到cloudflare踩坑</title>
       <link>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</link>
       <pubDate>Fri, 25 Mar 2022 13:11:29 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</guid>
       <description>好久不见，新年开始一直忙着毕业设计和实习找新的工作，一直没有空去将一些折腾过的东西记录成为博客，最近在写毕业设计的间隙终于对博客进行了一波优化，顺便写篇博客记录一下。
 在过去的部署中，博客一直是采用多节点部署并且通过dnspod的分地区解析做流量调度，将流量解析到尽量近的节点来尽量保证博客访问的速度。而多个节点之间的博客文件同步一开始用的是定时任务从github上面更新，后来改成了使用syncthing进行同步，这种方法看起来比较蠢，但是也持续的保证了我的博客在这两年期间的顺畅访问。
@@ -148,33 +147,27 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
 修复这个情况只需要在返回响应的时候加上相应的header即可，代码修改可以参考我提的PR
 参考链接 将 Hexo 部署到 Cloudflare Workers Site 上的趟坑记录 </description>
     </item>
-    
     <item>
       <title>2021 年度简报</title>
       <link>https://blog.lvcshu.com/2021/12/26/2021-year-summary/</link>
       <pubDate>Sun, 26 Dec 2021 15:11:29 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/12/26/2021-year-summary/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>使用 Zerotier 异地组内网</title>
       <link>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</link>
       <pubDate>Wed, 24 Nov 2021 16:25:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</guid>
       <description>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。
 其中一度不想折腾想着使用那些现成的局域网对战平台来进行游戏 (对就是浩方) 但是下载注册 (这个平台注册居然还要身份证，就离谱，虽然我是用生成的身份证号码注册的) 之后，登录这边一直卡死在 loading，无奈我只能再看看有没有其他的方案。
 在一位 (非常非常非常想玩红警3的) 朋友的建议下，我去研究了下 ZeroTier 这个异地组网的解决方案，发现挺方便的。
 但是问题来了，在我用上了 ZeroTier 之后，隧道倒是建立了，但是不知道为何，有两个节点相互 ping 不通</description>
     </item>
-    
     <item>
       <title>用于 gnet 的 Protocol buffers 编解码器</title>
       <link>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</link>
       <pubDate>Fri, 17 Sep 2021 18:30:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/09/17/tcp-protocol-buffers-codec/</guid>
       <description>要写一个 TCP 服务端，实现处理在纯 TCP 流中传输的 Protocol buffers 数据。网络框架很早就选好了，用性能杰出的 gnet，问题是 gnet 的示例库里面没有直接解析纯 Protocol buffers 的编解码器，于是乎只能自己动手了&amp;hellip;
 协议分析 从 TCP 流里面传过来的是经过简单处理的 Protocol buffers 数据，他在数据的头携带了这个数据包的长度信息，像是这样
@@ -182,34 +175,28 @@ Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生�
 由于没有特定的协议在包与包之间进行明显的划分，所以得用他的头数据来进行分包。
 解码器 // 储存连接内的相关信息 type DataStruct struct { fullLength int lenNumLength int fullData []byte } func (d *Codec) Decode(c gnet.</description>
     </item>
-    
     <item>
       <title>解决全屏背景图卡顿</title>
       <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
       <pubDate>Wed, 28 Jul 2021 11:44:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
       <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
 而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。
 搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;</description>
     </item>
-    
     <item>
       <title>proto 通过字段名获取值</title>
       <link>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</link>
       <pubDate>Fri, 11 Jun 2021 15:48:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/06/11/proto%E9%80%9A%E8%BF%87%E5%AD%97%E6%AE%B5%E5%90%8D%E8%8E%B7%E5%8F%96%E5%80%BC/</guid>
       <description>很久没有更新博客了，一方面是出去实习比在学校的时候忙，真的很多东西等着我去学，太可怕了，另一方面就是懒
 protobuf 真是个好东西，就是在你不知道具体结构的时候想要拿到特定字段的值有点小麻烦，好不容易折腾出来了，写篇博客记录一下
 func FindByName(name string, msg protoreflect.Message) (has bool, value protoreflect.Value, isList bool) { if name == &amp;#34;&amp;#34; { return false, *new(protoreflect.Value), false } msgDesc := msg.Descriptor() for i := 0; i &amp;lt; msgDesc.Fields().Len(); i++ { if msgDesc.Fields().Get(i).Kind() == protoreflect.MessageKind { sonMsg := msgDesc.Fields().Get(i) has, value, isList = FindByName(name, msg.Get(sonMsg).Message()) // type mismatch: cannot convert list to message if has { return has, value, isList } } if msgDesc.Fields().Get(i).Name() == protoreflect.</description>
     </item>
-    
     <item>
       <title>Linux 进程信息格式化</title>
       <link>https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
       <pubDate>Tue, 02 Feb 2021 21:20:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
       <description>2021 年了，转头看了下自己的服务器面板，发现还是那个半成品的样子&amp;hellip;于是在这三天改了下代码，加入了 v2 api 接口，这个接口主要使用 Websocket 进行通信，虽然说服务端的压力其实不是很大，但是使用轮询进行数据的更新不仅会看到一坨一坨的请求，对我的渣渣电脑来说也有些吃力了，不过这篇文章的内容不是这个，改天再开一篇文章记录一下。
 进程查看其实是很早之前就想做进面板的功能之一，但是受限于并没有找到现成的 go 第三方或者官方库，所以就放了一放 （结果放了差不多一年），刚好这几天在改面板的代码，索性就顺手把它做了。
@@ -217,77 +204,63 @@ func FindByName(name string, msg protoreflect.Message) (has bool, value protoref
 前端代码截取如下
 let ps = server.Ps.split(&amp;#39;\n&amp;#39;); ps.forEach(item = &amp;gt;{ if (item.split(&amp;#34; &amp;#34;).length &amp;gt; 3) { item = item.split(&amp;#34; &amp;#34;) if (item[0] === &amp;#34;&amp;#34;) { item = item.slice(1, item.length) } let i = { PID: item[0], User: item[1], State: item[2], Pcpu: item[3], Pmem: item[4], Command: item.</description>
     </item>
-    
     <item>
       <title>2020 年度简报</title>
       <link>https://blog.lvcshu.com/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
       <pubDate>Wed, 23 Dec 2020 11:11:29 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/12/23/2020%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
       <description>&lt;p&gt;2020 年的开头我们并不知道接下来的这一年是那么的艰难，幸好春节前我就已经在某些地方得知了疫情的消息并且准备了一些口罩，减轻了疫情高峰期时口罩的使用压力。&lt;/p&gt;
 &lt;p&gt;Bilibili 跨年晚会仿佛就发生在昨天，又到了 2020 年的圣诞节，得开始写年度总结了，总感觉这一年啥都没有干就到年末了（&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>NodeMCU 制作桌面天气时钟</title>
       <link>https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/</link>
       <pubDate>Wed, 02 Dec 2020 23:00:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/12/02/esp8266-weather-card/</guid>
       <description>&lt;p&gt;其实我眼馋青萍空气检测仪很久了，但是要700+的价格实在是下不了手，于是萌生了自己做一个类似的桌面摆件的想法，一方面是想尝试下制作包含硬件的小玩意，一方面确实是想整一个摆件放在桌面。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 Webdav 备份</title>
       <link>https://blog.lvcshu.com/2020/11/07/webdav-backup/</link>
       <pubDate>Sat, 07 Nov 2020 10:19:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/11/07/webdav-backup/</guid>
       <description>webdav 服务端 使用 cloudreve 自带 webdav
 客户端 cadaver
 备份 记录登录信息 .netrc
 machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav backup echo &amp;#34;==========================================================================&amp;#34; export t=`date +%Y-%m-%d` echo &amp;#34;Backup: &amp;#34; $t printf &amp;#34;集中配置文件 [执行中]&amp;#34; mkdir config cp .ssh/config config ...... printf &amp;#34;\r集中配置文件 [完成] \n&amp;#34; printf &amp;#34;归档配置文件 [执行中]&amp;#34; zip -q backup.zip config -r rm config -rf printf &amp;#34;\r归档配置文件 [完成] \n&amp;#34; ...... printf &amp;#34;\r归档密钥文件 [完成] \n&amp;#34; echo &amp;#34;put backup-&amp;#34;$t&amp;#34;.zip&amp;#34; &amp;gt; webdav echo &amp;#34;bye&amp;#34; &amp;gt;&amp;gt; webdav cadaver WEBDAVURL &amp;lt; webdav rm webdav rm backup-$t.</description>
     </item>
-    
     <item>
       <title>Hackergame 2020 writeups</title>
       <link>https://blog.lvcshu.com/2020/11/04/2020-hackergame-writeups/</link>
       <pubDate>Wed, 04 Nov 2020 00:19:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/11/04/2020-hackergame-writeups/</guid>
       <description>最终成绩 Sat Nov 7 09:59:22 AM CST 2020 当前分数：1500， 总排名：225 / 2415 binary：0 ， general：850 ， math：300 ， web：350 啊，我真的是太菜了（
 只做出了一点点题目
 签到 谢邀，利益相关：老签到出题人了。 今年出题组的要求是「来参加我们比赛的同学很多都是初学者，我们的签到题要清晰明确一点，让同学们轻松签到。」 我完全明白了，签到题就是送 flag，送就送，我最会送了.jpg 首先写好题目介绍：「你需要点击下面蓝色的 “打开/下载题目” 按钮，在打开的网页上获取到形如 flag{...} 的 flag，回到本页面，将其完整填写到下面的文本框中，并点击灰色的 “提交” 按钮即可完成本题。」 然后写一个 flag 提取器，选手要多少个 flag，我就给多少个 flag，绿色背景，红色加粗，显眼的位置，标准的格式，这都不叫送，那还有什么叫做送。 点击 「打开/下载题目」 按钮，打开 flag 提取器，获取第一个 flag 吧！ 提示：完成题目遇到困难？你可以参考 2018 年签到题题解 与 2019 年签到题题解。 F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以得到 flag
 &amp;lt;input type=&amp;#34;range&amp;#34; id=&amp;#34;number&amp;#34; name=&amp;#34;number&amp;#34; class=&amp;#34;form-control&amp;#34; value=&amp;#34;0&amp;#34; min=&amp;#34;0&amp;#34; max=&amp;#34;1&amp;#34; step=&amp;#34;0.00001&amp;#34;&amp;gt; 猫咪问答++ 在科大西区的研究生食堂旁边，有块水泥石板盛产肥猫。 每一个晴朗的中午，其上都会有花花白白的猫咪慵懒地晒着太阳。 而许多吃完午饭的同学，也可以趁此良机大肆撸猫。 但是突然从某一天起，水泥石板上多了一只猫首猫身的动物，拦住前来撸猫的同学，用它精心准备好的谜语考验他们。 只有全部答对了才可以撸猫，如果不小心答错了它就会炸毛给你看。 为了让每日撸猫活动恢复正轨，热心的 LUG 协会同学把这些谜题放到了这里。 如果你能答对所有的谜题，就会有 flag 作为奖励。 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。 手动数，数量为 12 搜索到了 wikipedia -&amp;gt; RFC1149 A typical MTU is 256 milligrams.</description>
     </item>
-    
     <item>
       <title>Oneplus 8T 到手</title>
       <link>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</link>
       <pubDate>Wed, 21 Oct 2020 15:56:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/10/21/oneplus-8t/</guid>
       <description>&lt;p&gt;&lt;del&gt;来了来了，Android R 他朝我们走来了&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;刚刚忍不住剁手了香气四溢的 Oneplus 8T，也把我手中的已经伊拉克成色的 Oneplus 6 给以旧换新处理掉了，就例行来说一下 Android 11 以及这个看起来很香的 Oneplus 8T 的体验&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>编译安装 python 3.9</title>
       <link>https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/</link>
       <pubDate>Fri, 09 Oct 2020 11:02:14 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/</guid>
       <description>环境 Ubuntu 20.04.1 LTS focal x86_64
 下载 &amp;amp;&amp;amp; 解压缩 wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz 解压xz文件需要软件包 xz-utils
 tar -Jxvf Python-3.9.0.tar.xz 编译 &amp;amp;&amp;amp; 安装 cd Python-3.9.0 ./configure make make install 错误解决方法 No module named zlib 编译步骤中使用 ./configure --with-zlib pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available. 安装软件包
 libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev </description>
     </item>
-    
     <item>
       <title>vps 登录推送</title>
       <link>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</link>
       <pubDate>Sun, 13 Sep 2020 13:10:21 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</guid>
       <description>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能
 文件名 00-ssh-login-alarm-telegram.sh (其实也可以自己自定义)，将文件放在 /etc/profile.d 目录下。
@@ -295,31 +268,25 @@ libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev li
 使用效果：
 NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</description>
     </item>
-    
     <item>
       <title>liunx jetbrains 软件输入中文</title>
       <link>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</link>
       <pubDate>Sat, 13 Jun 2020 00:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/06/13/liunx-jetbrains-%E8%BD%AF%E4%BB%B6%E8%BE%93%E5%85%A5%E4%B8%AD%E6%96%87/</guid>
       <description>首先你得有中文输入法
 在启动脚本 /PATH/bin/xxx.sh 上面添加一行 export LC_ALL=zh_CN.UTF-8</description>
     </item>
-    
     <item>
       <title>git 同步上游代码</title>
       <link>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Sun, 31 May 2020 21:30:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/05/31/git-%E5%90%8C%E6%AD%A5%E4%B8%8A%E6%B8%B8%E4%BB%A3%E7%A0%81/</guid>
       <description>git remote add upstream 上游地址 git fetch upstream git checkout master git merge upstream/master git merge upstream/master git push origin master Github:syncing a fork</description>
     </item>
-    
     <item>
       <title>Telegram spammer 二三事</title>
       <link>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</link>
       <pubDate>Thu, 28 May 2020 17:20:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</guid>
       <description>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
 今天就简单的写一写在我记忆里面的 Telegram 中文使用者群体里面所见到的 spammer 以及反 spammer 的一些事情。
@@ -337,21 +304,17 @@ spammer 分类 截至到目前，我所见过的广告帐号主要分为以下�
 进群就批量发送 spam 消息，刷屏来进行爆破骚扰 spammer 等级区分 反 spam 史 这一步部分虽然美其名曰 史 但是这些阶段并没有什么明显的分界线，目前来看这几个方案都是并存的状态，这几个方案及其项目目前的活跃程度不一，但在笔者有限的视野里面也的确有在运行。
 第一阶段 - 手动处理 一开始也是处理 spammer 比较原始的方式，就是利用 telegram 的比较完善的群组管理的功能进行广告内容的清理，同时因为能够清除成员发送的所有消息，所以其实效果还不错（在有管理员在线的情况下）</description>
     </item>
-    
     <item>
       <title>博客主题更新 &amp;&amp; 一些碎碎念</title>
       <link>https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
       <pubDate>Sun, 19 Apr 2020 18:26:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/04/19/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
       <description>&lt;p&gt;好久没有更新博客啦，上来写点碎碎念&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
 0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
@@ -362,12 +325,10 @@ spammer 分类 截至到目前，我所见过的广告帐号主要分为以下�
 上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
 if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
     </item>
-    
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
       <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
 0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
@@ -378,12 +339,10 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
 上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
 if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
     </item>
-    
     <item>
       <title>Joplin：笔记软件的新选择</title>
       <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 22 Feb 2020 14:29:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
       <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
 使用体验 优点 支持 markdown、html 待办事项可以定时提醒 网页摘抄可以直接截取网页的 HTML 代码保存 中文本地化并不完全 一些坑 onedriver 速度慢 Dropbox Linux 版本无法授权 坚果云 webdav 有频率限制 自建 webdav 有点麻烦以及不能保证速度 linux 桌面版本有时会无端卡顿 加密密钥不能编辑管理 安装 桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。
@@ -393,12 +352,10 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
 正确的操作逻辑：
 启用加密--&amp;gt;同步--&amp;gt;输入密码 参考链接 Joplin：真正的 Evernote 开源替代品 Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置 Joplin 同步到坚果云 webdav Syncthing 官网 PS:本篇文章在 Joplin 上完成</description>
     </item>
-    
     <item>
       <title>Tiny File Manager 使用</title>
       <link>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Fri, 14 Feb 2020 11:20:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</guid>
       <description>最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。
 但是 PT 下载好了的文件我得拉回本地，所以我就想在服务器上建个私有云盘，但是试来试去都没有啥好用的，最后用到了 Tiny File Manager
@@ -406,21 +363,17 @@ if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(da
 为了安全起见，我还在 nginx 上设置了权限限制，让这个目录下面的文件只能通过这个 php 文件下载。
 location / { deny all; } location /index.php { allow all; } </description>
     </item>
-    
     <item>
       <title>Archlinux 系统体验报告</title>
       <link>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
       <pubDate>Mon, 13 Jan 2020 22:16:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>配置 IPTV-NET VLAN 单线复用</title>
       <link>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</link>
       <pubDate>Thu, 09 Jan 2020 21:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</guid>
       <description>家里的弱电箱因为前期设计失误所以电视那里只有一条网线，而如果我想将 wifi 信号在屋子里面相对良好的覆盖的话我也要将无线路由器设置在电视机附近，但是 IPTV 也需要占用一条网线，一开始我们的解决方案是用一条劈叉的网线，但是数据传输会有质量问题，所以趁着暑假我就尝试着解决这个问题。
 设置光猫 首先利用广东电信的光猫超级账户
@@ -429,230 +382,180 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
 交换机设置 光猫 --&amp;gt; WAN -------&amp;gt; LAN1(IPTV) | |----&amp;gt; CPU(NET) 然后就好了～
 还可以顺便获取到 ipv6，双倍的快乐</description>
     </item>
-    
     <item>
       <title>2019 年度简报</title>
       <link>https://blog.lvcshu.com/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
       <pubDate>Mon, 23 Dec 2019 16:47:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/12/23/2019%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
       <description>&lt;p&gt;又是一年圣诞节，2019 年也来到了尾声，2018 年的年度简报感觉就是在不久之前写的，时间过得真的快。又是时候来给过去的 2019 年做一个简报以及总结。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>js 提取 QQ 音乐直链</title>
       <link>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</link>
       <pubDate>Thu, 12 Dec 2019 17:19:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</guid>
       <description>function getSong(name) { window.location.href = &amp;#34;https://y.qq.com/portal/search.html#page=1&amp;amp;searchid=1&amp;amp;remoteplace=txt.yqq.top&amp;amp;t=song&amp;amp;w=&amp;#34; + name; var muname = $(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;&amp;#39;); var qq = &amp;#34;0&amp;#34;; var guid = &amp;#34;0&amp;#34;; $.ajax({ url: &amp;#34;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?g_tk=0&amp;amp;loginUin=&amp;#34; + qq + &amp;#34;&amp;amp;hostUin=0&amp;amp;format=json&amp;amp;inCharset=utf8&amp;amp;outCharset=utf-8&amp;amp;notice=0&amp;amp;platform=yqq&amp;amp;needNewCode=0&amp;amp;cid=205361747&amp;amp;uin=&amp;#34; + qq + &amp;#34;&amp;amp;songmid=&amp;#34; + muname.replace(&amp;#39;C400&amp;#39;, &amp;#39;&amp;#39;) + &amp;#34;&amp;amp;filename=&amp;#34; + muname + &amp;#34;.m4a&amp;amp;guid=&amp;#34; + guid, success: function (data) { data = JSON.parse(data); vkey = data.data.items[0].vkey; console.log($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.stream.qqmusic.qq.com/C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;.m4a?guid=&amp;#39; + guid + &amp;#39;&amp;amp;vkey=&amp;#39; + vkey + &amp;#39;&amp;amp;uin=&amp;#39; + qq + &amp;#39;&amp;amp;fromtag=66&amp;#39;)) window.open($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.</description>
     </item>
-    
     <item>
       <title>Android 10 再体验</title>
       <link>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Mon, 21 Oct 2019 00:19:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/10/21/android-q-%E5%86%8D%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;&lt;del&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/del&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Linux 删除大量文件</title>
       <link>https://blog.lvcshu.com/2019/10/20/linux%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/</link>
       <pubDate>Sun, 20 Oct 2019 13:40:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/10/20/linux%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/</guid>
       <description>&lt;p&gt;最近去看了下我的自动重连脚本的 log 文件夹&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>deepin 应用字体异常解决方法</title>
       <link>https://blog.lvcshu.com/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sat, 12 Oct 2019 23:30:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
       <description>&lt;p&gt;写下我是怎么解决 deepin 应用字体异常的&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>配置CORS小记</title>
       <link>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</link>
       <pubDate>Mon, 07 Oct 2019 21:44:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</guid>
       <description>&lt;p&gt;最近在折腾博客的字体，最终选定了这几个字体作为网站的字体&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>app推荐:安卓上好用的 RSS 客户端们</title>
       <link>https://blog.lvcshu.com/2019/09/25/rss-on-android/</link>
       <pubDate>Wed, 25 Sep 2019 00:17:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/09/25/rss-on-android/</guid>
       <description>&lt;p&gt;一直以来我都是用着 Telegram bot 来作为 RSS 推送阅读的阅读器，直到前几天我的 bot 突然宕机，我就懒得恢复了 &lt;del&gt;因为我忘记他在哪个服务器上了嘤嘤嘤&lt;/del&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>ikoula Ubuntu 18.04 独服配置 IPv6</title>
       <link>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</link>
       <pubDate>Mon, 19 Aug 2019 20:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/08/19/ikoula-%E7%8B%AC%E6%9C%8D-%E9%85%8D%E7%BD%AEipv6/</guid>
       <description>&lt;p&gt;之前在 ikoula 买了个 8.99o/mo 的独服用来刷 PT ，最近看了下 ikoula 终于加上了 18.04 的镜像，就去升级了下。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>写了个 Hexo 主题 hexo-theme-XvA</title>
       <link>https://blog.lvcshu.com/2019/08/13/%E5%86%99%E4%BA%86%E4%B8%AAhexo%E4%B8%BB%E9%A2%98/</link>
       <pubDate>Tue, 13 Aug 2019 11:50:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/08/13/%E5%86%99%E4%BA%86%E4%B8%AAhexo%E4%B8%BB%E9%A2%98/</guid>
       <description>&lt;p&gt;之前博客用的主题是移植自 Typecho 的 &lt;a href=&#34;https://github.com/tufu9441/maupassant-hexo&#34;&gt;Maupassant&lt;/a&gt; 主题，简洁，也挺好看，就是有点略显单调&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>keepass 客户端：keeweb 使用体验</title>
       <link>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Sun, 28 Jul 2019 17:07:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;前不久转坑到 1 password 的我在看见了 keeweb 这一项目时又有了重回 keepass 的想法。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>keepass 客户端：keeweb 使用体验</title>
       <link>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Sun, 28 Jul 2019 17:07:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/07/28/keepass%E5%AE%A2%E6%88%B7%E7%AB%AFkeeweb%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;前不久转坑到 1 password 的我在看见了 keeweb 这一项目时又有了重回 keepass 的想法。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Linux 家族:Alpine 体验</title>
       <link>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Wed, 24 Jul 2019 17:16:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/07/24/linux%E5%AE%B6%E6%97%8F-alpine%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;最近心痒痒想折腾下新的系统，顺便记录一下。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>天猫精灵体验</title>
       <link>https://blog.lvcshu.com/2019/06/22/%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5-%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Sat, 22 Jun 2019 01:31:30 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/06/22/%E5%A4%A9%E7%8C%AB%E7%B2%BE%E7%81%B5-%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;买了天猫精灵方糖也有半年了 &lt;del&gt;差不多&lt;/del&gt; 就写 &lt;del&gt;水&lt;/del&gt; 一篇文章说说使用体验吧。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>使用 travis-ci 自动化构建博客</title>
       <link>https://blog.lvcshu.com/2019/06/15/%E4%BD%BF%E7%94%A8-travis-ci-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 15 Jun 2019 14:09:31 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/06/15/%E4%BD%BF%E7%94%A8-travis-ci-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;之前的 hexo 博客我都是在电脑上进行生成然后 push 上 github repo，现在感觉有些麻烦 &lt;del&gt;就是懒&lt;/del&gt; 所以就想着能不能用 travis-ci 自动化构建博客。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ubuntu 安装 rtl8821ce 驱动</title>
       <link>https://blog.lvcshu.com/2019/06/06/ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/</link>
       <pubDate>Thu, 06 Jun 2019 21:51:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/06/06/ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/</guid>
       <description>&lt;p&gt;&lt;del&gt;电脑又出问题了&lt;/del&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>修复Chrome色差问题</title>
       <link>https://blog.lvcshu.com/2019/06/04/%E4%BF%AE%E5%A4%8Dchrome%E8%89%B2%E5%B7%AE%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 04 Jun 2019 15:54:20 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/06/04/%E4%BF%AE%E5%A4%8Dchrome%E8%89%B2%E5%B7%AE%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;在几次使用 Chrome 发现了网页的色彩渲染似乎有些问题&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>优化Bash控制台显示</title>
       <link>https://blog.lvcshu.com/2019/05/28/%E4%BC%98%E5%8C%96bash%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%98%BE%E7%A4%BA/</link>
       <pubDate>Tue, 28 May 2019 21:14:30 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/05/28/%E4%BC%98%E5%8C%96bash%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%98%BE%E7%A4%BA/</guid>
       <description>&lt;p&gt;=。=&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>和平精英有感</title>
       <link>https://blog.lvcshu.com/2019/05/12/%E5%92%8C%E5%B9%B3%E7%B2%BE%E8%8B%B1%E6%9C%89%E6%84%9F/</link>
       <pubDate>Sun, 12 May 2019 22:57:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/05/12/%E5%92%8C%E5%B9%B3%E7%B2%BE%E8%8B%B1%E6%9C%89%E6%84%9F/</guid>
       <description>&lt;p&gt;最近刺激战场正式结束了公测并且改名成为和平精英&lt;del&gt;割草&lt;/del&gt;正式经营&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Android Q 初体验</title>
       <link>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Fri, 10 May 2019 13:29:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/05/10/android-q-%E5%88%9D%E4%BD%93%E9%AA%8C/</guid>
       <description>&lt;p&gt;最近开的 Google I/O 大会公布了 Android Q beta3 的几款适配的机型，我的 Oneplus 6 恰好也在其中&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>安装Arch笔记</title>
       <link>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 07 May 2019 22:53:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/05/07/%E5%AE%89%E8%A3%85arch%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Arch Linux（或 Arch /ˈɑːrtʃ/)）是一款基于 x86-64 架构的 Linux发行版。&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>博客支持 TLS 1.3</title>
       <link>https://blog.lvcshu.com/2019/04/11/%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81tls-1.3/</link>
       <pubDate>Thu, 11 Apr 2019 09:36:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/04/11/%E5%8D%9A%E5%AE%A2%E6%94%AF%E6%8C%81tls-1.3/</guid>
       <description>&lt;p&gt;博客终于在无数次的 想配置 TLS1.3 和 &amp;ldquo;啊好麻烦啊，不上了&amp;rdquo; 中一直没有上 TLS1.3&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>我们已经被微信捆住了</title>
       <link>https://blog.lvcshu.com/2019/04/03/%E6%88%91%E4%BB%AC%E5%B7%B2%E7%BB%8F%E8%A2%AB%E5%BE%AE%E4%BF%A1%E6%8D%86%E4%BD%8F%E4%BA%86/</link>
       <pubDate>Wed, 03 Apr 2019 17:41:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/04/03/%E6%88%91%E4%BB%AC%E5%B7%B2%E7%BB%8F%E8%A2%AB%E5%BE%AE%E4%BF%A1%E6%8D%86%E4%BD%8F%E4%BA%86/</guid>
       <description>&lt;p&gt;我们已经被微信捆住了&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>初探 Proxmox VE</title>
       <link>https://blog.lvcshu.com/2019/03/17/%E5%88%9D%E6%8E%A2proxmox-ve/</link>
       <pubDate>Sun, 17 Mar 2019 11:36:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/03/17/%E5%88%9D%E6%8E%A2proxmox-ve/</guid>
       <description>&lt;p&gt;一直好奇主机商们是怎么把一台独立服务器分成 VPS 来售卖的，这几天就去玩了 下 Proxmox VE&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>office 365 online 太好用啦!</title>
       <link>https://blog.lvcshu.com/2019/03/02/office-365-online-%E5%A4%AA%E5%A5%BD%E7%94%A8%E5%95%A6/</link>
       <pubDate>Sat, 02 Mar 2019 20:40:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/03/02/office-365-online-%E5%A4%AA%E5%A5%BD%E7%94%A8%E5%95%A6/</guid>
       <description>&lt;p&gt;自从把主力的系统从 windows 转向了 ubuntu 了以后，感觉 ubuntu 实在是比 windows 要方便许多 （除了进行文档处理的操作以外）&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Github commit添加verified标识</title>
       <link>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</link>
       <pubDate>Sat, 09 Feb 2019 19:07:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/02/09/github-commit%E6%B7%BB%E5%8A%A0verified%E6%A0%87%E8%AF%86/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这是一篇笔记&lt;/p&gt;
@@ -661,48 +564,38 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
 &lt;p&gt;内容：Github commit添加verified标识&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
-    
     <item>
       <title>app推荐:notify &amp; fitness for mi band</title>
       <link>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</link>
       <pubDate>Tue, 22 Jan 2019 21:21:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</guid>
       <description>&lt;p&gt;话说用了那么久小米手环，其实感觉还是比较不错的，唯一美中不足的就是小米手环的附属应用 &lt;code&gt;小米运动(mi fit)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>app推荐:notify &amp; fitness for mi band</title>
       <link>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</link>
       <pubDate>Tue, 22 Jan 2019 21:21:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/01/22/app%E6%8E%A8%E8%8D%90notify-fitness-for-mi-band/</guid>
       <description>&lt;p&gt;话说用了那么久小米手环，其实感觉还是比较不错的，唯一美中不足的就是小米手环的附属应用 &lt;code&gt;小米运动(mi fit)&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>真-多点部署博客</title>
       <link>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Mon, 14 Jan 2019 21:03:02 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/01/14/%E7%9C%9F-%E5%A4%9A%E7%82%B9%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</guid>
       <description>&lt;p&gt;emmmmm 众所周知由于中国的特殊情况使得中国的网络监管机制有别于外国，国内开展各项网络业务是需要经过备案的，而备案过程比较繁琐而且需要上传持证照，我是不太喜欢这个玩意儿的，所以我的博客也没备案。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>改进SSL证书相关策略</title>
       <link>https://blog.lvcshu.com/2019/01/10/%E6%94%B9%E8%BF%9Bssl%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3%E7%AD%96%E7%95%A5/</link>
       <pubDate>Thu, 10 Jan 2019 11:11:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/01/10/%E6%94%B9%E8%BF%9Bssl%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3%E7%AD%96%E7%95%A5/</guid>
       <description>&lt;p&gt;自从使用了 docker 作为基础环境以后，我想着写一个能够服务进行统一集中管理的面板，一方面不想使用市面上使用比较广泛面板 &lt;del&gt;因为我做到他们不行啊啊啊&lt;/del&gt;，一方面也算是一种练习吧&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>2018年度简报</title>
       <link>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
       <pubDate>Tue, 25 Dec 2018 16:47:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
       <description>首先 圣诞快乐~ 转眼间啊，2018年就快要过去了，是时候来 水 写一篇年终总结了
 Photo by Fabrizio Verrecchia on Unsplash
@@ -712,45 +605,37 @@ Photo by Fabrizio Verrecchia on Unsplash
 Github 的一年 那么 2019 加油哇~
 __ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _ \ \ \ \ \ / / / __/| |_| | | (_) | / / \_\ /_/ |_____|\___/|_|\___/ /_/ 2019 计划 预习JAVA 把 业余无线电牌照 考到手 继续学习算法知识 待定&amp;hellip; </description>
     </item>
-    
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
       <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
 学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
-    
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
       <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
       <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
 学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
 chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
 cd /home mkdir www 修改httpd配置文件</description>
     </item>
-    
     <item>
       <title>树莓派 docker 搭建 pi-dashboard</title>
       <link>https://blog.lvcshu.com/2018/10/21/%E6%A0%91%E8%8E%93%E6%B4%BE-docker-%E6%90%AD%E5%BB%BA-pi-dashboard/</link>
       <pubDate>Sun, 21 Oct 2018 05:40:21 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/10/21/%E6%A0%91%E8%8E%93%E6%B4%BE-docker-%E6%90%AD%E5%BB%BA-pi-dashboard/</guid>
       <description>&lt;p&gt;前一阵子我入手了一（台？）（个？）树莓派，但是一直都没有时间研究该用来做什么&amp;hellip;. 然后无意间看见了一个叫做pi-dashboard 的小玩意儿 上一张图看看&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>&lt;失效&gt; Ubuntu 安装 thinkpad S2 无线网卡驱动</title>
       <link>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</link>
       <pubDate>Sat, 25 Aug 2018 16:58:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</guid>
       <description>注意：本文已失效，目前有效的方法在 这里
 最近入手了一台 thinkpad S2 ，打开 windows 系统，觉得缺了点什么，于是连忙把 ubuntu 系统也安装了上去，但是在配置 ubuntu 系统的时候并没有让我连接网络的选项，当时就感觉有些奇怪&amp;lt;!&amp;mdash;more&amp;mdash;&amp;gt;，但是没有放在心上。安装完成后打开 ubuntu 系统发现系统 根本没有 检测到无线网卡的存在，于是我就慌了，赶紧回到 windows 系统，看见了无线网卡的型号
@@ -759,12 +644,10 @@ Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC 于是使用强大的 百度 goog
 原文如下：
 Worked solution (Requirements: kernel &amp;gt;=4.11) : (UPD: In the latest release of endlessm you need kernel version 4.15) Download driver directory from this repo: https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce You can do it by this link: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce Unpack zip archive. Change the Makefile.</description>
     </item>
-    
     <item>
       <title>密码管理器是好文明</title>
       <link>https://blog.lvcshu.com/2018/08/24/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8%E6%98%AF%E5%A5%BD%E6%96%87%E6%98%8E/</link>
       <pubDate>Fri, 24 Aug 2018 08:26:36 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/08/24/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8%E6%98%AF%E5%A5%BD%E6%96%87%E6%98%8E/</guid>
       <description>密码一直以来是人们帐号的一个薄弱点，通过各种各样的途径，想要获取他人密码的人总能获取到另他们满意的信息，&amp;lt;!&amp;mdash;more&amp;mdash;&amp;gt;而人们喜欢利用自己个人信息的组合作为密码立下了汗马功劳，而一些人对于密码重要性毫不了解从而设下简单密码的人也功不可没，而我，一直以来使用的是一串字符串所生成 md5 来作为我帐号的密码，自认为十分安全，实则不然，因为密码中只含有小写字母和数字，是可以实现暴力破解的。加上一些特殊符号的密码是目前为止相对安全的密码解决方案，但是 复杂的密码太难记了啊 这该咋办，直到某群大佬说出了 密码管理器是好文明（） 我才发现原来早就有人想到解决方案了。
 目前，网络上流行的有四款密码管理器：
@@ -773,12 +656,10 @@ KeePass 同样采用了主流的一个主密码打开密码数据库文件的模
 在用上 KeePass 的那一晚，我就把每一个可以想起来的帐号都改成了自动生成的强密码，感觉自己的帐号安全提升了不止一点半点，美滋滋～
 赶快去尝试下咯～</description>
     </item>
-    
     <item>
       <title>博客双开，避免offline™</title>
       <link>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</link>
       <pubDate>Tue, 07 Aug 2018 05:30:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</guid>
       <description>怎么双开博客呢？ 答案就是—— vps 与 github 一起部署。。。
 好吧，我承认我是标题党了一下，主要是记录一下我 成功部署 完 hexo 博客了以后如何将博客部署到 github 上去。
@@ -789,12 +670,10 @@ deploy: type: git repo: GitHub上仓库的完整路径包括 .git branch: master
 git config --global user.name &amp;#34;你的GitHub用户名&amp;#34; git config --global user.email &amp;#34;你的GitHub注册邮箱&amp;#34; 生成ssh密钥文件：
 ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三个回车即可，默认不需要设置密码 然后找到生成的 .</description>
     </item>
-    
     <item>
       <title>设定微信自动发送信息</title>
       <link>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</link>
       <pubDate>Sat, 21 Jul 2018 06:10:58 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</guid>
       <description>首先先说一说吐槽一下微信封闭的生态圈，除了开放给搜狗这个搜索引擎可以搜索微信公众号的 api 之外，几乎没有开放任何可以利用的 api ，固然这有其在安全方面的考虑，但是这就使得一些比较有趣的功能难以实现，例如机器人。而一些比较实用的功能又在官方垃圾客户端中没有实现。
 需求 在 chrome 上了 web 版微信的基础上利用 chrome 自带的 console + javascript 实现 自动、循环、发送信息
@@ -805,12 +684,10 @@ google搜索 然后，我分别以 微信、发信息、chrome、console、javas
 修改代码
 // 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍 var appElement = document.querySelector(&amp;#39;[ng-controller=chatSenderController]&amp;#39;); var $scope = angular.element(appElement).scope(); setInterval(function(){ var localTime = new Date(); if(localTime.</description>
     </item>
-    
     <item>
       <title>安装hexo博客及其优化记录</title>
       <link>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Fri, 20 Jul 2018 06:01:39 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
       <description>使用lnmp.org的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
 本文采用 lvcshu.com 为示例域名
@@ -829,21 +706,17 @@ root /home/wwwroot/blog.lvcshu.com/public; 记住：有两个地方要改，对�
 推荐：可以将 http 通过301跳转，跳转到 https
 lnmp nginx restart 看看效果吧！</description>
     </item>
-    
     <item>
       <title>cloudreve体验报告</title>
       <link>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
       <pubDate>Wed, 09 May 2018 05:30:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/05/09/cloudreve%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
       <description>&lt;p&gt;自从360云盘把业务收缩回企业用户之时，笔者就在不断的寻觅适合个人用户使用的私有云盘，但是纵观网络的各种各样的云盘，不是过于简单，就是部署过于复杂，还有就是会出现各种各样奇奇怪怪的问题（比如nextcloud），&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>还不给你的网站加上https？</title>
       <link>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</link>
       <pubDate>Sun, 11 Feb 2018 05:47:16 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</guid>
       <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~ 那么，什么是https呢？
 HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
@@ -869,12 +742,10 @@ HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是�
 违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
 2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
     </item>
-    
     <item>
       <title>配置ufw防火墙，守护你的Ubuntu</title>
       <link>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</link>
       <pubDate>Mon, 15 Jan 2018 05:21:10 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
       <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
 直到我发现了ufw这个神器
@@ -890,12 +761,10 @@ ufw default deny 阻断除上述规则外的外部连接（本机外发流量无
 ufw enable 启动防火墙，done！
 操作指令 启动防火墙 ufw enable 关闭防火墙 ufw disable 更新配置 ufw reload 查看防火墙状态 ufw status </description>
     </item>
-    
     <item>
       <title>慢慢的，就没有了，就像从未存在过</title>
       <link>https://blog.lvcshu.com/2017/12/21/%E6%85%A2%E6%85%A2%E7%9A%84%E5%B0%B1%E6%B2%A1%E6%9C%89%E4%BA%86%E5%B0%B1%E5%83%8F%E4%BB%8E%E6%9C%AA%E5%AD%98%E5%9C%A8%E8%BF%87/</link>
       <pubDate>Thu, 21 Dec 2017 05:17:17 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2017/12/21/%E6%85%A2%E6%85%A2%E7%9A%84%E5%B0%B1%E6%B2%A1%E6%9C%89%E4%BA%86%E5%B0%B1%E5%83%8F%E4%BB%8E%E6%9C%AA%E5%AD%98%E5%9C%A8%E8%BF%87/</guid>
       <description>作者小海，原文已被和谐
 几年以前，我曾经嘲笑过某科技界大佬。当时他说：也许90后、95后会慢慢不知道谷歌是什么网站。
@@ -925,6 +794,5 @@ ufw enable 启动防火墙，done！
 天黑了，那么睡觉吧，但愿长醉不复醒，卧槽泥马勒戈壁。
 最后，我们变成了一群做梦的人，这个梦的名字，叫根据相关法律法规，相关搜索结果不予显示梦。</description>
     </item>
-    
   </channel>
 </rss>

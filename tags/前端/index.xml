@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Jul 2021 11:44:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jul 2021 11:44:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>解决全屏背景图卡顿</title>
       <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
       <pubDate>Wed, 28 Jul 2021 11:44:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
       <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
 而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。
 搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;</description>
     </item>
-    
   </channel>
 </rss>

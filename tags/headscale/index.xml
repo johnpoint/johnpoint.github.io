@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>headscale on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/headscale/</link>
     <description>Recent content in headscale on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Nov 2022 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/headscale/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Nov 2022 10:00:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/headscale/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用 headscale 异地组网</title>
       <link>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</link>
       <pubDate>Fri, 04 Nov 2022 10:00:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2022/11/04/deploy-headscale/</guid>
       <description>很久之前看过柠檬大佬的使用 N2N 进行异地组网的文章，大受震撼，但是 N2N 的部署体验很难说得上令人愉悦。
 然后就听说了 wireguard 被加入 linux 内核，以下是 wireguard 的介绍：
@@ -22,6 +22,5 @@ WireGuard是由Jason A. Donenfeld开发的开放源代码VPN程序及协议[1]�
 部署 headscale 这里我使用 docker-componse 进行部署
 version: &amp;#39;3.5&amp;#39; services: headscale: image: headscale/headscale:latest-alpine container_name: headscale volumes: - ./container-config:/etc/headscale - ./container-data/data:/var/lib/headscale ports: - 27896:8080 command: headscale serve restart: unless-stopped headscale-ui: image: ghcr.io/gurucomputing/headscale-ui:latest restart: unless-stopped container_name: headscale-ui ports: - 9443:443 同时我还使用了nginx来进行反向代理，将 headscale-ui 和 headscale 分别部署在了不同的域名下面，因此要做一些 CORS 的处理，Nginx 配置文件参考如下</description>
     </item>
-    
   </channel>
 </rss>

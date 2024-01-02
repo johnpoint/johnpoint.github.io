@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>字体 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/%E5%AD%97%E4%BD%93/</link>
     <description>Recent content in 字体 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 12 Oct 2019 23:30:37 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E5%AD%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Oct 2019 23:30:37 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/%E5%AD%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>deepin 应用字体异常解决方法</title>
       <link>https://blog.lvcshu.com/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sat, 12 Oct 2019 23:30:37 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/10/12/deepin%E5%BA%94%E7%94%A8%E5%AD%97%E4%BD%93%E5%BC%82%E5%B8%B8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
       <description>&lt;p&gt;写下我是怎么解决 deepin 应用字体异常的&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>配置CORS小记</title>
       <link>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</link>
       <pubDate>Mon, 07 Oct 2019 21:44:00 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2019/10/07/%E9%85%8D%E7%BD%AEcors%E5%B0%8F%E8%AE%B0/</guid>
       <description>&lt;p&gt;最近在折腾博客的字体，最终选定了这几个字体作为网站的字体&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

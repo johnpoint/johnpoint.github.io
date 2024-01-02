@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>记录 on johnpoint&#39;s blog</title>
     <link>https://blog.lvcshu.com/tags/%E8%AE%B0%E5%BD%95/</link>
     <description>Recent content in 记录 on johnpoint&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2020 00:19:57 +0800</lastBuildDate><atom:link href="https://blog.lvcshu.com/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Nov 2023 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.lvcshu.com/tags/%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackergame 2023 writeups</title>
+      <link>https://blog.lvcshu.com/2023/11/04/2023-hackergame-writeups/</link>
+      <pubDate>Sat, 04 Nov 2023 12:00:00 +0800</pubDate>
+      <guid>https://blog.lvcshu.com/2023/11/04/2023-hackergame-writeups/</guid>
+      <description>久违的参加 hackergame 了，前两年都忙得忘记了还有这个好玩的比赛，上一次参加已经是2020年的事情了
+最终成绩 当前分数：2750， 总排名：260 / 2386 AI：0 ， binary：200 ， general：1550 ， math：200 ， web：800 hackergame 启动 一道简单的签到题，显而易见的我不可能通过录制音频来过这个题目，于是我直接F12看源代码，这个相似度是使用js评估得出来然后放进一个不显示的元素里面的，于是我直接自己将100放进这个元素内，然后提交，这样就得到了第一个flag flag{wELcoM3-7O-HaCk3Rg@Me-AnD-enJOy-hACKIN9-20Z3}
+猫咪小测 又是经典的搜索引擎时间
+想要借阅世界图书出版公司出版的《A Classical Introduction To Modern Number Theory 2nd ed.》，应当前往中国科学技术大学西区图书馆的哪一层？ 很容易就能找到中国科学技术大学图书馆的官方网站，里面有提供图书检索的功能，搜到这本书馆藏在西区图书馆的外文书库 于是搜索西区图书馆的简介，可得外文书库在12楼 今年 arXiv 网站的天体物理版块上有人发表了一篇关于「可观测宇宙中的鸡的密度上限」的论文，请问论文中作者计算出的鸡密度函数的上限为 10 的多少次方每立方秒差距？ 这个随便搜搜就出来了，可得 23 为了支持 TCP BBR 拥塞控制算法，在编译 Linux 内核时应该配置好哪一条内核选项？ 使用 google 搜索这几个关键词 tcp bbr 编译 &amp;quot;config_&amp;quot; 可以找到这篇文章 由于这次的题目是能明确看到分数的，所以逐个试试就可以得到答案为 CONFIG_TCP_CONG_BBR 🥒🥒🥒：「我……从没觉得写类型标注有意思过」。在一篇论文中，作者给出了能够让 Python 的类型检查器 MyPY mypy 陷入死循环的代码，并证明 Python 的类型检查和停机问题一样困难。请问这篇论文发表在今年的哪个学术会议上？ 这题目有点难，但是我打开了bing ai找到了一些相关的信息 虽然没有得到最终正确的答案，但是我找到了新的关键词 esop python type checking is undecidable 把它塞进 google 搜索，可以找到 这篇论文 论文的角落就写着学术回忆的缩写 更深更暗 这题又是看js源代码可以拿到的flag，就不多说了 旅行照片 3.</description>
+    </item>
     <item>
       <title>Hackergame 2020 writeups</title>
       <link>https://blog.lvcshu.com/2020/11/04/2020-hackergame-writeups/</link>
       <pubDate>Wed, 04 Nov 2020 00:19:57 +0800</pubDate>
-      
       <guid>https://blog.lvcshu.com/2020/11/04/2020-hackergame-writeups/</guid>
       <description>最终成绩 Sat Nov 7 09:59:22 AM CST 2020 当前分数：1500， 总排名：225 / 2415 binary：0 ， general：850 ， math：300 ， web：350 啊，我真的是太菜了（
 只做出了一点点题目
 签到 谢邀，利益相关：老签到出题人了。 今年出题组的要求是「来参加我们比赛的同学很多都是初学者，我们的签到题要清晰明确一点，让同学们轻松签到。」 我完全明白了，签到题就是送 flag，送就送，我最会送了.jpg 首先写好题目介绍：「你需要点击下面蓝色的 “打开/下载题目” 按钮，在打开的网页上获取到形如 flag{...} 的 flag，回到本页面，将其完整填写到下面的文本框中，并点击灰色的 “提交” 按钮即可完成本题。」 然后写一个 flag 提取器，选手要多少个 flag，我就给多少个 flag，绿色背景，红色加粗，显眼的位置，标准的格式，这都不叫送，那还有什么叫做送。 点击 「打开/下载题目」 按钮，打开 flag 提取器，获取第一个 flag 吧！ 提示：完成题目遇到困难？你可以参考 2018 年签到题题解 与 2019 年签到题题解。 F12 定位到拖动条，将最大值改为 1 然后将条拖到最大就可以得到 flag
 &amp;lt;input type=&amp;#34;range&amp;#34; id=&amp;#34;number&amp;#34; name=&amp;#34;number&amp;#34; class=&amp;#34;form-control&amp;#34; value=&amp;#34;0&amp;#34; min=&amp;#34;0&amp;#34; max=&amp;#34;1&amp;#34; step=&amp;#34;0.00001&amp;#34;&amp;gt; 猫咪问答++ 在科大西区的研究生食堂旁边，有块水泥石板盛产肥猫。 每一个晴朗的中午，其上都会有花花白白的猫咪慵懒地晒着太阳。 而许多吃完午饭的同学，也可以趁此良机大肆撸猫。 但是突然从某一天起，水泥石板上多了一只猫首猫身的动物，拦住前来撸猫的同学，用它精心准备好的谜语考验他们。 只有全部答对了才可以撸猫，如果不小心答错了它就会炸毛给你看。 为了让每日撸猫活动恢复正轨，热心的 LUG 协会同学把这些谜题放到了这里。 如果你能答对所有的谜题，就会有 flag 作为奖励。 提示：正如撸猫不必亲自到现场，解出谜题也不需要是科大在校学生。解题遇到困难？你可以参考 2018 年猫咪问答题解。 手动数，数量为 12 搜索到了 wikipedia -&amp;gt; RFC1149 A typical MTU is 256 milligrams.</description>
     </item>
-    
   </channel>
 </rss>
