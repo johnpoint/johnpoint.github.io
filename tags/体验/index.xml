@@ -45,7 +45,7 @@ location / { deny all; } location /index.php { allow all; } </description>
       <link>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
       <pubDate>Mon, 13 Jan 2020 22:16:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
-      <description></description>
+      <description>-` johnpoint@archlinux .o+` ------------------- `ooo/ OS: Arch Linux x86_64 `+oooo: Host: ×××××××××××× `+oooooo: Kernel: 5.4.8-arch1-1 -+oooooo+: Uptime: 18 hours, 43 mins `/:-:++oooo+: Packages: 1389 (pacman) `/++++/+++++++: Shell: zsh 5.7.1 `/++++++++++++++: Resolution: 1920x1080, 1920x1080 `/+++ooooooooooooo/` DE: Plasma ./ooosssso++osssssso+` WM: KWin .oossssso-````/ossssss+` Theme: Breeze [GTK2/3] -osssssso. :ssssssso. Icons: breeze [GTK2/3] :osssssss/ osssso+++. Terminal: konsole /ossssssss/ +ssssooo/- Terminal Font: Cascadia Code 11 `/ossssso+/:- -:/+osssso+- CPU: Intel i5-8250U (8) @ 3.400GHz `+sso+:-` `.-/+oso: GPU: Intel UHD Graphics 620 `++:.</description>
     </item>
     <item>
       <title>Android 10 再体验</title>
