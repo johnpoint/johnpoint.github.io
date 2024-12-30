@@ -13,23 +13,7 @@
       <link>https://blog.lvcshu.com/2021/12/26/2021-year-summary/</link>
       <pubDate>Sun, 26 Dec 2021 15:11:29 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2021/12/26/2021-year-summary/</guid>
-      <description>今年真的是变化挺大的一年。我大四了，也算是步入了大学生活的最后一段时间，从三月份开始就离开了学校实习，在实习中我学到了许多，但是也确实占用了我大部分时间用于上班以及学习一些我之前没有学习的在工作中用到的知识和技术。
-博客写了啥 在编写那个服务器监控面板的时候我想把服务器上面的进程信息显示在上面，所以顺手写了一个文章
-Linux 进程信息格式化 这两篇是我在实习中所学习用到的东西，也写成了文章
-proto 通过字段名获取值 用于 gnet 的 Protocol buffers 编解码器 还有两篇是平时折腾的记录
-解决全屏背景图卡顿 使用 Zerotier 异地组内网 可以看出来我今年写的博客少了很多，看看明年能不能试试写多一些
-代码写了啥 GITHUB 照惯例上绿点图
-可以明显的看到今年比去年相比，我的 github 代码提交的不是那么的活跃了。。那是因为实习的时候确实比在学校要忙
-今年新写了啥呢 还在维护啥? johnpoint.github.io: 博客的本体
-hexo-theme-XvA: 今年更新的也很少，就是更新了一些细节问题，升级了 jq 的版本，改进了 copyright 的样式，修复了背景图片卡顿的问题
-博客今年怎么样 今年终于有人评论了！
-更新的文章略少，不过貌似还是比去年的文章多一篇，天啊
-今年更新了 6 篇文章(包括本文) 友链增加了 0 个大佬 评论 2 条(哇塞，终于有活人来评论了！！虽然我没有回复) 完整数据-Google Sheet
-参与了啥活动 GDG devfest GuangZhou（延期了&amp;hellip;延期到 2022年1月8日的 2021 GDG devfest，不出啥大问题的话会去的） 看了啥 今年在我心目中排名第一的电影！ 《雄狮少年》
-无论从画面还是剧情还是音乐都很不错，可能晚点会把刚刚看完就说要写的影评咕出来 绝对不咕
-还有啥想说 去年开始的记账习惯最终还是在一次长时间中断记账后放弃了，看来用web记账还是不适合我，用手机记账又在今年的10月份重新开始，希望可以坚持下去吧。
-经过我这将近一年的实习，我还是发现有挺多的不足，明年希望有所改进吧。
-最后 2021 再见！</description>
+      <description></description>
     </item>
     <item>
       <title>2020 年度简报</title>
@@ -51,13 +35,44 @@ hexo-theme-XvA: 今年更新的也很少，就是更新了一些细节问题，�
       <link>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</link>
       <pubDate>Tue, 25 Dec 2018 16:47:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/12/25/2018%E5%B9%B4%E5%BA%A6%E7%AE%80%E6%8A%A5/</guid>
-      <description>首先 圣诞快乐~ 转眼间啊，2018年就快要过去了，是时候来 水 写一篇年终总结了
-Photo by Fabrizio Verrecchia on Unsplash
-学习 这一年学了什么？ apache PHP javacript SQL docker 成果？ emmmmmmmm好像也没有什么成果可以出来说的，就简单的定制了几个 docker 并且写成了 docker-compose 使得我在部署服务器的时候能够更加方便，然后时间也比之前采用的脚本的编译安装要大大缩短，以后重装服务器就更加肆无忌惮了
-同时，初步的尝试使用 N2Nv2 的 peer to peer VPN 把所有的服务器链接成一个大内网，以后有什么证书之类的文件就可以通过内网进行传输了，并且我的电脑也连上了这个内网，使得我在外面（不在电脑身边）也能通过连接上我任意一台 VPS 来链接我的电脑。但是目前只是刚刚开始部署，估计完全搞定得到 2019 年了&amp;hellip;.
-还有这个！ 求star！！ johnpoint/anti-360browser.js
-Github 的一年 那么 2019 加油哇~
-__ __ ___ ___ _ ___ __ / / / / |___ \ / _ \/ |( _ ) \ \ / / / / __) | | | | |/ _ \ \ \ \ \ / / / __/| |_| | | (_) | / / \_\ /_/ |_____|\___/|_|\___/ /_/ 2019 计划 预习JAVA 把 业余无线电牌照 考到手 继续学习算法知识 待定&amp;hellip; </description>
+      <description>&lt;p&gt;首先 圣诞快乐~
+转眼间啊，2018年就快要过去了，是时候来 &lt;del&gt;水&lt;/del&gt; 写一篇年终总结了&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Photo by Fabrizio Verrecchia on Unsplash&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;学习&#34;&gt;学习&lt;/h1&gt;
+&lt;h2 id=&#34;这一年学了什么&#34;&gt;这一年学了什么？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;apache&lt;/li&gt;
+&lt;li&gt;PHP&lt;/li&gt;
+&lt;li&gt;javacript&lt;/li&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;成果&#34;&gt;成果？&lt;/h2&gt;
+&lt;p&gt;emmmmmmmm好像也没有什么成果可以出来说的，就简单的定制了几个 docker 并且写成了 docker-compose 使得我在部署服务器的时候能够更加方便，然后时间也比之前采用的脚本的编译安装要大大缩短，&lt;del&gt;以后重装服务器就更加肆无忌惮了&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;同时，初步的尝试使用 N2Nv2 的 peer to peer VPN 把所有的服务器链接成一个大内网，以后有什么证书之类的文件就可以通过内网进行传输了，并且我的电脑也连上了这个内网，使得我在外面（不在电脑身边）也能通过连接上我任意一台 VPS 来链接我的电脑。但是目前只是刚刚开始部署，估计完全搞定得到 2019 年了&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;还有这个！
+求star！！
+&lt;a href=&#34;https://github.com/johnpoint/anti-360browser.js&#34;&gt;johnpoint/anti-360browser.js&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;github-的一年&#34;&gt;Github 的一年&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.loli.net/2018/12/31/5c29bf6820a6c.png&#34; alt=&#34;github.com_johnpoint_tab=overview&amp;amp;from=2018-01-01&amp;amp;to=2018-01-31(iPhone 5_SE).png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;那么 2019 加油哇~&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   __     __   ___   ___  _  ___   __  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  / /    / / |___ \ / _ \/ |( _ )  \ \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; / /    / /    __) | | | | |/ _ \   \ \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; \ \   / /    / __/| |_| | | (_) |  / /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  \_\ /_/    |_____|\___/|_|\___/  /_/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;2019-计划&#34;&gt;2019 计划&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;预习JAVA&lt;/li&gt;
+&lt;li&gt;把 业余无线电牌照 考到手&lt;/li&gt;
+&lt;li&gt;继续学习算法知识&lt;/li&gt;
+&lt;li&gt;待定&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

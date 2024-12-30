@@ -21,31 +21,72 @@
       <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 22 Feb 2020 14:29:57 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
-      <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
-使用体验 优点 支持 markdown、html 待办事项可以定时提醒 网页摘抄可以直接截取网页的 HTML 代码保存 中文本地化并不完全 一些坑 onedriver 速度慢 Dropbox Linux 版本无法授权 坚果云 webdav 有频率限制 自建 webdav 有点麻烦以及不能保证速度 linux 桌面版本有时会无端卡顿 加密密钥不能编辑管理 安装 桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。
-配置同步 一开始我使用的同步策略是使用自建 webdav 进行同步，但是效果不佳，后来我就去尝试使用了国内的坚果云 webdav 进行同步笔记，但是由于坚果云的 webdav 有频繁操作的保护，所以几乎是不可用的状态。
-无奈之下我只能粗暴的选择直接进行文件同步，首先使用的 resilio sync 未知原因的同步速度十分缓慢(内网)，所以最后选择了同类型的软件 synthing
-加密配置 Joplin 还自带加密的功能，但是加密的功能稍微有点设计缺陷，主要是操作了逻辑的缺陷，他没有设计加密密钥的删除功能，所以加密如果禁用再重新打开是不能用回之前的密钥的，只能重新生成，而且如果两个设备都生成了密钥两边都会有两把密钥，有点看不顺眼。
-正确的操作逻辑：
-启用加密--&amp;gt;同步--&amp;gt;输入密码 参考链接 Joplin：真正的 Evernote 开源替代品 Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置 Joplin 同步到坚果云 webdav Syncthing 官网 PS:本篇文章在 Joplin 上完成</description>
+      <description>&lt;p&gt;前几天 Linux 中国发了一篇&lt;a href=&#34;https://linux.cn/article-11896-1.html&#34;&gt;文章&lt;/a&gt;，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。&lt;/p&gt;
+&lt;h1 id=&#34;使用体验&#34;&gt;使用体验&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200216001.jpg&#34; alt=&#34;&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200216002.jpg&#34; alt=&#34;&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200216003.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;优点&#34;&gt;优点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 markdown、html&lt;/li&gt;
+&lt;li&gt;待办事项可以定时提醒&lt;/li&gt;
+&lt;li&gt;网页摘抄可以直接截取网页的 HTML 代码保存&lt;/li&gt;
+&lt;li&gt;中文本地化并不完全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一些坑&#34;&gt;一些坑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;onedriver 速度慢&lt;/li&gt;
+&lt;li&gt;Dropbox Linux 版本无法授权&lt;/li&gt;
+&lt;li&gt;坚果云 webdav 有频率限制&lt;/li&gt;
+&lt;li&gt;自建 webdav 有点麻烦以及不能保证速度&lt;/li&gt;
+&lt;li&gt;linux 桌面版本有时会无端卡顿&lt;/li&gt;
+&lt;li&gt;加密密钥不能编辑管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;p&gt;桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。&lt;/p&gt;
+&lt;h2 id=&#34;配置同步&#34;&gt;配置同步&lt;/h2&gt;
+&lt;p&gt;一开始我使用的同步策略是使用自建 webdav 进行同步，但是效果不佳，后来我就去尝试使用了国内的坚果云 webdav 进行同步笔记，但是由于坚果云的 webdav 有频繁操作的保护，所以几乎是不可用的状态。&lt;/p&gt;
+&lt;p&gt;无奈之下我只能粗暴的选择直接进行文件同步，首先使用的 resilio sync 未知原因的同步速度十分缓慢(内网)，所以最后选择了同类型的软件 synthing&lt;/p&gt;
+&lt;h2 id=&#34;加密配置&#34;&gt;加密配置&lt;/h2&gt;
+&lt;p&gt;Joplin 还自带加密的功能，但是加密的功能稍微有点设计缺陷，主要是操作了逻辑的缺陷，他没有设计加密密钥的删除功能，所以加密如果禁用再重新打开是不能用回之前的密钥的，只能重新生成，而且如果两个设备都生成了密钥两边都会有两把密钥，有点看不顺眼。&lt;/p&gt;
+&lt;p&gt;正确的操作逻辑：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启用加密--&amp;gt;同步--&amp;gt;输入密码
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;参考链接&#34;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://linux.cn/article-11896-1.html&#34;&gt;Joplin：真正的 Evernote 开源替代品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/jackadam/p/8568833.html&#34;&gt;Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zsxwz.com/2019/07/11/joplin%E5%90%8C%E6%AD%A5%E5%88%B0%E5%9D%9A%E6%9E%9C%E4%BA%91webdav/&#34;&gt;Joplin 同步到坚果云 webdav&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://syncthing.net/&#34;&gt;Syncthing 官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS:本篇文章在 Joplin 上完成&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tiny File Manager 使用</title>
       <link>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Fri, 14 Feb 2020 11:20:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</guid>
-      <description>最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。
-但是 PT 下载好了的文件我得拉回本地，所以我就想在服务器上建个私有云盘，但是试来试去都没有啥好用的，最后用到了 Tiny File Manager
-安装的话也很简单，只需要你的服务器上有网页服务器和 php 环境即可，将 tinyfilemanager.php 和 translation.json 放到目录下就好了
-为了安全起见，我还在 nginx 上设置了权限限制，让这个目录下面的文件只能通过这个 php 文件下载。
-location / { deny all; } location /index.php { allow all; } </description>
+      <description>&lt;p&gt;最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。&lt;/p&gt;
+&lt;p&gt;但是 PT 下载好了的文件我得拉回本地，所以我就想在服务器上建个私有云盘，但是试来试去都没有啥好用的，最后用到了 &lt;a href=&#34;https://tinyfilemanager.github.io/&#34;&gt;Tiny File Manager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装的话也很简单，只需要你的服务器上有网页服务器和 php 环境即可，将 &lt;a href=&#34;https://raw.githubusercontent.com/prasathmani/tinyfilemanager/master/tinyfilemanager.php&#34;&gt;tinyfilemanager.php&lt;/a&gt; 和 &lt;a href=&#34;https://raw.githubusercontent.com/prasathmani/tinyfilemanager/master/translation.json&#34;&gt;translation.json&lt;/a&gt; 放到目录下就好了&lt;/p&gt;
+&lt;p&gt;为了安全起见，我还在 nginx 上设置了权限限制，让这个目录下面的文件只能通过这个 php 文件下载。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  deny all;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location /index.php {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;allow all;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Archlinux 系统体验报告</title>
       <link>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</link>
       <pubDate>Mon, 13 Jan 2020 22:16:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/01/13/arch-%E7%B3%BB%E7%BB%9F%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/</guid>
-      <description>-` johnpoint@archlinux .o+` ------------------- `ooo/ OS: Arch Linux x86_64 `+oooo: Host: ×××××××××××× `+oooooo: Kernel: 5.4.8-arch1-1 -+oooooo+: Uptime: 18 hours, 43 mins `/:-:++oooo+: Packages: 1389 (pacman) `/++++/+++++++: Shell: zsh 5.7.1 `/++++++++++++++: Resolution: 1920x1080, 1920x1080 `/+++ooooooooooooo/` DE: Plasma ./ooosssso++osssssso+` WM: KWin .oossssso-````/ossssss+` Theme: Breeze [GTK2/3] -osssssso. :ssssssso. Icons: breeze [GTK2/3] :osssssss/ osssso+++. Terminal: konsole /ossssssss/ +ssssooo/- Terminal Font: Cascadia Code 11 `/ossssso+/:- -:/+osssso+- CPU: Intel i5-8250U (8) @ 3.400GHz `+sso+:-` `.-/+oso: GPU: Intel UHD Graphics 620 `++:.</description>
+      <description></description>
     </item>
     <item>
       <title>Android 10 再体验</title>

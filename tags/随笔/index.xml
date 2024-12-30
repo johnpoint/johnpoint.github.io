@@ -13,20 +13,37 @@
       <link>https://blog.lvcshu.com/2023/07/13/%E6%88%91%E4%BB%AC%E8%A6%81%E5%AF%B9-newsletter-%E8%AF%B4%E4%B8%8D%E5%90%97/</link>
       <pubDate>Thu, 13 Jul 2023 14:04:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2023/07/13/%E6%88%91%E4%BB%AC%E8%A6%81%E5%AF%B9-newsletter-%E8%AF%B4%E4%B8%8D%E5%90%97/</guid>
-      <description>刚看了 diygod 发布的这篇文章 对 Newsletter 说不，对其中的一部分观点不是很认同，但是没有钱包的我没有办法去进行留言评论，索性就借此机会水一篇博客吧
-这些问题让我觉得 Newsletter 就像一个没有能力但却拼命想证明自己的暴君，无法很好达到发布者期望的效果，又过分侵犯了用户的选择和效率。
-没有一种技术是想要证明自己的，想要证明自己的永远是在技术后面的人。
-相比之下，RSS 更加简洁高效。订阅源可以集中管理，分类、收藏、订阅和取消订阅的过程也非常简单。而 Newsletter 则会将各种各样的邮件混合在一起，非常分散且难以管理。你很难知道自己到底订阅了哪些内容，它们什么时候会突然出现。而且，内容格式也是各种各样的，查看和阅读起来非常混乱，所以你也不能将一篇文章进行收藏，更不用说方便的第三方集成了。
-Newsletter 很难对内容进行有效分类和过滤，又与所有正常邮件混合在一起，需要花费精力手动整理。这很容易导致信息过载和垃圾邮件的问题。
-而 RSS 可以很方便地进行分类和过滤，对于不重要的内容，你也可以一键全部标记为已读瞬间解脱，完全没有压力。
-在我使用过的大部分邮件客户端或者说网页端的邮件管理页面来说都有自动归类以及一键已读的功能。
-对于 RSS 的更新虽然不算实时，但一般以小时计，类似 RSSHub 等自建服务，甚至可以做到每分钟更新。相比之下，Newsletter 的更新周期，以天甚至周月计，明显滞后了许多。
-明显的概念混淆，在上面的一段话中 RSS的更新==RSS主动拉取新内容的时间 但是 newsletter更新时间==newsletter发送者更新的时间 这两者并不等同，而且就算RSS每隔五分钟去拉取一次更新，但是RSS提供者不更新的情况就算你拉得再快也没有用，反观 newsletter 在一般情况下一有新文章更新则会立即推送到读者手中，这不是更新更加及时吗？
-RSS 的开放性体现在它不需要用户提供个人信息，从而确保了更好的隐私性和安全性。然而，Newsletter 至少需要提供一个邮箱地址，这增加了数据泄露或滥用的风险。更有甚者，电子邮件可能包含恶意链接或附件。
-电子邮件可能包含恶意链接或者附件，那 RSS 返回的数据就不会有任何风险了吗？
-总结 总的来说，其实 RSS 和 Newsletter 更像是在同一条内容分发赛道上面的不同方向的技术解决方案，RSS 更倾向于面对公众群体的公告板式的内容分发，Newsletter 更倾向于向特定群体提供及时的内容推送服务，两种技术解决方案各有优劣，RSS 代表的是 pull，Newsletter 代表的是 push，一概而论的进行讨论真的很奇怪。
-我在这里提出一些 我没有数据支持的观点
-Newsletter 的打开率要比 RSS 要高 Newsletter 一般情况下来说平均质量要高 Newsletter 在付费领域比 RSS 更有优势 </description>
+      <description>&lt;p&gt;刚看了 diygod 发布的这篇文章 &lt;a href=&#34;https://diygod.me/say-no-to-newsletter&#34;&gt;对 Newsletter 说不&lt;/a&gt;，对其中的一部分观点不是很认同，但是没有钱包的我没有办法去进行留言评论，&lt;del&gt;索性就借此机会水一篇博客吧&lt;/del&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这些问题让我觉得 Newsletter 就像一个没有能力但却拼命想证明自己的暴君，无法很好达到发布者期望的效果，又过分侵犯了用户的选择和效率。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;没有一种技术是想要证明自己的，想要证明自己的永远是在技术后面的人。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;相比之下，RSS 更加简洁高效。订阅源可以集中管理，分类、收藏、订阅和取消订阅的过程也非常简单。而 Newsletter 则会将各种各样的邮件混合在一起，非常分散且难以管理。你很难知道自己到底订阅了哪些内容，它们什么时候会突然出现。而且，内容格式也是各种各样的，查看和阅读起来非常混乱，所以你也不能将一篇文章进行收藏，更不用说方便的第三方集成了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Newsletter 很难对内容进行有效分类和过滤，又与所有正常邮件混合在一起，需要花费精力手动整理。这很容易导致信息过载和垃圾邮件的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;而 RSS 可以很方便地进行分类和过滤，对于不重要的内容，你也可以一键全部标记为已读瞬间解脱，完全没有压力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在我使用过的大部分邮件客户端或者说网页端的邮件管理页面来说都有自动归类以及一键已读的功能。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于 RSS 的更新虽然不算实时，但一般以小时计，类似 RSSHub 等自建服务，甚至可以做到每分钟更新。相比之下，Newsletter 的更新周期，以天甚至周月计，明显滞后了许多。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;明显的概念混淆，在上面的一段话中 &lt;code&gt;RSS的更新==RSS主动拉取新内容的时间&lt;/code&gt; 但是 &lt;code&gt;newsletter更新时间==newsletter发送者更新的时间&lt;/code&gt; 这两者并不等同，而且就算RSS每隔五分钟去拉取一次更新，但是RSS提供者不更新的情况就算你拉得再快也没有用，反观 newsletter 在一般情况下一有新文章更新则会立即推送到读者手中，这不是更新更加及时吗？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;RSS 的开放性体现在它不需要用户提供个人信息，从而确保了更好的隐私性和安全性。然而，Newsletter 至少需要提供一个邮箱地址，这增加了数据泄露或滥用的风险。更有甚者，电子邮件可能包含恶意链接或附件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;电子邮件可能包含恶意链接或者附件，那 RSS 返回的数据就不会有任何风险了吗？&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;总的来说，其实 RSS 和 Newsletter 更像是在同一条内容分发赛道上面的不同方向的技术解决方案，RSS 更倾向于面对公众群体的公告板式的内容分发，Newsletter 更倾向于向特定群体提供及时的内容推送服务，两种技术解决方案各有优劣，RSS 代表的是 pull，Newsletter 代表的是 push，一概而论的进行讨论真的很奇怪。&lt;/p&gt;
+&lt;p&gt;我在这里提出一些 &lt;strong&gt;我没有数据支持的观点&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Newsletter 的打开率要比 RSS 要高&lt;/li&gt;
+&lt;li&gt;Newsletter 一般情况下来说平均质量要高&lt;/li&gt;
+&lt;li&gt;Newsletter 在付费领域比 RSS 更有优势&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

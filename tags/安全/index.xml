@@ -13,11 +13,33 @@
       <link>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</link>
       <pubDate>Sun, 13 Sep 2020 13:10:21 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/09/13/vps-%E7%99%BB%E5%BD%95%E6%8E%A8%E9%80%81/</guid>
-      <description>国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能
-文件名 00-ssh-login-alarm-telegram.sh (其实也可以自己自定义)，将文件放在 /etc/profile.d 目录下。
-#!/bin/bash #填入 telegram bot 的 token token= #填自己telegram的id id= #vps ip vpsip=$(curl -s ip.sb -4) #登录时间 logintime=$(TZ=UTC-8 date &amp;#39;+%Y-%m-%d %H:%M:%S&amp;#39;) #远程登录的ip loginip=$(who -u am i 2&amp;gt;/dev/null| awk &amp;#39;{print $NF}&amp;#39;|sed -e &amp;#39;s/[()]//g&amp;#39;) #ip归属asn组织名称 loginfrom=$(curl -s https://api.ip.sb/geoip/${loginip} | jq .asn_organization) curl -s &amp;#34;https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}&amp;#34; --data-binary &amp;#34;&amp;amp;text=NewLogin:%0AVPS: ${vpsip}%0ATime: ${logintime}%0ALogin from:%0A${loginip}%0A${loginfrom}&amp;#34; &amp;gt; /dev/null 因为用到了 jq 作为解析 json 的工具，所以需要在包管理器中自行安装。
-使用效果：
-NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</description>
+      <description>&lt;p&gt;国内的云服务器大多数都自带了 ssh 登录提示功能，这个功能我觉得不错，但是在很多并没有深度定制系统镜像的云服务器服务商那里就没有远程登录提醒功能了，于是写了一个小脚本来实现远程登录就将登录信息推送至 telegram 的功能&lt;/p&gt;
+&lt;p&gt;文件名 &lt;code&gt;00-ssh-login-alarm-telegram.sh&lt;/code&gt; (其实也可以自己自定义)，将文件放在 &lt;code&gt;/etc/profile.d&lt;/code&gt; 目录下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#填入 telegram bot 的 token&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#填自己telegram的id&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#vps ip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;vpsip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -s ip.sb -4&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#登录时间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;logintime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;TZ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;UTC-8 date &lt;span class=&#34;s1&#34;&gt;&amp;#39;+%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#远程登录的ip&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;loginip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;who -u am i 2&amp;gt;/dev/null&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;sed -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/[()]//g&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ip归属asn组织名称&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;loginfrom&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -s https://api.ip.sb/geoip/&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;loginip&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq .asn_organization&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://api.telegram.org/bot&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/sendMessage?chat_id=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; --data-binary &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;amp;text=NewLogin:%0AVPS: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;vpsip&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;%0ATime: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;logintime&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;%0ALogin from:%0A&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;loginip&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;%0A&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;loginfrom&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为用到了 &lt;code&gt;jq&lt;/code&gt; 作为解析 json 的工具，所以需要在包管理器中自行安装。&lt;/p&gt;
+&lt;p&gt;使用效果：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NewLogin:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;VPS: ***.***.***.***
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Time: 2020-09-13 12:41:24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Login from:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;***.***.***.***
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;asn_organization&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;脚本使用的 api 来自 ip.sb&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>keepass 客户端：keeweb 使用体验</title>
@@ -38,60 +60,100 @@ NewLogin: VPS: ***.***.***.*** Time: 2020-09-13 12:41:24 Login from: ***.</descr
       <link>https://blog.lvcshu.com/2018/08/24/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8%E6%98%AF%E5%A5%BD%E6%96%87%E6%98%8E/</link>
       <pubDate>Fri, 24 Aug 2018 08:26:36 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/08/24/%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8%E6%98%AF%E5%A5%BD%E6%96%87%E6%98%8E/</guid>
-      <description>密码一直以来是人们帐号的一个薄弱点，通过各种各样的途径，想要获取他人密码的人总能获取到另他们满意的信息，而人们喜欢利用自己个人信息的组合作为密码立下了汗马功劳，而一些人对于密码重要性毫不了解从而设下简单密码的人也功不可没，而我，一直以来使用的是一串字符串所生成 md5 来作为我帐号的密码，自认为十分安全，实则不然，因为密码中只含有小写字母和数字，是可以实现暴力破解的。加上一些特殊符号的密码是目前为止相对安全的密码解决方案，但是 复杂的密码太难记了啊 这该咋办，直到某群大佬说出了 密码管理器是好文明（） 我才发现原来早就有人想到解决方案了。
-目前，网络上流行的有四款密码管理器：
-KeePass：免费 开源 兼容性强 LastPass：最大的优势是跨浏览器平台 1Password：跨平台管理 用户认可度高 Enpass：支持平台多 20条密码免费 而其中，我第一时间试用了 LastPass 发现多设备使用需要高级版本授权，而授权居然需要 VISA卡 （我没有啊啊啊啊） ，于是舍弃。后来我看见了开源解决方案 KeePass 在经过一段时间的使用之后，觉得用起来十分舒服，而且支持 Linux 、Windows 和手机系统，而且支持 Webdav ，这在自己已经搭建了网盘的人来说简直就是太爽了，不用担心密码存放在别人手里而不安全，但是安全设施一定要做好。
-KeePass 同样采用了主流的一个主密码打开密码数据库文件的模式，这时，这个主密码就代表了你的所有密码，需要尽可能的兼顾复杂与你的好记，这就是唯一需要做的。至于其他密码，KeePass 提供了随机密码生成器，能自定义生成密码包含 字母、符号、特殊字符等内容，还可以自定义长度，总之就是非常爽就是了。
-在用上 KeePass 的那一晚，我就把每一个可以想起来的帐号都改成了自动生成的强密码，感觉自己的帐号安全提升了不止一点半点，美滋滋～
-赶快去尝试下咯～</description>
+      <description>&lt;p&gt;密码一直以来是人们帐号的一个薄弱点，通过各种各样的途径，想要获取他人密码的人总能获取到另他们满意的信息，&lt;!-- raw HTML omitted --&gt;而人们喜欢利用自己个人信息的组合作为密码立下了汗马功劳，而一些人对于密码重要性毫不了解从而设下简单密码的人也功不可没，而我，一直以来使用的是一串字符串所生成 md5 来作为我帐号的密码，自认为十分安全，实则不然，因为密码中只含有小写字母和数字，是可以实现暴力破解的。加上一些特殊符号的密码是目前为止相对安全的密码解决方案，但是 &lt;strong&gt;复杂的密码太难记了啊&lt;/strong&gt; 这该咋办，直到某群大佬说出了 &lt;strong&gt;密码管理器是好文明（）&lt;/strong&gt; 我才发现原来早就有人想到解决方案了。&lt;/p&gt;
+&lt;p&gt;目前，网络上流行的有四款密码管理器：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KeePass：免费 开源 兼容性强&lt;/li&gt;
+&lt;li&gt;LastPass：最大的优势是跨浏览器平台&lt;/li&gt;
+&lt;li&gt;1Password：跨平台管理 用户认可度高&lt;/li&gt;
+&lt;li&gt;Enpass：支持平台多 20条密码免费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而其中，我第一时间试用了 LastPass 发现多设备使用需要高级版本授权，而授权居然需要 VISA卡 （我没有啊啊啊啊） ，于是舍弃。后来我看见了开源解决方案 KeePass 在经过一段时间的使用之后，觉得用起来十分舒服，而且支持 Linux 、Windows 和手机系统，而且支持 Webdav ，这在自己已经搭建了网盘的人来说简直就是太爽了，不用担心密码存放在别人手里而不安全，但是安全设施一定要做好。&lt;/p&gt;
+&lt;p&gt;KeePass 同样采用了主流的一个主密码打开密码数据库文件的模式，这时，这个主密码就代表了你的所有密码，需要尽可能的兼顾复杂与你的好记，这就是唯一需要做的。至于其他密码，KeePass 提供了随机密码生成器，能自定义生成密码包含 字母、符号、特殊字符等内容，还可以自定义长度，总之就是非常爽就是了。&lt;/p&gt;
+&lt;p&gt;在用上 KeePass 的那一晚，我就把每一个可以想起来的帐号都改成了自动生成的强密码，感觉自己的帐号安全提升了不止一点半点，美滋滋～&lt;/p&gt;
+&lt;p&gt;赶快去尝试下咯～&lt;/p&gt;</description>
     </item>
     <item>
       <title>还不给你的网站加上https？</title>
       <link>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</link>
       <pubDate>Sun, 11 Feb 2018 05:47:16 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/02/11/%E8%BF%98%E4%B8%8D%E7%BB%99%E4%BD%A0%E7%9A%84%E7%BD%91%E7%AB%99%E5%8A%A0%E4%B8%8Ahttps/</guid>
-      <description>什么是https？ 现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~ 那么，什么是https呢？
-HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。 来自百度百科
-简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改
-一个小故事 但是，https并不是绝对安全的，我在知乎上看到了这样一个故事：(斜体为笔者注释)
-从前山上有座庙，庙里有个和尚……，别胡闹了，老和尚来了。
-小和尚问老和尚：ssl为什么会让http安全？
-老和尚答道：譬如你我都有一个同样的密码，我发信给你时用这个密码加密，你收到我发的信，用这个密码解密，就能知道我信的内容，其他的闲杂人等，就算偷偷拿到了信，由于不知道这个密码，也只能望信兴叹，这个密码就叫做对称密码。ssl使用对称密码对http内容进行加解密，所以让http安全了，常用的加解密算法主要有3DES和AES等。
-小和尚摸摸脑袋问老和尚：师傅，如果我们两人选择“和尚”作为密码，再创造一个和尚算法，我们俩之间的通信不就高枕无忧了？
-老和尚当头给了小和尚一戒尺：那我要给山下的小花写情书，还得用“和尚”这个密码不成？想了想又给了小和尚一戒尺：虽然我们是和尚，不是码农，也不能自己造轮子，当初一堆牛人码农造出了Wifi的安全算法WEP，后来发现是一绣花枕头，在安全界传为笑谈；况且小花只知道3DES和AES，哪知道和尚算法？
-小和尚问到：那师傅何解？
-老和尚：我和小花只要知道每封信的密码，就可以读到对方加密的信件，关键是我们互相之间怎么知道这个对称密码。你说，我要是将密码写封信给她，信被别人偷了，那大家不都知道我们的密码了，也就能够读懂我们情书了。不过还是有解的，这里我用到了江湖中秘传的非对称密码。我现在手头有两个密码，一个叫“公钥”，一个叫“私钥”，公钥发布到了江湖上，好多人都知道，私钥嘛，江湖上只有我一个人知道；这两个密钥有数学相关性，就是说用公钥加密的信件，可以用私钥解开，但是用公钥却解不开。公钥小花是知道的，她每次给我写信，都要我的公钥加密她的对称密码，单独写一张密码纸，然后用她的对称密码加密她的信件，这样我用我的私钥可以解出这个对称密码，再用这个对称密码来解密她的信件。
-这种加密方法即自己生成自签证书，这种做法是不完全安全的，具体表现为Chrome地址栏划掉的红色https
-老和尚顿了顿：可惜她用的对称密码老是“和尚为什么写情书”这一类，所以我每次解开密码纸时总是怅然若失，其实我钟意的对称密码是诸如“风花”“雪月”什么的，最头痛的是，我还不得不用“和尚为什么写情书”这个密码来加密我给小花回的情书，人世间最痛苦的事莫过于如此。可我哪里知道，其实有人比我更痛苦。山下的张屠夫，暗恋小花很多年，看着我们鸿雁传书，心中很不是滋味，主动毛遂自荐代替香客给我们送信。在他第一次给小花送信时，就给了小花他自己的公钥，谎称是我公钥刚刚更新了，小花信以为真，之后的信件对称密码都用张屠夫的这个公钥加密了，张屠夫拿到回信后，用他自己的私钥解开了小花的对称密码，然后用这个对称密码，不仅能够看到了小花信件的所有内容，还能使用这个密码伪造小花给我写信，同时还能用他的私钥加密给小花的信件。渐渐我发现信件变味了，尽管心生疑惑，但是没有确切的证据，一次我写信问小花第一次使用的对称密码，回信中“和尚为什么写情书”赫然在列，于是我的疑惑稍稍减轻。直到有一次去拜会嵩山少林寺老方丈才顿悟，原来由于我的公钥没有火印，任何人都可以伪造一份公钥宣称是我的，这样这个人即能读到别人写给我的信，也能伪造别人给我写信，同样也能读到我的回信，也能伪造我给别人的回信，这种邪门武功江湖上称之“Man-in-the-middle attack”（即中间人攻击）。唯一的破解就是使用嵩山少林寺的火印（即由CA机构颁发的证书），这个火印可有讲究了，需要将我的公钥及个人在江湖地位提交给18罗汉委员会，他们会根据我的这些信息使用委员会私钥进行数字签名，签名的信息凸现在火印上，有火印的公钥真实性在江湖上无人质疑，要知道18罗汉可是无人敢得罪的。
-小和尚问：那然后呢？
-老和尚：从嵩山少林寺回山上寺庙时，我将有火印的公钥亲自给小花送去，可是之后再也没有收到小花的来信。过了一年才知道，其实小花还是给我写过信的，当时信确实是用有火印的公钥加密，张屠夫拿到信后，由于不知道我的私钥，解不开小花的密码信，所以一怒之下将信件全部烧毁了。也由于张屠夫无法知道小花的对称密码而无法回信，小花发出几封信后石沉大海，也心生疑惑，到处打听我的近况。这下张屠夫急了，他使用我发布的公钥，仿照小花的语气，给我发来一封信。拿到信时我就觉得奇怪，信纸上怎么有一股猪油的味道，结尾竟然还关切的询问我的私钥。情知有诈，我思量无论如何要找到办法让我知道来的信是否真是小花所写。后来竟然让我想到了办法….
-老和尚摸着光头说：这头发可不是白掉的，我托香客给小花带话，我一切安好，希望她也拥有属于自己的一段幸福，不对，是一对非对称密钥。小花委托小镇美女协会给小花公钥打上火印后，托香客给我送来，这样小花在每次给我写信时，都会在密码纸上贴上一朵小牡丹，牡丹上写上用她自己的私钥加密过的给我的留言，这样我收到自称是小花的信后，我会先抽出密码纸，取下小牡丹，使用小花的公钥解密这段留言，如果解不出来，我会直接将整封信连同密码纸一起扔掉，因为这封信一定不是小花写的，如果能够解出来，这封信才能确信来之于小花，我才仔细的解码阅读。
-小和尚：难怪听说张屠夫是被活活气死的。您这情书整的，我头都大了，我长大后，有想法直接扯着嗓子对山下喊，也省的这么些麻烦。不过我倒是明白了楼上的话，ssl 握手阶段，就是要解决什么看火印，读牡丹，解密码纸，确实够麻烦的，所以性能瓶颈在这里，一旦双方都知道了对称密码，之后就是行云流水的解码读信阶段了，相对轻松很多。
-编辑于 2014-04-28
-著作权归作者所有
-来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答
-但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：
-违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任
-2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。</description>
+      <description>&lt;ul&gt;
+&lt;li&gt;什么是https？
+现在，请看到你的浏览器的网址栏，你会看到会有一个绿色的锁或者类似的安全标志，这说明我的博客加上了https保障数据传送的安全性~&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;那么，什么是https呢？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。
+来自百度百科&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单的来说https就是保障了这个网站的呈现给你的内容没有被擅改&lt;/p&gt;
+&lt;h1 id=&#34;一个小故事&#34;&gt;一个小故事&lt;/h1&gt;
+&lt;p&gt;但是，https并不是绝对安全的，我在知乎上看到了这样一个故事：(斜体为笔者注释)&lt;/p&gt;
+&lt;p&gt;从前山上有座庙，庙里有个和尚……，别胡闹了，老和尚来了。&lt;/p&gt;
+&lt;p&gt;小和尚问老和尚：ssl为什么会让http安全？&lt;/p&gt;
+&lt;p&gt;老和尚答道：譬如你我都有一个同样的密码，我发信给你时用这个密码加密，你收到我发的信，用这个密码解密，就能知道我信的内容，其他的闲杂人等，就算偷偷拿到了信，由于不知道这个密码，也只能望信兴叹，这个密码就叫做对称密码。ssl使用对称密码对http内容进行加解密，所以让http安全了，常用的加解密算法主要有3DES和AES等。&lt;/p&gt;
+&lt;p&gt;小和尚摸摸脑袋问老和尚：师傅，如果我们两人选择“和尚”作为密码，再创造一个和尚算法，我们俩之间的通信不就高枕无忧了？&lt;/p&gt;
+&lt;p&gt;老和尚当头给了小和尚一戒尺：那我要给山下的小花写情书，还得用“和尚”这个密码不成？想了想又给了小和尚一戒尺：虽然我们是和尚，不是码农，也不能自己造轮子，当初一堆牛人码农造出了Wifi的安全算法WEP，后来发现是一绣花枕头，在安全界传为笑谈；况且小花只知道3DES和AES，哪知道和尚算法？&lt;/p&gt;
+&lt;p&gt;小和尚问到：那师傅何解？&lt;/p&gt;
+&lt;p&gt;老和尚：我和小花只要知道每封信的密码，就可以读到对方加密的信件，关键是我们互相之间怎么知道这个对称密码。你说，我要是将密码写封信给她，信被别人偷了，那大家不都知道我们的密码了，也就能够读懂我们情书了。不过还是有解的，这里我用到了江湖中秘传的非对称密码。我现在手头有两个密码，一个叫“公钥”，一个叫“私钥”，公钥发布到了江湖上，好多人都知道，私钥嘛，江湖上只有我一个人知道；这两个密钥有数学相关性，就是说用公钥加密的信件，可以用私钥解开，但是用公钥却解不开。公钥小花是知道的，她每次给我写信，都要我的公钥加密她的对称密码，单独写一张密码纸，然后用她的对称密码加密她的信件，这样我用我的私钥可以解出这个对称密码，再用这个对称密码来解密她的信件。&lt;/p&gt;
+&lt;p&gt;这种加密方法即自己生成自签证书，这种做法是不完全安全的，具体表现为Chrome地址栏划掉的红色https&lt;/p&gt;
+&lt;p&gt;老和尚顿了顿：可惜她用的对称密码老是“和尚为什么写情书”这一类，所以我每次解开密码纸时总是怅然若失，其实我钟意的对称密码是诸如“风花”“雪月”什么的，最头痛的是，我还不得不用“和尚为什么写情书”这个密码来加密我给小花回的情书，人世间最痛苦的事莫过于如此。可我哪里知道，其实有人比我更痛苦。山下的张屠夫，暗恋小花很多年，看着我们鸿雁传书，心中很不是滋味，主动毛遂自荐代替香客给我们送信。在他第一次给小花送信时，就给了小花他自己的公钥，谎称是我公钥刚刚更新了，小花信以为真，之后的信件对称密码都用张屠夫的这个公钥加密了，张屠夫拿到回信后，用他自己的私钥解开了小花的对称密码，然后用这个对称密码，不仅能够看到了小花信件的所有内容，还能使用这个密码伪造小花给我写信，同时还能用他的私钥加密给小花的信件。渐渐我发现信件变味了，尽管心生疑惑，但是没有确切的证据，一次我写信问小花第一次使用的对称密码，回信中“和尚为什么写情书”赫然在列，于是我的疑惑稍稍减轻。直到有一次去拜会嵩山少林寺老方丈才顿悟，原来由于我的公钥没有火印，任何人都可以伪造一份公钥宣称是我的，这样这个人即能读到别人写给我的信，也能伪造别人给我写信，同样也能读到我的回信，也能伪造我给别人的回信，这种邪门武功江湖上称之“Man-in-the-middle attack”（即中间人攻击）。唯一的破解就是使用嵩山少林寺的火印（即由CA机构颁发的证书），这个火印可有讲究了，需要将我的公钥及个人在江湖地位提交给18罗汉委员会，他们会根据我的这些信息使用委员会私钥进行数字签名，签名的信息凸现在火印上，有火印的公钥真实性在江湖上无人质疑，要知道18罗汉可是无人敢得罪的。&lt;/p&gt;
+&lt;p&gt;小和尚问：那然后呢？&lt;/p&gt;
+&lt;p&gt;老和尚：从嵩山少林寺回山上寺庙时，我将有火印的公钥亲自给小花送去，可是之后再也没有收到小花的来信。过了一年才知道，其实小花还是给我写过信的，当时信确实是用有火印的公钥加密，张屠夫拿到信后，由于不知道我的私钥，解不开小花的密码信，所以一怒之下将信件全部烧毁了。也由于张屠夫无法知道小花的对称密码而无法回信，小花发出几封信后石沉大海，也心生疑惑，到处打听我的近况。这下张屠夫急了，他使用我发布的公钥，仿照小花的语气，给我发来一封信。拿到信时我就觉得奇怪，信纸上怎么有一股猪油的味道，结尾竟然还关切的询问我的私钥。情知有诈，我思量无论如何要找到办法让我知道来的信是否真是小花所写。后来竟然让我想到了办法….&lt;/p&gt;
+&lt;p&gt;老和尚摸着光头说：这头发可不是白掉的，我托香客给小花带话，我一切安好，希望她也拥有属于自己的一段幸福，不对，是一对非对称密钥。小花委托小镇美女协会给小花公钥打上火印后，托香客给我送来，这样小花在每次给我写信时，都会在密码纸上贴上一朵小牡丹，牡丹上写上用她自己的私钥加密过的给我的留言，这样我收到自称是小花的信后，我会先抽出密码纸，取下小牡丹，使用小花的公钥解密这段留言，如果解不出来，我会直接将整封信连同密码纸一起扔掉，因为这封信一定不是小花写的，如果能够解出来，这封信才能确信来之于小花，我才仔细的解码阅读。&lt;/p&gt;
+&lt;p&gt;小和尚：难怪听说张屠夫是被活活气死的。您这情书整的，我头都大了，我长大后，有想法直接扯着嗓子对山下喊，也省的这么些麻烦。不过我倒是明白了楼上的话，ssl 握手阶段，就是要解决什么看火印，读牡丹，解密码纸，确实够麻烦的，所以性能瓶颈在这里，一旦双方都知道了对称密码，之后就是行云流水的解码读信阶段了，相对轻松很多。&lt;/p&gt;
+&lt;p&gt;编辑于 2014-04-28&lt;/p&gt;
+&lt;p&gt;著作权归作者所有&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;来源:【HTTPS 要比 HTTP 多用多少服务器资源？】牟旭东的回答&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是 并不是所有的CA机构所颁发的证书都是值得信任的，例如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;违反多项凭证机构要求，Chrome 全面取消对中国沃通的 SSL 证书信任&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2016 年 9 月 Mozilla 揭发中国凭证机构 WoSign（沃通）伪造证书发行日期、隐瞒收购同行等问题，宣布暂停信任该机构发出的证书，苹果、Google 也跟随。近日 Google 宣布，旗下的 Chrome 浏览器在 9 月发布新版本后，将对 WoSign 及其收购的 StartCom 签发所有证书，不论新旧全部取消信任，建议正在使用的网站考虑更换这些数位证书。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     <item>
       <title>配置ufw防火墙，守护你的Ubuntu</title>
       <link>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</link>
       <pubDate>Mon, 15 Jan 2018 05:21:10 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
-      <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
-直到我发现了ufw这个神器
-UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
-废话不多说，上教程
-环境 Ubuntu 16.04
-安装 apt install ufw 配置 首先先打开ssh端口
-ufw allow ssh 如果你的ssh端口不是默认的22，就
-ufw allow 你的ssh端口 打开53端口，使dns功能不受影响
-ufw allow 53/tcp ufw allow 53/udp 可选：打开80，443端口
-ufw allow http/tcp ufw allow https/tcp 然后
-ufw default deny 阻断除上述规则外的外部连接（本机外发流量无影响）
-ufw enable 启动防火墙，done！
-操作指令 启动防火墙 ufw enable 关闭防火墙 ufw disable 更新配置 ufw reload 查看防火墙状态 ufw status </description>
+      <description>&lt;p&gt;很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~&lt;/p&gt;
+&lt;p&gt;直到我发现了ufw这个神器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;废话不多说，上教程&lt;/p&gt;
+&lt;h1 id=&#34;环境&#34;&gt;环境&lt;/h1&gt;
+&lt;p&gt;Ubuntu 16.04&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install ufw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;配置&#34;&gt;配置&lt;/h1&gt;
+&lt;p&gt;首先先打开ssh端口&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果你的ssh端口不是默认的22，就&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 你的ssh端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开53端口，使dns功能不受影响&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 53/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 53/udp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可选：打开80，443端口&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow http/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow https/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw default deny
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;阻断除上述规则外的外部连接（本机外发流量无影响）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;启动防火墙，done！&lt;/p&gt;
+&lt;h1 id=&#34;操作指令&#34;&gt;操作指令&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;启动防火墙&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;关闭防火墙&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;更新配置&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reload&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;查看防火墙状态&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

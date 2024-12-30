@@ -1,14 +1,239 @@
 <!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Go 实现瑞士轮排列算法 | johnpoint's blog</title>
 <meta name=keywords content="算法,Golang"><meta name=description content="工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
-选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
-type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) < 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i]."><meta name=author content="johnpoint"><link rel=canonical href=https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/><link crossorigin=anonymous href=/assets/css/stylesheet.9a07b9c81cbc95fa741d61ca6489dcdb8491591c19dca31d14a124a4ba95ec80.css integrity="sha256-mge5yBy8lfp0HWHKZInc24SRWRwZ3KMdFKEkpLqV7IA=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=32x32 href=https://blog.lvcshu.com/favicon.ico><link rel=apple-touch-icon href=https://blog.lvcshu.com/favicon.ico><link rel=mask-icon href=https://blog.lvcshu.com/favicon.ico><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:title" content="Go 实现瑞士轮排列算法"><meta property="og:description" content="工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
+
+选择积分相近的对手进行比赛
+不会重复比赛
+
+写出来的算法如下:
+type player struct {
+	Id       int64
+	Score    int64
+	Opponent map[int64]struct{} // 曾经遇到过的对手
+}
+
+// pickTablePlayer 计算瑞士轮比赛排列
+func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) {
+	if len(players) < 2 {
+		return players, true
+	}
+	whitePlayer := players[0]
+	opponentMap, _ := playerOpponentMap[whitePlayer]
+	for i := range players {
+		if i != 0 {
+			// 判断是否已经比过
+			if _, has := opponentMap[players[i]]; !has {
+				// 选中
+				res := make([]int64, 2)
+				res[0] = whitePlayer
+				res[1] = players[i]
+
+				// 组装剩下排序的数据
+				var nextRound []int64
+				nextRound = append(nextRound, players[1:i]...)
+				nextRound = append(nextRound, players[i+1:]...)
+				pick, ok := pickTablePlayer(nextRound, playerOpponentMap) // 进行下一轮排序
+				if ok {
+					return append(res, pick...), true // 成功，结果上浮
+				}
+			}
+		}
+	}
+	return nil, false // 失败，上层重算
+}
+
+func CreateSwissRound(players []player) (playerBattleList [][]int64, emptyPlayer int64, ok bool) {
+	ok = true
+
+	// 判断轮空选手
+	total := len(players)
+	if total%2 != 0 {
+		emptyPlayer = players[total-1].Id
+		players = players[:total]
+	}
+
+	// 转换数据结构
+	var playerIds []int64
+	var playerOpponentMap = make(map[int64]map[int64]struct{})
+	for _, v := range players {
+		playerIds = append(playerIds, v.Id)
+		if _, has := playerOpponentMap[v.Id]; !has {
+			playerOpponentMap[v.Id] = v.Opponent
+		}
+	}
+
+	// 计算比赛排序
+	playerList, ok := pickTablePlayer(playerIds, playerOpponentMap)
+	if !ok {
+		return playerBattleList, emptyPlayer, ok
+	}
+
+	// 转换为二维数组
+	for i := 0; i < len(playerList)/2; i++ {
+		playerBattleList = append(playerBattleList, []int64{
+			playerList[i*2],
+			playerList[i*2+1],
+		})
+	}
+	return
+}
+"><meta name=author content="johnpoint"><link rel=canonical href=https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/><link crossorigin=anonymous href=/assets/css/stylesheet.9a07b9c81cbc95fa741d61ca6489dcdb8491591c19dca31d14a124a4ba95ec80.css integrity="sha256-mge5yBy8lfp0HWHKZInc24SRWRwZ3KMdFKEkpLqV7IA=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://blog.lvcshu.com/favicon.ico><link rel=icon type=image/png sizes=32x32 href=https://blog.lvcshu.com/favicon.ico><link rel=apple-touch-icon href=https://blog.lvcshu.com/favicon.ico><link rel=mask-icon href=https://blog.lvcshu.com/favicon.ico><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:title" content="Go 实现瑞士轮排列算法"><meta property="og:description" content="工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
-选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
-type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) < 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i]."><meta property="og:type" content="article"><meta property="og:url" content="https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-07-29T10:00:00+08:00"><meta property="article:modified_time" content="2022-07-29T10:00:00+08:00"><meta property="og:site_name" content="johnpoint's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Go 实现瑞士轮排列算法"><meta name=twitter:description content="工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
+
+选择积分相近的对手进行比赛
+不会重复比赛
+
+写出来的算法如下:
+type player struct {
+	Id       int64
+	Score    int64
+	Opponent map[int64]struct{} // 曾经遇到过的对手
+}
+
+// pickTablePlayer 计算瑞士轮比赛排列
+func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) {
+	if len(players) < 2 {
+		return players, true
+	}
+	whitePlayer := players[0]
+	opponentMap, _ := playerOpponentMap[whitePlayer]
+	for i := range players {
+		if i != 0 {
+			// 判断是否已经比过
+			if _, has := opponentMap[players[i]]; !has {
+				// 选中
+				res := make([]int64, 2)
+				res[0] = whitePlayer
+				res[1] = players[i]
+
+				// 组装剩下排序的数据
+				var nextRound []int64
+				nextRound = append(nextRound, players[1:i]...)
+				nextRound = append(nextRound, players[i+1:]...)
+				pick, ok := pickTablePlayer(nextRound, playerOpponentMap) // 进行下一轮排序
+				if ok {
+					return append(res, pick...), true // 成功，结果上浮
+				}
+			}
+		}
+	}
+	return nil, false // 失败，上层重算
+}
+
+func CreateSwissRound(players []player) (playerBattleList [][]int64, emptyPlayer int64, ok bool) {
+	ok = true
+
+	// 判断轮空选手
+	total := len(players)
+	if total%2 != 0 {
+		emptyPlayer = players[total-1].Id
+		players = players[:total]
+	}
+
+	// 转换数据结构
+	var playerIds []int64
+	var playerOpponentMap = make(map[int64]map[int64]struct{})
+	for _, v := range players {
+		playerIds = append(playerIds, v.Id)
+		if _, has := playerOpponentMap[v.Id]; !has {
+			playerOpponentMap[v.Id] = v.Opponent
+		}
+	}
+
+	// 计算比赛排序
+	playerList, ok := pickTablePlayer(playerIds, playerOpponentMap)
+	if !ok {
+		return playerBattleList, emptyPlayer, ok
+	}
+
+	// 转换为二维数组
+	for i := 0; i < len(playerList)/2; i++ {
+		playerBattleList = append(playerBattleList, []int64{
+			playerList[i*2],
+			playerList[i*2+1],
+		})
+	}
+	return
+}
+"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-07-29T10:00:00+08:00"><meta property="article:modified_time" content="2022-07-29T10:00:00+08:00"><meta property="og:site_name" content="johnpoint's blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Go 实现瑞士轮排列算法"><meta name=twitter:description content="工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法
 瑞士轮有两个规则
-选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:
-type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) < 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i]."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.lvcshu.com/posts/"},{"@type":"ListItem","position":2,"name":"Go 实现瑞士轮排列算法","item":"https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Go 实现瑞士轮排列算法","name":"Go 实现瑞士轮排列算法","description":"工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法\n瑞士轮有两个规则\n选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:\ntype player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) \u0026lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i].","keywords":["算法","Golang"],"articleBody":"工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法\n瑞士轮有两个规则\n选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:\ntype player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) \u003c 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i]...) nextRound = append(nextRound, players[i+1:]...) pick, ok := pickTablePlayer(nextRound, playerOpponentMap) // 进行下一轮排序 if ok { return append(res, pick...), true // 成功，结果上浮 } } } } return nil, false // 失败，上层重算 } func CreateSwissRound(players []player) (playerBattleList [][]int64, emptyPlayer int64, ok bool) { ok = true // 判断轮空选手 total := len(players) if total%2 != 0 { emptyPlayer = players[total-1].Id players = players[:total] } // 转换数据结构 var playerIds []int64 var playerOpponentMap = make(map[int64]map[int64]struct{}) for _, v := range players { playerIds = append(playerIds, v.Id) if _, has := playerOpponentMap[v.Id]; !has { playerOpponentMap[v.Id] = v.Opponent } } // 计算比赛排序 playerList, ok := pickTablePlayer(playerIds, playerOpponentMap) if !ok { return playerBattleList, emptyPlayer, ok } // 转换为二维数组 for i := 0; i \u003c len(playerList)/2; i++ { playerBattleList = append(playerBattleList, []int64{ playerList[i*2], playerList[i*2+1], }) } return } ","wordCount":"214","inLanguage":"en","datePublished":"2022-07-29T10:00:00+08:00","dateModified":"2022-07-29T10:00:00+08:00","author":{"@type":"Person","name":"johnpoint"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/"},"publisher":{"@type":"Organization","name":"johnpoint's blog","logo":{"@type":"ImageObject","url":"https://blog.lvcshu.com/favicon.ico"}}}</script></head><body class=dark id=top><header class=header><nav class=nav><div class=logo><a href=https://blog.lvcshu.com/ accesskey=h title="johnpoint's blog (Alt + H)">johnpoint's blog</a><div class=logo-switches><ul class=lang-switch><li>|</li></ul></div></div><ul id=menu><li><a href=https://blog.lvcshu.com/posts/ title=归档><span>归档</span></a></li><li><a href=https://blog.lvcshu.com/friends/ title=友链><span>友链</span></a></li><li><a href=https://blog.lvcshu.com/about/ title=关于我><span>关于我</span></a></li><li><a href=https://blog.lvcshu.com/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Go 实现瑞士轮排列算法</h1><div class=post-meta><span title='2022-07-29 10:00:00 +0800 CST'>2022-07-29 10:00:00</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;214 words&nbsp;·&nbsp;johnpoint</div></header><div class=post-content><p>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法</p><p>瑞士轮有两个规则</p><ol><li>选择积分相近的对手进行比赛</li><li>不会重复比赛</li></ol><p>写出来的算法如下:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=kd>type</span> <span class=nx>player</span> <span class=kd>struct</span> <span class=p>{</span>
+
+选择积分相近的对手进行比赛
+不会重复比赛
+
+写出来的算法如下:
+type player struct {
+	Id       int64
+	Score    int64
+	Opponent map[int64]struct{} // 曾经遇到过的对手
+}
+
+// pickTablePlayer 计算瑞士轮比赛排列
+func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) {
+	if len(players) < 2 {
+		return players, true
+	}
+	whitePlayer := players[0]
+	opponentMap, _ := playerOpponentMap[whitePlayer]
+	for i := range players {
+		if i != 0 {
+			// 判断是否已经比过
+			if _, has := opponentMap[players[i]]; !has {
+				// 选中
+				res := make([]int64, 2)
+				res[0] = whitePlayer
+				res[1] = players[i]
+
+				// 组装剩下排序的数据
+				var nextRound []int64
+				nextRound = append(nextRound, players[1:i]...)
+				nextRound = append(nextRound, players[i+1:]...)
+				pick, ok := pickTablePlayer(nextRound, playerOpponentMap) // 进行下一轮排序
+				if ok {
+					return append(res, pick...), true // 成功，结果上浮
+				}
+			}
+		}
+	}
+	return nil, false // 失败，上层重算
+}
+
+func CreateSwissRound(players []player) (playerBattleList [][]int64, emptyPlayer int64, ok bool) {
+	ok = true
+
+	// 判断轮空选手
+	total := len(players)
+	if total%2 != 0 {
+		emptyPlayer = players[total-1].Id
+		players = players[:total]
+	}
+
+	// 转换数据结构
+	var playerIds []int64
+	var playerOpponentMap = make(map[int64]map[int64]struct{})
+	for _, v := range players {
+		playerIds = append(playerIds, v.Id)
+		if _, has := playerOpponentMap[v.Id]; !has {
+			playerOpponentMap[v.Id] = v.Opponent
+		}
+	}
+
+	// 计算比赛排序
+	playerList, ok := pickTablePlayer(playerIds, playerOpponentMap)
+	if !ok {
+		return playerBattleList, emptyPlayer, ok
+	}
+
+	// 转换为二维数组
+	for i := 0; i < len(playerList)/2; i++ {
+		playerBattleList = append(playerBattleList, []int64{
+			playerList[i*2],
+			playerList[i*2+1],
+		})
+	}
+	return
+}
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.lvcshu.com/posts/"},{"@type":"ListItem","position":2,"name":"Go 实现瑞士轮排列算法","item":"https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Go 实现瑞士轮排列算法","name":"Go 实现瑞士轮排列算法","description":"工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法\n瑞士轮有两个规则\n选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:\ntype player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) \u0026lt; 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i]...) nextRound = append(nextRound, players[i+1:]...) pick, ok := pickTablePlayer(nextRound, playerOpponentMap) // 进行下一轮排序 if ok { return append(res, pick...), true // 成功，结果上浮 } } } } return nil, false // 失败，上层重算 } func CreateSwissRound(players []player) (playerBattleList [][]int64, emptyPlayer int64, ok bool) { ok = true // 判断轮空选手 total := len(players) if total%2 != 0 { emptyPlayer = players[total-1].Id players = players[:total] } // 转换数据结构 var playerIds []int64 var playerOpponentMap = make(map[int64]map[int64]struct{}) for _, v := range players { playerIds = append(playerIds, v.Id) if _, has := playerOpponentMap[v.Id]; !has { playerOpponentMap[v.Id] = v.Opponent } } // 计算比赛排序 playerList, ok := pickTablePlayer(playerIds, playerOpponentMap) if !ok { return playerBattleList, emptyPlayer, ok } // 转换为二维数组 for i := 0; i \u0026lt; len(playerList)/2; i++ { playerBattleList = append(playerBattleList, []int64{ playerList[i*2], playerList[i*2+1], }) } return } ","keywords":["算法","Golang"],"articleBody":"工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法\n瑞士轮有两个规则\n选择积分相近的对手进行比赛 不会重复比赛 写出来的算法如下:\ntype player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经遇到过的对手 } // pickTablePlayer 计算瑞士轮比赛排列 func pickTablePlayer(players []int64, playerOpponentMap map[int64]map[int64]struct{}) ([]int64, bool) { if len(players) \u003c 2 { return players, true } whitePlayer := players[0] opponentMap, _ := playerOpponentMap[whitePlayer] for i := range players { if i != 0 { // 判断是否已经比过 if _, has := opponentMap[players[i]]; !has { // 选中 res := make([]int64, 2) res[0] = whitePlayer res[1] = players[i] // 组装剩下排序的数据 var nextRound []int64 nextRound = append(nextRound, players[1:i]...) nextRound = append(nextRound, players[i+1:]...) pick, ok := pickTablePlayer(nextRound, playerOpponentMap) // 进行下一轮排序 if ok { return append(res, pick...), true // 成功，结果上浮 } } } } return nil, false // 失败，上层重算 } func CreateSwissRound(players []player) (playerBattleList [][]int64, emptyPlayer int64, ok bool) { ok = true // 判断轮空选手 total := len(players) if total%2 != 0 { emptyPlayer = players[total-1].Id players = players[:total] } // 转换数据结构 var playerIds []int64 var playerOpponentMap = make(map[int64]map[int64]struct{}) for _, v := range players { playerIds = append(playerIds, v.Id) if _, has := playerOpponentMap[v.Id]; !has { playerOpponentMap[v.Id] = v.Opponent } } // 计算比赛排序 playerList, ok := pickTablePlayer(playerIds, playerOpponentMap) if !ok { return playerBattleList, emptyPlayer, ok } // 转换为二维数组 for i := 0; i \u003c len(playerList)/2; i++ { playerBattleList = append(playerBattleList, []int64{ playerList[i*2], playerList[i*2+1], }) } return } ","wordCount":"214","inLanguage":"en","datePublished":"2022-07-29T10:00:00+08:00","dateModified":"2022-07-29T10:00:00+08:00","author":{"@type":"Person","name":"johnpoint"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.lvcshu.com/2022/07/29/%E7%91%9E%E5%A3%AB%E8%BD%AE/"},"publisher":{"@type":"Organization","name":"johnpoint's blog","logo":{"@type":"ImageObject","url":"https://blog.lvcshu.com/favicon.ico"}}}</script></head><body class=dark id=top><header class=header><nav class=nav><div class=logo><a href=https://blog.lvcshu.com/ accesskey=h title="johnpoint's blog (Alt + H)">johnpoint's blog</a><div class=logo-switches><ul class=lang-switch><li>|</li></ul></div></div><ul id=menu><li><a href=https://blog.lvcshu.com/posts/ title=归档><span>归档</span></a></li><li><a href=https://blog.lvcshu.com/friends/ title=友链><span>友链</span></a></li><li><a href=https://blog.lvcshu.com/about/ title=关于我><span>关于我</span></a></li><li><a href=https://blog.lvcshu.com/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Go 实现瑞士轮排列算法</h1><div class=post-meta><span title='2022-07-29 10:00:00 +0800 CST'>2022-07-29 10:00:00</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;214 words&nbsp;·&nbsp;johnpoint</div></header><div class=post-content><p>工作原因接触到了瑞士轮这种赛制，记录一下瑞士轮比赛对手编排的算法</p><p>瑞士轮有两个规则</p><ol><li>选择积分相近的对手进行比赛</li><li>不会重复比赛</li></ol><p>写出来的算法如下:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=kd>type</span> <span class=nx>player</span> <span class=kd>struct</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>	<span class=nx>Id</span>       <span class=kt>int64</span>
 </span></span><span class=line><span class=cl>	<span class=nx>Score</span>    <span class=kt>int64</span>
 </span></span><span class=line><span class=cl>	<span class=nx>Opponent</span> <span class=kd>map</span><span class=p>[</span><span class=kt>int64</span><span class=p>]</span><span class=kd>struct</span><span class=p>{}</span> <span class=c1>// 曾经遇到过的对手
@@ -83,5 +308,5 @@ type player struct { Id int64 Score int64 Opponent map[int64]struct{} // 曾经�
 </a><a class=next href=https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/><span class=title>Next »</span><br><span>Oneplus 8T 刷入 LineageOS</span></a></nav><div id=disqus_thread></div><script>(function(){var e=document,t=e.createElement("script");t.src="https://johnpoints-blog-hexo.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(t)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></footer></article></main><footer class=footer><span>&copy; 2024 <a href=https://blog.lvcshu.com/>johnpoint's blog</a></span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
 </a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script><script async src=https://umami.uipo.cc/script.js data-website-id=7319ce07-a672-4d99-bf07-9ebb227d449d></script></body></html>

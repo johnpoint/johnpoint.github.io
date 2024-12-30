@@ -13,10 +13,25 @@
       <link>https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/</link>
       <pubDate>Fri, 09 Oct 2020 11:02:14 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/10/09/upgrade-to-python-3.9/</guid>
-      <description>环境 Ubuntu 20.04.1 LTS focal x86_64
-下载 &amp;amp;&amp;amp; 解压缩 wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz 解压xz文件需要软件包 xz-utils
-tar -Jxvf Python-3.9.0.tar.xz 编译 &amp;amp;&amp;amp; 安装 cd Python-3.9.0 ./configure make make install 错误解决方法 No module named zlib 编译步骤中使用 ./configure --with-zlib pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available. 安装软件包
-libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev </description>
+      <description>&lt;h2 id=&#34;环境&#34;&gt;环境&lt;/h2&gt;
+&lt;p&gt;Ubuntu 20.04.1 LTS focal x86_64&lt;/p&gt;
+&lt;h2 id=&#34;下载--解压缩&#34;&gt;下载 &amp;amp;&amp;amp; 解压缩&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;解压xz文件需要软件包 &lt;code&gt;xz-utils&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -Jxvf Python-3.9.0.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;编译--安装&#34;&gt;编译 &amp;amp;&amp;amp; 安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd Python-3.9.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./configure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;错误解决方法&#34;&gt;错误解决方法&lt;/h2&gt;
+&lt;h3 id=&#34;no-module-named-zlib&#34;&gt;No module named zlib&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;编译步骤中使用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./configure --with-zlib
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;pip-is-configured-with-locations-that-require-tlsssl-however-the-ssl-module-in-python-is-not-available&#34;&gt;pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.&lt;/h3&gt;
+&lt;p&gt;安装软件包&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libssl-dev libncurses5-dev libsqlite3-dev libreadline-dev libtk8.5 libgdm-dev libdb4o-cil-dev libpcap-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

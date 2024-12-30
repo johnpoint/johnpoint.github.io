@@ -34,31 +34,66 @@
       <link>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</link>
       <pubDate>Sat, 25 Aug 2018 16:58:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/08/25/ubuntu%E5%AE%89%E8%A3%85-thinkpad-s2-%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%A9%B1%E5%8A%A8/</guid>
-      <description>注意：本文已失效，目前有效的方法在 这里
-最近入手了一台 thinkpad S2 ，打开 windows 系统，觉得缺了点什么，于是连忙把 ubuntu 系统也安装了上去，但是在配置 ubuntu 系统的时候并没有让我连接网络的选项，当时就感觉有些奇怪，但是没有放在心上。安装完成后打开 ubuntu 系统发现系统 根本没有 检测到无线网卡的存在，于是我就慌了，赶紧回到 windows 系统，看见了无线网卡的型号
-Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC 于是使用强大的 百度 google 搜索解决办法，最后在 ubuntu论坛 的这个帖子里发现了解决办法。
-解决方法 由这个帖子里的大佬在这里请教到的大佬给出解决方法
-原文如下：
-Worked solution (Requirements: kernel &amp;gt;=4.11) : (UPD: In the latest release of endlessm you need kernel version 4.15) Download driver directory from this repo: https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce You can do it by this link: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce Unpack zip archive. Change the Makefile.</description>
+      <description>&lt;p&gt;&lt;strong&gt;注意：本文已失效，目前有效的方法在 &lt;a href=&#34;https://blog.lvcshu.com/2019/06/06/Ubuntu%E5%AE%89%E8%A3%85rtl8821ce%E9%A9%B1%E5%8A%A8/&#34;&gt;这里&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最近入手了一台 thinkpad S2 ，打开 windows 系统，觉得缺了点什么，于是连忙把 ubuntu 系统也安装了上去，但是在配置 ubuntu 系统的时候并没有让我连接网络的选项，当时就感觉有些奇怪&lt;!-- raw HTML omitted --&gt;，但是没有放在心上。安装完成后打开 &lt;em&gt;ubuntu&lt;/em&gt; 系统发现系统 &lt;strong&gt;根本没有&lt;/strong&gt; 检测到无线网卡的存在，于是我就慌了，赶紧回到 &lt;em&gt;windows&lt;/em&gt; 系统，看见了无线网卡的型号&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;于是使用强大的 &lt;del&gt;百度&lt;/del&gt; &lt;strong&gt;google&lt;/strong&gt; 搜索解决办法，最后在 ubuntu论坛 的&lt;a href=&#34;http://forum.ubuntu.org.cn/viewtopic.php?f=116&amp;amp;t=485936&#34;&gt;这个帖子&lt;/a&gt;里发现了解决办法。&lt;/p&gt;
+&lt;h1 id=&#34;解决方法&#34;&gt;解决方法&lt;/h1&gt;
+&lt;p&gt;由&lt;a href=&#34;http://forum.ubuntu.org.cn/viewtopic.php?f=116&amp;amp;t=485936&#34;&gt;这个帖子里&lt;/a&gt;的大佬在&lt;a href=&#34;https://unix.stackexchange.com/questions/379049/realtek-wifi-driver-problem-in-linux-mint-18-2&#34;&gt;这里&lt;/a&gt;请教到的大佬给出解决方法&lt;/p&gt;
+&lt;p&gt;原文如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Worked solution &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Requirements: kernel &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;4.11&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; :
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;UPD: In the latest release of endlessm you need kernel version 4.15&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Download driver directory from this repo: https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You can &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; it by this link: https://minhaskamal.github.io/DownGit/#/home?url&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://github.com/endlessm/linux/tree/master/drivers/net/wireless/rtl8821ce
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Unpack zip archive.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Change the Makefile. Line &lt;span class=&#34;s2&#34;&gt;&amp;#34;export TopDIR ?= ...&amp;#34;&lt;/span&gt; to &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;TopDIR ?= PATH TO EXTRACTED DIRECTORY&amp;#34;&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ make
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo make install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ sudo modprobe -a 8821ce
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;至此，完美解决了这个问题&lt;/p&gt;</description>
     </item>
     <item>
       <title>配置ufw防火墙，守护你的Ubuntu</title>
       <link>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</link>
       <pubDate>Mon, 15 Jan 2018 05:21:10 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/01/15/%E9%85%8D%E7%BD%AEufw%E9%98%B2%E7%81%AB%E5%A2%99%E5%AE%88%E6%8A%A4%E4%BD%A0%E7%9A%84ubuntu/</guid>
-      <description>很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~
-直到我发现了ufw这个神器
-UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。
-废话不多说，上教程
-环境 Ubuntu 16.04
-安装 apt install ufw 配置 首先先打开ssh端口
-ufw allow ssh 如果你的ssh端口不是默认的22，就
-ufw allow 你的ssh端口 打开53端口，使dns功能不受影响
-ufw allow 53/tcp ufw allow 53/udp 可选：打开80，443端口
-ufw allow http/tcp ufw allow https/tcp 然后
-ufw default deny 阻断除上述规则外的外部连接（本机外发流量无影响）
-ufw enable 启动防火墙，done！
-操作指令 启动防火墙 ufw enable 关闭防火墙 ufw disable 更新配置 ufw reload 查看防火墙状态 ufw status </description>
+      <description>&lt;p&gt;很久以来许许多多人催促着我赶快配置好防火墙规则以保护vps，但是。。。配置繁琐的iptables使我望而却步~~（其实就是懒~~&lt;/p&gt;
+&lt;p&gt;直到我发现了ufw这个神器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UFW 全称为 UncomplicatedFirewall[1]，是 Ubuntu 系统上默认的防火墙组件, 为了轻量化配置 iptables 而开发的一款工具。UFW 提供一个非常友好的界面用于创建基于IPV4，IPV6的防火墙规则。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;废话不多说，上教程&lt;/p&gt;
+&lt;h1 id=&#34;环境&#34;&gt;环境&lt;/h1&gt;
+&lt;p&gt;Ubuntu 16.04&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install ufw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;配置&#34;&gt;配置&lt;/h1&gt;
+&lt;p&gt;首先先打开ssh端口&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果你的ssh端口不是默认的22，就&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 你的ssh端口
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;打开53端口，使dns功能不受影响&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 53/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow 53/udp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可选：打开80，443端口&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow http/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow https/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw default deny
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;阻断除上述规则外的外部连接（本机外发流量无影响）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;启动防火墙，done！&lt;/p&gt;
+&lt;h1 id=&#34;操作指令&#34;&gt;操作指令&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;启动防火墙&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;关闭防火墙&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;更新配置&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reload&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;查看防火墙状态&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ufw&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
   </channel>
 </rss>

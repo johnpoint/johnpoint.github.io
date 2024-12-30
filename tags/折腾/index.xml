@@ -13,71 +13,123 @@
       <link>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</link>
       <pubDate>Sun, 01 May 2022 11:51:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</guid>
-      <description>劳动节来给博客除除草！
-自从一加手机社区发布了官方公告说 Android 12 正式版本出来了之后我就一直在等系统更新的推送，谁知道从4月12日公告出来到今天我都没有收到推送，再加上一加的在 Android 12 后 HOS 会切换成 ColorOS，类原生的特点就没有了，OOS 虽说还会持续维护，但是我既然都用 OOS 了我为啥不自己刷个更加原生的系统呢？比如说 LineageOS。
-前期准备 说干就干，先去官网看下有没有支持，芜湖，有支持而且看了下文档还蛮完善的，备份好微信(这个手机里面唯一没有同步功能的app)的数据就打算开始刷机了。
-开刷 刷机的过程官方文档已经非常完善了，在这里不重复赘述。
-一些要注意的小问题 GAPPS GAPPS 一定要在首次启动系统之前刷入，不然就要双清，之前辛苦配置的东西都无了
-SafetyNet 在刷好系统之后，我自然是想打开 ingress 玩下，然后折腾了半天，一直在提醒 ”ingress 需要安全登录“，一开始还以为是代理的问题，疯狂切换代理都没有用，后来查到这个讨论发现是 SafetyNet 的问题，于是 Magisk 刷入了 MagiskHide Props Config、Universal SafetyNet Fix 两个模块解决了这个问题
-Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生效 MagiskHide Props Config 这个则需要在shell执行指令 props 按照提示选择即可。 相机 自带的相机 app 太拉了，直接停用，在 Google Camera Port 下载了个最新版本的相机，以及挑了个推荐的配置文件。
-使用感受 原生的系统真是舒服啊，没有了一些有的没有的app，动画啥的感觉要比HOS要好。高帧率、AOD、蓝牙HD音频编码、屏下指纹这些都没有啥大问题。
-甚至有些之前在HOS上面没有体验过的特性，比如说锁屏音乐可视化 总的来说挺满意的，再看看后续使用的过程中有没有啥坑了，就这样。</description>
+      <description>&lt;p&gt;劳动节来给博客除除草！&lt;/p&gt;
+&lt;p&gt;自从一加手机社区发布了&lt;a href=&#34;https://www.oneplusbbs.com/thread-6275993-1.html&#34;&gt;官方公告&lt;/a&gt;说 Android 12 正式版本出来了之后我就一直在等系统更新的推送，谁知道从4月12日公告出来到今天我都没有收到推送，再加上一加的在 Android 12 后 HOS 会切换成 ColorOS，类原生的特点就没有了，OOS 虽说还会持续维护，但是我既然都用 OOS 了我为啥不自己刷个更加原生的系统呢？比如说 LineageOS。&lt;/p&gt;
+&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
+&lt;p&gt;说干就干，先去官网看下有没有支持，芜湖，&lt;a href=&#34;https://wiki.lineageos.org/devices/kebab/&#34;&gt;有支持&lt;/a&gt;而且看了下文档还蛮完善的，备份好微信(这个手机里面唯一没有同步功能的app)的数据就打算开始刷机了。&lt;/p&gt;
+&lt;h2 id=&#34;开刷&#34;&gt;开刷&lt;/h2&gt;
+&lt;p&gt;刷机的过程&lt;a href=&#34;https://wiki.lineageos.org/devices/kebab/install&#34;&gt;官方文档&lt;/a&gt;已经非常完善了，在这里不重复赘述。&lt;/p&gt;
+&lt;h2 id=&#34;一些要注意的小问题&#34;&gt;一些要注意的小问题&lt;/h2&gt;
+&lt;h3 id=&#34;gapps&#34;&gt;GAPPS&lt;/h3&gt;
+&lt;p&gt;GAPPS 一定要在首次启动系统之前刷入，不然就要双清，之前辛苦配置的东西都无了&lt;/p&gt;
+&lt;h3 id=&#34;safetynet&#34;&gt;SafetyNet&lt;/h3&gt;
+&lt;p&gt;在刷好系统之后，我自然是想打开 ingress 玩下，然后折腾了半天，一直在提醒 ”ingress 需要安全登录“，一开始还以为是代理的问题，疯狂切换代理都没有用，后来查到&lt;a href=&#34;https://community.ingress.com/en/discussion/9303/ingress-requires-a-secure-login&#34;&gt;这个讨论&lt;/a&gt;发现是 SafetyNet 的问题，于是 Magisk 刷入了 &lt;a href=&#34;https://github.com/cnrd/MagiskHide-Props-Config&#34;&gt;MagiskHide Props Config&lt;/a&gt;、&lt;a href=&#34;https://github.com/kdrag0n/safetynet-fix&#34;&gt;Universal SafetyNet Fix&lt;/a&gt; 两个模块解决了这个问题&lt;/p&gt;
+&lt;p&gt;Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生效
+MagiskHide Props Config 这个则需要在shell执行指令 &lt;code&gt;props&lt;/code&gt; 按照提示选择即可。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220501001.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;相机&#34;&gt;相机&lt;/h3&gt;
+&lt;p&gt;自带的相机 app 太拉了，直接停用，在 &lt;a href=&#34;https://www.celsoazevedo.com/files/android/google-camera/&#34;&gt;Google Camera Port&lt;/a&gt; 下载了个最新版本的相机，以及挑了个推荐的配置文件。&lt;/p&gt;
+&lt;h2 id=&#34;使用感受&#34;&gt;使用感受&lt;/h2&gt;
+&lt;p&gt;原生的系统真是舒服啊，没有了一些有的没有的app，动画啥的感觉要比HOS要好。高帧率、AOD、蓝牙HD音频编码、屏下指纹这些都没有啥大问题。&lt;/p&gt;
+&lt;p&gt;甚至有些之前在HOS上面没有体验过的特性，比如说锁屏音乐可视化
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220501002.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;总的来说挺满意的，再看看后续使用的过程中有没有啥坑了，就这样。&lt;/p&gt;</description>
     </item>
     <item>
       <title>博客及相关服务部署更新</title>
       <link>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</link>
       <pubDate>Sun, 17 Apr 2022 00:40:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2022/04/17/%E5%8D%9A%E5%AE%A2%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9B%B4%E6%96%B0/</guid>
-      <description>部署流程更新 众所周知，之前我的博客以及图片托管的服务是通过硬核的DNS分区域解析来实现流量的就近调度，而多个服务器之间的资源文件我一般使用syncthing来进行同步，这个方法显得比较粗糙，但是还挺有效的。最近折腾了下 cloudflare worker 感觉还不错，于是就把博客以及图片托管迁移到了 cloudflare worker 上来，这样一来可以白嫖到不错的全球加速(除中国大陆)，而且使用 workers 进行部署可以省下不少的服务器资源。
-这个就是我之前的发布工作流程
-在这次部署流程更新后他变成了这样，博客由于是 public 代码仓库，所以我的自动构建直接使用了 github action，只要基于之前的配置改改加上 publish 到 cloudflare workers 的 step 就可以直接用了。
-而静态文件托管的我一直是存在自建的 gitea 上面，所以配了个 drone 来执行自动 publish 到 cloudflare workers 的工作，总而言之也是挺香的。
-5月1日更新 又更改了下，用上了 vercel 的服务，实测这个服务提供的 cdn 要比 cloudflare 在中国大陆访问的快些。 博客主题更新 博客主题也好久没有更新了，这次更新主要是加上了几个能够改进访问体验的 feature。
-添加了首页巨幕以及文章头图图片下面的背景颜色，能够自定义在图片还没有加载出来之前显示的颜色 将博客底部版权信息部分的版本号放进了一个js里面，这样就减少了版本号修改时候需要修改的位置 将原来的文章无头图从几张图片中随机选择一张作为头图改成了随机选择一个颜色作为头图 颜色随机取值这里，是取值RGB都在 110-87之间的值，这里的颜色饱和度比较低，看起来比较舒服</description>
+      <description>&lt;h2 id=&#34;部署流程更新&#34;&gt;部署流程更新&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;众所周知&lt;/del&gt;，之前我的博客以及图片托管的服务是通过硬核的DNS分区域解析来实现流量的就近调度，而多个服务器之间的资源文件我一般使用syncthing来进行同步，这个方法显得比较粗糙，但是还挺有效的。最近折腾了下 cloudflare worker 感觉还不错，于是就把博客以及图片托管迁移到了 cloudflare worker 上来，这样一来可以白嫖到不错的全球加速(除中国大陆)，而且使用 workers 进行部署可以省下不少的服务器资源。&lt;/p&gt;
+&lt;p&gt;这个就是我之前的发布工作流程&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220417004.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;在这次部署流程更新后他变成了这样，博客由于是 public 代码仓库，所以我的自动构建直接使用了 github action，只要基于之前的配置改改加上 publish 到 cloudflare workers 的 step 就可以直接用了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220417002.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;而静态文件托管的我一直是存在自建的 gitea 上面，所以配了个 drone 来执行自动 publish 到 cloudflare workers 的工作，总而言之也是挺香的。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220417003.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;5月1日更新&#34;&gt;5月1日更新&lt;/h3&gt;
+&lt;p&gt;又更改了下，用上了 vercel 的服务，实测这个服务提供的 cdn 要比 cloudflare 在中国大陆访问的快些。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220422001.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;博客主题更新&#34;&gt;博客主题更新&lt;/h2&gt;
+&lt;p&gt;博客主题也好久没有更新了，这次更新主要是加上了几个能够改进访问体验的 feature。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加了首页巨幕以及文章头图图片下面的背景颜色，能够自定义在图片还没有加载出来之前显示的颜色&lt;/li&gt;
+&lt;li&gt;将博客底部版权信息部分的版本号放进了一个js里面，这样就减少了版本号修改时候需要修改的位置&lt;/li&gt;
+&lt;li&gt;将原来的文章无头图从几张图片中随机选择一张作为头图改成了随机选择一个颜色作为头图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;颜色随机取值这里，是取值RGB都在 110-87之间的值，这里的颜色饱和度比较低，看起来比较舒服&lt;/p&gt;</description>
     </item>
     <item>
       <title>博客迁移到cloudflare踩坑</title>
       <link>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</link>
       <pubDate>Fri, 25 Mar 2022 13:11:29 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2022/03/25/blog-on-cloudflare-workers/</guid>
-      <description>好久不见，新年开始一直忙着毕业设计和实习找新的工作，一直没有空去将一些折腾过的东西记录成为博客，最近在写毕业设计的间隙终于对博客进行了一波优化，顺便写篇博客记录一下。
-在过去的部署中，博客一直是采用多节点部署并且通过dnspod的分地区解析做流量调度，将流量解析到尽量近的节点来尽量保证博客访问的速度。而多个节点之间的博客文件同步一开始用的是定时任务从github上面更新，后来改成了使用syncthing进行同步，这种方法看起来比较蠢，但是也持续的保证了我的博客在这两年期间的顺畅访问。
-最近在翻sukka大佬的博客过程中，看到了 cloudflare worker 可以联合 kv 存储用来部署静态网站，于是乎我就先将自托管的图片提供服务(就是一个存了图片的http服务)，部署到了 cloudflare 上面，测试速度以及延迟也相当不错，所以就想彻底的把博客这一套东西完全迁移到 cloudflare 上面去。
-这样就能保证我博客在我不主动折腾的情况下保证极高的可靠性以及相对不错的响应速度。
-404页面异常 在 worker-site/index.js 文件中，有一段逻辑是控制在url无法获取到文件的时候返回 /404.html。但是一部署上去我就发现了不对劲，这个404页面直接源代码显示，并没有被浏览器渲染出来。
-经过F12大法查看network的response知道返回的数据中缺少了个指定响应数据格式的header。
-修复这个情况只需要在返回响应的时候加上相应的header即可，代码修改可以参考我提的PR
-参考链接 将 Hexo 部署到 Cloudflare Workers Site 上的趟坑记录 </description>
+      <description>&lt;p&gt;好久不见，新年开始一直忙着毕业设计和实习找新的工作，一直没有空去将一些折腾过的东西记录成为博客，最近在写毕业设计的间隙终于对博客进行了一波优化，顺便写篇博客记录一下。&lt;/p&gt;
+&lt;p&gt;在过去的部署中，博客一直是采用多节点部署并且通过dnspod的分地区解析做流量调度，将流量解析到尽量近的节点来尽量保证博客访问的速度。而多个节点之间的博客文件同步一开始用的是定时任务从github上面更新，后来改成了使用syncthing进行同步，这种方法看起来比较蠢，但是也持续的保证了我的博客在这两年期间的顺畅访问。&lt;/p&gt;
+&lt;p&gt;最近在翻sukka大佬的博客过程中，看到了 cloudflare worker 可以联合 kv 存储用来部署静态网站，于是乎我就先将自托管的图片提供服务(就是一个存了图片的http服务)，部署到了 cloudflare 上面，测试速度以及延迟也相当不错，所以就想彻底的把博客这一套东西完全迁移到 cloudflare 上面去。&lt;/p&gt;
+&lt;p&gt;这样就能保证我博客在我不主动折腾的情况下保证极高的可靠性以及相对不错的响应速度。&lt;/p&gt;
+&lt;h2 id=&#34;404页面异常&#34;&gt;404页面异常&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;worker-site/index.js&lt;/code&gt; 文件中，有一段逻辑是控制在url无法获取到文件的时候返回 &lt;code&gt;/404.html&lt;/code&gt;。但是一部署上去我就发现了不对劲，这个404页面直接源代码显示，并没有被浏览器渲染出来。&lt;/p&gt;
+&lt;p&gt;经过F12大法查看network的response知道返回的数据中缺少了个指定响应数据格式的header。&lt;/p&gt;
+&lt;p&gt;修复这个情况只需要在返回响应的时候加上相应的header即可，代码修改可以参考&lt;a href=&#34;https://github.com/cloudflare/worker-sites-template/pull/63&#34;&gt;我提的PR&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.skk.moe/post/deploy-blog-to-cf-workers-site/&#34;&gt;将 Hexo 部署到 Cloudflare Workers Site 上的趟坑记录&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>使用 Zerotier 异地组内网</title>
       <link>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</link>
       <pubDate>Wed, 24 Nov 2021 16:25:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2021/11/24/zerotier-%E6%9E%84%E5%BB%BA%E5%86%85%E7%BD%91/</guid>
-      <description>众所周知，世界上的 ipv4 地址已经快要枯竭 (错了就当我在瞎掰)，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 (比如说想异地联机打红警之类的)，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《异地也要玩局域网——使用N2N，实现异地服务器快速组建内网》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。
-其中一度不想折腾想着使用那些现成的局域网对战平台来进行游戏 (对就是浩方) 但是下载注册 (这个平台注册居然还要身份证，就离谱，虽然我是用生成的身份证号码注册的) 之后，登录这边一直卡死在 loading，无奈我只能再看看有没有其他的方案。
-在一位 (非常非常非常想玩红警3的) 朋友的建议下，我去研究了下 ZeroTier 这个异地组网的解决方案，发现挺方便的。
-但是问题来了，在我用上了 ZeroTier 之后，隧道倒是建立了，但是不知道为何，有两个节点相互 ping 不通</description>
+      <description>&lt;p&gt;众所周知，世界上的 ipv4 地址已经快要枯竭 &lt;del&gt;(错了就当我在瞎掰)&lt;/del&gt;，所以在国内不是所有的运营商都拥有公网 IP 地址，同时还有许多奇奇怪怪的需求 &lt;del&gt;(比如说想异地联机打红警之类的)&lt;/del&gt;，想要实现异地组建内网的效果不得不要采取一些特别手段进行组网。其实异地组网的文章有不少，比如柠檬雨大佬的这篇文章 《&lt;a href=&#34;https://blog.ilemonrain.com/linux/n2n-v2-tutorial.html&#34;&gt;异地也要玩局域网——使用N2N，实现异地服务器快速组建内网&lt;/a&gt;》，中间就用到了一个叫做 N2N 的软件来进行隧道的建立。但是吧，我在想用 N2N 进行组网的时候，遇到了不少问题，首先就是 windows 客户端 v2 版本的我只找到了一个网络博主自己编译的版本，而且国内服务器在获取客户端的时候非常慢。&lt;/p&gt;
+&lt;p&gt;其中一度不想折腾想着使用那些现成的局域网对战平台来进行游戏 &lt;del&gt;(对就是浩方)&lt;/del&gt; 但是下载注册 &lt;del&gt;(这个平台注册居然还要身份证，就离谱，虽然我是用生成的身份证号码注册的)&lt;/del&gt; 之后，登录这边一直卡死在 loading，无奈我只能再看看有没有其他的方案。&lt;/p&gt;
+&lt;p&gt;在一位 &lt;del&gt;(非常非常非常想玩红警3的)&lt;/del&gt; 朋友的建议下，我去研究了下 ZeroTier 这个异地组网的解决方案，发现挺方便的。&lt;/p&gt;
+&lt;p&gt;但是问题来了，在我用上了 ZeroTier 之后，隧道倒是建立了，但是不知道为何，有两个节点相互 ping 不通&lt;/p&gt;</description>
     </item>
     <item>
       <title>解决全屏背景图卡顿</title>
       <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
       <pubDate>Wed, 28 Jul 2021 11:44:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
-      <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
-而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。
-搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;</description>
+      <description>&lt;p&gt;早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。&lt;/p&gt;
+&lt;p&gt;而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。&lt;/p&gt;
+&lt;p&gt;搜索资料发现了这篇文章 &lt;a href=&#34;https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55&#34;&gt;Fixed background image performance issue&lt;/a&gt;，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linux 进程信息格式化</title>
       <link>https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/</link>
       <pubDate>Tue, 02 Feb 2021 21:20:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2021/02/02/linux-%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/</guid>
-      <description>2021 年了，转头看了下自己的服务器面板，发现还是那个半成品的样子&amp;hellip;于是在这三天改了下代码，加入了 v2 api 接口，这个接口主要使用 Websocket 进行通信，虽然说服务端的压力其实不是很大，但是使用轮询进行数据的更新不仅会看到一坨一坨的请求，对我的渣渣电脑来说也有些吃力了，不过这篇文章的内容不是这个，改天再开一篇文章记录一下。
-进程查看其实是很早之前就想做进面板的功能之一，但是受限于并没有找到现成的 go 第三方或者官方库，所以就放了一放 （结果放了差不多一年），刚好这几天在改面板的代码，索性就顺手把它做了。
-进程查看没有库可以调用，就只能通过调用系统命令来进行查看，一般来说我看进程会使用 ps -aux，但是对于面板来说，这里输出的数据有点太多以及有点太乱（太乱指的是输出的数据不是计算机友好型结构），然后看了下网上网友们五花八门的命令，左拼右凑之后，最后成品是用的 ps axc -o pid,user,stat,pcpu,pmem,command --sort -pcpu --no-header | sed &#39;s/\ \+/\ /g&#39; 最终得到的数据是没有表头、连续空格被替换成一个空格的数据，我感觉这就够了，其余的交给前端处理。
-前端代码截取如下
-let ps = server.Ps.split(&amp;#39;\n&amp;#39;); ps.forEach(item = &amp;gt;{ if (item.split(&amp;#34; &amp;#34;).length &amp;gt; 3) { item = item.split(&amp;#34; &amp;#34;) if (item[0] === &amp;#34;&amp;#34;) { item = item.slice(1, item.length) } let i = { PID: item[0], User: item[1], State: item[2], Pcpu: item[3], Pmem: item[4], Command: item.</description>
+      <description>&lt;p&gt;2021 年了，转头看了下自己的服务器面板，发现还是那个半成品的样子&amp;hellip;于是在这三天改了下代码，加入了 v2 api 接口，这个接口主要使用 Websocket 进行通信，虽然说服务端的压力其实不是很大，但是使用轮询进行数据的更新不仅会看到一坨一坨的请求，对我的渣渣电脑来说也有些吃力了，不过这篇文章的内容不是这个，改天再开一篇文章记录一下。&lt;/p&gt;
+&lt;p&gt;进程查看其实是很早之前就想做进面板的功能之一，但是受限于并没有找到现成的 go 第三方或者官方库，所以就放了一放 &lt;del&gt;（结果放了差不多一年）&lt;/del&gt;，刚好这几天在改面板的代码，索性就顺手把它做了。&lt;/p&gt;
+&lt;p&gt;进程查看没有库可以调用，就只能通过调用系统命令来进行查看，一般来说我看进程会使用 &lt;code&gt;ps -aux&lt;/code&gt;，但是对于面板来说，这里输出的数据有点太多以及有点太乱（太乱指的是输出的数据不是计算机友好型结构），然后看了下网上网友们五花八门的命令，左拼右凑之后，最后成品是用的 &lt;code&gt;ps axc -o pid,user,stat,pcpu,pmem,command --sort -pcpu --no-header | sed &#39;s/\ \+/\ /g&#39;&lt;/code&gt; 最终得到的数据是没有表头、连续空格被替换成一个空格的数据，我感觉这就够了，其余的交给前端处理。&lt;/p&gt;
+&lt;p&gt;前端代码截取如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ps&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Ps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;ps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;forEach&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;PID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;State&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;Pcpu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;Pmem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;Command&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;item&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replaceAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;psData&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后效果还不错~&lt;/p&gt;</description>
     </item>
     <item>
       <title>NodeMCU 制作桌面天气时钟</title>
@@ -91,10 +143,45 @@ let ps = server.Ps.split(&amp;#39;\n&amp;#39;); ps.forEach(item = &amp;gt;{ if (
       <link>https://blog.lvcshu.com/2020/11/07/webdav-backup/</link>
       <pubDate>Sat, 07 Nov 2020 10:19:57 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/11/07/webdav-backup/</guid>
-      <description>webdav 服务端 使用 cloudreve 自带 webdav
-客户端 cadaver
-备份 记录登录信息 .netrc
-machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav backup echo &amp;#34;==========================================================================&amp;#34; export t=`date +%Y-%m-%d` echo &amp;#34;Backup: &amp;#34; $t printf &amp;#34;集中配置文件 [执行中]&amp;#34; mkdir config cp .ssh/config config ...... printf &amp;#34;\r集中配置文件 [完成] \n&amp;#34; printf &amp;#34;归档配置文件 [执行中]&amp;#34; zip -q backup.zip config -r rm config -rf printf &amp;#34;\r归档配置文件 [完成] \n&amp;#34; ...... printf &amp;#34;\r归档密钥文件 [完成] \n&amp;#34; echo &amp;#34;put backup-&amp;#34;$t&amp;#34;.zip&amp;#34; &amp;gt; webdav echo &amp;#34;bye&amp;#34; &amp;gt;&amp;gt; webdav cadaver WEBDAVURL &amp;lt; webdav rm webdav rm backup-$t.</description>
+      <description>&lt;h2 id=&#34;webdav&#34;&gt;webdav&lt;/h2&gt;
+&lt;h3 id=&#34;服务端&#34;&gt;服务端&lt;/h3&gt;
+&lt;p&gt;使用 &lt;a href=&#34;https://cloudreve.org/&#34;&gt;cloudreve&lt;/a&gt; 自带 webdav&lt;/p&gt;
+&lt;h3 id=&#34;客户端&#34;&gt;客户端&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.webdav.org/cadaver/&#34;&gt;cadaver&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;备份&#34;&gt;备份&lt;/h2&gt;
+&lt;h3 id=&#34;记录登录信息&#34;&gt;记录登录信息&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;.netrc&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;machine WEBDAVURL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;login USERNAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;password PASSWORD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;使用脚本&#34;&gt;使用脚本&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;figlet webdav backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;==========================================================================&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date +%Y-%m-%d&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Backup: &amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$t&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;集中配置文件 [执行中]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp .ssh/config config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\r集中配置文件 [完成]              \n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;归档配置文件 [执行中]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zip -q backup.zip config -r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm config -rf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\r归档配置文件 [完成]              \n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;\r归档密钥文件 [完成]              \n&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;put backup-&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$t&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;.zip&amp;#34;&lt;/span&gt; &amp;gt; webdav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;bye&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; webdav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cadaver WEBDAVURL &amp;lt; webdav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm webdav
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm backup-&lt;span class=&#34;nv&#34;&gt;$t&lt;/span&gt;.zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;==========================================================================&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;备份完成&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Oneplus 8T 到手</title>
@@ -109,21 +196,91 @@ machine WEBDAVURL login USERNAME password PASSWORD 使用脚本 figlet webdav ba
       <link>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</link>
       <pubDate>Thu, 28 May 2020 17:20:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/05/28/telegram-spammer/</guid>
-      <description>从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。
-今天就简单的写一写在我记忆里面的 Telegram 中文使用者群体里面所见到的 spammer 以及反 spammer 的一些事情。
-spammer 分类 截至到目前，我所见过的广告帐号主要分为以下几类
-色情
-色情频道推广 色情 GIF/图片 分发机器人，带频道推广 私聊问你要不要拍一些色图 卖东西
-卖高仿鞋 黑产
-各种涨粉 个人信息售卖 四件套 实体储蓄卡+身份证+手机卡+U盾（取款密码+网银登录密码 售卖（四件套解释-知乎） 出售科学上网工具 出售各种帐号(twitter,facebook,微博) 三网数据 币圈
-拉人 推荐各种币 传教
-法轮功 Arch神教 外语
-各种看不懂的语言 spammer 行为分类 公开群类
-进群发送一些无意义的问好的消息，并且展露自己的广告iID 进群不说话，但是会私聊群成员进行推广 进群后发送转发的频道的消息 私聊类
-会先了解你是不是中国人，然后假装是一个对中国很有兴趣的外国人，然后就会宣传法轮功 拉群类
-会将你拉进一些莫名其妙的群里面，一般以币圈的群居多 爆破类
-进群就批量发送 spam 消息，刷屏来进行爆破骚扰 spammer 等级区分 反 spam 史 这一步部分虽然美其名曰 史 但是这些阶段并没有什么明显的分界线，目前来看这几个方案都是并存的状态，这几个方案及其项目目前的活跃程度不一，但在笔者有限的视野里面也的确有在运行。
-第一阶段 - 手动处理 一开始也是处理 spammer 比较原始的方式，就是利用 telegram 的比较完善的群组管理的功能进行广告内容的清理，同时因为能够清除成员发送的所有消息，所以其实效果还不错（在有管理员在线的情况下）</description>
+      <description>&lt;p&gt;从几年前开始使用 Telegram 开始，即使身边的人大部分都在使用微信但 Telegram 一直就是我首选的即时通讯软件，就是因为 Telegram 的整体感觉比微信更加像是一个即时通讯软件，并且 Telegram 开放的 bot api 让我一陷进去就无法自拔。&lt;/p&gt;
+&lt;p&gt;今天就简单的写一写在我记忆里面的 Telegram 中文使用者群体里面所见到的 spammer 以及反 spammer 的一些事情。&lt;/p&gt;
+&lt;h1 id=&#34;spammer-分类&#34;&gt;spammer 分类&lt;/h1&gt;
+&lt;p&gt;截至到目前，我所见过的广告帐号主要分为以下几类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;色情&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;色情频道推广&lt;/li&gt;
+&lt;li&gt;色情 GIF/图片 分发机器人，带频道推广&lt;/li&gt;
+&lt;li&gt;私聊问你要不要拍一些色图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;卖东西&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;卖高仿鞋&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;黑产&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各种涨粉&lt;/li&gt;
+&lt;li&gt;个人信息售卖&lt;/li&gt;
+&lt;li&gt;四件套 &lt;code&gt;实体储蓄卡+身份证+手机卡+U盾（取款密码+网银登录密码&lt;/code&gt; 售卖（&lt;a href=&#34;https://zhuanlan.zhihu.com/p/38847710&#34;&gt;四件套解释-知乎&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;出售科学上网工具&lt;/li&gt;
+&lt;li&gt;出售各种帐号(twitter,facebook,微博)&lt;/li&gt;
+&lt;li&gt;三网数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;币圈&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拉人&lt;/li&gt;
+&lt;li&gt;推荐各种币&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传教&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;法轮功&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Arch神教&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外语&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各种看不懂的语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;spammer-行为分类&#34;&gt;spammer 行为分类&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;公开群类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进群发送一些无意义的问好的消息，并且展露自己的广告iID&lt;/li&gt;
+&lt;li&gt;进群不说话，但是会私聊群成员进行推广&lt;/li&gt;
+&lt;li&gt;进群后发送转发的频道的消息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;私聊类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;会先了解你是不是中国人，然后假装是一个对中国很有兴趣的外国人，然后就会宣传法轮功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拉群类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;会将你拉进一些莫名其妙的群里面，一般以币圈的群居多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;爆破类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进群就批量发送 spam 消息，刷屏来进行爆破骚扰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;spammer-等级区分&#34;&gt;spammer 等级区分&lt;/h1&gt;
+&lt;h1 id=&#34;反-spam-史&#34;&gt;反 spam 史&lt;/h1&gt;
+&lt;p&gt;这一步部分虽然美其名曰 &lt;code&gt;史&lt;/code&gt; 但是这些阶段并没有什么明显的分界线，目前来看这几个方案都是并存的状态，这几个方案及其项目目前的活跃程度不一，但在笔者有限的视野里面也的确有在运行。&lt;/p&gt;
+&lt;h2 id=&#34;第一阶段---手动处理&#34;&gt;第一阶段 - 手动处理&lt;/h2&gt;
+&lt;p&gt;一开始也是处理 spammer 比较原始的方式，就是利用 telegram 的比较完善的群组管理的功能进行广告内容的清理，同时因为能够清除成员发送的所有消息，所以其实效果还不错（在有管理员在线的情况下）&lt;/p&gt;</description>
     </item>
     <item>
       <title>博客主题更新 &amp;&amp; 一些碎碎念</title>
@@ -137,71 +294,155 @@ spammer 分类 截至到目前，我所见过的广告帐号主要分为以下�
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
-      <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
-0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
-1 接下来我就去体验了一下大名鼎鼎的巨硬出的 OneNote ，使用体验的确十分惊艳，其中文字图片混排的使用方式其实很适合上课的笔记，但是为什么我后来也放弃了 OneNote 呢，原因就在于我是个实打实的跨平台用户，从 windows 到 安卓 到 Linux，都是我比较主要使用的操作系统，OneNote 的客户端功能不统一的弊端就出现了，而且情况十分严重，web、移动端、win10 PWA 版和 office 2016版这四个版本的客户端其中的功能 都 不 一 样，就很气，所以使用体验就比 joplin 还要割裂，最后忍无可忍就放弃了 OneNote。
-最后我只能把我的视线投向了目前还很火的 Notion，用 EDU 教育邮箱注册可以获得永久的免费个人订阅。
-2 入坑，简单的试了下发现还不赖，排版功能虽然说没有 OneNote 那种几乎无限制的容器布局，但是 Notion 的块布局也相对比较自由，排版功能已经满足了我，页面套娃功能也非常不错，页面层级理论上来说可以是无限的。
-值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库
-上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
-if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
+      <description>&lt;p&gt;2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。&lt;/p&gt;
+&lt;h1 id=&#34;0&#34;&gt;0&lt;/h1&gt;
+&lt;p&gt;而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 &lt;del&gt;(我才不是懒)&lt;/del&gt; ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 &lt;a href=&#34;https://blog.lvcshu.com/2020/02/22/Joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/&#34;&gt;一篇文章&lt;/a&gt; ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。&lt;/p&gt;
+&lt;h1 id=&#34;1&#34;&gt;1&lt;/h1&gt;
+&lt;p&gt;接下来我就去体验了一下大名鼎鼎的巨硬出的 OneNote ，使用体验的确十分惊艳，其中文字图片混排的使用方式其实很适合上课的笔记，但是为什么我后来也放弃了 OneNote 呢，原因就在于我是个实打实的跨平台用户，从 windows 到 安卓 到 Linux，都是我比较主要使用的操作系统，OneNote 的客户端功能不统一的弊端就出现了，而且情况十分严重，web、移动端、win10 PWA 版和 office 2016版这四个版本的客户端其中的功能 都 不 一 样，就很气，所以使用体验就比 joplin 还要割裂，最后忍无可忍就放弃了 OneNote。&lt;/p&gt;
+&lt;p&gt;最后我只能把我的视线投向了目前还很火的 Notion，用 EDU 教育邮箱注册可以获得永久的免费个人订阅。&lt;/p&gt;
+&lt;h1 id=&#34;2&#34;&gt;2&lt;/h1&gt;
+&lt;p&gt;入坑，简单的试了下发现还不赖，排版功能虽然说没有 OneNote 那种几乎无限制的容器布局，但是 Notion 的块布局也相对比较自由，排版功能已经满足了我，页面套娃功能也非常不错，页面层级理论上来说可以是无限的。&lt;/p&gt;
+&lt;p&gt;值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200323001.jpg&#34; alt=&#34;https://img.r2.6-d.cc/oldcdn/20200323001.jpg&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Notion：好用的现代笔记软件</title>
       <link>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</link>
       <pubDate>Mon, 23 Mar 2020 11:30:30 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/03/23/notion%E5%A5%BD%E7%94%A8%E7%9A%84%E7%8E%B0%E4%BB%A3%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/</guid>
-      <description>2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。
-0 而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 (我才不是懒) ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 一篇文章 ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。
-1 接下来我就去体验了一下大名鼎鼎的巨硬出的 OneNote ，使用体验的确十分惊艳，其中文字图片混排的使用方式其实很适合上课的笔记，但是为什么我后来也放弃了 OneNote 呢，原因就在于我是个实打实的跨平台用户，从 windows 到 安卓 到 Linux，都是我比较主要使用的操作系统，OneNote 的客户端功能不统一的弊端就出现了，而且情况十分严重，web、移动端、win10 PWA 版和 office 2016版这四个版本的客户端其中的功能 都 不 一 样，就很气，所以使用体验就比 joplin 还要割裂，最后忍无可忍就放弃了 OneNote。
-最后我只能把我的视线投向了目前还很火的 Notion，用 EDU 教育邮箱注册可以获得永久的免费个人订阅。
-2 入坑，简单的试了下发现还不赖，排版功能虽然说没有 OneNote 那种几乎无限制的容器布局，但是 Notion 的块布局也相对比较自由，排版功能已经满足了我，页面套娃功能也非常不错，页面层级理论上来说可以是无限的。
-值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库
-上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单
-if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;)) 这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。</description>
+      <description>&lt;p&gt;2020年的春节是我过得最“憋屈”的一次春节，整整一个月我除了必要的出门以外从大年初一开始我就一直待在了家里，更令我觉得“绝望”的是因为疫情原因我还没法回学校。。。&lt;/p&gt;
+&lt;h1 id=&#34;0&#34;&gt;0&lt;/h1&gt;
+&lt;p&gt;而理所当然的我也加入了网课大军，而记笔记成了我的一个难题，因为如果利用纸质笔记本来进行笔记的工作，那么在电脑屏幕上面显示的内容就需要我手抄 &lt;del&gt;(我才不是懒)&lt;/del&gt; ，会有点割裂，所以我一直在寻找一个令我满意的笔记软件，当然，国内的公司我是不怎么考虑的了，因为我还想做一些网页存档。so，我在前些时候发了 &lt;a href=&#34;https://blog.lvcshu.com/2020/02/22/Joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/&#34;&gt;一篇文章&lt;/a&gt; ，简要的体验了一下 “开源拖拉机” joplin ，有一说一 joplin 的使用体验真的只是仅仅能用的级别，长期使用下还是不能做到体验顺滑。&lt;/p&gt;
+&lt;h1 id=&#34;1&#34;&gt;1&lt;/h1&gt;
+&lt;p&gt;接下来我就去体验了一下大名鼎鼎的巨硬出的 OneNote ，使用体验的确十分惊艳，其中文字图片混排的使用方式其实很适合上课的笔记，但是为什么我后来也放弃了 OneNote 呢，原因就在于我是个实打实的跨平台用户，从 windows 到 安卓 到 Linux，都是我比较主要使用的操作系统，OneNote 的客户端功能不统一的弊端就出现了，而且情况十分严重，web、移动端、win10 PWA 版和 office 2016版这四个版本的客户端其中的功能 都 不 一 样，就很气，所以使用体验就比 joplin 还要割裂，最后忍无可忍就放弃了 OneNote。&lt;/p&gt;
+&lt;p&gt;最后我只能把我的视线投向了目前还很火的 Notion，用 EDU 教育邮箱注册可以获得永久的免费个人订阅。&lt;/p&gt;
+&lt;h1 id=&#34;2&#34;&gt;2&lt;/h1&gt;
+&lt;p&gt;入坑，简单的试了下发现还不赖，排版功能虽然说没有 OneNote 那种几乎无限制的容器布局，但是 Notion 的块布局也相对比较自由，排版功能已经满足了我，页面套娃功能也非常不错，页面层级理论上来说可以是无限的。&lt;/p&gt;
+&lt;p&gt;值得着重讲下的就是 Notion 自带的数据库功能，其实就是将表格抽象成数据库，并且可以让数据库在几种不同的视图中来回切换，我简单的利用他这个功能做了个订阅服务续费管理的数据库&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200323001.jpg&#34; alt=&#34;https://img.r2.6-d.cc/oldcdn/20200323001.jpg&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;上图就是我做的一个小工具，在临近续费期的时候他最前面一格就会标红，代码也很简单&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;if(prop(&amp;#34;周期&amp;#34;) == &amp;#34;月付&amp;#34;, if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;months&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;), if(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;) &amp;lt;= 10, &amp;#34;🔴 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;, &amp;#34;🔵 还有 &amp;#34; + format(dateBetween(dateAdd(prop(&amp;#34;上次付款&amp;#34;), 1, &amp;#34;years&amp;#34;), now(), &amp;#34;days&amp;#34;)) + &amp;#34; 天&amp;#34;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这就是 Notion 其中一个让我用起来很舒服的功能，就是你可以用简单的逻辑语句做出一些自己想要的小功能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Joplin：笔记软件的新选择</title>
       <link>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</link>
       <pubDate>Sat, 22 Feb 2020 14:29:57 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/02/22/joplin%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B0%E9%80%89%E6%8B%A9/</guid>
-      <description>前几天 Linux 中国发了一篇文章，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。
-使用体验 优点 支持 markdown、html 待办事项可以定时提醒 网页摘抄可以直接截取网页的 HTML 代码保存 中文本地化并不完全 一些坑 onedriver 速度慢 Dropbox Linux 版本无法授权 坚果云 webdav 有频率限制 自建 webdav 有点麻烦以及不能保证速度 linux 桌面版本有时会无端卡顿 加密密钥不能编辑管理 安装 桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。
-配置同步 一开始我使用的同步策略是使用自建 webdav 进行同步，但是效果不佳，后来我就去尝试使用了国内的坚果云 webdav 进行同步笔记，但是由于坚果云的 webdav 有频繁操作的保护，所以几乎是不可用的状态。
-无奈之下我只能粗暴的选择直接进行文件同步，首先使用的 resilio sync 未知原因的同步速度十分缓慢(内网)，所以最后选择了同类型的软件 synthing
-加密配置 Joplin 还自带加密的功能，但是加密的功能稍微有点设计缺陷，主要是操作了逻辑的缺陷，他没有设计加密密钥的删除功能，所以加密如果禁用再重新打开是不能用回之前的密钥的，只能重新生成，而且如果两个设备都生成了密钥两边都会有两把密钥，有点看不顺眼。
-正确的操作逻辑：
-启用加密--&amp;gt;同步--&amp;gt;输入密码 参考链接 Joplin：真正的 Evernote 开源替代品 Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置 Joplin 同步到坚果云 webdav Syncthing 官网 PS:本篇文章在 Joplin 上完成</description>
+      <description>&lt;p&gt;前几天 Linux 中国发了一篇&lt;a href=&#34;https://linux.cn/article-11896-1.html&#34;&gt;文章&lt;/a&gt;，里面介绍了 Joplin 这一款开源的笔记本软件，对于一个平时有那么一点待办事项的我来说，产生了一点点想尝试的念头。然后就去安装并体验了一下，总的来说，体验不错，但是仍然有着一点瑕疵。&lt;/p&gt;
+&lt;h1 id=&#34;使用体验&#34;&gt;使用体验&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200216001.jpg&#34; alt=&#34;&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200216002.jpg&#34; alt=&#34;&#34;  /&gt;
+
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200216003.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;优点&#34;&gt;优点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 markdown、html&lt;/li&gt;
+&lt;li&gt;待办事项可以定时提醒&lt;/li&gt;
+&lt;li&gt;网页摘抄可以直接截取网页的 HTML 代码保存&lt;/li&gt;
+&lt;li&gt;中文本地化并不完全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;一些坑&#34;&gt;一些坑&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;onedriver 速度慢&lt;/li&gt;
+&lt;li&gt;Dropbox Linux 版本无法授权&lt;/li&gt;
+&lt;li&gt;坚果云 webdav 有频率限制&lt;/li&gt;
+&lt;li&gt;自建 webdav 有点麻烦以及不能保证速度&lt;/li&gt;
+&lt;li&gt;linux 桌面版本有时会无端卡顿&lt;/li&gt;
+&lt;li&gt;加密密钥不能编辑管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;p&gt;桌面端，我使用的是 Linux 系统，直接下载官网的 AppImage 文件，开箱即用。移动端直接从 GooglePlay 下载安装即可。&lt;/p&gt;
+&lt;h2 id=&#34;配置同步&#34;&gt;配置同步&lt;/h2&gt;
+&lt;p&gt;一开始我使用的同步策略是使用自建 webdav 进行同步，但是效果不佳，后来我就去尝试使用了国内的坚果云 webdav 进行同步笔记，但是由于坚果云的 webdav 有频繁操作的保护，所以几乎是不可用的状态。&lt;/p&gt;
+&lt;p&gt;无奈之下我只能粗暴的选择直接进行文件同步，首先使用的 resilio sync 未知原因的同步速度十分缓慢(内网)，所以最后选择了同类型的软件 synthing&lt;/p&gt;
+&lt;h2 id=&#34;加密配置&#34;&gt;加密配置&lt;/h2&gt;
+&lt;p&gt;Joplin 还自带加密的功能，但是加密的功能稍微有点设计缺陷，主要是操作了逻辑的缺陷，他没有设计加密密钥的删除功能，所以加密如果禁用再重新打开是不能用回之前的密钥的，只能重新生成，而且如果两个设备都生成了密钥两边都会有两把密钥，有点看不顺眼。&lt;/p&gt;
+&lt;p&gt;正确的操作逻辑：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启用加密--&amp;gt;同步--&amp;gt;输入密码
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;参考链接&#34;&gt;参考链接&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://linux.cn/article-11896-1.html&#34;&gt;Joplin：真正的 Evernote 开源替代品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/jackadam/p/8568833.html&#34;&gt;Syncthing – 数据同步利器&amp;mdash;自己的网盘，详细安装配置指南，内网使用，发现服务器配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zsxwz.com/2019/07/11/joplin%E5%90%8C%E6%AD%A5%E5%88%B0%E5%9D%9A%E6%9E%9C%E4%BA%91webdav/&#34;&gt;Joplin 同步到坚果云 webdav&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://syncthing.net/&#34;&gt;Syncthing 官网&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PS:本篇文章在 Joplin 上完成&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tiny File Manager 使用</title>
       <link>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Fri, 14 Feb 2020 11:20:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/02/14/tiny-file-manager-%E4%BD%BF%E7%94%A8/</guid>
-      <description>最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。
-但是 PT 下载好了的文件我得拉回本地，所以我就想在服务器上建个私有云盘，但是试来试去都没有啥好用的，最后用到了 Tiny File Manager
-安装的话也很简单，只需要你的服务器上有网页服务器和 php 环境即可，将 tinyfilemanager.php 和 translation.json 放到目录下就好了
-为了安全起见，我还在 nginx 上设置了权限限制，让这个目录下面的文件只能通过这个 php 文件下载。
-location / { deny all; } location /index.php { allow all; } </description>
+      <description>&lt;p&gt;最近我的 ikoula 杜甫频繁出现问题，再三考虑之下还是将杜甫退掉了，然后在 letbox 重新买了一个大盘鸡作为我的储存服务器+PT 盒子。&lt;/p&gt;
+&lt;p&gt;但是 PT 下载好了的文件我得拉回本地，所以我就想在服务器上建个私有云盘，但是试来试去都没有啥好用的，最后用到了 &lt;a href=&#34;https://tinyfilemanager.github.io/&#34;&gt;Tiny File Manager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装的话也很简单，只需要你的服务器上有网页服务器和 php 环境即可，将 &lt;a href=&#34;https://raw.githubusercontent.com/prasathmani/tinyfilemanager/master/tinyfilemanager.php&#34;&gt;tinyfilemanager.php&lt;/a&gt; 和 &lt;a href=&#34;https://raw.githubusercontent.com/prasathmani/tinyfilemanager/master/translation.json&#34;&gt;translation.json&lt;/a&gt; 放到目录下就好了&lt;/p&gt;
+&lt;p&gt;为了安全起见，我还在 nginx 上设置了权限限制，让这个目录下面的文件只能通过这个 php 文件下载。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location / {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  deny all;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;location /index.php {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;allow all;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>配置 IPTV-NET VLAN 单线复用</title>
       <link>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</link>
       <pubDate>Thu, 09 Jan 2020 21:00:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2020/01/09/%E9%85%8D%E7%BD%AE-iptv-net-vlan-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8/</guid>
-      <description>家里的弱电箱因为前期设计失误所以电视那里只有一条网线，而如果我想将 wifi 信号在屋子里面相对良好的覆盖的话我也要将无线路由器设置在电视机附近，但是 IPTV 也需要占用一条网线，一开始我们的解决方案是用一条劈叉的网线，但是数据传输会有质量问题，所以趁着暑假我就尝试着解决这个问题。
-设置光猫 首先利用广东电信的光猫超级账户
-SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
-设置路由器 注意：在进行这一个篇章的时候建议先对路由器的设置进行记录，以免机毁人亡
-交换机设置 光猫 --&amp;gt; WAN -------&amp;gt; LAN1(IPTV) | |----&amp;gt; CPU(NET) 然后就好了～
-还可以顺便获取到 ipv6，双倍的快乐</description>
+      <description>&lt;p&gt;家里的弱电箱因为前期设计失误所以电视那里只有一条网线，而如果我想将 wifi 信号在屋子里面相对良好的覆盖的话我也要将无线路由器设置在电视机附近，但是 IPTV 也需要占用一条网线，一开始我们的解决方案是用一条劈叉的网线，但是数据传输会有质量问题，所以趁着暑假我就尝试着解决这个问题。&lt;/p&gt;
+&lt;h1 id=&#34;设置光猫&#34;&gt;设置光猫&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200109001.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;首先利用广东电信的光猫超级账户&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SuperUser: telecomadmin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PassWord: nE7jA%5m
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;进行 VLAN 绑定&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200109002.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;设置路由器&#34;&gt;设置路由器&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;注意：在进行这一个篇章的时候建议先对路由器的设置进行记录，以免&lt;del&gt;机毁人亡&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;交换机设置&#34;&gt;交换机设置&lt;/h2&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20200109003.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;光猫 --&amp;gt; WAN -------&amp;gt; LAN1(IPTV)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               |----&amp;gt; CPU(NET)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后就好了～&lt;/p&gt;
+&lt;p&gt;还可以顺便获取到 ipv6，双倍的快乐&lt;/p&gt;</description>
     </item>
     <item>
       <title>js 提取 QQ 音乐直链</title>
       <link>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</link>
       <pubDate>Thu, 12 Dec 2019 17:19:57 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2019/12/12/js-%E6%8F%90%E5%8F%96qq%E9%9F%B3%E4%B9%90%E7%9B%B4%E9%93%BE/</guid>
-      <description>function getSong(name) { window.location.href = &amp;#34;https://y.qq.com/portal/search.html#page=1&amp;amp;searchid=1&amp;amp;remoteplace=txt.yqq.top&amp;amp;t=song&amp;amp;w=&amp;#34; + name; var muname = $(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;&amp;#39;); var qq = &amp;#34;0&amp;#34;; var guid = &amp;#34;0&amp;#34;; $.ajax({ url: &amp;#34;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?g_tk=0&amp;amp;loginUin=&amp;#34; + qq + &amp;#34;&amp;amp;hostUin=0&amp;amp;format=json&amp;amp;inCharset=utf8&amp;amp;outCharset=utf-8&amp;amp;notice=0&amp;amp;platform=yqq&amp;amp;needNewCode=0&amp;amp;cid=205361747&amp;amp;uin=&amp;#34; + qq + &amp;#34;&amp;amp;songmid=&amp;#34; + muname.replace(&amp;#39;C400&amp;#39;, &amp;#39;&amp;#39;) + &amp;#34;&amp;amp;filename=&amp;#34; + muname + &amp;#34;.m4a&amp;amp;guid=&amp;#34; + guid, success: function (data) { data = JSON.parse(data); vkey = data.data.items[0].vkey; console.log($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.stream.qqmusic.qq.com/C400&amp;#39;).replace(&amp;#39;.html&amp;#39;, &amp;#39;.m4a?guid=&amp;#39; + guid + &amp;#39;&amp;amp;vkey=&amp;#39; + vkey + &amp;#39;&amp;amp;uin=&amp;#39; + qq + &amp;#39;&amp;amp;fromtag=66&amp;#39;)) window.open($(&amp;#39;.js_song&amp;#39;)[0].href.replace(&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;, &amp;#39;http://isure.</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getSong&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;location&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://y.qq.com/portal/search.html#page=1&amp;amp;searchid=1&amp;amp;remoteplace=txt.yqq.top&amp;amp;t=song&amp;amp;w=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;muname&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.js_song&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;C400&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.html&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;qq&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;guid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ajax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://c.y.qq.com/base/fcgi-bin/fcg_music_express_mobile3.fcg?g_tk=0&amp;amp;loginUin=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;qq&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;amp;hostUin=0&amp;amp;format=json&amp;amp;inCharset=utf8&amp;amp;outCharset=utf-8&amp;amp;notice=0&amp;amp;platform=yqq&amp;amp;needNewCode=0&amp;amp;cid=205361747&amp;amp;uin=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;qq&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;amp;songmid=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;muname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;C400&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;amp;filename=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;muname&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;.m4a&amp;amp;guid=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;guid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;success&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;JSON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;vkey&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;vkey&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.js_song&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;http://isure.stream.qqmusic.qq.com/C400&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.html&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.m4a?guid=&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;guid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;amp;vkey=&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;vkey&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;amp;uin=&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;qq&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;amp;fromtag=66&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nb&#34;&gt;window&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.js_song&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://y.qq.com/n/yqq/song/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;http://isure.stream.qqmusic.qq.com/C400&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.html&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.m4a?guid=&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;guid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;amp;vkey=&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;vkey&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;amp;uin=&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;qq&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;amp;fromtag=66&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title>Android 10 再体验</title>
@@ -299,70 +540,161 @@ SuperUser: telecomadmin PassWord: nE7jA%5m 进行 VLAN 绑定
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
       <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
-      <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
-学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
-chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
-cd /home mkdir www 修改httpd配置文件</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;学习目标&#34;&gt;学习目标&lt;/h1&gt;
+&lt;h2 id=&#34;安装-httpdphpmysql&#34;&gt;安装 httpd、php、mysql&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;建立 &lt;strong&gt;两个&lt;/strong&gt; 虚拟主机建立网站，并申请 &lt;strong&gt;SSL&lt;/strong&gt; 使其能够通过 &lt;strong&gt;https&lt;/strong&gt; 访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学习过程&#34;&gt;学习过程&lt;/h2&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install yum-utils
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum-config-manager --enable remi-php72
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install httpd  mysql  mysql-server  mysql-connector-odbc  mysql-devel  libdbi-dbd-mysql  openssl  mod_ssl  httpd-manual  mod_ssl  mod_perl  mod_auth_mysql
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install php  php-mcrypt  php-cli  php-gd  php-curl  php-mysql  php-zip  php-fileinfo  php-fpm  php-xml  php-mbstring  php-ldap  php-xmlrpc  php-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;设置开机启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chkconfig httpd on  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chkconfig mysqld on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;建立虚拟主机文件夹&lt;/p&gt;</description>
     </item>
     <item>
       <title>学习笔记:初识httpd</title>
       <link>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</link>
       <pubDate>Fri, 02 Nov 2018 09:49:57 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/11/02/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%88%9D%E8%AF%86httpd/</guid>
-      <description>提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。
-学习目标 安装 httpd、php、mysql 建立 两个 虚拟主机建立网站，并申请 SSL 使其能够通过 https 访问 学习过程 安装 yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm yum -y install yum-utils yum-config-manager --enable remi-php72 yum -y install httpd mysql mysql-server mysql-connector-odbc mysql-devel libdbi-dbd-mysql openssl mod_ssl httpd-manual mod_ssl mod_perl mod_auth_mysql yum -y install php php-mcrypt php-cli php-gd php-curl php-mysql php-zip php-fileinfo php-fpm php-xml php-mbstring php-ldap php-xmlrpc php-devel 设置开机启动
-chkconfig httpd on chkconfig mysqld on 建立虚拟主机文件夹
-cd /home mkdir www 修改httpd配置文件</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;提醒：这只是一篇学习笔记，不保证语句通顺，仅作记录。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;学习目标&#34;&gt;学习目标&lt;/h1&gt;
+&lt;h2 id=&#34;安装-httpdphpmysql&#34;&gt;安装 httpd、php、mysql&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;建立 &lt;strong&gt;两个&lt;/strong&gt; 虚拟主机建立网站，并申请 &lt;strong&gt;SSL&lt;/strong&gt; 使其能够通过 &lt;strong&gt;https&lt;/strong&gt; 访问&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学习过程&#34;&gt;学习过程&lt;/h2&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install https://mirrors.ustc.edu.cn/epel/epel-release-latest-6.noarch.rpm https://mirrors.ustc.edu.cn/remi/enterprise/remi-release-6.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install yum-utils
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum-config-manager --enable remi-php72
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install httpd  mysql  mysql-server  mysql-connector-odbc  mysql-devel  libdbi-dbd-mysql  openssl  mod_ssl  httpd-manual  mod_ssl  mod_perl  mod_auth_mysql
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum -y install php  php-mcrypt  php-cli  php-gd  php-curl  php-mysql  php-zip  php-fileinfo  php-fpm  php-xml  php-mbstring  php-ldap  php-xmlrpc  php-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;设置开机启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chkconfig httpd on  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chkconfig mysqld on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;建立虚拟主机文件夹&lt;/p&gt;</description>
     </item>
     <item>
       <title>博客双开，避免offline™</title>
       <link>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</link>
       <pubDate>Tue, 07 Aug 2018 05:30:37 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/08/07/%E5%8D%9A%E5%AE%A2%E5%8F%8C%E5%BC%80%E9%81%BF%E5%85%8Doffline/</guid>
-      <description>怎么双开博客呢？ 答案就是—— vps 与 github 一起部署。。。
-好吧，我承认我是标题党了一下，主要是记录一下我 成功部署 完 hexo 博客了以后如何将博客部署到 github 上去。
-创建远程仓库 就是在 github 上创建一个名称为 用户名.github.io 的仓库，这一个仓库可以在自动化部署之后在 用户名.github.io 生成博客，而用 github 在全世界（除中国大陆，中国大陆就是互联网上的孤岛）外厉害的 cdn ，我们的博客访问速度会比较快， 注意，一开始我是选择不初始化仓库，这样可以避免一些莫名奇妙的坑！
-修改 站点配置 在 站点根目录 下的 _config.yml 寻找 deploy 关键词，将其 整部分 修改为：
-deploy: type: git repo: GitHub上仓库的完整路径包括 .git branch: master repo 的链接一定要是 ssh 而不是 https 的！！！
-配置 git 生成 ssh 密钥
-git config --global user.name &amp;#34;你的GitHub用户名&amp;#34; git config --global user.email &amp;#34;你的GitHub注册邮箱&amp;#34; 生成ssh密钥文件：
-ssh-keygen -t rsa -C &amp;#34;你的GitHub注册邮箱&amp;#34; 然后直接三个回车即可，默认不需要设置密码 然后找到生成的 .</description>
+      <description>&lt;p&gt;怎么双开博客呢？
+答案就是—— vps 与 github 一起部署。。。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;好吧，我承认我是标题党了一下，主要是记录一下我 成功部署 完 hexo 博客了以后如何将博客部署到 github 上去。&lt;/p&gt;
+&lt;h1 id=&#34;创建远程仓库&#34;&gt;创建远程仓库&lt;/h1&gt;
+&lt;p&gt;就是在 github 上创建一个名称为 用户名.github.io 的仓库，这一个仓库可以在自动化部署之后在 用户名.github.io 生成博客，而用 github 在全世界（除中国大陆，中国大陆就是互联网上的孤岛）外厉害的 cdn ，我们的博客访问速度会比较快， 注意，一开始我是选择不初始化仓库，这样可以避免一些莫名奇妙的坑！&lt;/p&gt;
+&lt;h1 id=&#34;修改-站点配置&#34;&gt;修改 站点配置&lt;/h1&gt;
+&lt;p&gt;在 站点根目录 下的 &lt;code&gt;_config.yml&lt;/code&gt; 寻找 &lt;code&gt;deploy&lt;/code&gt; 关键词，将其 整部分 修改为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;git&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;repo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub上仓库的完整路径包括 .git&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;repo 的链接一定要是 ssh 而不是 https 的！！！&lt;/p&gt;
+&lt;h1 id=&#34;配置-git&#34;&gt;配置 git&lt;/h1&gt;
+&lt;p&gt;生成 ssh 密钥&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的GitHub用户名&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;你的GitHub注册邮箱&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;生成ssh密钥文件：&lt;/p&gt;</description>
     </item>
     <item>
       <title>设定微信自动发送信息</title>
       <link>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</link>
       <pubDate>Sat, 21 Jul 2018 06:10:58 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/07/21/%E8%AE%BE%E5%AE%9A%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E4%BF%A1%E6%81%AF/</guid>
-      <description>首先先说一说吐槽一下微信封闭的生态圈，除了开放给搜狗这个搜索引擎可以搜索微信公众号的 api 之外，几乎没有开放任何可以利用的 api ，固然这有其在安全方面的考虑，但是这就使得一些比较有趣的功能难以实现，例如机器人。而一些比较实用的功能又在官方垃圾客户端中没有实现。
-需求 在 chrome 上了 web 版微信的基础上利用 chrome 自带的 console + javascript 实现 自动、循环、发送信息
-施工 首先声明，我在事前并 没有 了解过 javascript 这种语言，一切都是通过善用搜索引擎来一步一步实现的，所以请各位看到这一篇文章的大佬们看到有什么不妥的地方欢迎在评论区指出。
-网页源码 首先当然是登录网页版微信，顺手打开 F12 开发者工具，尝试着发送了几条信息，并在 network 选项卡里面观察了一下网页的活动，然后发现
-&amp;lt;pre id=&amp;#34;editArea&amp;#34; contenteditable-directive=&amp;#34;&amp;#34; mm-paste=&amp;#34;&amp;#34; class=&amp;#34;flex edit_area ng-isolate-scope ng-pristine ng-valid&amp;#34; contenteditable=&amp;#34;true&amp;#34; ng-blur=&amp;#34;editAreaBlur($event)&amp;#34; ng-model=&amp;#34;editAreaCtn&amp;#34; ng-click=&amp;#34;editAreaClick($event)&amp;#34; ng-keyup=&amp;#34;editAreaKeyup($event)&amp;#34; ng-keydown=&amp;#34;editAreaKeydown($event)&amp;#34;&amp;gt;&amp;lt;/pre&amp;gt; 然而并没有什么用。。。
-google搜索 然后，我分别以 微信、发信息、chrome、console、javascript 为关键词进行搜索，最终发现了这篇文章–&amp;gt;用javascriptt脚本实现微信定时发送信息，关键词命中。遂打开，发现正是我想要的。
-修改代码
-// 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍 var appElement = document.querySelector(&amp;#39;[ng-controller=chatSenderController]&amp;#39;); var $scope = angular.element(appElement).scope(); setInterval(function(){ var localTime = new Date(); if(localTime.</description>
+      <description>&lt;p&gt;首先先说一说吐槽一下微信封闭的生态圈，除了开放给搜狗这个搜索引擎可以搜索微信公众号的 api 之外，几乎没有开放任何可以利用的 api ，固然这有其在安全方面的考虑，但是这就使得一些比较有趣的功能难以实现，例如机器人。而一些比较实用的功能又在官方垃圾客户端中没有实现。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;需求&#34;&gt;需求&lt;/h1&gt;
+&lt;p&gt;在 chrome 上了 web 版微信的基础上利用 chrome 自带的 console + javascript 实现 自动、循环、发送信息&lt;/p&gt;
+&lt;h1 id=&#34;施工&#34;&gt;施工&lt;/h1&gt;
+&lt;p&gt;首先声明，我在事前并 &lt;strong&gt;没有&lt;/strong&gt; 了解过 javascript 这种语言，一切都是通过善用搜索引擎来一步一步实现的，所以请各位看到这一篇文章的大佬们看到有什么不妥的地方欢迎在评论区指出。&lt;/p&gt;
+&lt;p&gt;网页源码
+首先当然是登录网页版微信，顺手打开 F12 开发者工具，尝试着发送了几条信息，并在 network 选项卡里面观察了一下网页的活动，然后发现&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pre&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;editArea&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;contenteditable-directive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;mm-paste&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;flex edit_area ng-isolate-scope ng-pristine ng-valid&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;contenteditable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-blur&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;editAreaBlur($event)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;editAreaCtn&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-click&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;editAreaClick($event)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-keyup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;editAreaKeyup($event)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-keydown&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;editAreaKeydown($event)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;pre&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然而并没有什么用。。。&lt;/p&gt;
+&lt;p&gt;google搜索
+然后，我分别以 微信、发信息、chrome、console、javascript 为关键词进行搜索，最终发现了这篇文章–&amp;gt;&lt;a href=&#34;https://www.cnblogs.com/hello-lijj/p/6715561.html&#34;&gt;用javascriptt脚本实现微信定时发送信息&lt;/a&gt;，关键词命中。遂打开，发现正是我想要的。&lt;/p&gt;
+&lt;p&gt;修改代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// 周一----周五： 6:50 AM 提醒对方起床， 9：30 PM提醒对方回宿舍
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;appElement&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;querySelector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[ng-controller=chatSenderController]&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;angular&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;element&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;appElement&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;setInterval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;localTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;localTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getDay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//非周末
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;            &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;localTimeString&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;localTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toLocaleTimeString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;localTimeString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;上午6:49:00&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;editAreaCtn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;6.50了，你该起床了！&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sendTextMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;localTimeString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;上午6:54:00&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;editAreaCtn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;今天又是新的一天，祝你好运！&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sendTextMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;localTimeString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;下午9:28:00&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;editAreaCtn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;时间快到9:30了，你该回去了！&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;$scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sendTextMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在这篇文章中，发送微信消息之前还要进行一波判断，但是我不需要，我只需要无脑发就行，（对了还要设置一个间歇时间，不然就成了刷屏了），最终改成这样：&lt;/p&gt;</description>
     </item>
     <item>
       <title>安装hexo博客及其优化记录</title>
       <link>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Fri, 20 Jul 2018 06:01:39 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
-      <description>使用lnmp.org的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
-本文采用 lvcshu.com 为示例域名
-安装 HEXO 按照官网说明的方法一步步安装
-安装 node.js curl:
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 或
-wget:
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 然后重启终端或者ssh重新连接
-nvm install stable 安装 hexo-cil npm install -g hexo-cli 随后就会很快安装完成！
-部署博客 安装Hexo后，运行以下命令以初始化目标中的Hexo 。
-此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行
-hexo init . npm install hexo g 此时我们博客的静态页面已经成功生成了，但是访问页面是没有办法看到的，接着下一步
-调整 nginx 配置文件 打开 nginx 相应站点 的配置文件，找到
-root /home/wwwroot/lvcshu.com; 改为
-root /home/wwwroot/blog.lvcshu.com/public; 记住：有两个地方要改，对应http与https
-推荐：可以将 http 通过301跳转，跳转到 https
-lnmp nginx restart 看看效果吧！</description>
+      <description>&lt;p&gt;使用&lt;a href=&#34;https://lnmp.org&#34;&gt;lnmp.org&lt;/a&gt;的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文采用 lvcshu.com 为示例域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;安装-hexo&#34;&gt;安装 HEXO&lt;/h1&gt;
+&lt;p&gt;按照官网说明的方法一步步安装&lt;/p&gt;
+&lt;h1 id=&#34;安装-nodejs&#34;&gt;安装 node.js&lt;/h1&gt;
+&lt;p&gt;curl:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或&lt;/p&gt;
+&lt;p&gt;wget:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后重启终端或者ssh重新连接&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm install stable  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;安装-hexo-cil&#34;&gt;安装 hexo-cil&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g hexo-cli  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;随后就会很快安装完成！&lt;/p&gt;
+&lt;h1 id=&#34;部署博客&#34;&gt;部署博客&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装Hexo后，运行以下命令以初始化目标中的Hexo 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo init .  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo g  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时我们博客的静态页面已经成功生成了，但是访问页面是没有办法看到的，接着下一步&lt;/p&gt;
+&lt;h1 id=&#34;调整-nginx-配置文件&#34;&gt;调整 nginx 配置文件&lt;/h1&gt;
+&lt;p&gt;打开 nginx &lt;strong&gt;相应站点&lt;/strong&gt; 的配置文件，找到&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root  /home/wwwroot/lvcshu.com;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;改为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root  /home/wwwroot/blog.lvcshu.com/public;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;记住：有两个地方要改，对应http与https&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;推荐：可以将 http 通过301跳转，跳转到 https&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>cloudreve体验报告</title>

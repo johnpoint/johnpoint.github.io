@@ -13,15 +13,29 @@
       <link>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</link>
       <pubDate>Sun, 01 May 2022 11:51:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2022/05/01/oneplus-8t-%E5%88%B7%E5%85%A5-lineageos/</guid>
-      <description>劳动节来给博客除除草！
-自从一加手机社区发布了官方公告说 Android 12 正式版本出来了之后我就一直在等系统更新的推送，谁知道从4月12日公告出来到今天我都没有收到推送，再加上一加的在 Android 12 后 HOS 会切换成 ColorOS，类原生的特点就没有了，OOS 虽说还会持续维护，但是我既然都用 OOS 了我为啥不自己刷个更加原生的系统呢？比如说 LineageOS。
-前期准备 说干就干，先去官网看下有没有支持，芜湖，有支持而且看了下文档还蛮完善的，备份好微信(这个手机里面唯一没有同步功能的app)的数据就打算开始刷机了。
-开刷 刷机的过程官方文档已经非常完善了，在这里不重复赘述。
-一些要注意的小问题 GAPPS GAPPS 一定要在首次启动系统之前刷入，不然就要双清，之前辛苦配置的东西都无了
-SafetyNet 在刷好系统之后，我自然是想打开 ingress 玩下，然后折腾了半天，一直在提醒 ”ingress 需要安全登录“，一开始还以为是代理的问题，疯狂切换代理都没有用，后来查到这个讨论发现是 SafetyNet 的问题，于是 Magisk 刷入了 MagiskHide Props Config、Universal SafetyNet Fix 两个模块解决了这个问题
-Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生效 MagiskHide Props Config 这个则需要在shell执行指令 props 按照提示选择即可。 相机 自带的相机 app 太拉了，直接停用，在 Google Camera Port 下载了个最新版本的相机，以及挑了个推荐的配置文件。
-使用感受 原生的系统真是舒服啊，没有了一些有的没有的app，动画啥的感觉要比HOS要好。高帧率、AOD、蓝牙HD音频编码、屏下指纹这些都没有啥大问题。
-甚至有些之前在HOS上面没有体验过的特性，比如说锁屏音乐可视化 总的来说挺满意的，再看看后续使用的过程中有没有啥坑了，就这样。</description>
+      <description>&lt;p&gt;劳动节来给博客除除草！&lt;/p&gt;
+&lt;p&gt;自从一加手机社区发布了&lt;a href=&#34;https://www.oneplusbbs.com/thread-6275993-1.html&#34;&gt;官方公告&lt;/a&gt;说 Android 12 正式版本出来了之后我就一直在等系统更新的推送，谁知道从4月12日公告出来到今天我都没有收到推送，再加上一加的在 Android 12 后 HOS 会切换成 ColorOS，类原生的特点就没有了，OOS 虽说还会持续维护，但是我既然都用 OOS 了我为啥不自己刷个更加原生的系统呢？比如说 LineageOS。&lt;/p&gt;
+&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
+&lt;p&gt;说干就干，先去官网看下有没有支持，芜湖，&lt;a href=&#34;https://wiki.lineageos.org/devices/kebab/&#34;&gt;有支持&lt;/a&gt;而且看了下文档还蛮完善的，备份好微信(这个手机里面唯一没有同步功能的app)的数据就打算开始刷机了。&lt;/p&gt;
+&lt;h2 id=&#34;开刷&#34;&gt;开刷&lt;/h2&gt;
+&lt;p&gt;刷机的过程&lt;a href=&#34;https://wiki.lineageos.org/devices/kebab/install&#34;&gt;官方文档&lt;/a&gt;已经非常完善了，在这里不重复赘述。&lt;/p&gt;
+&lt;h2 id=&#34;一些要注意的小问题&#34;&gt;一些要注意的小问题&lt;/h2&gt;
+&lt;h3 id=&#34;gapps&#34;&gt;GAPPS&lt;/h3&gt;
+&lt;p&gt;GAPPS 一定要在首次启动系统之前刷入，不然就要双清，之前辛苦配置的东西都无了&lt;/p&gt;
+&lt;h3 id=&#34;safetynet&#34;&gt;SafetyNet&lt;/h3&gt;
+&lt;p&gt;在刷好系统之后，我自然是想打开 ingress 玩下，然后折腾了半天，一直在提醒 ”ingress 需要安全登录“，一开始还以为是代理的问题，疯狂切换代理都没有用，后来查到&lt;a href=&#34;https://community.ingress.com/en/discussion/9303/ingress-requires-a-secure-login&#34;&gt;这个讨论&lt;/a&gt;发现是 SafetyNet 的问题，于是 Magisk 刷入了 &lt;a href=&#34;https://github.com/cnrd/MagiskHide-Props-Config&#34;&gt;MagiskHide Props Config&lt;/a&gt;、&lt;a href=&#34;https://github.com/kdrag0n/safetynet-fix&#34;&gt;Universal SafetyNet Fix&lt;/a&gt; 两个模块解决了这个问题&lt;/p&gt;
+&lt;p&gt;Universal SafetyNet Fix 这个模块无需任何配置，直接刷入即可生效
+MagiskHide Props Config 这个则需要在shell执行指令 &lt;code&gt;props&lt;/code&gt; 按照提示选择即可。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220501001.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;相机&#34;&gt;相机&lt;/h3&gt;
+&lt;p&gt;自带的相机 app 太拉了，直接停用，在 &lt;a href=&#34;https://www.celsoazevedo.com/files/android/google-camera/&#34;&gt;Google Camera Port&lt;/a&gt; 下载了个最新版本的相机，以及挑了个推荐的配置文件。&lt;/p&gt;
+&lt;h2 id=&#34;使用感受&#34;&gt;使用感受&lt;/h2&gt;
+&lt;p&gt;原生的系统真是舒服啊，没有了一些有的没有的app，动画啥的感觉要比HOS要好。高帧率、AOD、蓝牙HD音频编码、屏下指纹这些都没有啥大问题。&lt;/p&gt;
+&lt;p&gt;甚至有些之前在HOS上面没有体验过的特性，比如说锁屏音乐可视化
+&lt;img loading=&#34;lazy&#34; src=&#34;https://img.r2.6-d.cc/oldcdn/20220501002.jpg&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;总的来说挺满意的，再看看后续使用的过程中有没有啥坑了，就这样。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Oneplus 8T 到手</title>

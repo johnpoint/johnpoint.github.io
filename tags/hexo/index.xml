@@ -13,9 +13,9 @@
       <link>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</link>
       <pubDate>Wed, 28 Jul 2021 11:44:00 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2021/07/28/%E8%A7%A3%E5%86%B3%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E5%8D%A1%E9%A1%BF/</guid>
-      <description>早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。
-而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。
-搜索资料发现了这篇文章 Fixed background image performance issue，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;</description>
+      <description>&lt;p&gt;早就在替换了新的主题后（也就是现在用的主题），发现主页滚动的时候特别的卡，但是在滚动部分没有背景图片的时候就不会掉帧，所以判断是背景图片的问题。&lt;/p&gt;
+&lt;p&gt;而在我替换掉了 fixed 属性之后就又不卡了，从而断定就是这个属性导致博客滚动的时候出现性能问题。&lt;/p&gt;
+&lt;p&gt;搜索资料发现了这篇文章 &lt;a href=&#34;https://medium.com/vehikl-news/fixed-background-image-performance-issue-6b7d9e2dbc55&#34;&gt;Fixed background image performance issue&lt;/a&gt;，遂按照其中的方式将背景设置为虚元素，那么在滚动的时候背景就不会频繁的进行重绘，从而解决了滚动到时候出现掉帧的问题，终于在鸽了半年之后让我的博客首页重回丝滑&amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>博客主题更新 &amp;&amp; 一些碎碎念</title>
@@ -43,22 +43,40 @@
       <link>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Fri, 20 Jul 2018 06:01:39 +0800</pubDate>
       <guid>https://blog.lvcshu.com/2018/07/20/%E5%AE%89%E8%A3%85hexo%E5%8D%9A%E5%AE%A2%E5%8F%8A%E5%85%B6%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/</guid>
-      <description>使用lnmp.org的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。
-本文采用 lvcshu.com 为示例域名
-安装 HEXO 按照官网说明的方法一步步安装
-安装 node.js curl:
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 或
-wget:
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash 然后重启终端或者ssh重新连接
-nvm install stable 安装 hexo-cil npm install -g hexo-cli 随后就会很快安装完成！
-部署博客 安装Hexo后，运行以下命令以初始化目标中的Hexo 。
-此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行
-hexo init . npm install hexo g 此时我们博客的静态页面已经成功生成了，但是访问页面是没有办法看到的，接着下一步
-调整 nginx 配置文件 打开 nginx 相应站点 的配置文件，找到
-root /home/wwwroot/lvcshu.com; 改为
-root /home/wwwroot/blog.lvcshu.com/public; 记住：有两个地方要改，对应http与https
-推荐：可以将 http 通过301跳转，跳转到 https
-lnmp nginx restart 看看效果吧！</description>
+      <description>&lt;p&gt;使用&lt;a href=&#34;https://lnmp.org&#34;&gt;lnmp.org&lt;/a&gt;的lnmp安装一键包，按程序安装好即可，并顺手创建一个虚拟主机，不需要重写，不需要数据库。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文采用 lvcshu.com 为示例域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;安装-hexo&#34;&gt;安装 HEXO&lt;/h1&gt;
+&lt;p&gt;按照官网说明的方法一步步安装&lt;/p&gt;
+&lt;h1 id=&#34;安装-nodejs&#34;&gt;安装 node.js&lt;/h1&gt;
+&lt;p&gt;curl:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或&lt;/p&gt;
+&lt;p&gt;wget:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后重启终端或者ssh重新连接&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm install stable  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;安装-hexo-cil&#34;&gt;安装 hexo-cil&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install -g hexo-cli  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;随后就会很快安装完成！&lt;/p&gt;
+&lt;h1 id=&#34;部署博客&#34;&gt;部署博客&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装Hexo后，运行以下命令以初始化目标中的Hexo 。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此处的 folder 就是我们博客的主目录，即 lnmp 虚拟主机的目录，进入目录以后执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo init .  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm install  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hexo g  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时我们博客的静态页面已经成功生成了，但是访问页面是没有办法看到的，接着下一步&lt;/p&gt;
+&lt;h1 id=&#34;调整-nginx-配置文件&#34;&gt;调整 nginx 配置文件&lt;/h1&gt;
+&lt;p&gt;打开 nginx &lt;strong&gt;相应站点&lt;/strong&gt; 的配置文件，找到&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root  /home/wwwroot/lvcshu.com;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;改为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;root  /home/wwwroot/blog.lvcshu.com/public;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;记住：有两个地方要改，对应http与https&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;推荐：可以将 http 通过301跳转，跳转到 https&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
